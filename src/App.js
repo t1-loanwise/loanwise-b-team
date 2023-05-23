@@ -12,8 +12,6 @@ function App() {
           <Route exact path='/AboutUs' element={<AboutUs />} />
           <Route exact path='/Pricing' element={<Pricing />} />
           <Route exact path='/Blog' element={<Blog />} />
-          {/* <Route exact path='/AboutUs' element={<AboutUs />} /> */}
-          {/* <Route exact path='/signup' element={<Signup />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
