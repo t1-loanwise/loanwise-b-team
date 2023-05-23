@@ -4,9 +4,11 @@ import { HiMenu } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
 import Logo from '../../Images/logo.svg';
 import FilledBtn from '../../components/Button/FilledBtn';
-
+import { useNavigate } from 'react-router-dom';
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState("/");
 
   const navItems = [
@@ -21,15 +23,19 @@ const Header = () => {
   };
 
   const navItem = navItems.map((item, index) => (
-    <li
+    <NavLink
+      id={styles.li}
+      to={item.link}
       key={index}
-      onClick={() => onSelectItem(item.link)}
+      onClick={(e) => {
+        onSelectItem(item.link);
+        e.preventDefault();
+        navigate(item.link);
+      }}
       className={selectedItem === item.link ? styles.active : ''}
     >
-      <a href={item.link}>
-        {item.name}
-      </a>
-    </li>
+      {item.name}
+    </NavLink>
   ));
 
   const [menu, setMenu] = useState(true);
@@ -60,14 +66,14 @@ const Header = () => {
             </button>
             <ul className={!menu ? styles.menuList : styles.display}>
               {navItem}
-              <a className={styles.register} href="">
+              <a className={styles.register} href="/register">
                 Register
               </a>
               <FilledBtn title={"Login"} />
             </ul>
           </div>
           <div className={styles.registerLogin}>
-            <a href="">Register</a>
+            <a href="/register">Register</a>
             <FilledBtn title={"Login"} />
           </div>
         </div>
