@@ -5,37 +5,28 @@ import { CgClose } from "react-icons/cg";
 import Logo from '../../Images/logo.svg';
 import FilledBtn from '../../components/Button/FilledBtn';
 import { useNavigate } from 'react-router-dom';
-import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [selectedItem, setSelectedItem] = useState("/");
 
   const navItems = [
     { name: "Home", link: "/" },
     { name: "About Us", link: "/AboutUs" },
-    { name: "Pricing", link: "/pricing" },
-    { name: "Blog", link: "/blog" }
+    { name: "Pricing", link: "/Pricing" },
+    { name: "Blog", link: "/Blog" }
   ];
 
-  const onSelectItem = (link) => {
-    setSelectedItem(link);
-  };
-
   const navItem = navItems.map((item, index) => (
-    <NavLink
-      id={styles.li}
-      to={item.link}
+    <li
       key={index}
       onClick={(e) => {
-        onSelectItem(item.link);
         e.preventDefault();
         navigate(item.link);
       }}
-      className={selectedItem === item.link ? styles.active : ''}
+      className={styles.activeItem}
     >
-      {item.name}
-    </NavLink>
+      <a href={item.link}>{item.name}</a>
+    </li>
   ));
 
   const [menu, setMenu] = useState(true);

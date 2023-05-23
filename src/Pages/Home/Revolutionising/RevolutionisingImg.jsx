@@ -1,6 +1,6 @@
-import styles from "../LoanwiseImgTxt/LwImgTxt.module.css";
-import RevolutionisingImage from "../LoanwiseImgTxt/LwFlexImg";
-import Revolutionising from "../../assets/images/flexImages/LoanDefaulters/Revolutionising.svg";
+import styles from "../LoanwiseImgText/LwImgTxt.module.css";
+import RevolutionisingImage from "../LoanwiseImgText/LwFlexImg";
+import Revolutionising from "../../../Images/Revolutionising.svg";
 
 const RevolutionisingImg = () => {
   return (

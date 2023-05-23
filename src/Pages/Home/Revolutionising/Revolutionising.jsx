@@ -1,6 +1,6 @@
 import RevolutionisingImg from "./RevolutionisingImg";
 import RevolutionisingTxt from "./RevolutionisingTxt";
-import styles from "../LoanwiseImgTxt/LwImgTxt.module.css";
+import styles from "../LoanwiseImgText/LwImgTxt.module.css";
 
 const Revolutionising = () => {
   return (

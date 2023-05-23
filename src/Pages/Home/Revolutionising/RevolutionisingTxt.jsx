@@ -1,4 +1,4 @@
-import FilledBtn from "../Button/FilledBtn";
+import FilledBtn from "./";
 import LwFlexText from "../LoanwiseImgTxt/LwFlexText";
 import styles from "../LoanwiseImgTxt/LwImgTxt.module.css";
 
