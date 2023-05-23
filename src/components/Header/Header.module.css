@@ -1,0 +1,134 @@
+:root {
+    --primary-bg: #007e99;
+  }
+  
+  .container {
+    padding: 0 63px;
+  }
+  
+  /* ------------------ */
+  /* Header */
+  /* ------------------ */
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  
+  .display {
+    display: none;
+  }
+  
+  .leftHeader,
+  .rightHeader {
+    display: flex;
+    align-items: center;
+  }
+  
+  .leftHeader {
+    gap: 24px;
+  }
+  
+  .navlist {
+    display: flex;
+  }
+  
+  .logo {
+    width: 140px;
+  }
+  
+  ul {
+    display: flex;
+    padding: 0;
+  }
+  
+  li {
+    padding: 8px;
+  }
+  
+  ul li a {
+    color: black;
+  }
+  
+  .active {
+    border-bottom: 2px solid var(--primary-bg);
+  }
+  
+  /* ------------------ */
+  /* Buttons */
+  /* ------------------ */
+  
+  .transparentBtn {
+    background-color: transparent;
+    border: 1px solid var(--primary-bg);
+    border-radius: 5px;
+    padding: 16px 34px;
+    color: var(--primary-bg);
+    cursor: pointer;
+  }
+  
+  /* .transparentBtn img {
+    padding: 0;
+    margin: 0;
+  } */
+  
+  .filledBtn {
+    background-color: var(--primary-bg);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 19px 34px;
+    cursor: pointer;
+  }
+  
+  .menuList {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 44px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px 30px;
+    height: 100vh;
+    width: 50%;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); */
+  }
+  
+  .menuList .register {
+    color: var(--primary-bg);
+  }
+  
+  .menuBtn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .registerLogin a {
+    padding: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .menuBtn {
+      display: flex;
+      align-items: center;
+    }
+  
+    .menuList {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .navlist {
+      display: none;
+    }
+  
+    .registerLogin {
+      display: none;
+    }
+  }
+  
