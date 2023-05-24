@@ -1,11 +1,12 @@
-<<<<<<< HEAD
+ blog
+ HEAD
 
 import './App.css';
 
 function App() {
 return("hello world");
 };
-=======
+ dev
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
@@ -27,6 +28,6 @@ function App() {
     </div>
   );
 }
->>>>>>> d0137669d7928d20372c2755f8124b345c6fbfc5
+
 
 export default App;
