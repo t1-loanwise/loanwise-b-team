@@ -4,10 +4,10 @@ import TeamworkText from "./TeamworkText";
 
 const Teamwork = () => {
   return (
-    <div className={styles.teamwork}>
+    <section className={styles.teamwork}>
       <TeamworkImg />
       <TeamworkText />
-    </div>
+    </section>
   );
 };
 

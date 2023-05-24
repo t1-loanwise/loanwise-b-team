@@ -4,10 +4,10 @@ import styles from "../LoanwiseImgText/LwImgTxt.module.css";
 
 const Revolutionising = () => {
   return (
-    <div className={styles.Revolutionising}>
+    <section className={styles.Revolutionising}>
       <RevolutionisingTxt />
       <RevolutionisingImg />
-    </div>
+    </section>
   );
 };
 

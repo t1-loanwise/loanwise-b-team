@@ -3,10 +3,10 @@ import UserDetails from "./UserDetails";
 
 const LoanwiseUsers = () => {
   return (
-    <div>
+    <section>
       <UserDesc />
       <UserDetails />
-    </div>
+    </section>
   );
 };
 
