@@ -1,4 +1,4 @@
-import styles from "../LoanwiseImgText/LwImgTxt.module.css";
+import styles from "../LoanwiseImgText/styles.module.css";
 import RevolutionisingImage from "../LoanwiseImgText/LwFlexImg";
 import Revolutionising from "../../../Images/Revolutionising.svg";
 
