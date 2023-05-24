@@ -1,4 +1,4 @@
-import styles from "./LwImgTxt.module.css";
+import styles from "./styles.module.css";
 import LoanDefaultersText from "./LwFlexText";
 import LoanDefaultersImg from "./LwFlexImg";
 import LoanDefaulters from "../../../Images/loanDefaulters.svg";

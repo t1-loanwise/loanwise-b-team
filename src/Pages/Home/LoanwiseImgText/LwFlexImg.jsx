@@ -1,4 +1,4 @@
-import styles from "./LwImgTxt.module.css";
+import styles from "./styles.module.css";
 
 const LoanDefaultersImg = ({ image }) => {
   return (
