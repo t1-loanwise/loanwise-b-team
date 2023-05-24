@@ -29,8 +29,9 @@ ul {
   padding: 0 63px;
 }
 
-section{
-  margin-bottom: 30px;
+section {
+  margin-bottom: 50px;
+  /* border: 1px solid black; */
 }
 
 @media (max-width: 768px) {

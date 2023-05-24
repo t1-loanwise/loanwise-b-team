@@ -15,7 +15,8 @@ h4 {
 
 .loanDefaulters,
 .teamwork,
-.Revolutionising {
+.Revolutionising,
+.hero {
   display: flex;
   align-items: center;
   padding: 0px;
@@ -41,9 +42,10 @@ h4 {
 
 h2 {
   font-weight: 600;
-  font-size: 41px;
+  font-size: 50px;
   line-height: 60px;
   margin: 0;
+  /* border: 1px solid black; */
 }
 
 .lwFlexText p {
@@ -75,12 +77,14 @@ h2 {
   /* max-height: 875px; */
 }
 
-.Revolutionising {
-  /*  */
-}
+/* ------------------ */
+/* Revolutionising */
+/* ------------------ */
+
+
 
 .revText {
-  font-size: 30px;
+  font-size: 40px;
   line-height: 50px;
   /* border: 1px solid black; */
 }
@@ -90,31 +94,149 @@ h2 {
   margin-bottom: 10px;
 }
 
-.revText h2{
+.revText h2 {
   font-size: 35px;
 }
+
+/* ------------------ */
+/* Amazing features */
+/* ------------------ */
+
+.featureWrapper,
+.features {
+  display: flex;
+  width: 100%;
+}
+
+.featureWrapper {
+  gap: 49px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-gap: 10px; */
+  gap: 49px;
+}
+
+.bigFeature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 40px;
+  gap: 150px;
+  background: #11252A;
+  border-radius: 15px;
+}
+
+.bigFeature h3 {
+  font-weight: 400;
+  font-size: 52.5px;
+  line-height: 73px;
+  color: #fff;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 55px;
+  gap: 73px;
+  background: #F3F8F7;
+  border-radius: 15px;
+}
+
+.feature p {
+  font-size: 20px;
+  line-height: 31px;
+}
+
+/* ------------------------- */
+/* Hero*/
+/* ------------------------- */
+
+.hero{
+  margin-top: 30px;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+
+/* .hero h2{
+  font-size: 51px;
+line-height: 73px;
+} */
+
+.heroBtns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroBtns a {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.heroText p {
+  margin-bottom: 10px;
+}
+
+
 
 /* ------------------------- */
 /* Medium to small screens*/
 /* ------------------------- */
 
 @media (max-width: 768px) {
+
   .loanDefaulters {
     flex-direction: column;
     gap: 20px;
   }
 
   h2 {
-    /* text-align: center; */
     font-size: 31px;
-    /* line-height: 50px; */
+    line-height: 45px;
+    margin-bottom: 10px;
   }
 
-  .teamwork {
+  .teamwork, .hero {
     flex-direction: column-reverse;
   }
 
   .Revolutionising {
     flex-direction: column;
+  }
+
+  .featureWrapper,
+  .features {
+    flex-direction: column;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .bigFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 50px;
+    gap: 90px;
+
+  }
+
+  .heroText {
+    margin-bottom: 30px;
   }
 }

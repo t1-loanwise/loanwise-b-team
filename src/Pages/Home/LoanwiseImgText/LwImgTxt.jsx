@@ -20,14 +20,14 @@ decisions.`;
 
 const LwImgTxt = () => {
   return (
-    <div className={styles.loanDefaulters}>
+    <section className={styles.loanDefaulters}>
       <LoanDefaultersText
         listItems={listItems}
         paragraph={paragraph}
         heading={heading}
       />
       <LoanDefaultersImg image={LoanDefaulters} />
-    </div>
+    </section>
   );
 };
 

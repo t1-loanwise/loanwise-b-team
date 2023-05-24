@@ -6,10 +6,10 @@ import styles from "../LoanwiseImgText/LwImgTxt.module.css";
 
 const Hero = () => {
   return (
-    <div>
-      <HeroImg />
+    <section className={styles.hero}>
       <HeroTxt />
-    </div>
+      <HeroImg />
+    </section>
   )
 }
 
