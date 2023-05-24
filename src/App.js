@@ -1,3 +1,12 @@
+ blog
+ HEAD
+
+import './App.css';
+
+function App() {
+return("hello world");
+};
+ dev
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
@@ -19,5 +28,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
