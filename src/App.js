@@ -13,6 +13,7 @@ import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
 import Blog from './Pages/Blog/Blog'
 import Register from './components/register'
+import SignUP from './Pages/SignUP/js/SignUP';
 function App() {
   return (
     <div className="App">
