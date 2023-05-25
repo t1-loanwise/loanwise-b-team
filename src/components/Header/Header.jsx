@@ -1,20 +1,26 @@
-import React, { useState } from 'react'
-import styles from "./Header.module.css";
-import { HiMenu } from "react-icons/hi";
-import { CgClose } from "react-icons/cg";
+import React, { useState } from 'react';
+import styles from './Header.module.css';
+import { HiMenu } from 'react-icons/hi';
+import { CgClose } from 'react-icons/cg';
 import Logo from '../../Images/logo.svg';
 import FilledBtn from '../../components/Button/FilledBtn';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [selectedItem, setSelectedItem] = useState(location.pathname);
 
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "About Us", link: "/AboutUs" },
-    { name: "Pricing", link: "/Pricing" },
-    { name: "Blog", link: "/Blog" }
+    { name: 'Home', link: '/' },
+    { name: 'About Us', link: '/AboutUs' },
+    { name: 'Pricing', link: '/Pricing' },
+    { name: 'Blog', link: '/Blog' }
   ];
+
+  const onSelectItem = (link) => {
+    setSelectedItem(link);
+  };
 
   const navItem = navItems.map((item, index) => (
     <li
@@ -22,8 +28,9 @@ const Header = () => {
       onClick={(e) => {
         e.preventDefault();
         navigate(item.link);
+        onSelectItem(item.link);
       }}
-      className={styles.activeItem}
+      className={selectedItem === item.link ? styles.active : ''}
     >
       <a href={item.link}>{item.name}</a>
     </li>
@@ -40,7 +47,10 @@ const Header = () => {
     return <IconComponent size={30} className={styles.menuIcon} />;
   };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
   return (
     <div>
       <header>
@@ -60,17 +70,32 @@ const Header = () => {
               <a className={styles.register} href="/register">
                 Register
               </a>
+<<<<<<< HEAD
               <FilledBtn title={"Login"} />
+=======
+              <FilledBtn title={'Login'} />
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
             </ul>
           </div>
           <div className={styles.registerLogin}>
             <a href="/register">Register</a>
+<<<<<<< HEAD
             <FilledBtn title={"Login"} />
+=======
+            <FilledBtn title={'Login'} />
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
           </div>
         </div>
       </header>
     </div>
+<<<<<<< HEAD
   )
 }
 
 export default Header
+=======
+  );
+};
+
+export default Header;
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa

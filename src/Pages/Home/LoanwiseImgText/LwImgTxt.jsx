@@ -1,4 +1,4 @@
-import styles from "./LwImgTxt.module.css";
+import styles from "./styles.module.css";
 import LoanDefaultersText from "./LwFlexText";
 import LoanDefaultersImg from "./LwFlexImg";
 import LoanDefaulters from "../../../Images/loanDefaulters.svg";
@@ -20,14 +20,14 @@ decisions.`;
 
 const LwImgTxt = () => {
   return (
-    <div className={styles.loanDefaulters}>
+    <section className={styles.loanDefaulters}>
       <LoanDefaultersText
         listItems={listItems}
         paragraph={paragraph}
         heading={heading}
       />
       <LoanDefaultersImg image={LoanDefaulters} />
-    </div>
+    </section>
   );
 };
 

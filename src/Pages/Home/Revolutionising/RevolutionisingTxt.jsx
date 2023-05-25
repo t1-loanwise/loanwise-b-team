@@ -1,6 +1,6 @@
-import FilledBtn from "./";
-import LwFlexText from "../LoanwiseImgTxt/LwFlexText";
-import styles from "../LoanwiseImgTxt/LwImgTxt.module.css";
+import FilledBtn from "../../../components/Button/FilledBtn";
+import LwFlexText from "../LoanwiseImgText/LwFlexText";
+import styles from "../LoanwiseImgText/styles.module.css";
 
 const heading = "Revolutionising lending with predictive analytics.";
 

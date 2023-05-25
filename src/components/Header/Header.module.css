@@ -47,12 +47,27 @@ li {
   padding: 8px;
 }
 
+<<<<<<< HEAD
+=======
+/* li:active {
+  border: 1px solid black;
+} */
+
+
+
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
 ul li a {
   color: black;
 }
 
+<<<<<<< HEAD
 ul li a.active {
   border-bottom: 2px solid var(--primary-bg);
+=======
+.active {
+  border-bottom: 2px solid var(--primary-bg);
+  /* border: 1px solid black; */
+>>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
 }
 
 /* ------------------ */

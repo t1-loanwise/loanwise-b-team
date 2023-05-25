@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: "Urbanist", sans-serif;
+  width: 100%;
+}
+
+/* this class can be found in the team component*/
+.hero-2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.hero-2 h2 {
+  line-height: 40px;
+  margin: auto;
+  width: 40%;
+  font-size: 31px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hero-2 img {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  height: 80%
+}
+
+.team-statement {
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+  width: 65%;
+  font-weight: 500;
+  color: #55666a;
+}
+
+/* this class can be found in the profile component*/
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 50px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.person-profile {
+  height: 300px;
+  width: 100%;
+  padding: 20px 0 10px;
+  border: 1px solid #aab2b4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.image {
+  width: 123px;
+  height: 123px;
+}
+.learn-more {
+  color: #006980;
+  border: 1px solid #006980;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+/* this class can be found in the vision and mission component*/
+.vision-section {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+  gap: 8%;
+
+}
+
+.loan-analysis {
+  flex: 1.5;
+  height: 100%;
+}
+.loan-analysis img {
+  width: 100%;
+  height: 100%;
+}
+
+/* this class can be found in the getstarted component*/
+.get-Started {
+  flex: 1.5;
+}
+
+.get-Started h2 {
+  font-size: 31px;
+  font-weight: 600px;
+}
+
+.get-Started button {
+  padding: 10px 15px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #007e99;
+  border-radius: 5px;
+  border: none;
+}
+
+.get-Started p {
+  line-height: 19px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #55666a;
+  margin-bottom: 15px;
+}
+
+/* this class can be found in the About component, imported under the header*/
+.team1 {
+ height: 600px;
+}
+
+.team1 p {
+  width: 85%;
+}
+
+
+
+/* Media query*/
+@media screen and (max-width: 750px) {
+  .team1 {
+    height: auto;
+  }
+  .team1 h2, .hero-2 h2, .team-statement, .get-Started p {
+    width: 100%;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .vision-section{
+    height: auto;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+  .get-Started p{
+    width: 100%;
+  }
+
+}

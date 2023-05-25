@@ -1,13 +1,13 @@
-import styles from "../LoanwiseImgText/LwImgTxt.module.css";
+import styles from "../LoanwiseImgText/styles.module.css";
 import TeamworkImg from "./TeamworkImg";
 import TeamworkText from "./TeamworkText";
 
 const Teamwork = () => {
   return (
-    <div className={styles.teamwork}>
+    <section className={styles.teamwork}>
       <TeamworkImg />
       <TeamworkText />
-    </div>
+    </section>
   );
 };
 

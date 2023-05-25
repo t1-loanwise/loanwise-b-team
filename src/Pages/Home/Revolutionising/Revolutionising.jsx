@@ -1,13 +1,13 @@
 import RevolutionisingImg from "./RevolutionisingImg";
 import RevolutionisingTxt from "./RevolutionisingTxt";
-import styles from "../LoanwiseImgText/LwImgTxt.module.css";
+import styles from "../LoanwiseImgText/styles.module.css";
 
 const Revolutionising = () => {
   return (
-    <div className={styles.Revolutionising}>
+    <section className={styles.Revolutionising}>
       <RevolutionisingTxt />
       <RevolutionisingImg />
-    </div>
+    </section>
   );
 };
 
