@@ -1,3 +1,4 @@
+ HEAD
 import styles from "./LwImgTxt.module.css";
 import TickCircle from "../../../Images/tickcircle.svg";
 const LoanDefaultersText = ({ listItems, heading, paragraph }) => {

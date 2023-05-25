@@ -6,6 +6,7 @@ import Pricing from './Pages/Pricing/Pricing'
 import Blog from './Pages/Blog/Blog'
 import Register from './components/register'
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>

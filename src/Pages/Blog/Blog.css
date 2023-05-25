@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.Blog{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:50px;
+}
+
+.Blogtext, .Blogimages{
+    width: 100%;
+    max-width: 764px;
+}
+
+h4{
+    color:rgb(94, 94, 230);
+}
