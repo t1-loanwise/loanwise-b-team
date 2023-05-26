@@ -8,7 +8,6 @@ import SignUP from './Pages/SignUP/js/SignUP';
 import './App.css';
 
 
-
 function App() {
 
   return (
