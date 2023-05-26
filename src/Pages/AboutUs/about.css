@@ -29,7 +29,7 @@
   width: 100%;
   margin-top: 30px;
   margin-bottom: 0px;
-  height: 80%
+  height: 80%;
 }
 
 .team-statement {
@@ -88,7 +88,6 @@
   margin-top: 20px;
   align-items: center;
   gap: 8%;
-
 }
 
 .loan-analysis {
@@ -129,21 +128,22 @@
 
 /* this class can be found in the About component, imported under the header*/
 .team1 {
- height: 600px;
+  height: 600px;
 }
 
 .team1 p {
   width: 85%;
 }
 
-
-
 /* Media query*/
 @media screen and (max-width: 750px) {
   .team1 {
     height: auto;
   }
-  .team1 h2, .hero-2 h2, .team-statement, .get-Started p {
+  .team1 h2,
+  .hero-2 h2,
+  .team-statement,
+  .get-Started p {
     width: 100%;
   }
 
@@ -151,15 +151,18 @@
     display: flex;
     flex-direction: column;
   }
-  .vision-section{
+  .vision-section {
     height: auto;
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
-    gap:20px;
-  }
-  .get-Started p{
-    width: 100%;
+    gap: 20px;
   }
 
+  .mission {
+    flex-direction: column-reverse;
+  }
+  .get-Started p {
+    width: 100%;
+  }
 }
