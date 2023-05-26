@@ -3,8 +3,13 @@ import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
 import Blog from './Pages/Blog/Blog'
-import SignUP from './Pages/SignUP/js/SignUP';
 import './App.css';
+import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword'
+import Login from './Pages/Authentication/Login'
+import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
+import Register from './Pages/Authentication/Register/Register'
+
+
 
 
 
@@ -17,7 +22,11 @@ function App() {
           <Route exact path='/aboutUs' element={<AboutUs />} />
           <Route exact path='/pricing' element={<Pricing />} />
           <Route exact path='/blog' element={<Blog />} />
-          <Route exact path='/register' element={<SignUP/>} />
+          <Route exact path='/register' element={<Register/>} />
+          <Route exact path='/create-new-password' element={<CreatePassword/>} />
+          <Route exact path='/login' element={<Login/>} />
+          <Route exact path='/security-question' element={<SecurityQuestion/>} />
+          
         </Routes>
       </BrowserRouter>
     </div>

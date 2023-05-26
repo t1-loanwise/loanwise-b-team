@@ -47,10 +47,6 @@ const Header = () => {
     return <IconComponent size={30} className={styles.menuIcon} />;
   };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
   return (
     <div>
       <header>
@@ -70,32 +66,17 @@ const Header = () => {
               <a className={styles.register} href="/register">
                 Register
               </a>
-<<<<<<< HEAD
-              <FilledBtn title={"Login"} />
-=======
               <FilledBtn title={'Login'} />
->>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
             </ul>
           </div>
           <div className={styles.registerLogin}>
             <a href="/register">Register</a>
-<<<<<<< HEAD
-            <FilledBtn title={"Login"} />
-=======
             <FilledBtn title={'Login'} />
->>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
           </div>
         </div>
       </header>
     </div>
-<<<<<<< HEAD
-  )
-}
-
-export default Header
-=======
   );
 };
 
 export default Header;
->>>>>>> f2d66e6d4995c8877237da38a9726922f5309afa
