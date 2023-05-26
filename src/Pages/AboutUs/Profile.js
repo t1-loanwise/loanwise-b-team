@@ -4,7 +4,7 @@ import { VscArrowRight } from "react-icons/vsc";
 
 const Profile = () => {
   return (
-    <div className = 'container'>
+    <div>
       
       <div className="grid">
         {profile.map((item) => {
@@ -13,7 +13,7 @@ const Profile = () => {
               <div>
                 <img src={item.image} alt={item.name} className = 'image' />
               </div>
-              <p  className = 'position'>{item.name}</p>
+              <p>{item.name}</p>
               <p  >{item.position}</p>
               <a href="#" className = 'learn-more'>Learn More <VscArrowRight /></a>
             </div>

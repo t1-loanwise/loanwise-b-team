@@ -11,7 +11,7 @@ const AboutUs = () => {
         <div className="container">
             <Header />
             <div class='team1'>
-                <Team heading= {'Simplifying lending, reducing'} heading2 = {'loan default risk.'} content= {'The Loan Default Prediction App is a company dedicated to simplifying the lending process for financial institutions and borrowers. Their experienced team understands the complexities and challenges involved in lending money, and their goal is to help financial institutions reduce the risk of loan default and make more informed lending decisions.'} />
+                <Team heading= {'Simplifying lending, reducing loan default risk.'} imageUrl = {'./images/about-us-hero.png'}  content= {'The Loan Default Prediction App is a company dedicated to simplifying the lending process for financial institutions and borrowers. Their experienced team understands the complexities and challenges involved in lending money, and their goal is to help financial institutions reduce the risk of loan default and make more informed lending decisions.'} />
             </div>
             <Vision />
             <Mission />

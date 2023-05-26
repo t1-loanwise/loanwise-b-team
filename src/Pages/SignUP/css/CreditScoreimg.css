@@ -1,0 +1,11 @@
+/* Sign Up Design */
+.img-content {
+    width: 328px;
+    margin-right: 26px;
+}
+
+.img-content img {
+    max-width: 100%;
+    background: #007e99;
+    border-radius: 16px;
+}
