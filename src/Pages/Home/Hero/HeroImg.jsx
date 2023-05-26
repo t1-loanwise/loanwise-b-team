@@ -4,7 +4,7 @@ import styles from "../LoanwiseImgText/styles.module.css";
 
 const HeroImg = () => {
   return (
-    <div>
+    <div className={styles.heroImg}>
       <HeroImage image={HeroPic} />
     </div>
   );

@@ -73,12 +73,21 @@ ul li a {
   cursor: pointer;
 }
 
+.transparentBtn:hover {
+  background-color: var(--primary-bg);
+  color: aliceblue;
+}
+
+.transparentBtn img:hover {
+  fill: #fff;
+}
+
 /* .transparentBtn img {
     padding: 0;
     margin: 0;
   } */
 
-.filledBtn {
+.filledBtn a {
   background-color: var(--primary-bg);
   border: none;
   border-radius: 5px;
