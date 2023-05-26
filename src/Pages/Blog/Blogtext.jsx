@@ -6,7 +6,7 @@ const Blogtext = () => {
   return (
     <div>
         <h4>Coming Soon</h4>
-        <h2>Get Notified We Our Blog Launches</h2>
+        <h2>Get Notified We<br/> Our Blog Launches</h2>
         
         <div>
             <input type='text'/>
