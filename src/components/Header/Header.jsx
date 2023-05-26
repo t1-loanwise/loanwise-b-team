@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import styles from './Header.module.css';
-import { HiMenu } from 'react-icons/hi';
-import { CgClose } from 'react-icons/cg';
-import Logo from '../../Images/logo.svg';
-import FilledBtn from '../../components/Button/FilledBtn';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import styles from "./Header.module.css";
+import { HiMenu } from "react-icons/hi";
+import { CgClose } from "react-icons/cg";
+import Logo from "../../Images/logo.svg";
+import FilledBtn from "../../components/Button/FilledBtn";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -12,10 +12,10 @@ const Header = () => {
   const [selectedItem, setSelectedItem] = useState(location.pathname);
 
   const navItems = [
-    { name: 'Home', link: '/' },
-    { name: 'About Us', link: '/AboutUs' },
-    { name: 'Pricing', link: '/Pricing' },
-    { name: 'Blog', link: '/Blog' }
+    { name: "Home", link: "/" },
+    { name: "About Us", link: "/AboutUs" },
+    { name: "Pricing", link: "/Pricing" },
+    { name: "Blog", link: "/Blog" },
   ];
 
   const onSelectItem = (link) => {
@@ -30,7 +30,7 @@ const Header = () => {
         navigate(item.link);
         onSelectItem(item.link);
       }}
-      className={selectedItem === item.link ? styles.active : ''}
+      className={selectedItem === item.link ? styles.active : ""}
     >
       <a href={item.link}>{item.name}</a>
     </li>
@@ -66,12 +66,12 @@ const Header = () => {
               <a className={styles.register} href="/register">
                 Register
               </a>
-              <FilledBtn title={'Login'} />
+              <FilledBtn title={"Login"} link={"/Login"} />
             </ul>
           </div>
           <div className={styles.registerLogin}>
             <a href="/register">Register</a>
-            <FilledBtn title={'Login'} />
+            <FilledBtn title={"Login"} link={"/Login"} />
           </div>
         </div>
       </header>

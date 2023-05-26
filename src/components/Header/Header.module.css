@@ -51,8 +51,6 @@ li {
   border: 1px solid black;
 } */
 
-
-
 ul li a {
   color: black;
 }
@@ -89,13 +87,12 @@ ul li a {
   cursor: pointer;
 }
 
-
 .menuList {
   display: none;
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 44px;
+  top: 67px;
   right: 0;
   background-color: #fff;
   padding: 20px 30px;
