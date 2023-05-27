@@ -3,7 +3,7 @@ import GetStarted from './GetStarted'
 
 const Mission = () => {
   return (
-    <div className = 'vision-section'>
+    <div className = 'vision-section mission'>
           <div className='loan-analysis'>
               <img src = '/images/Loan-Overview.svg' alt = 'loan overview' />
           </div>
