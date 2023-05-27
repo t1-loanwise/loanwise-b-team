@@ -1,13 +1,15 @@
 import React from 'react'
-import '../Pricing/Pricing.css'
-import Question from '../../components/Question'
+import checkmark from "../../Images/Vector.svg"
+import Question from '../Pricing/Question.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Header from '../../components/Header/Header.jsx'
 import LoanwiseUsers from '../Home/LoanwiseUsers/LoanwiseUsers'
+import '../Pricing/Pricing.css'
 
 
 
 const Pricing = () => {
+
 	return (
 		<div className='container'>
 			<Header />
@@ -34,13 +36,51 @@ const Pricing = () => {
 					</div>
 					<div className='card-features'>
 						<ul>
-							<li> Access core features, including predictive analytics and customizable loan criteria.</li>
-							<li>Real-time default alerts for prompt action by financial institutions.</li>
-							<li>Historical loan performance analysis to help predict future defaults.</li>
-							<li>Compliance with local and federal regulations for loan applications.</li>
-							<li>Risk scoring prioritizes high-risk loans and minimizes default risk.</li>
-							<li>Data integration with credit bureaus and financial institutions for borrower history.</li>
-							<li>Affordable pricing for small financial institution.s</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+										Access core features, including predictive analytics and customizable loan criteria.
+								</div>
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Real-time default alerts for prompt action by financial institutions.
+								</div>	
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Historical loan performance analysis to help predict future defaults.
+								</div>
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Compliance with local and federal regulations for loan applications.
+								</div>
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Risk scoring prioritizes high-risk loans and minimizes default risk.
+								</div>
+								
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+										Data integration with credit bureaus and financial institutions for borrower history.
+								</div>
+							
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Affordable pricing for small financial institutions.
+								</div>
+								
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -64,13 +104,52 @@ const Pricing = () => {
 						</div>
 						<div className='card-features'>
 							<ul>
-								<li>Basic Plan benefits plus fraud detection and financial behavioral analysis.</li>
-								<li>Analyze borrower's social media for deeper financial insights.</li>
-								<li>Customizable dashboards for a comprehensive lending view and informed decisions.</li>
-								<li>Advanced reporting capabilities for valuable lending insights..</li>
-								<li>Dedicated support and training for optimal app usage.</li>
-								<li>Unlimited users for sealable lending as buisness grow</li>
-								<li>Competitive pricing with exceptional value for financial institution</li>
+								
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+										Basic Plan benefits plus fraud detection and financial behavioral analysis.
+								</div>
+								
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+										Analyze borrower's social media for deeper financial insights.
+								</div>
+									
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+										Customizable dashboards for a comprehensive lending view and informed decisions.
+									</div>
+						
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+											Advanced reporting capabilities for valuable lending insights.
+									</div>
+								
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>	Dedicated support and training for optimal app usage.</div>
+								
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+											Unlimited users for sealable lending as buisness grow
+									</div>
+								</li>
+								<li>
+									<img src={checkmark} alt='check mate icon' />
+									<div className='list'>
+										Competitive pricing with exceptional value for financial institution
+									</div>
+									</li>
 							</ul>
 						</div>
 					</div>
@@ -96,13 +175,54 @@ const Pricing = () => {
 					</div>
 					<div className='card-features'>
 						<ul>
-							<li>Premium Plan benefit plus customized risk models and white-labeling. </li>
-							<li>Tailored risk models meet specific needs of financial institutions.</li>
-							<li>White-labeling enables branding of the app as their own. </li>
-							<li>Custom integrations with third-party systems provide seamless experience.</li>
-							<li> Advanced security features ensure safety of sensitive borrower data.</li>
-							<li>Flexible pricing options for tailored needs of financial institutions.</li>
-							<li>  Dedicated account management for personalized support.</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Premium Plan benefit plus customized risk models and white-labeling.
+								</div>
+								
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Tailored risk models meet specific needs of financial institutions.
+								</div>
+								
+							</li>
+								
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									White-labeling enables branding of the app as their own.
+								</div>
+								
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'></div>
+								Custom integrations with third-party systems provide seamless experience.
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Advanced security features ensure safety of sensitive borrower data.
+								</div>
+								
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Flexible pricing options for tailored needs of financial institutions.
+								</div>
+								
+							</li>
+							<li>
+								<img src={checkmark} alt='check mate icon' />
+								<div className='list'>
+									Dedicated account management for personalized support.
+								</div>
+								
+							</li>
 						</ul>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../Pages/Pricing/Pricing.css'
-import icon from '../Images/plus.svg'
+import '../Pricing/Pricing.css'
+import icon from '../../Images/plus.svg'
 
 
 
@@ -30,7 +30,7 @@ const Question = () => {
                         <div className='item' key={item.id}>
                             <div className='title' onClick={() => toggle(index)}>
                                 <p>{item.Question}</p>
-                                <span className='plus'>{selected === index ? <div>-</div> : <img src={icon} alt='plus icon' />}</span>
+                                <span className='plus'>{selected === index ? <div className='minus'>-</div> : <img src={icon} alt='plus icon' />}</span>
                             </div>
 
                             <div className={selected === index ? "content-show" : "content"}>

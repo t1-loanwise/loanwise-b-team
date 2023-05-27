@@ -14,379 +14,7 @@
     font-size: 50px;
     line-height: 77px;
     color: #00191F;
-}
-
-.plan-div p {
-    font-size: 20px;
-    line-height: 29px;
-    text-align: center;
-    color: #00191F;
-    width: 70%;
-}
-
-.plan-div a {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    text-decoration-line: underline;
-    color: #1D79E5;
-    padding-top: 5px;
-}
-
-/* ---------------------- 1st card style------------------- */
-.card-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.card-div {
-    max-width: 340px;
-    height: 800px;
-    background: #FFFFFF;
-    border: 1px solid #AAD4DD;
-    box-shadow: 0px 4.65954px 4.65954px 5.82442px rgba(208, 223, 232, 0.15), 0px 4.65954px 4.65954px rgba(208, 223, 232, 0.12), 0px 4.65954px 4.65954px rgba(208, 223, 232, 0.09), 0px 4.65954px 4.65954px rgba(208, 223, 232, 0.06), 0px 4.65954px 4.65954px rgba(208, 223, 232, 0.03);
-    border-radius: 17.4733px;
-    padding: 10px 30px;
-    margin-top: 40px;
-}
-
-.free-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 5px;
-    gap: 10px;
-    width: 100%;
-    height: 295px;
-    background: #FFFFFF;
-    border-radius: 11.6488px 11.6488px 0px 0px;
-
-}
-
-.free-card h2 {
-
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 45px;
-    color: #24292F;
-    text-align: center;
-}
-
-.free-card p {
-
-    font-weight: 300;
-    font-size: 18.6381px;
-    line-height: 22px;
-    width: 220px;
-    text-align: center;
-    color: #24292F;
-}
-
-.price-div {
-    font-family: 'Azeret Mono', monospace;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-
-}
-
-.dollar {
-
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    text-align: center;
-    padding-bottom: 15px;
-    color: #24292F;
-
-
-}
-
-.price-div .zero {
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 67px;
-    text-align: center;
-    color: #24292F;
-    padding-left: 10px;
-}
-
-.time-div {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.time-div span {
-    font-family: 'Urbanist';
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    /* padding-left: 10px; */
-    color: #24292F;
-}
-
-.join-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 32px;
-    gap: 10px;
-    width: 100%;
-    background-color: white;
-    height: 54px;
-    border: 2px solid #006980;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 18.6381px;
-    line-height: 22px;
-    text-align: center;
-    color: #007E99;
-}
-
-.join-btn:hover {
-    background-color: #007E99;
-    cursor: pointer;
-    color: #E6F2F5;
-}
-
-.card-features ul {
-    width: 100%;
-    /* list-style-image: url( "C:/Users/FEMI/Desktop/Royas-React-Project/react-project-loanwise/src/Assets/Vector.svg"); */
-    padding-inline-start: 3ch;
-}
-
-.card-features ul li {
-    list-style-type: none;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 3px 0px;
-
-
-    color: #00191F;
-    margin-top: 10px;
-
-}
-
-.premium-card {
-    background: #007E99;
-    border-radius: 17.4733px;
-    width: 358px;
-    height: 830px;
-    position: relative;
-    margin-top: 30px;
-}
-
-.premium-card-div {
-    position: absolute;
-    left: 8px;
-    top: 0px;
-    background: #E6F2F5;
-    position: relative;
-    padding: 1px 7px;
-    margin-top: 20px;
-
-}
-
-.premium {
-    width: 100%;
-
-    height: 283.43px;
-    /* border-radius: 17.4733px; */
-    padding-top: 10px;
-
-}
-
-.premium p {
-    width: 230px;
-    font-weight: 500px;
-}
-
-.premium-price-div {
-    margin-left: -25px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-.premium-dollar {
-    color: #999DA4;
-    font-weight: 400;
-    padding-left: 10px;
-}
-
-.premium-price-ash {
-
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: line-through;
-
-    color: #999DA4;
-}
-
-.premium-dollar-black {
-    padding-left: 5px;
-}
-
-.premium-price-black {
-
-    font-weight: 500;
-    font-size: 53px;
-    line-height: 90px;
-    text-align: center;
-
-}
-
-.premium-time span {
-
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 1px;
-    color: #24292F;
-
-}
-
-.started-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15.1435px 30.287px;
-    gap: 11.65px;
-    width: 220.27px;
-    height: 52.29px;
-    background: #007E99;
-    border: 1px solid #006980;
-    border-radius: 5.82442px;
-    font-family: 'Urbanist';
-
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-.started-btn:hover {
-    background-color: #00191F;
-}
-
-.trial-btn-div {
-    display: flex;
-    gap: 6px;
-}
-
-.free-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    gap: 11.65px;
-    width: 120px;
-    height: 40.29px;
-    background: #007E99;
-    border: 1px solid #006980;
-    border-radius: 5.82442px;
-
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 19px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.free-btn:hover {
-    cursor: pointer;
-    background-color: #006980;
-
-}
-
-.contact-btn {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    gap: 10px;
-    width: 120px;
-    height: 40.29px;
-    background-color: white;
-    border: 2px solid #006980;
-    border-radius: 5px;
-
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 22px;
-    text-align: center;
-    color: #007E99;
-    cursor: pointer;
-}
-
-.contact-btn:hover {
-    background-color: #007E99;
-    color: #FFFFFF;
-}
-
-.pricing-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 70px;
-
-}
-
-.pricing-content h2 {
-
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 73px;
-    text-align: center;
-    color: #00151A;
-}
-
-.pricing-content p {
-
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 22px;
-    text-align: center;
-    width: 800px;
-    color: #55666A;
-}
-
-
-/* -----------container style----------------------- */
-.pricing-container {
-    padding: 0px 80px;
-}
-
-/* -----------------plan div style---------------- */
-.plan-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 40px;
-
-}
-
-.plan-div h1 {
-
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 77px;
-    color: #00191F;
+ 
 }
 
 .plan-div p {
@@ -418,7 +46,7 @@
 }
 
 .card-div {
-    width: 340px;
+    width: 350px;
     height: 800px;
     background: #FFFFFF;
     border: 1px solid #AAD4DD;
@@ -446,6 +74,7 @@
     font-size: 40px;
     line-height: 45px;
     color: #24292F;
+
     text-align: center;
 }
 
@@ -503,7 +132,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
+    padding: 18px 36px;
     gap: 10px;
     width: 100%;
     background-color: white;
@@ -516,13 +145,18 @@
     text-align: center;
     color: #007E99;
 }
-
+.join-btn:hover{
+    background-color: #006980;
+    cursor: pointer;
+    color:#FFFFFF;
+}
 .card-features ul {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* list-style-image: url("C:/Users/FEMI/Desktop/Royas-React-Project/react-project-loanwise/src/Assets/Vector.svg"); */
-    padding-inline-start: 3ch;
+    align-items: center;
+    gap:5px
+  
 
 
 }
@@ -535,13 +169,19 @@
     padding: 3px 0px;
     color: #00191F;
     margin-top: 10px;
-
+    text-align: left;
+    display:flex;
+    align-items: center;
+    gap: 5px;
+}
+.list{
+    padding-top: 5px;
 }
 
 .premium-card {
     background: #007E99;
     border-radius: 17.4733px;
-    width: 358px;
+    width: 360px;
     height: 830px;
     position: relative;
     margin-top: 30px;
@@ -549,25 +189,25 @@
 
 .premium-card-div {
     position: absolute;
-    left: 8px;
-    top: 0px;
+    right: -4px;
+    top: 6px;
     background: #E6F2F5;
     position: relative;
     padding: 1px 7px;
     margin-top: 20px;
 
-}
+}   
 
 .premium {
     width: 100%;
     height: 283.43px;
-    /* border-radius: 17.4733px; */
+
     padding-top: 10px;
 
 }
 
 .premium p {
-    width: 230px;
+    width: 260px;
     font-weight: 500px;
 }
 
@@ -610,7 +250,7 @@
 
 .premium-time span {
 
-    font-weight: 500;
+    font-weight: 700;
     font-size: 11px;
     line-height: 13px;
     letter-spacing: 1px;
@@ -625,19 +265,21 @@
     align-items: center;
     padding: 15.1435px 30.287px;
     gap: 11.65px;
-    width: 220.27px;
-    height: 52.29px;
+    width: 230px;
+    height: 40px;
     background: #007E99;
     border: 1px solid #006980;
     border-radius: 5.82442px;
     font-family: 'Urbanist';
-
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
+}
+.started-btn:hover{
+    background-color: #00191F;
 }
 
 .trial-btn-div {
@@ -664,6 +306,10 @@
     text-align: center;
     color: #FFFFFF;
 }
+.free-btn:hover{
+    cursor: pointer;
+
+}
 
 .contact-btn {
     flex-direction: row;
@@ -683,6 +329,10 @@
     text-align: center;
     color: #007E99;
     cursor: pointer;
+}
+.contact-btn:hover{
+    color: #FFFFFF;
+    background: #007E99;
 }
 
 .pricing-content {
@@ -716,25 +366,32 @@
 
 /* -------------Frequent Question Section----------------- */
 .frequent-question {
-    margin: 30px 0px;
+    margin: 25px 0px;
 }
 
 
 .frequent-div {
     color: #00191F;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-bottom: 10px;
 }
 
 .frequent-div h2 {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 77px;
 }
 
 .frequent-div p {
-    font-weight: 500;
-    font-size: 17px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 20px;
+    width: 700px;
+    text-align: center;
 }
 
 /* -----------------Accordion wrapper----------- */
@@ -743,12 +400,17 @@
     flex-direction: column;
     align-items: flex-start;
     background: #FFFFFF;
+    width: 100%;
+    margin-top: 80px;
 }
 
 .List-container h2 {
     font-weight: 500;
     font-size: 30px;
     color: #1E1E1C;
+    width: 300px;
+    text-align: left;
+    line-height: 30px;
 }
 
 /* -------accordion------- */
@@ -757,8 +419,7 @@
 }
 
 .item {
-
-    padding: 20px 0px;
+        padding: 20px 0px;
     /* width: 100%; */
     border-top: 1px solid #ccd1d2;
 }
@@ -769,6 +430,21 @@
     cursor: pointer;
     align-items: center;
 }
+.minus{
+    font-size: 1.4em;
+    font-weight: 800;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+}
+.title p{
+    font-size:1.1em ;
+    font-weight: 500;
+}
 
 .content {
     max-height: 0px;
@@ -778,13 +454,16 @@
 .content-show {
     height: auto;
     max-height: 90%;
-    margin-top: 10px;
-
+    margin-top: 20px;
+    text-align: left;
+font-size: 1.1em;
+font-weight: 500;
 
 }
 
 
----------useLoanwise--------- .Useloanwise {
+/* ---------useLoanwise--------- */
+ .Useloanwise {
     margin: 100px 0px;
 }
 
@@ -792,6 +471,8 @@
 .footer {
     margin-top: 50px;
 }
+
+/* ----------Responsive Style---------- */
 
 @media (max-width: 768px) {
     .plan-div h1 {
@@ -808,8 +489,18 @@
     }
 
     .card-div {
-        width: 90%;
+        width: 100%;
+        height: fit-content;
     }
+    .premium-card{
+        width: 350px;
+        position: relative;
+    }
+.premium-card-div{
+    width: 95%;
+    position: absolute;
+    right:10px ;
+}
 
     .frequent-div h2 {
         font-size: 30px;
