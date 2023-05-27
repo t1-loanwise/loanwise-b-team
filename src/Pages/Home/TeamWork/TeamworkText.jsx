@@ -1,7 +1,4 @@
- HEAD
 import styles from "../LoanwiseImgText/LwImgTxt.module.css";
-
-
 import TeamworkTxt from "../LoanwiseImgText/LwFlexText";
 
 const listItems = [
