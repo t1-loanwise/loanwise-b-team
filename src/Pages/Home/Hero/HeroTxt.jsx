@@ -1,7 +1,7 @@
 import HeroText from "../LoanwiseImgText/LwFlexText";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import TransparentBtn from "../../../components/Button/TransparentBtn";
-import styles from "../LoanwiseImgText/styles.module.css";
+import styles from "../styles.module.css";
 import Icon from "../../../Images/arrow-right.svg";
 import History from "../../../Images/History.svg";
 

@@ -13,9 +13,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/AboutUs" },
-    { name: "Pricing", link: "/Pricing" },
-    { name: "Blog", link: "/Blog" },
+    { name: "About Us", link: "/aboutUs" },
+    { name: "Pricing", link: "/pricing" },
+    { name: "Blog", link: "/blog" },
   ];
 
   const onSelectItem = (link) => {
@@ -51,12 +51,16 @@ const Header = () => {
     <div>
       <header>
         <div className={styles.leftHeader}>
-          <img src={Logo} alt="" className={styles.logo} />
+          <img src={Logo} alt="logo" className={styles.logo} />
           <nav>
             <ul className={styles.navlist}>{navItem}</ul>
           </nav>
         </div>
         <div className={styles.rightHeader}>
+          <div className={styles.registerLogin}>
+            <a href="/register">Register</a>
+            <FilledBtn title={"Login"} link={"/login"} />
+          </div>
           <div className={styles.mdSm}>
             <button className={styles.menuBtn} onClick={menuToggle}>
               {renderMenuIcon()}
@@ -66,12 +70,8 @@ const Header = () => {
               <a className={styles.register} href="/register">
                 Register
               </a>
-              <FilledBtn title={"Login"} link={"/Login"} />
+              <FilledBtn title={"Login"} link={"/login"} />
             </ul>
-          </div>
-          <div className={styles.registerLogin}>
-            <a href="/register">Register</a>
-            <FilledBtn title={"Login"} link={"/Login"} />
           </div>
         </div>
       </header>

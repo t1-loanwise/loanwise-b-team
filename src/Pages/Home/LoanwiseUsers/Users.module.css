@@ -55,14 +55,29 @@ p {
   text-align: center;
 }
 
+.user h4 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #00151a;
+}
+
 .user a {
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   display: flex;
   align-items: center;
   gap: 20px;
   white-space: nowrap;
 }
 
+@media (max-width: 1000px) {
+  .userDesc {
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+  }
+}
 @media (max-width: 768px) {
   .userDesc {
     width: 95%;

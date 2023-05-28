@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";
+import styles from "../styles.module.css";
 import TickCircle from "../../../Images/tickcircle.svg";
 const LoanDefaultersText = ({ listItems, heading, paragraph }) => {
   let listItem = null;
