@@ -8,7 +8,7 @@ const Blogtext = () => {
         <h4>Coming Soon</h4>
         <h2>Get Notified We<br/> Our Blog Launches</h2>
         
-        <div>
+        <div className='padding'>
             <input type='text'/>
             <FilledBtn title={"Notify Me"}/>
         </div>
