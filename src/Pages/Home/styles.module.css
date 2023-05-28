@@ -254,8 +254,7 @@ h2 {
     margin-bottom: 10px;
   }
 
-  .teamwork,
-  .hero {
+  .teamwork {
     flex-direction: column-reverse;
   }
 
