@@ -158,11 +158,6 @@ h2 {
   margin-bottom: 16px;
 }
 
-/* .hero h2{
-  font-size: 51px;
-line-height: 73px;
-} */
-
 .heroBtns {
   display: flex;
   align-items: center;
@@ -180,7 +175,7 @@ line-height: 73px;
 }
 
 /* .heroBtns img {
-  fill: red;
+  stroke: red;
   border: 1px solid black;
 } */
 
@@ -198,6 +193,21 @@ line-height: 73px;
   .lwFlexText {
     align-items: center;
     text-align: center;
+  }
+
+  .history {
+    justify-content: center;
+  }
+
+  .heroBtns {
+    justify-content: center;
+  }
+
+  .revText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .teamwork {
@@ -236,12 +246,6 @@ line-height: 73px;
 
   .loanDefaulters {
     flex-direction: column;
-  }
-
-  .lwFlexText {
-    align-items: center;
-    text-align: center;
-    /* max-width: 543px; */
   }
 
   h2 {

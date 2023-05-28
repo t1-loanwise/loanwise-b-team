@@ -14,10 +14,6 @@ const FooterLists = () => {
       items: ["About Us", "Careers", "Privacy Policy", "Terms of Use"],
     },
     {
-      title: "Company",
-      items: ["About Us", "Careers", "Privacy Policy", "Terms of Use"],
-    },
-    {
       title: "Contact",
       items: [
         "loanwise@gmail.com",
