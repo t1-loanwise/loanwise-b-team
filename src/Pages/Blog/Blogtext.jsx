@@ -1,21 +1,21 @@
-import React from 'react'
-import FilledBtn from '../../components/Button/FilledBtn'
-import styles from "./Blog.css";
+import React from "react";
+import FilledBtn from "../../components/Button/FilledBtn";
+import "./Blog.css";
 
 const Blogtext = () => {
   return (
-    <div>
+    <div className="text">
         <h4>Coming Soon</h4>
         <h2>Get Notified We<br/> Our Blog Launches</h2>
         
-        <div className='padding'>
+        <div className="padding">
             <input type='text'/>
             <FilledBtn title={"Notify Me"}/>
         </div>
 
-        <p>We would not spam you, don’t worry.</p>
+      <p>We would not spam you, don’t worry.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Blogtext
+export default Blogtext;
