@@ -1,6 +1,6 @@
 import React from 'react'
 import GirlFrame from "../../Images/girlFrame.svg"
-import styles from "./Blog.css"
+import  "./Blog.css"
 
 export const Blogimage = () => {
   return (

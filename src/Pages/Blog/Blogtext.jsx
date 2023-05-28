@@ -1,6 +1,6 @@
 import React from 'react'
 import FilledBtn from '../../components/Button/FilledBtn'
-import styles from "./Blog.css";
+import "./Blog.css";
 
 const Blogtext = () => {
   return (

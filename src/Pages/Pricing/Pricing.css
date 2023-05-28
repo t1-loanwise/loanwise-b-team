@@ -42,7 +42,9 @@
 .card-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .card-div {
@@ -416,13 +418,23 @@
 /* -------accordion------- */
 .Accordion {
     margin-top: 20px;
+    width:100%;
+
+
+}
+.Accordion:hover{
+
+    cursor:pointer;
 }
 
 .item {
-        padding: 20px 0px;
-    /* width: 100%; */
+    padding: 20px 0px;
     border-top: 1px solid #ccd1d2;
 }
+.item:nth-of-type(10){
+border-top: 1px solid #ccd1d2;
+}
+
 
 .title {
     display: flex;
@@ -441,9 +453,16 @@
     align-items: center;
     padding-left: 3px;
 }
+.minus:hover{
+    border: 2px solid #007E99;
+        color: #007E99;
+}
 .title p{
     font-size:1.1em ;
     font-weight: 500;
+}
+.title p:hover{
+    color: #007E99;
 }
 
 .content {
@@ -458,6 +477,7 @@
     text-align: left;
 font-size: 1.1em;
 font-weight: 500;
+
 
 }
 
