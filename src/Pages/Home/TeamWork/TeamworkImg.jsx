@@ -1,4 +1,4 @@
-import styles from "../LoanwiseImgText/styles.module.css";
+import styles from "../LoanwiseImgText/LwImgTxt.module.css";
 import TeamworkImage from "../LoanwiseImgText/LwFlexImg";
 import GirlFrame from "../../../Images/girlFrame.svg";
 

@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import Home from './Pages/Home/Home'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
@@ -13,8 +14,8 @@ import Register from './Pages/Authentication/Register/Register'
 
 
 
-
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>

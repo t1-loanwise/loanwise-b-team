@@ -2,7 +2,6 @@ import React from 'react'
 import { features } from './Features.js'
 import Group from '../../../Images/Group.svg'
 import styles from '../LoanwiseImgText/styles.module.css'
-
 const AmazingFeatures = () => {
     const Feature = features.map((item) => (
         <div className={styles.feature} key={item.id}>
