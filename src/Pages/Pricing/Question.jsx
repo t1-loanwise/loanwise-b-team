@@ -73,32 +73,32 @@ const QuestionData = [
     },
     {
         id: 5,
-        Question: "Is the Basic Plan suitable for small financial institutions? ",
+        Question: " Is white-labeling included in the Basic Plan?",
         Answer: "Yes the Basic Plan is designed to be affordable and accessible to smaller financial institution"
     },
     {
         id: 6,
-        Question: " Is white-labeling included in the Basic Plan? ",
+        Question: "How does the flexible pricing work for the Premium Plan?",
         Answer: "No, white-labelling is not included in the Basic Plan. It is a features that is exclusive to the Premium Plan"
     },
     {
         id: 7,
-        Question: "Is the Basic Plan suitable for small financial institutions? ",
+        Question: "Can I customize the risk models on the Basic Plan?",
         Answer: "Yes the Basic Plan is designed to be affordable and accessible to smaller financial institution"
     },
     {
         id: 8,
-        Question: "Is the Basic Plan suitable for small financial institutions? ",
+        Question: "Are there any hidden fees with either pricing plan?",
         Answer: "Yes the Basic Plan is designed to be affordable and accessible to smaller financial institution"
     },
     {
         id: 9,
-        Question: "Is the Basic Plan suitable for small financial institutions? ",
+        Question: "Does the Premium Plan offer more advanced reporting capabilities?",
         Answer: "Yes the Basic Plan is designed to be affordable and accessible to smaller financial institution"
     },
     {
         id: 10,
-        Question: "Is the Basic Plan suitable for small financial institutions? ",
+        Question: "How much does the Basic Plan cost?",
         Answer: "Yes the Basic Plan is designed to be affordable and accessible to smaller financial institution"
     },
 ]
