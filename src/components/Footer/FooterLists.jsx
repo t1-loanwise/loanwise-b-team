@@ -7,11 +7,21 @@ const FooterLists = () => {
   const footerItems = [
     {
       title: "Resources",
-      items: ["Blog", "FAQ", "Help Center", "Contact Us"],
+      items: [
+        { name: "Blog", link: "/blog" },
+        { name: "FAQ", link: "/faq" },
+        { name: "Help Center", link: "/help" },
+        { name: "Contact Us", link: "/contact" },
+      ],
     },
     {
       title: "Company",
-      items: ["About Us", "Careers", "Privacy Policy", "Terms of Use"],
+      items: [
+        { name: "About Us", link: "/aboutUs" },
+        { name: "Careers", link: "/careers" },
+        { name: "Privacy Policy", link: "/privacy" },
+        { name: "Terms of Use", link: "/terms" },
+      ],
     },
     {
       title: "Contact",
@@ -33,7 +43,13 @@ const FooterLists = () => {
       <h4>{item.title}</h4>
       <div className={styles.lists}>
         {item.items.map((listItem, listItemIndex) => (
-          <li key={listItemIndex}>{listItem}</li>
+          <li key={listItemIndex}>
+            {typeof listItem === "object" ? (
+              <a href={listItem.link}>{listItem.name}</a>
+            ) : (
+              listItem
+            )}
+          </li>
         ))}
       </div>
     </ul>
