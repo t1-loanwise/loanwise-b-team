@@ -10,12 +10,19 @@
   width: 100%;
 }
 
+
+
 .Blogimages img {
-  max-width: 764px;
+  max-width: 300px;
+  background-color: blue;
 }
 
 .blogInput {
   gap: 20px;
+}
+
+.text{
+    width:50%;
 }
 
 h4 {

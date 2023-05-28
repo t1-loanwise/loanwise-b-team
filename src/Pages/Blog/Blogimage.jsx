@@ -5,7 +5,7 @@ import styles from "./Blog.css";
 export const Blogimage = () => {
   return (
     <div className="Blogimages">
-      <img src={GirlFrame} alt="" />
+      <img src={GirlFrame} alt=""  width="px"/>
     </div>
   );
 };
