@@ -8,23 +8,23 @@ import '../EmailVerify/EmailVerify.css'
 const EmailVerify = () => {
   return (
     <AuthLayout title={"Verify Email Address"} subtitle={"Please enter the verification code we sent to your registered email address @johndoe@gmail.com"}>
-      <form class="container">
-
-        <div className="userInput">
+      <form class="form">
 
         <div className="otp_input-Content">
+
+        <div className="otp_input-items">
         <FormField type={"text"} maxlength={"1"} className="otp_input" id="ist" onkeyup="clickEvent(this,'ist')" />
         </div>
 
-        <div className="otp_input-Content">
+        <div className="otp_input-items">
         <FormField type={"text"} maxlength={"1"} className="otp_input" id="sec" onkeyup="clickEvent(this,'sec')" />
         </div>
 
-        <div className="otp_input-Content">
+        <div className="otp_input-items">
         <FormField type={"text"} maxlength={"1"} className="otp_input" id="third" onkeyup="clickEvent(this,'third')" />
         </div>
-        
-        <div className="otp_input-Content">
+
+        <div className="otp_input-items">
         <FormField type={"text"} maxlength={"1"} className="otp_input" id="fourth" onkeyup="clickEvent(this,'fourth')" />
         </div>
           
