@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Home from './Pages/Home/Home'
+import Home from './Pages/Home/Home'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
@@ -11,6 +11,8 @@ import Login from './Pages/Authentication/Login'
 import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
 import Register from './Pages/Authentication/Register/Register'
 
+// import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
+
 
 
 
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      {/* <CreateAccount /> */}
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />

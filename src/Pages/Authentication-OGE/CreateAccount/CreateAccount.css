@@ -1,0 +1,12 @@
+.password-Content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.confirmPassword-Content{
+    /* margin-left: 18px; */
+    display: flex;
+}
+.password-Content input{
+width: 100%;
+}
