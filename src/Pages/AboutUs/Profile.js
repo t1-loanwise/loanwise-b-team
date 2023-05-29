@@ -15,7 +15,7 @@ const Profile = () => {
               </div>
               <p>{item.name}</p>
               <p  >{item.position}</p>
-              <a href="#" className = 'learn-more'>Learn More <VscArrowRight /></a>
+              <a href="/" className = 'learn-more'>Learn More <VscArrowRight /></a>
             </div>
 
           );

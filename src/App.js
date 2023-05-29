@@ -9,12 +9,14 @@ import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword
 import Login from './Pages/Authentication/Login'
 import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
 import Register from './Pages/Authentication/Register/Register'
-
+import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
+import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
 
 
 
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -27,7 +29,8 @@ function App() {
           <Route exact path='/create-new-password' element={<CreatePassword/>} />
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
-          
+          <Route exact path='/CreateAccount' element={<CreateAccount/>} />
+          <Route exact path='/EmailVerify' element={<EmailVerify/>} />
         </Routes>
       </BrowserRouter>
     </div>

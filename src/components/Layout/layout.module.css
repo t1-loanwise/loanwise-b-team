@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .auth-container {
   padding: 0 32px;
 }
@@ -14,7 +19,7 @@
 
 .left-side img {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   max-width: 693px;
 }
 
@@ -58,23 +63,23 @@ auth-header {
 }
 
 .logo img {
-  width: 90px;
+  width: 100%;
   justify-content: flex-end;
 }
 
 @media (max-width: 1000px) {
 
-  .auth-layout{
+  .auth-layout {
     background: transparent;
   }
 
   .lef-side {
-    display: none
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .left-side {
-    display: none
+    display: none;
   }
 }

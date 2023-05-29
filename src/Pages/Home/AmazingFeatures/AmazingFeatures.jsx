@@ -1,13 +1,15 @@
 import React from "react";
 import { features } from "./Features.js";
-import Group from "../../../Images/Group.svg";
+import Arrow from "../../../Images/Arrow.svg";
 import styles from "../styles.module.css";
 import AmazingFeaturesTxt from "./AmazingFeaturesTxt.jsx";
 
 const AmazingFeatures = () => {
   const Feature = features.map((item) => (
     <div className={styles.feature} key={item.id}>
-      <img src={item.image} alt="User" />
+      <div className={styles.featureImg}>
+        <img src={item.image} alt="User" />
+      </div>
       <p>{item.text}</p>
     </div>
   ));
@@ -17,7 +19,9 @@ const AmazingFeatures = () => {
       <AmazingFeaturesTxt />
       <div className={styles.bigFeature}>
         <h3>Check out our amazing features.</h3>
-        <img src={Group} alt="" />
+        <div className={styles.bigFeatureImg}>
+          <img src={Arrow} alt="" />
+        </div>
       </div>
       <div className={styles.features}>{Feature}</div>
     </section>
