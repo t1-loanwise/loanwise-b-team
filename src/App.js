@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
@@ -11,8 +10,6 @@ import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
 import Register from './Pages/Authentication/Register/Register'
 import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
 import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
-
-
 
 
 function App() {
