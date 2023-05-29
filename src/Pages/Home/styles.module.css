@@ -5,6 +5,43 @@ h4 {
   padding: 0;
 }
 
+/* ------------------------- */
+/* Hero*/
+/* ------------------------- */
+
+.hero {
+  margin-top: 30px;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+
+.heroBtns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroBtns a {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.heroText p {
+  margin-bottom: 10px;
+}
+
+.heroBtns:hover img {
+  filter: saturate(0%) brightness(10000%);
+}
+
 /* ------------------ */
 /* loanDefaulters */
 /* ------------------ */
@@ -119,11 +156,29 @@ h2 {
   border-radius: 15px;
 }
 
+.bigFeature:hover {
+  background: rgb(100, 164, 5);
+}
+
 .bigFeature h3 {
   font-weight: 400;
   font-size: 52.5px;
   line-height: 73px;
   color: #fff;
+}
+
+.bigFeatureImg {
+  border: 1.2444px solid #ffffff;
+  border-radius: 50%;
+  width: 177px;
+  height: 177px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigFeatureImg img {
+  transform: rotate(-5deg);
 }
 
 .feature {
@@ -136,45 +191,35 @@ h2 {
   border-radius: 15px;
 }
 
+.feature:hover {
+  background: var(--primary-bg);
+}
+
 .feature p {
   font-size: 20px;
   line-height: 31px;
 }
 
-/* ------------------------- */
-/* Hero*/
-/* ------------------------- */
-
-.hero {
-  margin-top: 30px;
+.feature:hover p {
+  color: #fff;
 }
 
-.history {
+.featureImg {
+  background: #80bfcc;
+  border-radius: 33px;
+  width: 75px;
+  height: 75px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  line-height: 27px;
-  margin-bottom: 16px;
+  padding: 0px;
 }
 
-.heroBtns {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.feature:hover .featureImg {
+  background: #11252a;
 }
 
-.heroBtns a {
-  gap: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.heroText p {
-  margin-bottom: 10px;
-}
-
-.heroBtns:hover img {
+.feature:hover .featureImg img {
   filter: saturate(0%) brightness(10000%);
 }
 
