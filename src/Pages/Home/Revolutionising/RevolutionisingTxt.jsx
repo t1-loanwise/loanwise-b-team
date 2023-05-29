@@ -1,6 +1,6 @@
 import FilledBtn from "../../../components/Button/FilledBtn";
 import LwFlexText from "../LoanwiseImgText/LwFlexText";
-import styles from "../LoanwiseImgText/LwImgTxt.module.css";
+import styles from "../styles.module.css";
 
 const heading = "Revolutionising lending with predictive analytics.";
 const paragraph =
@@ -10,7 +10,7 @@ const RevolutionisingTxt = () => {
   return (
     <div className={styles.revText}>
       <LwFlexText paragraph={paragraph} heading={heading} />
-      <FilledBtn title={"Get Started"} />
+      <FilledBtn title={"Get Started"} link={"/register"} />
     </div>
   );
 };
