@@ -19,8 +19,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <CreateAccount /> */}
-      {/* <EmailVerify /> */}
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />
