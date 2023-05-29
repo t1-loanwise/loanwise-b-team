@@ -1,6 +1,4 @@
-
 import styles from "../LoanwiseImgText/LwImgTxt.module.css";
-
 import TeamworkImg from "./TeamworkImg";
 import TeamworkText from "./TeamworkText";
 
