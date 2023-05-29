@@ -64,6 +64,21 @@ auth-header {
 
 .logo img {
   width: 100%;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background: var(--primary-bg);
+  }
+
+  .auth-layout {
+    background: transparent;
+  }
+
+  .lef-side {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
