@@ -25,7 +25,7 @@ const Register = () => {
   <FilledBtn title={"Submit"} size={"100%"}/> 
   </form>
 
-  <p>Already have an account? <a href='#'>Sign In </a> </p>
+  <p>Already have an account? <a href="#">Sign In </a> </p>
  
 
 </div>

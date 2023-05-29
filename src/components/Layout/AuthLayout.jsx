@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./layout.module.css";
 import signup from "../../Images/Auth/signup.svg";
-import Chart from "../../Images/Auth/Chart.png";
-import Sum from "../../Images/Auth/Sum.png";
+// import Chart from "../../Images/Auth/Chart.png";
+// import Sum from "../../Images/Auth/Sum.png";
 import logo from "../../Images/logo.svg";
 
 const AuthLayout = ({ title, children, subtitle }) => {
