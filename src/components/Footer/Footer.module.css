@@ -189,6 +189,9 @@ footer p:last-child {
     width: 100%;
     margin-bottom: 20px;
   }
+  .footerInput .form {
+    align-items: end;
+  }
 
   .footerLists ul h4 {
     font-size: 18px;
