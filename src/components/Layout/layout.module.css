@@ -22,6 +22,7 @@
   height: 100vh;
   max-width: 693px;
 }
+
 .left-title {
   font-weight: 600;
   font-size: 26px;
@@ -31,6 +32,7 @@
   order: 0;
   flex-grow: 0;
 }
+
 .left-subtitle {
   font-family: "Urbanist";
   font-style: normal;
@@ -53,17 +55,38 @@
   gap: 80px;
 }
 
-header {
+auth-header {
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: flex-end;
 }
+
 .logo img {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 90px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background: var(--primary-bg);
+  }
+
+  .auth-layout{
+    background: transparent;
+  }
+
+  .lef-side {
+    display: none
+  }
+>>>>>>> 9a1269645b1d23ede749726f4f226740f8179187
 }
 
 @media (max-width: 768px) {
-  .auth--layout {
-    flex-direction: column-reverse;
-    height: 100vh;
+  .left-side {
+    display: none
   }
 }

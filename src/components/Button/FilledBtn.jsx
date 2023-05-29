@@ -1,8 +1,8 @@
 import styles from "../Header/Header.module.css";
 
-const FilledBtn = ({ title, size, link }) => {
+const FilledBtn = ({ title, link }) => {
   return (
-    <button style={{ width: size }} className={styles.filledBtn}>
+    <button className={styles.filledBtn}>
       <a href={link ? link : "#"}>{title}</a>
     </button>
   );

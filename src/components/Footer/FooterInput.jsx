@@ -5,14 +5,16 @@ import styles from "./Footer.module.css";
 const FooterInput = () => {
   return (
     <div className={styles.footerInput}>
-      <img src={Logo} alt="" className={styles.logo} />
-      <p>
-        With our app, you can access a suite of advanced analytics and data
-        visualization tools to better understand loan performance and identify
-        potential areas for improvement.
-      </p>
+      <div className={styles.logoText}>
+        <img src={Logo} alt="" className={styles.logo} />
+        <p>
+          With our app, you can access a suite of advanced analytics and data
+          visualization tools to better understand loan performance and identify
+          potential areas for improvement.
+        </p>
+      </div>
 
-      <div className="form">
+      <div className={styles.form}>
         <label htmlFor="email">Stay In Touch</label>
         <input type="email" name="" id="" placeholder="Your Email" />
         <FilledBtn title={"Continue"} />

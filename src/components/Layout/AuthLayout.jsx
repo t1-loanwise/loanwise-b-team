@@ -8,11 +8,11 @@ import logo from "../../Images/logo.svg";
 const AuthLayout = ({ title, children, subtitle }) => {
   return (
     <div className="auth-container">
-      <header>
-        <a href="/Home" className={style["logo"]}>
+      <div className="auth-header">
+        <a href="/" className={style["logo"]}>
           <img src={logo} alt="logo" />
         </a>
-      </header>
+      </div>
 
       <div className={style["auth--layout"]}>
         <div className={style["left-side"]}>
