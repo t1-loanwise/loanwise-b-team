@@ -17,6 +17,7 @@
   height: 90vh;
   max-width: 693px;
 }
+
 .left-title {
   font-weight: 600;
   font-size: 26px;
@@ -26,6 +27,7 @@
   order: 0;
   flex-grow: 0;
 }
+
 .left-subtitle {
   font-family: "Urbanist";
   font-style: normal;
@@ -54,13 +56,28 @@ auth-header {
   display: flex;
   justify-content: flex-end;
 }
+
 .logo img {
   width: 90px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background: var(--primary-bg);
+  }
+
+  .auth-layout{
+    background: transparent;
+  }
+
+  .lef-side {
+    display: none
+  }
 }
 
 @media (max-width: 768px) {
-  .auth--layout {
-    flex-direction: column-reverse;
-    height: 100vh;
+  .left-side {
+    display: none
   }
 }
