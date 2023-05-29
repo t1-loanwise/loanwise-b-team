@@ -48,7 +48,7 @@ const CreateAccount = () => {
                 </span>
               </div>
 
-              <div className="input-Content FilledBtn">
+              <div className="input-Content CreateAccount-btn-Content">
                 <FilledBtn title={"Create Account"} size={"100%"} className="btn" />
               </div>
 
@@ -64,7 +64,6 @@ const CreateAccount = () => {
 
         </div>
       </AuthLayout>
-      {/* https://www.section.io/engineering-education/registration-form-react.js-firebase/ */}
 
     </>
   )
