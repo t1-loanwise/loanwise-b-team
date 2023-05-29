@@ -15,11 +15,9 @@ function SecurityQuestion() {
 
   return (
     <AuthLayout
-    title={"Set Security Question"}
-    subtitle={
-      "To keep your account secured, create 2 security questions and answers"
-    }
-  >
+    title={"Set Security Question"} 
+    subtitle={"To keep your account secured, create 2 security questions and answers"} 
+    >
     <div>
       <form>
         <Select placeholder={"Select a question"} options={options} />
