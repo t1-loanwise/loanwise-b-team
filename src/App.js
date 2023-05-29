@@ -1,6 +1,5 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Home from './Pages/Home/Home'
 import Home from './Pages/Home/Home'
 import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
@@ -10,6 +9,8 @@ import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword
 import Login from './Pages/Authentication/Login'
 import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
 import Register from './Pages/Authentication/Register/Register'
+import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
+import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
 
 
 
@@ -28,7 +29,8 @@ function App() {
           <Route exact path='/create-new-password' element={<CreatePassword/>} />
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
-          
+          <Route exact path='/CreateAccount' element={<CreateAccount/>} />
+          <Route exact path='/EmailVerify' element={<EmailVerify/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,36 @@
+.password-Content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.confirmPassword-Content{
+    /* margin-left: 18px; */
+    display: flex;
+}
+/* .password-Content input{
+} */
+.Password-characters {
+    font-family: 'Urbanist';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #808C8F;
+}
+.terms-and-conditions{
+    text-align: right;
+    margin: 18px 0;
+}
+.CreateAccount-btn-Content{
+    margin: 28px 0;
+}
+.Sign-In-Content{
+    text-align: center;
+    margin-top: 68px;
+}
+@media (max-width: 768px) {
+    .Sign-In-Content{
+        margin-top: 2px;
+    }
+  }
+  
