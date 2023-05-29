@@ -42,13 +42,13 @@ const CreateAccount = () => {
               <div className="terms-and-conditions">
                 <input type="radio" className="form__input" id="radio" />
                 <span>
-                  <label htmlFor="fullname">
+                  <label htmlFor="terms">
                     I agree to the terms of service and privacy policy
                   </label>
                 </span>
               </div>
 
-              <div className="input-Content fullname-Content">
+              <div className="input-Content FilledBtn">
                 <FilledBtn title={"Create Account"} size={"100%"} className="btn" />
               </div>
 
