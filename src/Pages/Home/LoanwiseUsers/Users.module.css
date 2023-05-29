@@ -71,6 +71,10 @@ p {
   white-space: nowrap;
 }
 
+.user button:hover img {
+  filter: saturate(0%) brightness(10000%);
+}
+
 @media (max-width: 1000px) {
   .userDesc {
     margin: 20px auto;
