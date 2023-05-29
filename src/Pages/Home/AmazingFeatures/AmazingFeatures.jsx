@@ -2,6 +2,7 @@ import React from "react";
 import { features } from "./Features.js";
 import Group from "../../../Images/Group.svg";
 import styles from "../styles.module.css";
+import AmazingFeaturesTxt from "./AmazingFeaturesTxt.jsx";
 
 const AmazingFeatures = () => {
   const Feature = features.map((item) => (
@@ -13,6 +14,7 @@ const AmazingFeatures = () => {
 
   return (
     <section className={styles.featureWrapper}>
+      <AmazingFeaturesTxt />
       <div className={styles.bigFeature}>
         <h3>Check out our amazing features.</h3>
         <img src={Group} alt="" />
