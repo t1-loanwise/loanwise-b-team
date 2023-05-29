@@ -63,9 +63,6 @@ auth-header {
 }
 
 @media (max-width: 1000px) {
-  body {
-    background: var(--primary-bg);
-  }
 
   .auth-layout{
     background: transparent;
