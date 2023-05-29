@@ -219,8 +219,8 @@ h2 {
   background: #11252a;
 }
 
-.feature img {
-  /* Primary Colour / 80 */
+.feature:hover .featureImg img {
+  filter: saturate(0%) brightness(10000%);
 }
 
 /* ------------------------- */
