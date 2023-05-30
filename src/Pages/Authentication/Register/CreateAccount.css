@@ -19,10 +19,13 @@
 }
 .terms-and-conditions{
     text-align: right;
-    margin: 18px 0;
+    /* margin: 18px 0; */
 }
 .CreateAccount-btn-Content{
     margin: 28px 0;
+}
+.btn{
+    width: 100%;
 }
 .Sign-In-Content{
     text-align: center;

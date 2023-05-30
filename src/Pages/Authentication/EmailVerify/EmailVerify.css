@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .otp_input-items{
-    margin: 18px;
+    margin: 0 18px;
     
 }
 .otp_input{
@@ -13,8 +13,12 @@ text-align: center;
 }
 .Verify-btn-Content{
     margin: 28px 0;
+    text-align: center;
+}
+.Verify-btn{
+    width: 100%;
 }
 .OTP-Content{
     text-align: center;
-    margin-top: 68px;
+    /* margin-top: 68px; */
 }

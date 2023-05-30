@@ -38,7 +38,7 @@ const CreateAccount = () => {
                 </div>
 
               </div>
-
+              
               <div className="terms-and-conditions">
                 <input type="radio" className="form__input" id="radio" />
                 <span>
@@ -47,7 +47,7 @@ const CreateAccount = () => {
                   </label>
                 </span>
               </div>
-
+              
               <div className="input-Content CreateAccount-btn-Content">
                 <FilledBtn title={"Create Account"} size={"100%"} className="btn" />
               </div>
