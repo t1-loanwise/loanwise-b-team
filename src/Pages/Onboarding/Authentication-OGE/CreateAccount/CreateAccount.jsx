@@ -33,28 +33,28 @@ const CreateAccount = () => {
 
               <div className="input-Content password-Wrapper">
                 <div className="password-Content">
-                  <div className="input-Content password-Content">
-                    <FormField
-                      label={"Password"}
-                      type={"password"}
-                      className="form__input"
-                      id="password"
-                    />
-                  </div>
+                  {/* <div className="input-Content password-Content"> */}
+                  <FormField
+                    label={"Password"}
+                    type={"password"}
+                    className="form__input"
+                    id="password"
+                  />
+                  {/* </div> */}
 
-                  <div className="input-Content confirmPassword-Content">
-                    <FormField
-                      label={"Confirm Password"}
-                      type={"password"}
-                      className="form__input"
-                      id="confirmPassword"
-                    />
-                  </div>
+                  {/* <div className="input-Content confirmPassword-Content"> */}
+                  <FormField
+                    label={"Confirm Password"}
+                    type={"password"}
+                    className="form__input"
+                    id="confirmPassword"
+                  />
+                  {/* </div> */}
                 </div>
 
-                <div className="Password-characters">
+                {/* <div className="Password-characters">
                   Password must contain at least 6 characters including numbers
-                </div>
+                </div> */}
               </div>
 
               <div className="terms-and-conditions">
@@ -75,7 +75,7 @@ const CreateAccount = () => {
               </div>
 
               <div className="Sign-In-Content">
-                Already have an account?
+                Already have an account?{" "}
                 <a href="../login" target="_blank" rel="noopener noreferrer">
                   Sign In
                 </a>
