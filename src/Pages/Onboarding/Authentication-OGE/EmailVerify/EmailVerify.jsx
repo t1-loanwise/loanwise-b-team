@@ -16,7 +16,7 @@ const EmailVerify = () => {
         <div className="otp_input-Content">
           <div className="otp_input-items">
             <FormField
-              type={"text"}
+              type={"number"}
               maxlength={"1"}
               className="otp_input"
               id="ist"
@@ -26,7 +26,7 @@ const EmailVerify = () => {
 
           <div className="otp_input-items">
             <FormField
-              type={"text"}
+              type={"number"}
               maxlength={"1"}
               className="otp_input"
               id="sec"
@@ -36,7 +36,7 @@ const EmailVerify = () => {
 
           <div className="otp_input-items">
             <FormField
-              type={"text"}
+              type={"number"}
               maxlength={"1"}
               className="otp_input"
               id="third"
@@ -46,7 +46,7 @@ const EmailVerify = () => {
 
           <div className="otp_input-items">
             <FormField
-              type={"text"}
+              type={"number"}
               maxlength={"1"}
               className="otp_input"
               id="fourth"
@@ -60,7 +60,7 @@ const EmailVerify = () => {
         </div>
 
         <div className="OTP-Content">
-          Don't get OTP?
+          Didn’t get OTP?{" "}
           <a href="../re" target="_blank" rel="noopener noreferrer">
             Resend in 60s
           </a>

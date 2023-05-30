@@ -5,10 +5,10 @@ import AboutUs from './Pages/Website/AboutUs/AboutUs'
 import Pricing from './Pages/Website/Pricing/Pricing'
 import Blog from './Pages/Website/Blog/Blog'
 import './App.css';
-import CreatePassword from './Pages/Onboarding/Authentication/CreatePassword/CreatePassword'
-import Login from './Pages/Onboarding/Authentication/Login/Login'
-import SecurityQuestion from './Pages/Onboarding/Authentication/Login/SecurityQuestion'
-import Register from './Pages/Onboarding/Authentication/Register/Register'
+import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
+import Login from './Pages/Onboarding/Login/Login'
+import SecurityQuestion from './Pages/Onboarding/Login/SecurityQuestion'
+import Register from './Pages/Onboarding/Register/Register'
 import CreateAccount from './Pages/Onboarding/Authentication-OGE/CreateAccount/CreateAccount';
 import EmailVerify from './Pages/Onboarding/Authentication-OGE/EmailVerify/EmailVerify';
 

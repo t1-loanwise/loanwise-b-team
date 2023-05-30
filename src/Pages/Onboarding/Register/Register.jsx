@@ -1,7 +1,7 @@
 import React from "react";
-import AuthLayout from "../../../../components/Layout/AuthLayout";
-import FormField from "../../../../components/Form/FormField";
-import FilledBtn from "../../../../components/Button/FilledBtn";
+import AuthLayout from "../../../components/Layout/AuthLayout";
+import FormField from "../../../components/Form/FormField";
+import FilledBtn from "../../../components/Button/FilledBtn";
 import "./register.css";
 
 const Register = () => {

@@ -124,6 +124,7 @@ h1 {
 
 .right-side button {
   width: 100%;
+  background: #02697f;
 }
 
 @media (max-width: 768px) {
@@ -137,5 +138,10 @@ h1 {
   .right-style {
     padding: 30px 50px;
     margin: 0;
+  }
+
+  .right-side .password-Content {
+    display: block;
+    /* border: 1px solid black; */
   }
 }
