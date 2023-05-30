@@ -1,42 +1,30 @@
 .register-container {
-    width:100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-right: 50px; 
-    gap: 80px;
-    height: 120px;
-    
-    
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
 }
 
-
-
-
 .password-box {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 
 .password-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25%;
 }
 
-
 .confirmpassword-content {
-    margin-left: 6px;
-    width: 50%;
+  margin-left: 6px;
+  width: 50%;
 }
 
 .Password-characters {
-    font-family: 'Urbanist';
-    font-style: italic;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    color: #808C8F;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #808c8f;
 }

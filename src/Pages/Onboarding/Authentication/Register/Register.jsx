@@ -18,18 +18,18 @@ const Register = () => {
             <FormField
               label={"Password"}
               type={"password"}
-              value={"Password"}
+              // value={"Password"}
               className={"password-content"}
             />
 
             <FormField
               label={"Confirm Password"}
               type={"password"}
-              value={"password"}
+              // value={"password"}
               className={"confirmpassword-content"}
             />
           </div>
-          <p>Password must contain at least 6 characters including numbers</p>
+          {/* <p>Password must contain at least 6 characters including numbers</p> */}
           <input type="radio" value="" /> I agree to the terms of service and
           privacy policy
           <FilledBtn title={"Submit"} size={"100%"} />
