@@ -11,7 +11,7 @@ import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
 import Register from './Pages/Authentication/Register/Register'
 import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
 import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
-
+import SuccessfulPage from './Pages/SuccessfulPage/SuccessfulPage'
 
 
 
@@ -30,7 +30,10 @@ function App() {
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
           <Route exact path='/CreateAccount' element={<CreateAccount/>} />
-          <Route exact path='/EmailVerify' element={<EmailVerify/>} />
+          <Route exact path='/EmailVerify' element={<EmailVerify />} />
+          <Route exact path='successful' element={<SuccessfulPage />}  />
+        
+        
         </Routes>
       </BrowserRouter>
     </div>
