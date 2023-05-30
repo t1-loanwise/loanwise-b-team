@@ -31,7 +31,7 @@ const EmailVerify = () => {
         </div>
 
         <div className="Verify-btn-Content">
-        <FilledBtn title={"Verify"} className="Verify-btn" />
+        <FilledBtn title={"Verify"} size={"100%"} className="Verify-btn" />
       </div>
 
         <div className="OTP-Content">

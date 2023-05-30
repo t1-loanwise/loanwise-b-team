@@ -8,8 +8,8 @@ import './App.css';
 // import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword'
 // import Login from './Pages/Authentication/Login'
 // import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
-// import CreateAccount from './Pages/Authentication/Register/CreateAccount';
-import EmailVerify from './Pages/Authentication/EmailVerify/EmailVerify';
+import CreateAccount from './Pages/Authentication/Register/CreateAccount';
+// import EmailVerify from './Pages/Authentication/EmailVerify/EmailVerify';
 
 
 
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <EmailVerify />
+      <CreateAccount />
       {/* <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home />} />

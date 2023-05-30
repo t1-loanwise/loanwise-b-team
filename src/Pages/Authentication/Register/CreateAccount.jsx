@@ -2,7 +2,7 @@ import React from 'react'
 import FilledBtn from '../../../components/Button/FilledBtn'
 import FormField from '../../../components/Form/FormField'
 import AuthLayout from '../../../components/Layout/AuthLayout'
-import '../Register/CreateAccount.css'
+import './CreateAccount.css'
 
 
 const CreateAccount = () => {
@@ -42,9 +42,9 @@ const CreateAccount = () => {
               <div className="terms-and-conditions">
                 <input type="radio" className="form__input" id="radio" />
                 <span>
-                  <label htmlFor="terms">
+                  <p htmlFor="terms">
                     I agree to the terms of service and privacy policy
-                  </label>
+                  </p>
                 </span>
               </div>
               
