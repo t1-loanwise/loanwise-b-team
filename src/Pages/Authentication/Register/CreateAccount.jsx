@@ -2,7 +2,7 @@ import React from 'react'
 import FilledBtn from '../../../components/Button/FilledBtn'
 import FormField from '../../../components/Form/FormField'
 import AuthLayout from '../../../components/Layout/AuthLayout'
-import '../CreateAccount/CreateAccount.css'
+import '../Register/CreateAccount.css'
 
 
 const CreateAccount = () => {
