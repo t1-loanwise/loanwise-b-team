@@ -1,9 +1,8 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home/Home'
-import AboutUs from './Pages/AboutUs/AboutUs'
-import Pricing from './Pages/Pricing/Pricing'
-import Blog from './Pages/Blog/Blog'
+import Home from './Pages/Website/Home/Home'
+import AboutUs from './Pages/Website/AboutUs/AboutUs'
+import Pricing from './Pages/Website/Pricing/Pricing'
+import Blog from './Pages/Website/Blog/Blog'
 import './App.css';
 import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword'
 import Login from './Pages/Authentication/Login'
@@ -12,7 +11,6 @@ import Register from './Pages/Authentication/Register/Register'
 import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
 import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
 import SuccessfulPage from './Pages/SuccessfulPage/SuccessfulPage'
-
 
 
 function App() {

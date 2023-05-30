@@ -164,9 +164,11 @@ footer p:last-child {
 
   .newsletter p {
     width: 100%;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 15px;
+    border: 1px solid black;
   }
 
   .logo {
@@ -207,9 +209,10 @@ footer p:last-child {
 
   .newsletter p {
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
-    line-height: 28px;
+    line-height: 24px;
     margin-bottom: 15px;
   }
 
