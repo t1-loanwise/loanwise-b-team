@@ -27,7 +27,7 @@ const FooterLists = () => {
       title: "Contact",
       items: [
         "loanwise@gmail.com",
-        "+123-457-789-00\n+123-457-789-00",
+        "+123-457-789-00\n+123-457-789-0",
         "123, Numberone Avenue,\nVI, Lagos.",
         [
           <img key="linkedin" src={LinkedIn} alt="LinkedIn" />,
