@@ -1,10 +1,19 @@
 import React from "react";
-import FilledBtn from "../../../../components/Button/FilledBtn";
-import FormField from "../../../../components/Form/FormField";
-import AuthLayout from "../../../../components/Layout/AuthLayout";
+// import FilledBtn from "../../../../components/Button/FilledBtn";
+import FormField from "../../../components/Form/FormField.jsx";
+import AuthLayout from "../../../components/Layout/AuthLayout.jsx";
+import styles from "../../../components/Header/Header.module.css";
 import "./EmailVerify.css";
+import { useNavigate } from "react-router-dom";
 
 const EmailVerify = () => {
+	
+	const navigate = useNavigate();
+	
+	const handleClick = () => {
+		navigate("/successful")
+	}
+
   return (
     <AuthLayout
       title={"Verify Email Address"}
@@ -56,7 +65,8 @@ const EmailVerify = () => {
         </div>
 
         <div className="Verify-btn-Content">
-          <FilledBtn title={"Verify"} size={"100%"} className="Verify-btn" />
+          {/* <FilledBtn title={"Verify"} size={"100%"} className="Verify-btn" /> */}
+          <button className={styles.filledBtn} onClick={handleClick}>Submit</button>
         </div>
 
         <div className="OTP-Content">

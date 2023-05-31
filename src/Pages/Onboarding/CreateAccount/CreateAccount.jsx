@@ -1,10 +1,18 @@
 import React from "react";
-import FilledBtn from "../../../../components/Button/FilledBtn";
-import FormField from "../../../../components/Form/FormField";
-import AuthLayout from "../../../../components/Layout/AuthLayout";
+// import FilledBtn from "../../../../components/Button/FilledBtn";
+import FormField from "../../../components/Layout/AuthLayout.jsx";
+import AuthLayout from "../../../components/Layout/AuthLayout";
 import "./CreateAccount.css";
+import styles from "../../../components/Header/Header.module.css";
+import { useNavigate } from "react-router-dom";
 
 const CreateAccount = () => {
+	  const navigate = useNavigate();
+		const handleClick = () => {
+
+		navigate("/security-question");
+	}
+	
   return (
     <>
       <AuthLayout title={"Create an account"}>
@@ -33,28 +41,26 @@ const CreateAccount = () => {
 
               <div className="input-Content password-Wrapper">
                 <div className="password-Content">
-                  {/* <div className="input-Content password-Content"> */}
+
                   <FormField
                     label={"Password"}
                     type={"password"}
                     className="form__input"
                     id="password"
                   />
-                  {/* </div> */}
+             
 
-                  {/* <div className="input-Content confirmPassword-Content"> */}
+                
                   <FormField
                     label={"Confirm Password"}
                     type={"password"}
                     className="form__input"
                     id="confirmPassword"
                   />
-                  {/* </div> */}
-                </div>
+            
+               </div>
 
-                {/* <div className="Password-characters">
-                  Password must contain at least 6 characters including numbers
-                </div> */}
+                
               </div>
 
               <div className="terms-and-conditions">
@@ -67,11 +73,8 @@ const CreateAccount = () => {
               </div>
 
               <div className="input-Content CreateAccount-btn-Content">
-                <FilledBtn
-                  title={"Create Account"}
-                  size={"100%"}
-                  className="btn"
-                />
+				{/* <FilledBtn title={"Create Account"}  size={"100%"} className="btn" /> */}
+					<button className={styles.filledBtn} onClick={handleClick}>Create Account</button>
               </div>
 
               <div className="Sign-In-Content">
