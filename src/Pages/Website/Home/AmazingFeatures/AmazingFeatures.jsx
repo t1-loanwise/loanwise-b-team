@@ -17,6 +17,7 @@ const AmazingFeatures = () => {
   return (
     <section className={styles.featureWrapper}>
       <AmazingFeaturesTxt />
+      <div className={styles.featureContainer}>
       <div className={styles.bigFeature}>
         <h3>Check out our amazing features.</h3>
         <div className={styles.bigFeatureImg}>
@@ -24,6 +25,8 @@ const AmazingFeatures = () => {
         </div>
       </div>
       <div className={styles.features}>{Feature}</div>
+      </div>
+    
     </section>
   );
 };

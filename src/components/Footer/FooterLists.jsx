@@ -9,7 +9,7 @@ const FooterLists = () => {
       title: "Resources",
       items: [
         { name: "Blog", link: "/blog" },
-        { name: "FAQ", link: "/faq" },
+        { name: "FAQ", link: "#faq" },
         { name: "Help Center", link: "/help" },
         { name: "Contact Us", link: "/contact" },
       ],
