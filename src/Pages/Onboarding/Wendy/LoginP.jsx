@@ -2,7 +2,7 @@ import React from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./loginn.css";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 
 const LoginP = ({ heading, subHeading }) => {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
-import GirlFrame from "../../../Images/girlFrame.svg";
+import HeroSection from "../../../Images/HeroSection.svg";
 import "./Blog.css";
 
 export const Blogimage = () => {
   return (
     <div className="Blogimages">
-      <img src={GirlFrame} alt="" width="px" />
+      <img src={HeroSection} alt="" width="px" />
     </div>
   );
 };
