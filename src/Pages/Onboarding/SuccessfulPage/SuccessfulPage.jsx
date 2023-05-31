@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from "../../Images/logo.svg";
-import "../SuccessfulPage/SuccessfulPage.css"
-import  wave from "../../Images/watermark.png"
-import check from "../../Images/Check.svg"
+import logo from "../../../Images/logo.svg";
+import "./SuccessfulPage.css"
+import  wave from "../../../Images/watermark.png"
+import check from "../../../Images/Check.svg"
 
 
 const SuccessfulPage = () => {
@@ -13,10 +13,7 @@ const SuccessfulPage = () => {
               <img src={logo} alt='succesful logo' />
           </div>
       		
-		  	<div className="successful-wave">
-			<img src={wave} alt='wave' />
-       		 </div>
-
+		  	
 		  <div className='successful-content'>
 			  	<div className='successful-checker'>
 			  		<img src ={check} alt='checkmark Logo' />
@@ -31,6 +28,11 @@ const SuccessfulPage = () => {
 
 
 			</div>
+
+			<div className="successful-wave">
+				<img src={wave} alt='wave' />
+       		 </div>
+
    		 </div>
   )
 }
