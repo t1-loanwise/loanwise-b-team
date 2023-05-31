@@ -8,31 +8,39 @@
 .Blogtext,
 .Blogimages img {
   width: 100%;
+
 }
 
 
 
-.Blogimages img {
-  max-width: 300px;
-  
-}
+ 
 
-.blogInput {
-  gap: 20px;
-}
+
 
 .text{
     width:50%;
 }
 
 h4 {
-  color: #026d8523
+  color: #0ebbe223
 }
 
 h2{
-  color:#00191F;
+  color:#011e25;
+  width: 400px;
 }
 
+.input{
+  width: 160%;
+  height: 50px;
+  padding: 8px 0 8px 8px;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  font-size: 0.6em;
+  &:focus{
+    outline: 1px solid #007e99;
+  }
+}
 
 .padding{
     padding-top: 6px;
