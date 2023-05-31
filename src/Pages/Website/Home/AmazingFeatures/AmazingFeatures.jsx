@@ -2,6 +2,7 @@ import React from "react";
 import { features } from "./Features.js";
 import Arrow from "../../../../Images/Arrow.svg";
 import styles from "../styles.module.css";
+import AmazingFeaturesTxt from "./AmazingFeaturesTxt.jsx";
 
 const AmazingFeatures = () => {
   const Feature = features.map((item) => (
@@ -15,13 +16,16 @@ const AmazingFeatures = () => {
 
   return (
     <section className={styles.featureWrapper}>
-      <div className={styles.bigFeature}>
-        <h3>Check out our amazing features.</h3>
-        <div className={styles.bigFeatureImg}>
-          <img src={Arrow} alt="" />
+      <AmazingFeaturesTxt />
+      <div className={styles.featureContainer}>
+        <div className={styles.bigFeature}>
+          <h3>Check out our amazing features.</h3>
+          <div className={styles.bigFeatureImg}>
+            <img src={Arrow} alt="" />
+          </div>
         </div>
+        <div className={styles.features}>{Feature}</div>
       </div>
-      <div className={styles.features}>{Feature}</div>
     </section>
   );
 };
