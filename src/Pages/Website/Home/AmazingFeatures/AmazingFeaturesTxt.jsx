@@ -19,9 +19,8 @@ const AmazingFeaturesTxt = () => {
           decisions.
         </p>
       </div>
-
       <div className={styles.AmazingImg}>
-        <img src={Arrow} alt="" />
+        <img src={Arrow} alt="Arrow" />
       </div>
     </div>
   );

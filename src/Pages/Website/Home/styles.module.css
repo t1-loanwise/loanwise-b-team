@@ -138,20 +138,17 @@ h2 {
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* grid-gap: 10px; */
   gap: 49px;
+  flex: 2;
 }
 
 .bigFeature {
   display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  /* flex-basis: 0; */
-  flex-grow: 0.4;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: 70px 40px;
-  gap: 150px;
+  padding: 50px 40px 70px;
+  gap: 120px;
   background: #11252a;
   border-radius: 15px;
 }
@@ -368,7 +365,7 @@ h2 {
     flex-direction: column;
   }
 
-  .featureWrapper,
+  .featureContainer,
   .features {
     flex-direction: column;
   }

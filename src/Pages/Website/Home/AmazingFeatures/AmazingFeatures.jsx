@@ -23,6 +23,7 @@ const AmazingFeatures = () => {
           <div className={styles.bigFeatureImg}>
             <img src={Arrow} alt="" />
           </div>
+          <div className={styles.features}>{Feature}</div>
         </div>
         <div className={styles.features}>{Feature}</div>
       </div>
