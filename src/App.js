@@ -5,14 +5,15 @@ import AboutUs from './Pages/AboutUs/AboutUs'
 import Pricing from './Pages/Pricing/Pricing'
 import Blog from './Pages/Blog/Blog'
 import './App.css';
-import CreatePassword from './Pages/Authentication/CreatePassword/CreatePassword'
-import Login from './Pages/Authentication/Login'
-import SecurityQuestion from './Pages/Authentication/SecurityQuestion'
-import Register from './Pages/Authentication/Register/Register'
-import CreateAccount from './Pages/Authentication-OGE/CreateAccount/CreateAccount';
-import EmailVerify from './Pages/Authentication-OGE/EmailVerify/EmailVerify';
 
-
+import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
+import Login from './Pages/Onboarding/Login/Login'
+import SecurityQuestion from './Pages/Onboarding/Login/SecurityQuestion'
+import CreateAccount from './Pages/Onboarding/CreateAccount/CreateAccount';
+import EmailVerify from './Pages/Onboarding/EmailVerify/EmailVerify';
+import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
+import Register from './Pages/Onboarding/Register/Register'
+// import Loginn from './Pages/Onboarding/Wendy/Loginn'
 
 
 function App() {
@@ -28,10 +29,12 @@ function App() {
           <Route exact path='/Register' element={<CreateAccount/>} />
           <Route exact path='/create-new-password' element={<CreatePassword/>} />
           <Route exact path='/login' element={<Login/>} />
-          <Route exact path='/Loginn' element={<Loginn/>} />
+          {/* <Route exact path='/Loginn' element={<Loginn/>} /> */}
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
-          <Route exact path='/CreateAccount' element={<CreateAccount/>} />
-          <Route exact path='/EmailVerify' element={<EmailVerify/>} />
+          <Route exact path='/createAccount' element={<CreateAccount/>} />
+          <Route exact path='/emailVerify' element={<EmailVerify />} />
+          <Route exact path='successful' element={<SuccessfulPage />}  />
+
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,11 +1,19 @@
 import React from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FormField from "../../../components/Form/FormField";
-import FilledBtn from "../../../components/Button/FilledBtn";
+// import FilledBtn from "../../../components/Button/FilledBtn";
+import styles from "../../../components/Header/Header.module.css";
 import Select from "react-select";
+import { useNavigate } from "react-router-dom";
 
 function SecurityQuestion() {
-  const options = [
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate("/emailVerify");
+		}
+
+	 const options = [
     {
       value: "what is your mother's name?",
       label: "What is your Mother's name?",
@@ -20,9 +28,10 @@ function SecurityQuestion() {
       label: "What University did you attend?",
     },
   ];
-
-  return (
-    <AuthLayout
+	return (
+	
+		
+	<AuthLayout
       title={"Set Security Question"}
       subtitle={
         "To keep your account secured, create 2 security questions and answers"
@@ -34,7 +43,8 @@ function SecurityQuestion() {
           <FormField placeholder={"Enter answer"} />
           <Select placeholder={"Select a question"} options={options} />
           <FormField placeholder={"Enter answer"} />
-          <FilledBtn title={"Proceed"} size={"100%"} />
+          <button className={styles.filledBtn} onClick={handleClick}>Submit</button>
+          {/* <FilledBtn title={"Proceed"} size={"100%"} /> */}
         </form>
       </div>
     </AuthLayout>

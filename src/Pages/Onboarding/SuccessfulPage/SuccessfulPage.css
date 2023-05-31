@@ -11,8 +11,11 @@
         font-family: 'Urbanist';
 }
 .successful-wave {
- bottom:0;
+ /* top: 550px; */
 position: absolute;
+bottom: 0px;
+
+  
 }
 .successful-logo{
     display: flex;
@@ -29,8 +32,10 @@ position: absolute;
 
 .successful-wave img{
   
-    height:150px ;
-    width: 1240px;
+    height:170px ;
+    width: 1360px;
+   
+
 
 }
 .successful-content{
