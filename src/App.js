@@ -7,10 +7,10 @@ import './App.css';
 import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
 import Login from './Pages/Onboarding/Login/Login'
 import SecurityQuestion from './Pages/Onboarding/Login/SecurityQuestion'
+import CreateAccount from './Pages/Onboarding/CreateAccount/CreateAccount';
+import EmailVerify from './Pages/Onboarding/EmailVerify/EmailVerify';
+import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
-import CreateAccount from './Pages/Onboarding/Authentication-OGE/CreateAccount/CreateAccount';
-import EmailVerify from './Pages/Onboarding/Authentication-OGE/EmailVerify/EmailVerify';
-import SuccessfulPage from './Pages/SuccessfulPage/SuccessfulPage'
 // import Loginn from './Pages/Onboarding/Wendy/Loginn'
 
 
@@ -30,8 +30,8 @@ function App() {
           <Route exact path='/login' element={<Login/>} />
           {/* <Route exact path='/Loginn' element={<Loginn/>} /> */}
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
-          <Route exact path='/CreateAccount' element={<CreateAccount/>} />
-          <Route exact path='/EmailVerify' element={<EmailVerify />} />
+          <Route exact path='/createAccount' element={<CreateAccount/>} />
+          <Route exact path='/emailVerify' element={<EmailVerify />} />
           <Route exact path='successful' element={<SuccessfulPage />}  />
         
         

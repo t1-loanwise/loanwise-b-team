@@ -7,12 +7,11 @@ const Blogtext = () => {
     <div className="text">
       <h4>Coming Soon</h4>
       <h2>
-        Get Notified We
-        <br /> Our Blog Launches
+        Get Notified We Our Blog Launches
       </h2>
 
       <div className="padding">
-        <input type="text" />
+        <input type="text" placeholder="Enter your email" className="input"/>
         <FilledBtn title={"Notify Me"} />
       </div>
 
