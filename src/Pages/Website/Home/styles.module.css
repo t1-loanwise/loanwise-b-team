@@ -1,0 +1,335 @@
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------- */
+/* Hero*/
+/* ------------------------- */
+
+.hero {
+  margin-top: 30px;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+
+.heroBtns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroBtns a {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.heroText p {
+  margin-bottom: 10px;
+}
+
+.heroBtns:hover img {
+  filter: saturate(0%) brightness(10000%);
+}
+
+/* ------------------ */
+/* loanDefaulters */
+/* ------------------ */
+
+.loanDefaulters,
+.teamwork,
+.Revolutionising,
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+  gap: 50px;
+}
+
+.lwFlexText,
+.lwFlexImg img {
+  width: 100%;
+}
+
+/* ------------------ */
+/* loanDefaulters Text*/
+/* ------------------ */
+
+.lwFlexText {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  max-width: 543px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+.lwFlexText p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.lwFlexText ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+}
+
+.lwFlexText li {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* ------------------ */
+/* loanDefaulters Img*/
+/* ------------------ */
+
+.lwFlexImg {
+  max-width: 736px;
+  display: flex;
+  align-items: center;
+  /* max-height: 875px; */
+}
+
+/* ------------------ */
+/* Revolutionising */
+/* ------------------ */
+
+.revText h2,
+.revText p {
+  margin-bottom: 10px;
+}
+
+.revText h2 {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+/* ------------------ */
+/* Amazing features */
+/* ------------------ */
+
+.featureWrapper,
+.features {
+  display: flex;
+  width: 100%;
+}
+
+.featureWrapper {
+  gap: 49px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-gap: 10px; */
+  gap: 49px;
+}
+
+.bigFeature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 40px;
+  gap: 150px;
+  background: #11252a;
+  border-radius: 15px;
+}
+
+.bigFeature:hover {
+  background: rgb(100, 164, 5);
+}
+
+.bigFeature h3 {
+  font-weight: 400;
+  font-size: 52.5px;
+  line-height: 73px;
+  color: #fff;
+}
+
+.bigFeatureImg {
+  border: 1.2444px solid #ffffff;
+  border-radius: 50%;
+  width: 177px;
+  height: 177px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigFeatureImg img {
+  transform: rotate(-5deg);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 55px;
+  gap: 73px;
+  background: #f3f8f7;
+  border-radius: 15px;
+}
+
+.feature:hover {
+  background: var(--primary-bg);
+}
+
+.feature p {
+  font-size: 20px;
+  line-height: 31px;
+}
+
+.feature:hover p {
+  color: #fff;
+}
+
+.featureImg {
+  background: #80bfcc;
+  border-radius: 33px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.feature:hover .featureImg {
+  background: #11252a;
+}
+
+.feature:hover .featureImg img {
+  filter: saturate(0%) brightness(10000%);
+}
+
+/* ------------------------- */
+/* Medium to small screens*/
+/* ------------------------- */
+
+@media (max-width: 1000px) {
+  .hero,
+  .Revolutionising,
+  .loanDefaulters {
+    flex-direction: column;
+  }
+
+  .lwFlexText ul {
+    align-items: center;
+  }
+
+  .lwFlexText {
+    align-items: center;
+    text-align: center;
+    max-width: none;
+  }
+
+  .history {
+    justify-content: center;
+  }
+
+  .heroBtns {
+    justify-content: center;
+  }
+
+  .revText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teamwork {
+    flex-direction: column-reverse;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .featureWrapper,
+  .features {
+    flex-direction: column;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bigFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 50px;
+    gap: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .Revolutionising,
+  .loanDefaulters {
+    flex-direction: column;
+  }
+
+  .loanDefaulters {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 31px;
+    line-height: 45px;
+    margin-bottom: 10px;
+  }
+
+  .teamwork {
+    flex-direction: column-reverse;
+  }
+
+  .Revolutionising,
+  .hero {
+    flex-direction: column;
+  }
+
+  .featureWrapper,
+  .features {
+    flex-direction: column;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .bigFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 50px;
+    gap: 90px;
+  }
+
+  .heroText {
+    margin-bottom: 30px;
+  }
+}

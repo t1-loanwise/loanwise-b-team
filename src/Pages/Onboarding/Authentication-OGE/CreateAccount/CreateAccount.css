@@ -1,0 +1,53 @@
+.password-Content {
+  display: flex;
+  gap: 10px;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+}
+
+.password-Content input {
+  width: 100%;
+  /* padding: 0; */
+  margin: 0;
+  /* display: block; */
+}
+
+/* .confirmPassword-Content {
+  display: flex;
+} */
+/* .password-Content input{
+} */
+.Password-characters {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #808c8f;
+}
+
+.terms-and-conditions {
+  text-align: right;
+  margin: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.terms-and-conditions input {
+  width: 15px;
+  margin: 0 3px 0 0;
+}
+
+.CreateAccount-btn-Content {
+  margin: 28px 0;
+}
+.Sign-In-Content {
+  text-align: center;
+  margin-top: 68px;
+}
+
+@media (max-width: 768px) {
+  .Sign-In-Content {
+    margin-top: 2px;
+  }
+}

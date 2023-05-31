@@ -1,17 +1,15 @@
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
 .field-container {
-  max-width: 100%;
   display: flex;
   flex-direction: column;
-
-  /*padding-left: 70px; */
-  font-style: normal;
-  text-align: left;
 }
 .label {
-  font-family: "Urbanist";
-  font-style: normal;
   font-weight: 600;
-  font-size: 16px;
   line-height: 24px;
   color: #00191f;
 }
@@ -19,10 +17,11 @@
   background: #ffffff;
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
-  height: 48px;
+
   width: 100%;
-  padding: 15px;
+  padding: 15px 0 15px 15px;
   outline: none;
+  /* border: 1px solid black; */
 }
 /*
 .submit{
@@ -31,3 +30,15 @@ gap: 10px;
 background: #007E99;
 border-radius: 5px;
 } */
+
+@media (max-width: 1000px) {
+  .label {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  .label {
+    color: #ffffff;
+  }
+}

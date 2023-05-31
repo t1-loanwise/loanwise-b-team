@@ -1,0 +1,55 @@
+.Blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.Blogtext,
+.Blogimages img {
+  width: 100%;
+}
+
+
+
+.Blogimages img {
+  max-width: 300px;
+  
+}
+
+.blogInput {
+  gap: 20px;
+}
+
+.text{
+    width:50%;
+}
+
+h4 {
+  color: #026d8523
+}
+
+h2{
+  color:#00191F;
+}
+
+
+.padding{
+    padding-top: 6px;
+    display:flex;
+    padding:2px;
+}
+
+p{
+  font-weight: 600;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .Blog {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
