@@ -51,6 +51,12 @@
   margin-bottom: 40px;
 }
 
+.grid a {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .person-profile {
   height: 300px;
   width: 100%;
@@ -107,15 +113,6 @@
 .get-Started h2 {
   font-size: 31px;
   font-weight: 600px;
-}
-
-.get-Started button {
-  padding: 10px 15px;
-  font-weight: 400;
-  color: #ffffff;
-  background-color: #007e99;
-  border-radius: 5px;
-  border: none;
 }
 
 .get-Started p {
