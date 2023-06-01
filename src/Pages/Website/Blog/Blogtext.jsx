@@ -12,7 +12,7 @@ const Blogtext = () => {
       </h2>
 
       <div className="padding">
-        <input type="text" placeholder="Enter your email" />
+        <input type="text" placeholder="Enter your email" className="input"/>
         <FilledBtn title={"Notify Me"} />
       </div>
 

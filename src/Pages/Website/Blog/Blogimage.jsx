@@ -5,7 +5,7 @@ import "./Blog.css";
 export const Blogimage = () => {
   return (
     <div className="Blogimages">
-      <img src={HeroSection} alt="" width="px" />
+      <img src={HeroSection} alt="" width="90%" />
     </div>
   );
 };
