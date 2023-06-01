@@ -12,6 +12,7 @@
 }
 
 
+
 .Blogimages{
   position: relative;
   width: 60%;
@@ -34,17 +35,15 @@
 }
  
 
-
-
 .text{
     width:50%;
 }
 
-h4 {
+.text h4 {
   color: #0ebbe223
 }
 
-h2{
+.text h2{
   color:#011e25;
   width: 400px;
 }
@@ -67,7 +66,7 @@ h2{
     padding:2px;
 }
 
-p{
+.text p{
   font-weight: 600;
   padding-top: 5px;
 }

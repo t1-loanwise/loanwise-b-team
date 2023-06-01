@@ -1,6 +1,8 @@
 import React from "react";
 import profile from "./data/profile-data";
-import { VscArrowRight } from "react-icons/vsc";
+import TransparentBtn from "../../../components/Button/TransparentBtn";
+import Icon from "../../../Images/arrow-right.svg";
+
 
 const Profile = () => {
   return (
@@ -15,7 +17,7 @@ const Profile = () => {
               </div>
               <p>{item.name}</p>
               <p  >{item.position}</p>
-              <a href="/" className = 'learn-more'>Learn More <VscArrowRight /></a>
+              <TransparentBtn title={'Learn More'} icon={Icon} />
             </div>
 
           );

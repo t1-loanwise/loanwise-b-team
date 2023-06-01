@@ -13,7 +13,7 @@ const Question = () => {
   };
 
   return (
-    <div className="frequent-question">
+    <div className="frequent-question" id="faq">
       <div className="frequent-div">
         <h2>Frequently asked questions</h2>
         <p>
