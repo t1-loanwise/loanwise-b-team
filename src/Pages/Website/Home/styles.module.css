@@ -79,7 +79,6 @@ h2 {
 }
 
 .lwFlexText p {
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 }
@@ -168,13 +167,13 @@ h2 {
 .AmazingImg {
   border-radius: 50%;
   height: 177px;
+  width: 177px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .bigFeatureImg {
-  width: 177px;
   border: 1.2444px solid #ffffff;
 }
 
@@ -185,23 +184,17 @@ h2 {
   gap: 20px;
 }
 
-.AmazingText,
-.AmazingImg {
-  width: 100%;
-}
-
 .AmazingText {
-  width: 70%;
+  width: 100%;
+  max-width: 780px;
 }
 
 .AmazingImg {
-  max-width: 177px;
   border: 1.2444px solid #000;
 }
 
 .AmazingImg img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .bigFeatureImg img,
@@ -253,10 +246,11 @@ h2 {
 }
 
 /* ------------------------- */
-/* Medium to small screens*/
+/* Tablets and big phones*/
 /* ------------------------- */
 
 @media (max-width: 1000px) {
+
   .hero,
   .Revolutionising,
   .loanDefaulters {
@@ -318,6 +312,11 @@ h2 {
     gap: 90px;
   }
 
+  .bigFeatureImg {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
   .featureHeader {
     flex-direction: column;
     justify-content: center;
@@ -339,7 +338,12 @@ h2 {
   }
 }
 
+/* ------------------------- */
+/* Medium to small screens*/
+/* ------------------------- */
+
 @media (max-width: 768px) {
+
   .hero,
   .Revolutionising,
   .loanDefaulters {
@@ -380,6 +384,17 @@ h2 {
     align-items: center;
     padding: 70px 50px;
     gap: 90px;
+  }
+
+  .bigFeature h3 {
+    font-size: 42.5px;
+    line-height: 63px;
+    color: #fff;
+  }
+
+  .bigFeatureImg {
+    max-width: 120px;
+    max-height: 120px;
   }
 
   .heroText {
