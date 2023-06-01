@@ -8,30 +8,26 @@
 .Blogtext,
 .Blogimages img {
   width: 100%;
+
 }
 
 
 
-.Blogimages img {
-  width: 90%;
-  
-}
+ 
 
-.blogInput {
-  gap: 20px;
-}
+
 
 .text{
     width:50%;
 }
 
 h4 {
-  color: #0c829c23
+  color: #0ebbe223
 }
 
 h2{
-  color:#00191F;
-  width: 120px;
+  color:#011e25;
+  width: 400px;
 }
 
 .input{
