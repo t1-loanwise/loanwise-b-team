@@ -61,10 +61,12 @@ footer {
   margin-bottom: 12px;
 }
 
-.footerInput p {
+.footerFlex .footerInput p {
   font-size: 13px;
   line-height: 14px;
   margin-bottom: 16px;
+  color: #55666a;
+  /* border: 1px solid red; */
 }
 
 .footerInput label {
