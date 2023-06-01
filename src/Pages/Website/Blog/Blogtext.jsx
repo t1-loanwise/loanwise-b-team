@@ -7,8 +7,7 @@ const Blogtext = () => {
     <div className="text">
       <h4>Coming Soon</h4>
       <h2>
-        Get Notified We
-        <br /> Our Blog Launches
+        Get Notified We Our Blog Launches
       </h2>
 
       <div className="padding">
