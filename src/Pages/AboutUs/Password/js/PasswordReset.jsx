@@ -1,4 +1,5 @@
 import React, {Pages} from "react";
+import "./Password.css"
 
 const Password= ({ PasswordRest}) => {
     return (
@@ -8,12 +9,12 @@ const Password= ({ PasswordRest}) => {
          <CreditScoreimg />
         </div>
 
-        <div>
+        <div className="form-wrapper">
             <h1>Forgot Password?</h1>
             <p>We've got you, please enter your registered email address</p>
         </div>
             <div>
-                <h3>Email Address</h3>
+                <h3 className="form-wrapper">Email Address</h3>
             </div>
 
             <div className="input-Content email-Content">
@@ -26,4 +27,4 @@ const Password= ({ PasswordRest}) => {
 </section>
     );
 };
-export class Password;
+export default Password;

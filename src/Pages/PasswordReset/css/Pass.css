@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Pass-Container{
+    width:100vw;
+    min-height: 100vh;
+}
+
+.Pass-Content{
+    width:100vw;
+    height:100vh;
+    padding:2.5rem;
+    border: 2px solid #e6e6e6;
+    display:flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+/* .Pass-Content .sub_sect{} */
+
+.Pass-Content .bg_img-container{
+    width:40%;
+    border: 2px solid #e6e6e6;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Pass-Content .bg_img-container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Pass-Content .form-Wrapper{
+    width:60%;
+    position: relative;
+}
+
+.Pass-Content .form-Wrapper .inner_div{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    position: absolute;   
+    top:10rem;
+    left:0;
+    right:0;
+    margin:0 3rem;
+}
+
+.Pass-Content .form-Wrapper .inner_div span{
+    width: 100%;
+}
+
+.Pass-Content .form-Wrapper .inner_div span .header{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.Pass-Content .form-Wrapper .inner_div span .sub_title{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.Pass-Content .form-Wrapper .inner_div span form .input-Content{
+    margin-top: 1rem;
+}
+
+.Pass-Content .form-Wrapper .inner_div span form .input-Content label{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.Pass-Content .form-Wrapper .inner_div span form .input-Content input{
+    width:100%;
+    padding:.75rem .5rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.Pass-Content .form-Wrapper .inner_div span form button{
+    width:100%;
+    padding:.75rem .5rem;
+    background-color: #008080;
+    color:#fff;
+    border:none;
+    border-radius: 5px;
+}
