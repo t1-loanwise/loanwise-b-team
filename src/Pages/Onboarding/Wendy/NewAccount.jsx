@@ -69,7 +69,7 @@ const NewAccount = () => {
                 id="password"
                 placeholder={"Enter Password"}
               />
-              <button onClick={togglePasswordVisibility}>
+              <button type="button" onClick={togglePasswordVisibility}>
                 {passwordVisible ? (
                   <RiEyeLine style={{ color: "#007e99" }} />
                 ) : (
@@ -96,7 +96,7 @@ const NewAccount = () => {
                 id="confirmPassword"
                 placeholder={"Confirm Password"}
               />
-              <button onClick={toggleConfirmPasswordVisibility}>
+              <button type="button" onClick={toggleConfirmPasswordVisibility}>
                 {confirmPasswordVisible ? (
                   <RiEyeLine style={{ color: "#007e99" }} />
                 ) : (
