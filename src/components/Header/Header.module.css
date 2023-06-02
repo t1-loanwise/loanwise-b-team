@@ -41,7 +41,7 @@ ul {
 }
 
 li {
-  padding: 8px;
+  margin: 8px;
 }
 
 ul li a {
@@ -62,9 +62,9 @@ ul li a {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   white-space: nowrap;
   font-weight: 500;
 }
@@ -84,6 +84,9 @@ ul li a {
   border: 1px solid var(--primary-bg);
   color: var(--primary-bg);
   padding: 16px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .transparentBtn:hover {
@@ -92,8 +95,8 @@ ul li a {
   transition: all ease-in-out 0.02s;
 }
 
-.transparentBtn img:hover {
-  fill: #fff;
+.transparentBtn:hover img {
+  filter: saturate(0%) brightness(10000%);
 }
 
 .transparentBtn img {

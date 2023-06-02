@@ -19,8 +19,8 @@ const HeroTxt = () => {
       </div>
       <HeroText heading={heading} paragraph={paragraph} />
       <div className={styles.heroBtns}>
-        <FilledBtn title={"Get Started"} link={"/register"} />
-        <TransparentBtn title={"Learn More"} icon={Icon} />
+        <FilledBtn title={"Get Started"} link={"/newaccount"} />
+        <TransparentBtn title={"Learn More"} icon={Icon} link={"/aboutUs"} />
       </div>
     </div>
   );

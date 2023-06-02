@@ -82,6 +82,23 @@ h1 {
   justify-content: flex-end;
 }
 
+.right-side button {
+  width: 100%;
+}
+
+.right-side label {
+  margin-bottom: 5px;
+}
+
+.right-side input,
+.right-side h1 {
+  margin-bottom: 10px;
+}
+
+.right-side h1 {
+  padding-top: 20px;
+}
+
 @media (max-width: 1000px) {
   .auth-container {
     padding: 0 100px;
@@ -110,21 +127,10 @@ h1 {
     align-items: center;
     justify-content: flex-end;
   }
-}
-
-.right-side label,
-.right-side input,
-.right-side h1 {
-  margin-bottom: 10px;
-}
-
-.right-side h1 {
-  padding-top: 20px;
-}
-
-.right-side button {
-  width: 100%;
-  background: #02697f;
+  .right-side button {
+    width: 100%;
+    background: #02697f;
+  }
 }
 
 @media (max-width: 768px) {
