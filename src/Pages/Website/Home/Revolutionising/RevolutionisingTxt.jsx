@@ -10,7 +10,7 @@ const RevolutionisingTxt = () => {
   return (
     <div className={styles.revText}>
       <LwFlexText paragraph={paragraph} heading={heading} />
-      <FilledBtn title={"Get Started"} link={"/register"} />
+      <FilledBtn title={"Get Started"} link={"//newaccount"} />
     </div>
   );
 };

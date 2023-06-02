@@ -7,8 +7,8 @@ const Newsletter = () => {
     <div className={styles.newsletter}>
       <p>Join Our Newsletter to be up-to-date with our latest news. </p>
       <div className={styles.newsletterBtns}>
-        <TransparentBtn title={"Subscribe"} link={'/createaccount'}/>
-        <FilledBtn title={"Get A Membership"} link={'/pricing'}/>
+        <TransparentBtn title={"Subscribe"} link={"/newaccount"} />
+        <FilledBtn title={"Get A Membership"} link={"/pricing"} />
       </div>
     </div>
   );
