@@ -21,9 +21,9 @@
 .my-image {
   position: relative;
   width: 60%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: fit-content;
-   overflow-y: hidden;
+   /* overflow-y: hidden; */
 }
 
 .Blogimages img:nth-of-type(2) {
