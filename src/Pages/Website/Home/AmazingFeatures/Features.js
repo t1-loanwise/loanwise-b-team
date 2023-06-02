@@ -1,7 +1,7 @@
 export const features = [
     {
         id: 1,
-        image: require('./Features/chart.svg').default,
+        image: require('./Features/status-up.svg').default,
         text: 'Predictive analytics for accurate risk assessment'
     },
     {
@@ -16,7 +16,7 @@ export const features = [
     },
     {
         id: 4,
-        image: require('./Features/status-up.svg').default,
+        image: require('./Features/chart.svg').default,
         text: 'Data integration for comprehensive financial history.'
     }
 ]

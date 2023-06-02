@@ -35,7 +35,7 @@ const Loginn = () => {
             placeholder={"Enter email address"}
           />
           {errors.email?.type === "required" && (
-            <p>The email field is required</p>
+            <p className="errorMessage">The email field is required</p>
           )}
         </div>
         <div className="input__margin">
@@ -46,15 +46,23 @@ const Loginn = () => {
             id="password"
             placeholder={"Enter email address"}
           />
-          {errors.email?.type === "required" && (
-            <p>The email field is required</p>
-          )}
-          {errors.email?.type === "minLength" && (
-            <p>Password must contain at least 6 characters including numbers</p>
+          {errors.password && (
+            <p className="errorMessage">
+              Password must contain at least 6 characters including numbers
+            </p>
           )}
         </div>
+        <div className="checkForgot">
+          <div className="checkText">
+            <input type="checkbox" name="Keep me signed in" /> Keep me signed in
+          </div>
+          <p className="subHeading">
+            <a href="/forgotpassword">Forgot Password?</a>
+          </p>
+        </div>
+
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Submit"} />
+          <FilledBtn type={"submit"} title={"Sign In"} />
         </div>
       </form>
     </AuthLayout>
