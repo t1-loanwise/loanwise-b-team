@@ -11,7 +11,8 @@ import CreateAccount from './Pages/Onboarding/CreateAccount/CreateAccount';
 import EmailVerify from './Pages/Onboarding/EmailVerify/EmailVerify';
 import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
-// import Loginn from './Pages/Onboarding/Wendy/Loginn'
+import Loginn from './Pages/Onboarding/Wendy/Loginn'
+import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
 
 
 
@@ -28,13 +29,12 @@ function App() {
           <Route exact path='/register' element={<Register/>} />
           <Route exact path='/create-new-password' element={<CreatePassword/>} />
           <Route exact path='/login' element={<Login/>} />
-          {/* <Route exact path='/Loginn' element={<Loginn/>} /> */}
+          <Route exact path='/Loginn' element={<Loginn/>} />
+          <Route exact path='/NewAccount' element={<NewAccount/>} />
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
           <Route exact path='/createAccount' element={<CreateAccount/>} />
           <Route exact path='/emailVerify' element={<EmailVerify />} />
           <Route exact path='successful' element={<SuccessfulPage />}  />
-        
-        
         </Routes>
       </BrowserRouter>
     </div>

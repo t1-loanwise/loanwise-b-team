@@ -12,11 +12,6 @@
   /* display: block; */
 }
 
-/* .confirmPassword-Content {
-  display: flex;
-} */
-/* .password-Content input{
-} */
 .Password-characters {
   font-style: italic;
   font-weight: 500;
@@ -31,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 3px;
 }
 
 .terms-and-conditions input {
@@ -38,9 +34,16 @@
   margin: 0 3px 0 0;
 }
 
+.terms-and-conditions span label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
 .CreateAccount-btn-Content {
   margin: 28px 0;
 }
+
 .Sign-In-Content {
   text-align: center;
   margin-top: 68px;
