@@ -1,11 +1,12 @@
 import React from "react";
 import FilledBtn from "../../../components/Button/FilledBtn";
+import ComingSoon from "../../../Images/ComingSoon.svg"
 import "./Blog.css";
 
 const Blogtext = () => {
   return (
     <div className="text">
-      <h4>Coming Soon</h4>
+      <img src={ComingSoon} alt=""/>
       <h2>
         Get Notified We Our Blog Launches
       </h2>
