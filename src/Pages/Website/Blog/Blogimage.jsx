@@ -1,11 +1,13 @@
 import React from "react";
-import HeroSection from "../../../Images/HeroSection.svg";
+import background from "../../../Images/Ellipse 36.svg";
+import girlImage from "../../../Images/girlImage.svg";
 import "./Blog.css";
 
 export const Blogimage = () => {
   return (
     <div className="Blogimages">
-      <img src={HeroSection} alt="" width="90%" />
+      <img src={background} alt="" />
+      <img src={girlImage} alt="" />
     </div>
   );
 };
