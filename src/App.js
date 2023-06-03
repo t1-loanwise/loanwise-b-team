@@ -16,6 +16,8 @@ import Loginn from "./Pages/Onboarding/Wendy/Loginn";
 import NewAccount from "./Pages/Onboarding/Wendy/NewAccount";
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 
+import Setting from "./Pages/Dashboard/Settings/Setting";
+
 function App() {
   return (
     <div className="App">
@@ -43,6 +45,9 @@ function App() {
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
           <Route exact path="successful" element={<SuccessfulPage />} />
           <Route exact path="/PasswordVerify" element={<PasswordVerify />} />
+
+          <Route path="/settings" element={<Setting />} />
+
         </Routes>
       </BrowserRouter>
     </div>
