@@ -17,7 +17,6 @@ import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'
 
 
 
-
 function App() {
 
   return (
@@ -36,8 +35,8 @@ function App() {
           <Route exact path='/security-question' element={<SecurityQuestion />} />
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path='/emailVerify' element={<EmailVerify />} />
-          <Route exact path='successful' element={<SuccessfulPage />} />
-          <Route exact path='dashboard' element={<Dashboard />} />
+           <Route exact path='/successful' element={<SuccessfulPage />} />
+           <Route  path='/dashboard/*' element={<Dashboard/>} />
         </Routes>
       </BrowserRouter>
     </div>
