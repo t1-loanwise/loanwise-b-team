@@ -13,6 +13,10 @@ import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
 import Loginn from './Pages/Onboarding/Wendy/Loginn'
 import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
+import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'
+
+
+
 
 
 
@@ -34,7 +38,12 @@ function App() {
           <Route exact path='/security-question' element={<SecurityQuestion/>} />
           <Route exact path='/createAccount' element={<CreateAccount/>} />
           <Route exact path='/emailVerify' element={<EmailVerify />} />
-          <Route exact path='successful' element={<SuccessfulPage />}  />
+          <Route exact path='/successful' element={<SuccessfulPage />} />
+           <Route  path='/dashboard/*' element={<Dashboard/>} />
+          
+      
+        
+        
         </Routes>
       </BrowserRouter>
     </div>
