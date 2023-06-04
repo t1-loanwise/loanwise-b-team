@@ -62,11 +62,11 @@ ul li a {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  white-space: nowrap;
+  font-weight: 500;
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  white-space: nowrap;
-  font-weight: 500;
 }
 
 .filledBtn {
@@ -84,6 +84,9 @@ ul li a {
   border: 1px solid var(--primary-bg);
   color: var(--primary-bg);
   padding: 16px 34px;
+}
+
+.transparentBtn a, .filledBtn a{
   display: flex;
   align-items: center;
   justify-content: center;

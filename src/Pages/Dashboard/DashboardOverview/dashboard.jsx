@@ -1,9 +1,15 @@
 import React from 'react'
+import DashSearch from './components/DashSearch'
+import LoanAmount from './components/LoanAmount'
 
-const dashboard = () => {
+
+const Dashboard = () => {
   return (
-    <div>dashboard</div>
+    <div className='container'>
+      <DashSearch />
+      <LoanAmount />
+    </div>
   )
 }
 
-export default dashboard
+export default Dashboard
