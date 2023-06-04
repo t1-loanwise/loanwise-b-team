@@ -1,0 +1,15 @@
+import styles from "../Header/Header.module.css";
+
+const TransparentBtn = ({ title, icon, icon2, link }) => {
+  return (
+    <button className={styles.transparentBtn}>
+      <a href={link ? link : "#"}>
+        {icon2 && <img src={icon2} alt="Icon2" />}
+        <span>{title}</span>
+        {icon && <img src={icon} alt="Icon" />}
+      </a>
+    </button>
+  );
+};
+
+export default TransparentBtn;
