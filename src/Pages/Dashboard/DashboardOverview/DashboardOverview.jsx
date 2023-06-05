@@ -3,6 +3,8 @@ import "./dashboard.css";
 import DashSearch from "./components/DashSearch";
 import LoanAmount from "./components/LoanAmount";
 
+
+
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, SetIsLoading] = useState(false);
