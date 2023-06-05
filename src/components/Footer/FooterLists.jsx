@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
-import LinkedIn from "../../Images/socials/linkedIn.svg";
-import Instagram from "../../Images/socials/instagram.svg";
-import Twitter from "../../Images/socials/twitter.svg";
+import LinkedIn from "../../Images/linkedIn.svg";
+import Instagram from "../../Images/instagram.svg";
+import Twitter from "../../Images/twitter.svg";
 
 const FooterLists = () => {
   const footerItems = [

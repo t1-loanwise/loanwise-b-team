@@ -1,5 +1,5 @@
 import Newsletter from "./Newsletter";
-import FooterInput from "./FooterInput";
+// import FooterInput from "./FooterInput";
 import styles from "./Footer.module.css";
 import FooterLists from "./FooterLists";
 
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <Newsletter />
       <div className={styles.footerFlex}>
-        <FooterInput />
+        {/* <FooterInput /> */}
         <FooterLists />
       </div>
       <p>© 2023 Loanwise.All rights reserved</p>
