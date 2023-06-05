@@ -1,227 +1,362 @@
-
 h3,
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .dash__title {
-    margin-bottom: 26px;
+  margin-bottom: 26px;
 }
 
 .dash__title h2 {
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 43px;
-    color: #00151A;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  color: #00151a;
 }
 
 .dash__title p {
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 34px;
-    color: #00151A;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #00151a;
 }
 
 .dash__searchFilterDate {
-    display: flex;
-    align-items: center;
-    gap: 300px;
+  display: flex;
+  align-items: center;
+  gap: 300px;
 }
 
-
 .dash__search {
-    max-width: 622px;
-    flex: 0.8;
+  max-width: 622px;
+  flex: 0.8;
 }
 
 .dash__searchFilterDate fieldset {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .dash__search input {
-    flex: 1;
-    padding: 17px 0 17px 15px;
-    margin: 0;
+  flex: 1;
+  padding: 17px 0 17px 15px;
+  margin: 0;
 }
 
 .btnzz {
-    display: none;
+  display: none;
 }
 
 .dash__searchFilter {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    /* width: 100%; */
-    flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  /* width: 100%; */
+  flex: 1;
 }
 
-fieldset>button {
-    height: auto;
-    width: auto;
-    padding: 16px 44px;
-    border: 1px solid green;
+fieldset > button {
+  height: auto;
+  width: auto;
+  padding: 16px 44px;
+  border: 1px solid green;
 }
 
-
-
-.dash__searchFilter>button:nth-child(2),
+.dash__searchFilter > button:nth-child(2),
 .btnzz button:nth-child(2) {
-    background: #FFFFFF;
-    border: 2px solid #CCE5EB;
-    border-radius: 0;
-    height: auto;
-    width: auto;
-    padding: 8px 20px;
-    margin: 0;
+  background: #ffffff;
+  border: 2px solid #cce5eb;
+  border-radius: 0;
+  height: auto;
+  width: auto;
+  padding: 8px 20px;
+  margin: 0;
 }
 
-.dash__searchFilter>button:nth-child(2) a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0;
+.dash__searchFilter > button:nth-child(2) a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
 }
-
 
 .loanAmountContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 24px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  width: 100%;
 }
 
+.loanAmountWrapper:last-child {
+  display: none;
+}
 
 .loanAmountWrapper {
-    background: #FFFFFF;
-    border: 1px solid #E6F2F5;
-    box-shadow: 0px 8px 40px #E6F2F5;
-    border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e6f2f5;
+  box-shadow: 0px 8px 40px #e6f2f5;
+  border-radius: 16px;
 }
 
 .loanAmount {
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    width: 100%;
+  gap: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 15px 20px 20px;
+  width: 100%;
 }
 
 .loanAmount h3 {
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 29px;
-    color: #00151A;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 29px;
+  color: #00151a;
 }
 
 .loanAmount p {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 19px;
-    color: #00151A;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #00151a;
+  white-space: nowrap;
 }
 
 .loanAmountIcon {
-    background: #CCE5EB;
-    box-shadow: 0px 8px 40px #E6F2F5;
-    border-radius: 16px;
-    padding: 8px 15px;
+  background: #cce5eb;
+  box-shadow: 0px 8px 40px #e6f2f5;
+  border-radius: 13px;
+  padding: 8px 15px;
+}
+
+.loanAmountIcon img {
+  width: 23px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px 0 50px;
+  padding: 2px;
+  gap: 15px;
+  width: 100%;
+  flex: 1;
+}
+
+.chart .loanAmountWrapper {
+  align-self: center;
+}
+
+.chart1,
+.chart2 {
+  background: #ffffff;
+  border: 1px solid #e6f2f5;
+  box-shadow: 0px 8px 40px #e6f2f5;
+  border-radius: 16px;
+  padding-right: 25px;
+  width: 100%;
+}
+
+.chart1 {
+  padding-bottom: 0;
+  flex: 0.45;
+}
+
+.chart2 {
+  padding: 14px;
+  flex: 0.55;
+}
+
+.chart2 h2 {
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+
+.graph {
+  display: flex;
+  align-items: center;
+  /* padding-left: 17px; */
+}
+
+.graph .rotate {
+  transform: rotate(-90deg);
+  margin-bottom: 30px;
+}
+
+.chartTitle {
+  padding: 10px 0 10px 25px;
+}
+
+.chart1 .chartTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chartTitle h2 {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.colors {
+  display: flex;
+  gap: 7px;
+  font-size: 8px;
+  font-weight: 500;
+  align-self: flex-end;
+  padding: 7px 0 0 0;
+}
+
+.color1,
+.color2,
+.color3 {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.color1 span,
+.color2 span,
+.color3 span {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+}
+
+.tl span {
+  background: #003299;
+}
+
+.ap span {
+  background: #99007e;
+}
+
+.dc span {
+  background: #009967;
+}
+
+.chart2 h2 {
+  line-height: 20px;
+}
+
+.chart1 p {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 0;
+  padding: 0 10px 10px;
+}
+
+.chart2 p {
+  font-size: 10px;
+  text-align: center;
+  color: #00191f;
+  line-height: 0;
 }
 
 @media (max-width: 768px) {
-    .dash__title h2 {
-        font-size: 30px;
-    }
+  .dash__title h2 {
+    font-size: 30px;
+  }
 
-    .dash__title p {
-        font-size: 22px;
-    }
+  .dash__title p {
+    font-size: 22px;
+  }
 
-    .dash__searchFilterDate {
-        flex-direction: column;
-        align-items: normal;
-        gap: 0;
-    }
+  .dash__searchFilterDate {
+    flex-direction: column;
+    align-items: normal;
+    gap: 0;
+  }
 
-    .dash__searchFilter {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
+  .dash__searchFilter {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
 
-    .dash__search {
-        max-width: none;
-        grid-column: auto;
-        flex-direction: column;
-    }
+  .dash__search {
+    max-width: none;
+    grid-column: auto;
+    flex-direction: column;
+  }
 
-    fieldset.dash__search>button {
-        display: none;
-    }
+  fieldset.dash__search > button {
+    display: none;
+  }
 
-    .dash__searchFilter>button:nth-child(2) {
-        display: none;
-    }
+  .dash__searchFilter > button:nth-child(2) {
+    display: none;
+  }
 
-    .btnzz {
-        display: flex;
-        gap: 20px;
-    }
-
-    .dash__search button {
-        display: block;
-    }
-
-    .dash__searchFilterDate fieldset {
-        justify-content: flex-start;
-    }
-
-    .dash__searchFilter,
-    .dash__searchFilter>button:last-child a {
-        justify-content: flex-start;
-    }
-
-    .loanAmountContainer {
-        grid-template-columns: 2fr;
-    }
-
-    .loanAmount {
-        align-items: center;
-    }
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-        font-family: 'Urbanist';
-        font-style: normal;
-
-}
-/* ---------dashbody body------- */
-.dashboard-body{
+  .btnzz {
     display: flex;
-    flex-direction: row;
+    gap: 20px;
+  }
+
+  .dash__search button {
+    display: block;
+  }
+
+  .dash__searchFilterDate fieldset {
+    justify-content: flex-start;
+  }
+
+  .dash__searchFilter,
+  .dash__searchFilter > button:last-child a {
+    justify-content: flex-start;
+  }
+
+  .loanAmountContainer {
+    grid-template-columns: 2fr;
+  }
+
+  .loanAmount {
+    align-items: center;
+  }
+
+  .loanAmountWrapper:last-child {
+    display: block;
+  }
+
+  .chart .loanAmountWrapper {
+    display: none;
+  }
+
+  .chart {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart1,
+  .chart1 {
+    /* max-width: 300px; */
+  }
+}
+
+/* ---------dashbody body------- */
+.dashboard-body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dashboard-body .wrapper {
+  margin: 20px 25px 0;
+  overflow-x: hidden;
 }
 
 /* ------------dashboard overview-------------- */
-.overview-container{
-    padding: 27px 50px;
-    width: 82vw;
-    height: 88vh;
-
+.overview-container {
+  padding: 27px 50px;
+  width: 82vw;
+  height: 88vh;
 }
-.explore p{
-  
-        font-weight: 500;
-        font-size: 19px;
-        line-height: 25px;
-        color: #00151A;
+.explore p {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  color: #00151a;
 }
-
