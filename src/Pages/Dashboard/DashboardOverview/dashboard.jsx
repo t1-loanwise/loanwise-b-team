@@ -8,6 +8,21 @@ import './dashboard.css'
 
 const Dashboard = () => {
   return (
+    <>
+    <div className='dashboard-wrapper'>
+    <DashboardHeader />
+    
+    <div className='dashboard-body'>
+        <SideBar />
+        <DashboardPages/>
+    </div>
+    </div>
+    <div className='container'>
+      <DashSearch />
+      <LoanAmount /> 
+    </div>
+    </>
+
 
       
       <div className='dashboard-wrapper'>
@@ -21,4 +36,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Dashboard;
