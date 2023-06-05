@@ -3,7 +3,7 @@ import "./layout.css";
 import Chart from "../../Images/Auth/Group 8039.svg";
 // import Chart from "../../Images/Auth/Chart.png";
 // import Sum from "../../Images/Auth/Sum.png";
-import logo from "../../Images/logo.svg";
+import logo from "../../Images/logo.svg"
 
 const AuthLayout = ({ title, children, subtitle }) => {
   return (
