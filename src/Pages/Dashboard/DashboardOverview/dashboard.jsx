@@ -19,7 +19,7 @@ const Dashboard = () => {
               <SideBar />
               <DashboardPages/>
           </div>
-
+          </div>
     </div>
   )
 }
