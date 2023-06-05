@@ -1,8 +1,11 @@
 import React from 'react'
+import Barchart from '../../../components/Barchart/Barchart'
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <div>
+      <Barchart/>
+    </div>
   )
 }
 
