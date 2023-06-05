@@ -3,10 +3,10 @@ import React from "react";
 import FormField from "../../../components/Form/FormField.jsx";
 import AuthLayout from "../../../components/Layout/AuthLayout.jsx";
 import styles from "../../../components/Header/Header.module.css";
-import "./EmailVerify.css";
+import "../AccountVerification/AccountVerify.css"
 import { useNavigate } from "react-router-dom";
 
-const EmailVerify = () => {
+const PasswordVerify = () => {
 	
 	const navigate = useNavigate();
 	
@@ -66,7 +66,7 @@ const EmailVerify = () => {
 
         <div className="Verify-btn-Content">
           {/* <FilledBtn title={"Verify"} size={"100%"} className="Verify-btn" /> */}
-          <button className={styles.filledBtn} onClick={handleClick}>Submit</button>
+          <button className={styles.filledBtn} onClick={handleClick}>Verify</button>
         </div>
 
         <div className="OTP-Content">
@@ -80,4 +80,4 @@ const EmailVerify = () => {
   );
 };
 
-export default EmailVerify;
+export default PasswordVerify;
