@@ -1,6 +1,8 @@
 import React from "react";
 import DashboardHeader from "../../../components/SideBar/DashboardHeader.jsx";
 import SideBar from "../../../components/SideBar/SideBar.jsx";
+import LoanAmount from "../DashboardOverview/components/LoanAmount.jsx";
+import DashSearch from "../DashboardOverview/components/DashSearch.jsx";
 
 const Deliquency = () => {
   return (
@@ -8,7 +10,10 @@ const Deliquency = () => {
       <DashboardHeader />
       <div className="dashboard-body">
         <SideBar />
-        <div className="wrapper">yo</div>
+        <div className="wrapper">
+          <DashSearch />
+          <LoanAmount />
+        </div>
       </div>
     </div>
   );

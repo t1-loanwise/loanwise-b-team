@@ -8,55 +8,50 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import BarGraph from "../DashboardOverview/components/BarGraph";
+import PortfolioGraph from "./PortfolioGraph";
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    name: "Jan",
+    ov: 510,
+    dc: 1300,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    name: "Feb",
+    ov: 1400,
+    dc: 700,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    name: "Apr",
+    ov: 750,
+    dc: 950,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    name: "May",
+    ov: 1000,
+    dc: 1200,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    name: "Jun",
+    ov: 1600,
+    dc: 1700,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    name: "Jul",
+    ov: 1450,
+    dc: 1700,
     amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
   },
 ];
 const PortfolioChart = () => {
   return (
     <div className="portChart">
+      <PortfolioGraph />
       <div className="portChart1">
         <div className="chartTitle">
           <div className="colors">
@@ -71,37 +66,36 @@ const PortfolioChart = () => {
         <ResponsiveContainer width="100%" height={150}>
           <AreaChart data={data} margin={0}>
             <CartesianGrid horizontal={true} vertical={false} />
-            <XAxis dataKey="name" fontSize={10} fontWeight={500} />
+            <XAxis
+              dataKey="name"
+              fontSize={10}
+              fontWeight={500}
+              tickLine={false}
+            />
             <YAxis
               axisLine={false}
               tickLine={false}
-              ticks={[0, 2000, 4000, 6000, 8000]}
+              ticks={[0, 500, 1000, 1500, 2000]}
               fontSize={10}
               fontWeight={500}
             />
 
             <Area
-              type="monotone"
-              dataKey="uv"
+              dataKey="ov"
               type="linear"
-              stroke="#8874d8"
+              stroke="#009967"
               strokeWidth={5}
-              fill="rgba(136, 132, 216, 0.5)"
+              fill="rgba(0, 153, 103, 0.38)"
             />
             <Area
-              type="monotone"
-              dataKey="pv"
+              dataKey="dc"
               type="linear"
-              stroke="red"
+              stroke="#99007E"
               strokeWidth={5}
-              fill="rgba(136, 132, 26, 0.5)"
+              fill=" rgba(153, 0, 126, 0.2982)"
             />
           </AreaChart>
         </ResponsiveContainer>
-        <p>Period</p>
-      </div>
-      <div className="portChart2">
-        <BarGraph />
       </div>
     </div>
   );
