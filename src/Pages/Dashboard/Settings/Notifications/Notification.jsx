@@ -1,8 +1,11 @@
 import React from 'react'
+import Settingtoggle from '../Settingtoggle';
 
 const Notification = () => {
   return (
-    <div>Notifications</div>
+    <div>
+      <Settingtoggle header={"Notification"}/>
+      </div>
   )
 }
 

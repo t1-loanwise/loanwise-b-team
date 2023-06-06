@@ -1,38 +1,46 @@
-import React from 'react';
+import React from "react";
 import Notification from "./Notifications/Notification";
 import SecurityPrivacy from "./Security-Privacy/SecurityPrivacy";
 import DashboardRule from "./Dashboard-Rule/DashboardRule";
 import UserPreference from "./User-Preference/UserPreference";
-
-
+import "../Settings/Setting.css";
 
 const Setting = () => {
-
   return (
-    <div>
-
-      <div >
-        <h1>Notifications</h1>
-      <Notification />
-      </div>
-
-      <div>
-        <h1>Security & Privacy</h1>
-      <SecurityPrivacy />
-      </div>
-
-      <div >
-        <h1>Dashboard Rule</h1>
-      <DashboardRule />
-      </div>
-
-      <div >
-        <h1>User Preference</h1>
-      <UserPreference />
-      </div>
+    <div className="Wrapper">
       
-    </div>
-  )
-}
+      <div className="container">
+        <div className="content">
+          <div>
+            <Notification />
+          </div>
+        </div>
+      </div>
 
-export default Setting
+      <div className="container">
+        <div className="content">
+          <div>
+            <SecurityPrivacy />
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="content">
+          <div>
+            <DashboardRule />
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="content">
+          <div>
+            <UserPreference />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Setting;

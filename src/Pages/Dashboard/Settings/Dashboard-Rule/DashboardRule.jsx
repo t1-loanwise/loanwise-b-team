@@ -1,8 +1,11 @@
 import React from 'react'
+import Settingtoggle from '../Settingtoggle';
 
 const DashboardRule = () => {
   return (
-    <div>DashboardRule</div>
+    <div>
+      <Settingtoggle  header={"Dashboard Rule"}/>
+      </div>
   )
 }
 

@@ -16,8 +16,6 @@ import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
 
-
-
 function App() {
   return (
     <div className="App">
