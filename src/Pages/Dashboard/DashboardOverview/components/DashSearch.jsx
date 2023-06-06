@@ -59,21 +59,23 @@ const DashSearch = () => {
                 </div>
               )}
             </div>
-            <div
-              className="dash__date-small"
-              onClick={() => setShowCalendar(!showCalendar)}
-            >
-              <div className="img-date">
+            <div className="dash__date-small">
+              <div
+                className="img-date"
+                onClick={() => setShowCalendar(!showCalendar)}
+              >
                 <img src={dateArrow} alt="date Arrow" />
-                <p>{0}</p>
+                <p>23 04 05</p>
               </div>
               <div className="calender">
                 {showCalendar && (
-                  <Calendar
-                    onChange={setSelectedDate}
-                    value={selectedDate}
-                    dateFormat="dd/MM/yyyy"
-                  />
+                  <div className="calender">
+                    <Calendar
+                      onChange={setSelectedDate}
+                      value={selectedDate}
+                      dateFormat="dd/MM/yyyy"
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -82,15 +84,21 @@ const DashSearch = () => {
             className="dash__date"
             onClick={() => setShowCalendar(!showCalendar)}
           >
-            <div className="img-date">
+            <div
+              className="img-date"
+              onClick={() => setShowCalendar(!showCalendar)}
+            >
               <img src={dateArrow} alt="date Arrow" />
+              <p>23 04 05</p>
             </div>
             {showCalendar && (
-              <Calendar
-                onChange={setSelectedDate}
-                value={selectedDate}
-                dateFormat="dd/MM/yyyy"
-              />
+              <div className="calender">
+                <Calendar
+                  onChange={setSelectedDate}
+                  value={selectedDate}
+                  dateFormat="dd/MM/yyyy"
+                />
+              </div>
             )}
           </div>
         </div>

@@ -112,7 +112,12 @@ fieldset > button {
   color: var(--primary-bg);
 }
 
-.img__date {
+.dash__date,
+.dash__date-small {
+  position: relative;
+}
+
+.img-date {
   box-sizing: border-box;
   background: #e6f2f5;
   padding: 17px 22px;
@@ -123,10 +128,11 @@ fieldset > button {
   border-radius: 5px;
 }
 
-/* .dash__date,
-.dash__date-small {
-
-} */
+.calender {
+  position: absolute;
+  top: 5px;
+  width: auto;
+}
 
 .loanAmountContainer {
   display: grid;
@@ -384,7 +390,7 @@ fieldset > button {
 
   .dash__date-small {
     display: flex;
-    padding: 13px 18px;
+    /* padding: 13px 18px; */
   }
 
   .dash__date {
