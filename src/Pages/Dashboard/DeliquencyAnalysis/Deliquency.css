@@ -1,0 +1,15 @@
+.delChart .chart2 {
+  padding: 15px 25px;
+}
+
+.delChart .graph {
+  display: flex;
+  align-items: center;
+  /* padding-left: 17px; */
+}
+
+.delChart .chart2 p {
+  /* align-self: flex-end; */
+  text-align: center;
+  padding: 10px;
+}

@@ -60,16 +60,7 @@ const PortfolioGraph = () => {
           </div>
         </div>
         <ResponsiveContainer width="100%" height={145}>
-          <BarChart
-            data={data}
-            stackOffset="sign"
-            // margin={{
-            //   top: 5,
-            //   right: 0,
-            //   left: 20,
-            //   bottom: 5,
-            // }}
-          >
+          <BarChart data={data} stackOffset="sign">
             <CartesianGrid
               stroke="#808C8F"
               vertical={false}
@@ -84,11 +75,10 @@ const PortfolioGraph = () => {
               stroke="#808C8F"
             />
             <YAxis
-              domain={[0, 1000]}
+              domain={[0, 2000]}
               ticks={[0, 500, 1000, 1500, 2000]}
               fontSize={10}
               fontWeight={500}
-              margin={0}
               tickLine={false}
               axisLine={false}
             />
