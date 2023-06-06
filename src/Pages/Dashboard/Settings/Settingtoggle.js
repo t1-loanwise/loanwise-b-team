@@ -1,9 +1,7 @@
 import * as React from "react";
 import "./Settingtoggle.css";
 
-const Settingtoggle = ({ header }) => {
-  const greeting = "Settings Loading...";
-
+const Settingtoggle = ({ header, subHeader }) => {
   const [isShow, setShow] = React.useState(false);
 
   const handleToggle = () => {
@@ -11,21 +9,29 @@ const Settingtoggle = ({ header }) => {
     console.log("clicked");
   };
 
-  return (
-    <div>
+  // const greeting = "Loading...";
+  // const Welcome = ({ text }) => {
+  //   return <h1>{text}</h1>;
+  // };
 
+  return (
+    <div className="Container">
       <button onClick={handleToggle} type="button" className="header-btn">
-        {header}
+        <h1>{header}</h1>
+        <p>{subHeader}</p>
       </button>
 
-      {isShow ? <Welcome text={greeting} /> : null}
-      
+      {isShow && (
+        <ul class="list-group">
+          <li class="list-group-item">Item</li>
+          <li class="list-group-item">Second item</li>
+          <li class="list-group-item">Third item</li>
+          <li class="list-group-item">Fourth item</li>
+          <li class="list-group-item">Fifth item</li>
+        </ul>
+      )}
     </div>
   );
-};
-
-const Welcome = ({ text }) => {
-  return <h1>{text}</h1>;
 };
 
 export default Settingtoggle;

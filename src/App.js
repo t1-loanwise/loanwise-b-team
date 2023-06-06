@@ -20,6 +20,7 @@ import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
 import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
 import Repayment from './Pages/Dashboard/Repayment/Repayment'
 
+
 function App() {
   return (
     <div className="App">
@@ -44,7 +45,6 @@ function App() {
            <Route  path='/deliquency' element={<Deliquency/>} />
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
-
         </Routes>
       </BrowserRouter>
     </div>

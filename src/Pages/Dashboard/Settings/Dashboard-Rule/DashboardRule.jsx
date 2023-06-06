@@ -4,7 +4,7 @@ import Settingtoggle from '../Settingtoggle';
 const DashboardRule = () => {
   return (
     <div>
-      <Settingtoggle  header={"Dashboard Rule"}/>
+      <Settingtoggle  header={"Dashboard Rule"} subHeader={"Set and edit or old load default analysis rule"}/>
       </div>
   )
 }

@@ -1,11 +1,35 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.header-btn{
+.header-btn {
   width: 100%;
-  height: 48px;
-  margin-bottom: 8px;
-  color: #002a33;
+  margin: 12px 0;
+  background: #ffffff;
+  border: none;
+  color: #005466;
+  box-shadow: 0px 4px 12px #e6f2f5;
+  padding: 12px 0 12px 16px;
+  font-family: "Urbanist";
+  font-style: normal;
+  text-align: left;
+  line-height: 480px;
+}
+.header-btn h1 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+}
+.header-btn p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+.list-group {
+  text-align: center;
+  background: #e6f2f5;
+  color: #005466;
+  font-weight: 600;
+  font-size: 18px;
 }

@@ -4,43 +4,54 @@ import SecurityPrivacy from "./Security-Privacy/SecurityPrivacy";
 import DashboardRule from "./Dashboard-Rule/DashboardRule";
 import UserPreference from "./User-Preference/UserPreference";
 import "../Settings/Setting.css";
+// import DashboardHeader from "../../../components/SideBar/DashboardHeader";
+// import SideBar from "../../../components/SideBar/SideBar";
 
 const Setting = () => {
   return (
-    <div className="Wrapper">
-      
-      <div className="container">
-        <div className="content">
-          <div>
-            <Notification />
-          </div>
-        </div>
-      </div>
+    // <div className="dashboard-wrapper">
+    //   <DashboardHeader />
+    //   <div className="dashboard-body">
+    //     <SideBar />
 
-      <div className="container">
-        <div className="content">
-          <div>
-            <SecurityPrivacy />
-          </div>
-        </div>
-      </div>
+        <div className="wrapper">
 
-      <div className="container">
-        <div className="content">
-          <div>
-            <DashboardRule />
+          <div className="container">
+            <div className="content">
+              <div>
+                <Notification />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="container">
-        <div className="content">
-          <div>
-            <UserPreference />
+          <div className="container">
+            <div className="content">
+              <div>
+                <SecurityPrivacy />
+              </div>
+            </div>
           </div>
+
+          <div className="container">
+            <div className="content">
+              <div>
+                <DashboardRule />
+              </div>
+            </div>
+          </div>
+
+          <div className="container">
+            <div className="content">
+              <div>
+                <UserPreference />
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
+
+    //   </div>
+    // </div>
   );
 };
 export default Setting;
