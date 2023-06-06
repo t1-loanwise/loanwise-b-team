@@ -66,12 +66,12 @@ const BarGraph = () => {
         <ResponsiveContainer width="100%" height={145}>
           <BarChart data={data}>
             <CartesianGrid stroke="#ccc" vertical={false} horizontal={false} />
-            <XAxis dataKey="name" fontSize={10} fontWeight={800} />
+            <XAxis dataKey="name" fontSize={10} fontWeight={500} />
             <YAxis
               domain={[0, 1000]}
               ticks={[0, 250, 500, 750, 1000]}
               fontSize={10}
-              fontWeight={800}
+              fontWeight={500}
             />
             <Bar dataKey="uv" fill="#99007E" />
           </BarChart>
