@@ -13,8 +13,12 @@ import Register from './Pages/Onboarding/Register/Register'
 import Loginn from './Pages/Onboarding/Wendy/Loginn'
 import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
 import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'
+import Portfolio from './Pages/Dashboard/PortfolioAnalysis/Portfolio'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
+import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
+import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
+import Repayment from './Pages/Dashboard/Repayment/Repayment'
 
 
 function App() {
@@ -37,6 +41,10 @@ function App() {
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
            <Route  path='/dashboard/*' element={<Dashboard/>} />
+           <Route  path='/portfolio' element={<Portfolio/>} />
+           <Route  path='/deliquency' element={<Deliquency/>} />
+           <Route  path='/recovery' element={<Recovery/>} />
+           <Route  path='/repayment' element={<Repayment/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -24,18 +24,18 @@ const SideBar = () => {
     {
       name: "Portfolio Analysis",
       image: portfolio,
-      link: "/portfolio-analysis",
+      link: "/portfolio",
     },
     { name: "Repayment", image: repayment, link: "/repayment" },
     {
       name: "Recovery Management",
       image: recovery,
-      link: "/recovery-management",
+      link: "/recovery",
     },
     {
       name: "Deliquency Analysis",
       image: deliquency,
-      link: "/deliquency-analysis",
+      link: "/deliquency",
     },
   ];
 

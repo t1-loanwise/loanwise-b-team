@@ -23,19 +23,6 @@ const FooterLists = () => {
         { name: "Terms of Use", link: "/terms" },
       ],
     },
-    {
-      title: "Contact",
-      items: [
-        "loanwise@gmail.com",
-        "+123-457-789-00\n+123-457-789-0",
-        "123, Numberone Avenue,\nVI, Lagos.",
-        [
-          <img key="linkedin" src={LinkedIn} alt="LinkedIn" />,
-          <img key="instagram" src={Instagram} alt="Instagram" />,
-          <img key="twitter" src={Twitter} alt="Twitter" />,
-        ],
-      ],
-    },
   ];
 
   const footerItem = footerItems.map((item, index) => (
@@ -44,22 +31,45 @@ const FooterLists = () => {
       <div className={styles.lists}>
         {item.items.map((listItem, listItemIndex) => (
           <li key={listItemIndex}>
-            {typeof listItem === "object" ? (
-              <a href={listItem.link}>{listItem.name}</a>
-            ) : (
-              listItem
-            )}
+            <a href={listItem.link}>{listItem.name}</a>
           </li>
         ))}
       </div>
     </ul>
   ));
 
-  return <div className={styles.footerLists}>{footerItem}</div>;
+  return (
+    <div className={styles.footerLists}>
+      {footerItem}
+      <ul>
+        <h4>Contact</h4>
+        <div className={styles.lists}>
+          <li>loanwise@gmail.com</li>
+          <li>
+            +123-457-789-00
+            <br />
+            +123-457-789-0
+          </li>
+          <li>
+            123, Numberone Avenue,
+            <br />
+            VI, Lagos.
+          </li>
+          <li>
+            <a href="">
+              <img key="linkedin" src={LinkedIn} alt="LinkedIn" />
+            </a>
+            <a href="">
+              <img key="instagram" src={Instagram} alt="Instagram" />
+            </a>
+            <a href="">
+              <img key="twitter" src={Twitter} alt="Twitter" />
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  );
 };
 
 export default FooterLists;
-
-
-
-
