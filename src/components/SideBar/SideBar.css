@@ -1,171 +1,208 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    width:100vw;
-    height: 100vh;
-    font-family: 'Urbanist';
-
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
 /* -----------dashboardheader---------- */
-.dashboard-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #007E99;
-    height: 12vh;
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: var(--primary-bg);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100dvw;
+  z-index: 999;
 }
-.dashboard-logo{
-    width: 170px;
-    height: 60px;
-}
-
-.dashboard-head-right{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.man-div{
-position: relative;
-}
-.man-logo {
-    border-radius: 40px;
-    width: 35px;
-     height: 35px;
-  
-
-}
-.num{
-    background: #FD3B47;
-        border-radius: 50px;
-        Width :10px;
-         Height :10px;
-        display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 8px;
-            gap: 10px;
-            position: absolute;
-            top: -4px;
-            right: -7px;
-            color: #fff;
-            font-size: 10px;
-}
-.dash-user-name p{
-    font-family: 'Urbanist';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 19px;
-        color: #E6F2F5;
-}
-.dash-user-name p:last-child{
-    padding-left: 6px;
+.dashboard-logo {
+  height: 60px;
 }
 
+.dashboard-head-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.profile-div {
+  position: relative;
+}
+.profile {
+  border-radius: 40px;
+  width: 35px;
+  height: 35px;
+}
+.num {
+  background: #fd3b47;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  color: #fff;
+  font-size: 10px;
+}
+.dash-user-name p {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #e6f2f5;
+}
+.dash-user-name p:last-child {
+  padding-left: 6px;
+}
 
 /* -----------sidebar---------- */
-.sidebar-wrapper{
-    width:18vw;
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 8px 15px 10px;
-    background: #007E99;
-  
-    
+.sidebar-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  background: var(--primary-bg);
+  height: calc(100dvh - 74px);
+  padding: 24px 13px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.sidebar-wrapper button{
-font-style: normal;
-font-weight: 100;
-font-size: 13px;
-line-height: 15px;
-padding: 10px 20px 10px 4px;
-color: #FFFFFF;
-display: flex;
-align-items: center;
-gap: 15px;
-background: transparent;
-border: none;
-}
-.active{
 
-width: 200px;
-background: #003F4D;
-border-radius: 4px;
+.link-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  padding: 11px 13px;
+  font-size: 13px;
+  cursor: pointer;
+}
 
+.active {
+  background: #003f4d;
+  border-radius: 3px;
 }
-.sidebar-wrapper button:hover{
-    cursor: pointer;
+
+.dashboard-icon {
+  width: 19px;
+  height: 19px;
 }
-.dashboard-icon{
-width: 19px;
-height: 19px;
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
 }
-.sidebar-top{
-    display: flex;
-    flex-direction: column;
-        align-items: flex-start;
-        gap:3px;
-}
-.sidebar-bottom{
-    display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3px;
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* gap: 20px; */
 }
 /* -----------General-------------- */
-.botton-active{
-    width: 200px;
-    background-color: #003F4D;
-    border-radius: 4px;
-    
+.sub-menu button {
+  font-size: 13px;
+  line-height: 15px;
+  padding: 10px 20px 10px 4px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
 }
-.general{
-    display: flex;
-     align-items: center;
-     gap: 80px;
+
+.general-wrapper > button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  padding: 11px 13px;
+  font-size: 13px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
-.general-right{
-    display: flex;
+
+.general {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.general-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.general-icon {
+  width: 13px;
+  height: 13px;
+}
+.general-icon-rotate {
+  transform: rotate(90deg);
+  width: 13px;
+  height: 13px;
+}
+
+.general-wrapper .submenu-active-1,
+.submenu-active-2,
+.submenu-active-3 {
+  width: 180px;
+  padding: 10px;
+  align-items: center;
+  background-color: #7cc2d1;
+  border-radius: 4px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-logo {
+    height: 40px;
+  }
+
+  .iconText {
+    display: none;
+  }
+
+  .general {
+    gap: 10px;
+  }
+
+  .general-wrapper {
+    text-align: center;
+  }
+
+  .sidebar-top,
+  .sidebar-wrapper,
+  .sidebar-bottom {
     align-items: center;
-     gap: 15px;
-}
-.general-icon{
-    width: 13px;
-    height: 13px;
-}
-.general-icon-rotate{
-    transform: rotate(90deg);
-    width: 13px;
-        height: 13px;
+  }
 
-}
+  .general-wrapper .submenu-active-1,
+  .submenu-active-2,
+  .submenu-active-3 {
+    width: auto;
+  }
 
-.general-wrapper .botton-active{
-    width: 180px;
-    background-color: #003F4D;
-    border-radius: 4px;
-}
+  .sub-menu button {
+    padding: 10px 0;
+  }
 
-.general-wrapper .submenu-active-1, .submenu-active-2, .submenu-active-3{
-    width: 180px;
+  .sub-menu {
     display: flex;
-    height: 35px;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-     background-color: #7cc2d1;
-     border-radius: 4px;
-    text-align: left;
-           
-       
+  }
 }
