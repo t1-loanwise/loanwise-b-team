@@ -45,7 +45,6 @@ function App() {
            <Route  path='/deliquency' element={<Deliquency/>} />
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
-
         </Routes>
       </BrowserRouter>
     </div>

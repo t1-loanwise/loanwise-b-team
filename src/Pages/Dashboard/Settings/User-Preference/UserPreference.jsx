@@ -1,8 +1,11 @@
 import React from 'react'
+import Settingtoggle from '../Settingtoggle';
 
 const UserPreference = () => {
   return (
-    <div>UserPreference</div>
+    <div>
+      <Settingtoggle header={"User Preference"} />
+      </div>
   )
 }
 
