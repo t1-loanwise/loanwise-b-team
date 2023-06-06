@@ -181,6 +181,8 @@ fieldset > button {
   width: 23px;
 }
 
+/* CHART */
+
 .chart {
   display: flex;
   align-items: flex-end;
