@@ -65,9 +65,9 @@ body {
 
 /* -----------sidebar---------- */
 .sidebar-wrapper {
+  position: -webkit-sticky;
   position: sticky;
   left: 0;
-  top: 0;
   background: var(--primary-bg);
   height: calc(100dvh - 74px);
   padding: 24px 13px 32px;
