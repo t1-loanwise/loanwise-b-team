@@ -67,14 +67,16 @@ const Barchart = () => {
               tickCount={12}
               tickLine={false}
               fontSize={10}
-              fontWeight={700}
+              fontWeight={500}
             />
             <YAxis
               domain={[0, 8000]}
               ticks={[0, 2000, 4000, 6000, 8000]}
               vertical={false}
               fontSize={10}
-              fontWeight={700}
+              fontWeight={500}
+              axisLine={false}
+              tickLine={false}
             />
             <Line
               type="monotone"

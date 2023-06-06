@@ -1,3 +1,120 @@
-.portfolio-body {
+/* .portfolio-body {
   display: flex;
+} */
+
+/* CHART */
+
+.portChart {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px 0 50px;
+  padding: 2px;
+  gap: 15px;
+  width: 100%;
+  flex: 1;
+}
+
+.portChart1,
+.portChart2 {
+  background: #ffffff;
+  border: 1px solid #e6f2f5;
+  box-shadow: 0px 8px 40px #e6f2f5;
+  border-radius: 16px;
+  padding-right: 25px;
+  width: 100%;
+}
+
+.portChart1 {
+  padding-bottom: 0;
+  flex: 0.45;
+}
+
+.portChart2 {
+  padding: 14px;
+  flex: 0.55;
+}
+
+.portChart2 h2 {
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+
+/* .graph {
+    display: flex;
+  } */
+/*   
+  .graph .rotate {
+    transform: rotate(-90deg);
+    margin-bottom: 30px;
+  } */
+
+.portChart .portChartTitle {
+  padding: 10px 0 10px 25px;
+}
+
+.portChart1 .chartTitle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*   
+  .colors {
+    display: flex;
+    gap: 7px;
+    font-size: 8px;
+    font-weight: 500;
+    align-self: flex-end;
+    padding: 7px 0 0 0;
+  }
+   */
+/* .color1,
+  .color2,
+  .color3 {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  } */
+
+/* .color1 span,
+  .color2 span,
+  .color3 span {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+  } */
+/*   
+  .tl span {
+    background: #003299;
+  } */
+/*   
+  .ap span {
+    background: #99007e;
+  } */
+
+/* .dc span {
+    background: #009967;
+  } */
+
+.portChart1 p {
+  text-align: center;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 0;
+  padding: 0 10px 10px;
+}
+
+.portChart2 p {
+  font-size: 10px;
+  text-align: center;
+  color: #00191f;
+  line-height: 0;
+}
+
+@media (max-width: 1000px) {
+  .portChart {
+    flex-direction: column;
+    align-items: center;
+  }
 }
