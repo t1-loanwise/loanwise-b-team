@@ -36,7 +36,7 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/dashboard/*' element={<Dashboard/>} />
+           <Route  path='/dashboard/' element={<Dashboard/>} />
         </Routes>
       </BrowserRouter>
     </div>
