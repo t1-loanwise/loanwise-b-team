@@ -9,13 +9,12 @@ import PaginationTable from '../../../components/Overview/PaginationTable'
 
 
 const DashboardOverview = () => {
+  const [searchResults, setSearchResults] = useState([]);
+  const [isLoading, SetIsLoading] = useState(false);
 
-	const [searchResults, setSearchResults] = useState([]);
-	const [isLoading, SetIsLoading] = useState(false)
-
-	const handleSearch = (searchTerm) => {
-		SetIsLoading(true);
-	}
+  const handleSearch = (searchTerm) => {
+    SetIsLoading(true);
+  };
   return (
 	  <div className='overview-container'>
 		  <div className='explore'>

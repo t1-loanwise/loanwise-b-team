@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
@@ -12,113 +13,154 @@ import logout from '../../Images/Dashboard/logout.png'
 import greater from '../../Images/Dashboard/greater.svg'  
 
 
-
 const SideBar = () => {
-	const [sidebar, setSidebar] = useState(false);
-	 const [isActive, setIsActive] = useState(false);
- 
-	const showSidebar = () => {	
-		setSidebar(!sidebar);
-		setIsActive(!isActive);
-	} 
+  const [showGeneral, setShowGeneral] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const showGeneralList = () => {
+    setShowGeneral(!showGeneral);
+    setIsActive(!isActive);
+  };
+
+  const navItems = [
+    { name: "Dashboard", image: dashboardIcon, link: "/dashboard" },
+    {
+      name: "Portfolio Analysis",
+      image: portfolio,
+      link: "/portfolio",
+    },
+    { name: "Repayment", image: repayment, link: "/repayment" },
+    {
+      name: "Recovery Management",
+      image: recovery,
+      link: "/recovery",
+    },
+    {
+      name: "Deliquency Analysis",
+      image: deliquency,
+      link: "/deliquency",
+    },
+  ];
+
+  const navItem = navItems.map((item, index) => (
+    <NavLink
+      key={index}
+      to={item.link}
+      className={({ isActive }) => (isActive ? "active" : "")}
+    >
+      <div className="link-text">
+        <a href={item.link}>
+          <img src={item.image} alt="icon" className="dashboard-icon" />
+        </a>
+        <a className="iconText" href={item.link}>
+          {item.name}
+        </a>
+      </div>
+    </NavLink>
+  ));
+
+  const bottomNavItems = [
+    { name: "Settings", image: setting, link: "/dashboard/settings" },
+    { name: "Logout", image: logout, link: "/dashboard/logout" },
+  ];
+
+  const bottomNavItem = bottomNavItems.map((item, index) => (
+    <NavLink
+      key={index}
+      to={item.link}
+      className={({ isActive }) => (isActive ? "active" : "")}
+    >
+      <div className="link-text">
+        <a href={item.link}>
+          <img src={item.image} alt="icon" className="dashboard-icon" />
+        </a>
+        <a className="iconText" href={item.link}>
+          {item.name}
+        </a>
+      </div>
+    </NavLink>
+  ));
+
   return (
-	  <nav>
-		  <div className='sidebar-wrapper'>
-				<div className='sidebar-top'>
-					<NavLink to='/dashboard/overview' className={({ isActive}) => isActive ? 'active' : ''}>
-						<button>
-							<img src={dashboardIcon} alt='a dashboard icon' className='dashboard-icon'  />
-								Dashboard
-							</button>
-						</NavLink>
-					
-						<NavLink to='/dashboard/portfolio-analysis'>
-							<button>
-							<img src={portfolio} alt='a portfolio icon' className='dashboard-icon' />
-							Portfolio Analysis
-							</button>
-						</NavLink>
-					
-						<NavLink to='/dashboard/repayment'>
-							<button>
-								<img src={repayment} alt='a repayment icon'  className='dashboard-icon' />
-								Repayment
-							</button>
-						</NavLink>
-				
-						<NavLink to='/dashboard/recovery-management'>
-							<button>
-								<img src={recovery} alt='a recovery convert icon' className='dashboard-icon'  />
-								Recovery Management
-							</button>
-						</NavLink>
+    <nav>
+      <div className="sidebar-wrapper">
+        <div className="sidebar-top">
+          {navItem}
+          <div className="general-wrapper">
+            <button
+              onClick={showGeneralList}
+              className={isActive ? "active" : ""}
+            >
+              <div className="general">
+                <div className="general-right">
+                  <img
+                    src={general}
+                    alt="a general icon"
+                    className="dashboard-icon"
+                  />
+                  <a href="" className="iconText">
+                    General
+                  </a>
+                </div>
+                {showGeneral ? (
+                  <div>
+                    <img
+                      src={greater}
+                      alt="a general"
+                      className="general-icon-rotate"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <img
+                      src={greater}
+                      alt="a general"
+                      className="general-icon"
+                    />
+                  </div>
+                )}
+              </div>
+            </button>
+            {showGeneral && (
+              <div className="sub-menu">
+                <button>
+                  <NavLink
+                    to="/dashboard/message"
+                    className={({ isActive }) =>
+                      isActive ? "submenu-active-1" : ""
+                    }
+                  >
+                    Messages
+                  </NavLink>
+                </button>
+                <button>
+                  <NavLink
+                    to="/dashboard/user-profile"
+                    className={({ isActive }) =>
+                      isActive ? "submenu-active-2" : ""
+                    }
+                  >
+                    User Profile
+                  </NavLink>
+                </button>
+                <button>
+                  <NavLink
+                    to="/dashboard/notification"
+                    className={({ isActive }) =>
+                      isActive ? "submenu-active-3" : ""
+                    }
+                  >
+                    Notification
+                  </NavLink>
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="sidebar-bottom">{bottomNavItem}</div>
+      </div>
+    </nav>
+  );
+};
 
-						<NavLink to='/dashboard/deliquency-analysis'>
-							<button>
-								<img src={deliquency} alt='a deliquency analysis icon' className='dashboard-icon'  />
-								Deliquency Analysis
-							</button>
-						</NavLink>
-
-				  		<div className='general-wrapper'>
-					  		<button onClick={showSidebar} className={isActive ? 'botton-active' : ''}>
-							
-						  		<div className='general'>
-							  		<div className='general-right'>
-							  			<img src={general} alt='a general icon' className='dashboard-icon'  />
-											General
-						  			</div>
-						  			{sidebar ?  (<div>
-							  		<img src={greater} alt='a general' className='general-icon-rotate' />
-									</div>) : (<div>
-							  		<img src={greater} alt='a general' className='general-icon' />
-									</div>) }
-						 		 </div>
-					  		</button>
-					  				{sidebar && (<div className='sub-menu'>
-						  				<button>
-							  				<NavLink to='/dashboard/message'  className={({ isActive}) => isActive ? 'submenu-active-1' : ''}>Messages</NavLink>
-						  				</button>
-						  				<button>
-							  				<NavLink to='/dashboard/user-profile' className={({ isActive}) => isActive ? 'submenu-active-2' : ''}>User Profile</NavLink>
-						  				</button>
-						  				<button>
-							  				<NavLink to='/dashboard/notification' className={({ isActive}) => isActive ? 'submenu-active-3' : ''}>Notification</NavLink>
-										</button>
-										
-					  				</div>
-					 			 	
-					  				)}
-					  			
-						</div>
-							
-					
-				</div>
-		 
-		 
-
-				<div className='sidebar-bottom'>
-					
-						<NavLink to='/dashboard/settings'>
-							<button>
-								<img src={setting} alt='a settings icon'  className='dashboard-icon' />
-									Settings
-							</button>
-						</NavLink>
-					
-						<NavLink to='/dashboard/logout' >
-							<button>
-								<img src={logout} alt='a logout icon' className='dashboard-icon' />
-									Logout
-							</button>
-						</NavLink>
-				</div>
-			</div>
-			
-		</nav>
-  )
-}
-
-
-
-export default SideBar
+export default SideBar;
