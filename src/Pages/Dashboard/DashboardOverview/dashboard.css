@@ -1,4 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Urbanist';
+    font-style: normal;
+
+}
+
+/* ---------dashbody body------- */
+.dashboard-body {
+    display: flex;
+    flex-direction: row;
+    /* overflow-y: auto; */
+}
+
+/* ------------dashboard overview-------------- */
+.overview-container {
+    padding: 27px 50px;
+    width: 82vw;
+    /* height: 100vh; */
+
+}
+
+.explore p {
+
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    color: #00151A;
+}
 h3,
 p {
     margin: 0;
@@ -193,35 +226,5 @@ fieldset>button {
     }
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-        font-family: 'Urbanist';
-        font-style: normal;
-
-}
-/* ---------dashbody body------- */
-.dashboard-body{
-    display: flex;
-    flex-direction: row;
-}
-
-/* ------------dashboard overview-------------- */
-.overview-container{
-    padding: 27px 50px;
-    width: 82vw;
-    height: 88vh;
-
-}
-.explore p{
-  
-        font-weight: 500;
-        font-size: 19px;
-        line-height: 25px;
-        color: #00151A;
-}
 

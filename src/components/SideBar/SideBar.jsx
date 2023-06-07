@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import dashboardIcon from '../../Images/Dashboard/dashboard-icon.svg' 
+import dashboardIcon from '../../Images/Dashboard/home.svg' 
 import portfolio from '../../Images/Dashboard/portfolio.svg' 
 import repayment from '../../Images/Dashboard/money-recive.svg' 
 import recovery from '../../Images/Dashboard/recovery-convert.svg' 

@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import './dashboard.css'
 import DashSearch from './components/DashSearch'
 import LoanAmount from './components/LoanAmount'
-
+import SearchBar from '../../../components/Overview/SearchBar'
+import DashboardFilter from '../../../components/Overview/DashboardFilter'
+import PaginationTable from '../../../components/Overview/PaginationTable'
 
 
 
@@ -23,8 +25,13 @@ const DashboardOverview = () => {
 			  <DashSearch />
       		<LoanAmount />
 			  
-		</div>
-
+		  </div>
+		  <div>
+			<SearchBar />
+		  <DashboardFilter />
+		  <PaginationTable />
+		  </div>
+		 
 
     	</div>
   )
