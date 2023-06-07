@@ -20,6 +20,17 @@ const Dashboard = () => {
             <Barchart />
           </div>
         </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        nesciunt odit fugit officia molestias provident laborum, fugiat, quae
+        quia autem iusto suscipit natus soluta expedita iste adipisci voluptatem
+        cum distinctio harum? Molestias mollitia dolore fugiat in labore nulla
+        amet veritatis inventore quod, consequatur reprehenderit laboriosam
+        libero laborum numquam ab facere sequi beatae, eos iusto sapiente
+        voluptatum nisi. Animi commodi laboriosam inventore necessitatibus rem
+        et hic earum quidem eum alias culpa aliquid cum optio quam tenetur ea,
+        accusantium doloremque vitae! Maiores, quae totam a aut inventore ipsam
+        aspernatur exercitationem minus eveniet quia cum obcaecati quibusdam
+        iure temporibus praesentium debitis esse architecto?
       </div>
     </>
   );

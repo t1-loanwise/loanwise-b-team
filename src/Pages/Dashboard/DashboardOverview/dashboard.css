@@ -44,6 +44,16 @@ p {
   margin: 0;
 }
 
+.dash__search input::placeholder {
+  /* Neutral / 20 */
+
+  color: #00151a;
+
+  /* Primary Colour / 90 */
+
+  /* border: 1px solid #aad4dd; */
+}
+
 .btnzz {
   display: none;
 }

@@ -30,6 +30,15 @@
   flex: 1;
 }
 
+.portChart2 .color1 span,
+.portChart1 .color1 span {
+  background: #009967;
+}
+.portChart2 .color3 span,
+.portChart1 .color3 span {
+  background: #99007e;
+}
+
 .graph {
   display: block;
 }
