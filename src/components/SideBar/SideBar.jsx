@@ -20,7 +20,7 @@ const SideBar = () => {
   };
 
   const navItems = [
-    { name: "Dashboard", image: dashboardIcon, link: "/dashboard/overview" },
+    { name: "Dashboard", image: dashboardIcon, link: "/dashboard" },
     {
       name: "Portfolio Analysis",
       image: portfolio,

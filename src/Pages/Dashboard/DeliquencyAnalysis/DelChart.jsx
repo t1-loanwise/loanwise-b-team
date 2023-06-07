@@ -26,6 +26,18 @@ const data = [
   { name: "L", ap: 1350 },
 ];
 
+const CustomDot = (props) => {
+  const { cx, cy } = props;
+  return (
+    <circle
+      cx={cx}
+      cy={cy}
+      r={4}
+      fill="#99007E" // Set the desired color to fill the dots
+    />
+  );
+};
+
 const DelChart = () => {
   return (
     <div className="chart delChart">
@@ -37,7 +49,7 @@ const DelChart = () => {
       <div className="chart2">
         <h2>Loan Default Count Trend</h2>
         <div className="graph">
-          <div className="rotate">Qty</div>
+          <div className="rotate">in Millions</div>
           <ResponsiveContainer width="100%" height={150}>
             <LineChart
               data={data}
@@ -73,7 +85,7 @@ const DelChart = () => {
                 dataKey="ap"
                 stroke="#99007E"
                 strokeWidth={2.5}
-                dot={true}
+                dot={<CustomDot />}
                 margin={20}
               />
             </LineChart>
@@ -81,7 +93,7 @@ const DelChart = () => {
         </div>
         <p>Period</p>
       </div>
-      <div className="chart2">
+      <div className="chart1">
         <DelPie />
       </div>
     </div>

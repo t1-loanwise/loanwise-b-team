@@ -112,9 +112,12 @@ fieldset > button {
   color: var(--primary-bg);
 }
 
+/* calender */
+
 .dash__date,
 .dash__date-small {
   position: relative;
+  cursor: pointer;
 }
 
 .img-date {
@@ -133,6 +136,15 @@ fieldset > button {
   top: 5px;
   width: auto;
 }
+
+.dash__date p,
+.dash__date-small p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-bg);
+}
+
+/* loan cards */
 
 .loanAmountContainer {
   display: grid;
@@ -229,7 +241,7 @@ fieldset > button {
   padding-bottom: 3px;
 }
 
-.graph {
+.chart2 .graph {
   display: flex;
   align-items: center;
   /* padding-left: 17px; */
@@ -238,6 +250,7 @@ fieldset > button {
 .graph .rotate {
   transform: rotate(-90deg);
   margin-bottom: 30px;
+  white-space: nowrap;
 }
 
 .chartTitle {
