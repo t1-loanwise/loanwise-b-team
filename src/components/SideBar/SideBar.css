@@ -89,6 +89,7 @@ body {
 .active {
   background: #003f4d;
   border-radius: 3px;
+  width: 100%;
 }
 
 .dashboard-icon {
@@ -204,5 +205,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .active {
+    width: auto;
   }
 }

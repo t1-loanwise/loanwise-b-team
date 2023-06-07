@@ -9,12 +9,18 @@ import "react-datepicker/dist/react-datepicker.css";
 const DashSearch = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [showCalendar, setShowCalendar] = useState(false);
+
+  const currentDate = selectedDate.toLocaleDateString("en-US", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
   return (
     <div className="dash__titleSearch">
       <div className="dash__title">
-        <h2>Welcome Tosin,</h2>
         <p>
           Explore insightful analyses and risk assessment to make informed
           lending decisions.
@@ -59,13 +65,16 @@ const DashSearch = () => {
                 </div>
               )}
             </div>
-            <div className="dash__date-small">
+            <div
+              className="dash__date-small"
+              onClick={() => setShowCalendar(!showCalendar)}
+            >
               <div
                 className="img-date"
                 onClick={() => setShowCalendar(!showCalendar)}
               >
                 <img src={dateArrow} alt="date Arrow" />
-                <p>23 04 05</p>
+                <p>{currentDate}</p>
               </div>
               <div className="calender">
                 {showCalendar && (
@@ -89,7 +98,7 @@ const DashSearch = () => {
               onClick={() => setShowCalendar(!showCalendar)}
             >
               <img src={dateArrow} alt="date Arrow" />
-              <p>23 04 05</p>
+              <p>{currentDate}</p>
             </div>
             {showCalendar && (
               <div className="calender">

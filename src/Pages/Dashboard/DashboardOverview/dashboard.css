@@ -10,14 +10,14 @@ p {
 
 .dash__title h2 {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 43px;
   color: #00151a;
 }
 
 .dash__title p {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 34px;
   color: #00151a;
 }
@@ -112,9 +112,12 @@ fieldset > button {
   color: var(--primary-bg);
 }
 
+/* calender */
+
 .dash__date,
 .dash__date-small {
   position: relative;
+  cursor: pointer;
 }
 
 .img-date {
@@ -133,6 +136,15 @@ fieldset > button {
   top: 5px;
   width: auto;
 }
+
+.dash__date p,
+.dash__date-small p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-bg);
+}
+
+/* loan cards */
 
 .loanAmountContainer {
   display: grid;
@@ -157,7 +169,7 @@ fieldset > button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px 12px 20px 20px;
+  padding: 15px 12px 20px 15px;
   width: 100%;
 }
 
@@ -180,7 +192,7 @@ fieldset > button {
   background: #cce5eb;
   box-shadow: 0px 8px 40px #e6f2f5;
   border-radius: 13px;
-  padding: 8px 15px;
+  padding: 6px 13px;
 }
 
 .loanAmountIcon img {
@@ -192,7 +204,7 @@ fieldset > button {
 .chart {
   display: flex;
   align-items: flex-end;
-  margin: 50px 0 50px;
+  margin: 20px 0;
   padding: 2px;
   gap: 15px;
   width: 100%;
@@ -201,6 +213,7 @@ fieldset > button {
 
 .chart .loanAmountWrapper {
   align-self: center;
+  flex: 0.25;
 }
 
 .chart1,
@@ -229,7 +242,7 @@ fieldset > button {
   padding-bottom: 3px;
 }
 
-.graph {
+.chart2 .graph {
   display: flex;
   align-items: center;
   /* padding-left: 17px; */
@@ -238,6 +251,7 @@ fieldset > button {
 .graph .rotate {
   transform: rotate(-90deg);
   margin-bottom: 30px;
+  white-space: nowrap;
 }
 
 .chartTitle {
@@ -407,6 +421,7 @@ fieldset > button {
 .dashboard-body .wrapper {
   margin: 20px 25px 0;
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
 }
 
