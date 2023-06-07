@@ -11,5 +11,10 @@
 .delChart .chart2 p {
   /* align-self: flex-end; */
   text-align: center;
-  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.delChart .graph .rotate {
+  margin-bottom: 10px;
 }
