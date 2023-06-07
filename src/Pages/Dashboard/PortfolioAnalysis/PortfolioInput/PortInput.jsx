@@ -3,7 +3,7 @@ import "./PortInput.css";
 import downArrow from "../../../../Images/Dashboard/downarrowbg.svg";
 import searchIcon from "../../../../Images/Dashboard/search-normal.svg";
 
-export const Boxes = () => {
+export const PortInput = () => {
   return (
     <div className="inputflex">
       <fieldset>
