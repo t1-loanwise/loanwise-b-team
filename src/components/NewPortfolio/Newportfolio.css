@@ -1,0 +1,21 @@
+.btn{ 
+    /* padding:11px, 16px, 11px, 16px; */
+    background-color: #007E99;
+    height: 40px;
+    width: 150px;
+    gap: 10px;
+    color: aliceblue;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.btnclass{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
