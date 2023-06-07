@@ -21,7 +21,6 @@ const DashSearch = () => {
   return (
     <div className="dash__titleSearch">
       <div className="dash__title">
-        <h2>Welcome Tosin,</h2>
         <p>
           Explore insightful analyses and risk assessment to make informed
           lending decisions.
