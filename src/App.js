@@ -20,7 +20,7 @@ import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
 import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
 import Repayment from './Pages/Dashboard/Repayment/Repayment'
 import Setting from './Pages/Dashboard/Settings/Setting'
-import SU from './Pages/Onboarding/Wendy/SU'
+// import SU from './Pages/Onboarding/Wendy/SU'
 
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
            <Route  path='/setting' element={<Setting/>} />
-           <Route  path='/su' element={<SU/>} />
+           {/* <Route  path='/su' element={<SU/>} /> */}
         </Routes>
       </BrowserRouter>
     </div>

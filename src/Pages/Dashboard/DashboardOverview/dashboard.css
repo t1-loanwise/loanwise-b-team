@@ -204,7 +204,7 @@ fieldset > button {
 .chart {
   display: flex;
   align-items: flex-end;
-  margin: 50px 0 50px;
+  margin: 20px 0;
   padding: 2px;
   gap: 15px;
   width: 100%;
@@ -213,6 +213,7 @@ fieldset > button {
 
 .chart .loanAmountWrapper {
   align-self: center;
+  flex: 0.25;
 }
 
 .chart1,
@@ -420,6 +421,7 @@ fieldset > button {
 .dashboard-body .wrapper {
   margin: 20px 25px 0;
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
 }
 
