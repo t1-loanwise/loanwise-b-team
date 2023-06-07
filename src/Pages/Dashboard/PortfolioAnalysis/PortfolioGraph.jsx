@@ -12,7 +12,7 @@ const data = [
   {
     name: "Jan",
     ac: 700,
-    cl: 1700,
+    cl: 1000,
   },
   {
     name: "Feb",
@@ -52,7 +52,7 @@ const PortfolioGraph = () => {
         <div className="chartTitle">
           <div className="colors">
             <div className="color1 tl">
-              <span></span> Overdue
+              <span></span> Active
             </div>
             <div className="color3 dc">
               <span></span> Declined
@@ -72,7 +72,6 @@ const PortfolioGraph = () => {
               fontSize={10}
               fontWeight={500}
               tickLine={false}
-              stroke="#808C8F"
             />
             <YAxis
               domain={[0, 2000]}
@@ -82,10 +81,10 @@ const PortfolioGraph = () => {
               tickLine={false}
               axisLine={false}
             />
-            <Bar barSize={11} dataKey="ac" fill="#8884d8" stackId="stack" />
+            <Bar barSize={11} dataKey="cl" fill="#99007E" stackId="stack" />
             <Bar
-              dataKey="cl"
-              fill="#82ca9d"
+              dataKey="ac"
+              fill="#009967"
               stackId="stack"
               radius={[10, 10, 0, 0]}
             />

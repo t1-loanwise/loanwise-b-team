@@ -20,6 +20,7 @@ const Dashboard = () => {
             <Barchart />
           </div>
         </div>
+
       </div>
     </>
   );

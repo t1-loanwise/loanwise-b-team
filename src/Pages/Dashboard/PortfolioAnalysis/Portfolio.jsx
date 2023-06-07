@@ -2,8 +2,8 @@ import React from "react";
 import PortfolioChart from "./PortfolioChart";
 import DashboardHeader from "../../../components/SideBar/DashboardHeader.jsx";
 import SideBar from "../../../components/SideBar/SideBar.jsx";
-import { Newportfolio } from "../../../components/NewPortfolio/Newportfolio";
-import { Boxes  } from "../../../components/input/Boxes";
+import { Newportfolio } from "./NewPortfolio/Newportfolio";
+import { PortInput } from "./PortfolioInput/PortInput";
 
 const Portfolio = () => {
   return (
@@ -12,9 +12,9 @@ const Portfolio = () => {
       <div className="dashboard-body">
         <SideBar />
         <div className="wrapper">
-         <Newportfolio/>
+          <Newportfolio />
           <PortfolioChart />
-          <Boxes/>
+          <PortInput />
         </div>
       </div>
     </div>
