@@ -17,22 +17,16 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     background: #007E99;
-    height: 12vh;
-     background: var(--primary-bg);
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    width: 100dvw;
-    z-index: 999;
-     padding: 15px;
-
-    /* width: 100vw; */
-
+    height: 80px;
+     position: sticky;
+     top: 0;
+     width: 100%;
+   
 }
 .dashboard-logo {
-  height: 60px;
+  height: 55px;
 }
 
 .dashboard-head-right {
@@ -81,57 +75,50 @@ body{
 /* -----------sidebar---------- */
 
 .sidebar-wrapper{
-    width:18vw;
-    height: 100vh;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 15px 15px 20px 18px;
+    padding: 17px 15px 18px 12px;
     background: #007E99;
-    position: -webkit-sticky;
-      position: sticky;
+    position: sticky;
       left: 0;
-      background: var(--primary-bg);
-      height: calc(100dvh - 74px);
+    height: 100%;
+    
   
     
 }
-.sidebar-wrapper button{
-font-style: normal;
-font-weight: 100;
-font-size: 13px;
-line-height: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
 
-color: #FFFFFF;
-display: flex;
-align-items: center;
-gap: 15px;
-background: transparent;
-border: none;
-}
-.active{
 
-width: 220px;
-background: #003F4D;
-border-radius: 4px;
-}
 .link-text {
   display: flex;
   align-items: center;
   gap: 15px;
-  color: #ffffff;
-  padding: 11px 13px;
-  font-size: 13px;
-  cursor: pointer;
+padding: 11px 13px;
+ cursor: pointer;
+padding-top: 10px;
+padding-bottom: 10px;
+  
+    background: transparent;
+
 }
-
-
+.iconText{
+  color: #ffffff;
+    font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 20px;
+}
 .dashboard-icon {
   width: 19px;
   height: 19px;
+}
+.active {
+
+  width: 228px;
+  background: #003F4D;
+  border-radius: 4px;
 }
 
 .sidebar-top {

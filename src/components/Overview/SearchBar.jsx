@@ -6,7 +6,7 @@ const SearchBar = ({ handleSearch }) => {
 
     const handleChange = (event) => {
         setSearchItems(event.target.value);
-        console.log(event)
+       
     }
 
     const handleSubmit = (event) => {

@@ -1,17 +1,15 @@
-
-import React from 'react'
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import dashboardIcon from '../../Images/Dashboard/home.svg' 
-import portfolio from '../../Images/Dashboard/portfolio.svg' 
-import repayment from '../../Images/Dashboard/money-recive.svg' 
-import recovery from '../../Images/Dashboard/recovery-convert.svg' 
-import deliquency from '../../Images/Dashboard/deliquency.svg' 
-import general from '../../Images/Dashboard/book.svg' 
-import setting from '../../Images/Dashboard/setting-2.svg' 
-import logout from '../../Images/Dashboard/logout.png'
-import greater from '../../Images/Dashboard/greater.svg'  
-
+import React from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import dashboardIcon from "../../Images/Dashboard/home.svg";
+import portfolio from "../../Images/Dashboard/portfolio.svg";
+import repayment from "../../Images/Dashboard/money-recive.svg";
+import recovery from "../../Images/Dashboard/recovery-convert.svg";
+import deliquency from "../../Images/Dashboard/deliquency.svg";
+import general from "../../Images/Dashboard/book.svg";
+import setting from "../../Images/Dashboard/setting-2.svg";
+import logout from "../../Images/Dashboard/logout.png";
+import greater from "../../Images/Dashboard/greater.svg";
 
 const SideBar = () => {
   const [showGeneral, setShowGeneral] = useState(false);
@@ -23,22 +21,22 @@ const SideBar = () => {
   };
 
   const navItems = [
-    { name: "Dashboard", image: dashboardIcon, link: "/dashboard" },
+    { name: "Dashboard", image: dashboardIcon, link: "/dashboard/overview" },
     {
       name: "Portfolio Analysis",
       image: portfolio,
-      link: "/portfolio",
+      link: "/dashboard/portfolio",
     },
-    { name: "Repayment", image: repayment, link: "/repayment" },
+    { name: "Repayment", image: repayment, link: "/dashboard/repayment" },
     {
       name: "Recovery Management",
       image: recovery,
-      link: "/recovery",
+      link: "/dashboard/recovery",
     },
     {
       name: "Deliquency Analysis",
       image: deliquency,
-      link: "/deliquency",
+      link: "/dashboard/deliquency",
     },
   ];
 
@@ -49,12 +47,8 @@ const SideBar = () => {
       className={({ isActive }) => (isActive ? "active" : "")}
     >
       <div className="link-text">
-        <a href={item.link}>
-          <img src={item.image} alt="icon" className="dashboard-icon" />
-        </a>
-        <a className="iconText" href={item.link}>
-          {item.name}
-        </a>
+        <img src={item.image} alt="icon" className="dashboard-icon" />
+        <span className="iconText">{item.name}</span>
       </div>
     </NavLink>
   ));
@@ -71,12 +65,8 @@ const SideBar = () => {
       className={({ isActive }) => (isActive ? "active" : "")}
     >
       <div className="link-text">
-        <a href={item.link}>
-          <img src={item.image} alt="icon" className="dashboard-icon" />
-        </a>
-        <a className="iconText" href={item.link}>
-          {item.name}
-        </a>
+        <img src={item.image} alt="icon" className="dashboard-icon" />
+        <span className="iconText">{item.name}</span>
       </div>
     </NavLink>
   ));
@@ -98,9 +88,7 @@ const SideBar = () => {
                     alt="a general icon"
                     className="dashboard-icon"
                   />
-                  <a href="" className="iconText">
-                    General
-                  </a>
+                  <span className="iconText">General</span>
                 </div>
                 {showGeneral ? (
                   <div>
@@ -123,36 +111,30 @@ const SideBar = () => {
             </button>
             {showGeneral && (
               <div className="sub-menu">
-                <button>
-                  <NavLink
-                    to="/dashboard/message"
-                    className={({ isActive }) =>
-                      isActive ? "submenu-active-1" : ""
-                    }
-                  >
-                    Messages
-                  </NavLink>
-                </button>
-                <button>
-                  <NavLink
-                    to="/dashboard/user-profile"
-                    className={({ isActive }) =>
-                      isActive ? "submenu-active-2" : ""
-                    }
-                  >
-                    User Profile
-                  </NavLink>
-                </button>
-                <button>
-                  <NavLink
-                    to="/dashboard/notification"
-                    className={({ isActive }) =>
-                      isActive ? "submenu-active-3" : ""
-                    }
-                  >
-                    Notification
-                  </NavLink>
-                </button>
+                <NavLink
+                  to="/dashboard/message"
+                  className={({ isActive }) =>
+                    isActive ? "submenu-active-1" : ""
+                  }
+                >
+                  Messages
+                </NavLink>
+                <NavLink
+                  to="/dashboard/user-profile"
+                  className={({ isActive }) =>
+                    isActive ? "submenu-active-2" : ""
+                  }
+                >
+                  User Profile
+                </NavLink>
+                <NavLink
+                  to="/dashboard/notification"
+                  className={({ isActive }) =>
+                    isActive ? "submenu-active-3" : ""
+                  }
+                >
+                  Notification
+                </NavLink>
               </div>
             )}
           </div>
