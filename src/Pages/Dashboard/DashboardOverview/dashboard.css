@@ -48,6 +48,12 @@ padding: 27px 50px;
   line-height: 25px;
   color: #00151a;
 }
+
+/* --------Search and button-------- */
+/* .overview-search-filter-cal{
+  display: flex;
+  align-items: center;
+} */
 /* ----------dashboard---filter----Search----Calendar-------- */
 h3,
 p {

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Boxes.css'
-import {FaAngleDown} from 'react-icons/fa';
+// import {FaAngleDown} from 'react-icons/fa';
 export const Boxes = () => {
   return (
     <div className='inputflex'>
@@ -10,7 +10,7 @@ export const Boxes = () => {
         
     </div>
 
-    <div>
+    <div className='box'>
         <input type='text' placeholder='Select customer Category'></input>
         
     </div>

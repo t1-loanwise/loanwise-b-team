@@ -9,6 +9,31 @@ body {
     font-style: normal;
 
 }
+/* ---------Search-------- */
+.overview-form-wrapper form{
+    display: flex;
+  
+    height: 40px;
+}
+.overview-input{
+    width: 300px;
+
+height:100%;
+
+}
+.overview-input input{
+    width:100%;
+border: 1px solid #AAD4DD;
+}
+.overview-input input::placeholder{
+    font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+      
+    
+        color: #00151A;
+}
 .table-wrapper{
     background: #FFFFFF;
      border: 1px solid #E6F2F5;

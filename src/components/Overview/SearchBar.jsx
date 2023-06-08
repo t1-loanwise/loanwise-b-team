@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './overview.css'
+
 
 const SearchBar = ({ handleSearch }) => {
     
@@ -17,9 +19,11 @@ const SearchBar = ({ handleSearch }) => {
 
 
   return (
-      <div className='form-wrapper'>
+      <div className='overview-form-wrapper'>
           <form onSubmit={handleSubmit}>
-              <input type='text' placeholder='Search For Loans' value={searchItems} onChange={handleChange} />
+              <div className='overview-input'>
+                  <input type='text' placeholder='Search For Loans' value={searchItems} onChange={handleChange}  />
+              </div>
               <button type='submit'>Search</button>
             </form>
         </div>

@@ -6,7 +6,7 @@ import dateArrow from "../../../../Images/Dashboard/datearrow.svg";
 import Calendar from "react-calendar";
 import "react-datepicker/dist/react-datepicker.css";
 
-const DashSearch = () => {
+const  DashSearch = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
