@@ -12,14 +12,10 @@ import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
 import Loginn from './Pages/Onboarding/Wendy/Loginn'
 import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
-import Dashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
-import Portfolio from './Pages/Dashboard/PortfolioAnalysis/Portfolio'
+import NewDashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
-import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
-import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
-import Repayment from './Pages/Dashboard/Repayment/Repayment'
-import Setting from './Pages/Dashboard/Settings/Setting'
+
 // import SU from './Pages/Onboarding/Wendy/SU'
 
 
@@ -42,12 +38,8 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/dashboard/' element={<Dashboard/>} />
-           <Route  path='/portfolio' element={<Portfolio/>} />
-           <Route  path='/deliquency' element={<Deliquency/>} />
-           <Route  path='/recovery' element={<Recovery/>} />
-           <Route  path='/repayment' element={<Repayment/>} />
-           <Route  path='/setting' element={<Setting/>} />
+           <Route  path='/dashboard/*' element={<NewDashboard/>} />
+         
            {/* <Route  path='/su' element={<SU/>} /> */}
         </Routes>
       </BrowserRouter>
