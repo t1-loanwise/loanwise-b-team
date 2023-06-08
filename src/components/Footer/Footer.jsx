@@ -11,7 +11,7 @@ const Footer = () => {
         <FooterInput />
         <FooterLists />
       </div>
-      <p>© 2023Loanwise.All rights reserved</p>
+      <p>© 2023 Loanwise.All rights reserved</p>
     </footer>
   );
 };

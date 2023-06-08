@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    font-family: 'Urbanist';
+
+
+}
+
+/* -----------dashboardheader---------- */
+.dashboard-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: #007E99;
+    height: 80px;
+     position: sticky;
+     top: 0;
+     width: 100%;
+   
+}
+.dashboard-logo {
+  height: 55px;
+}
+
+.dashboard-head-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.profile-div {
+  position: relative;
+}
+.profile {
+  border-radius: 40px;
+  width: 35px;
+  height: 35px;
+}
+.num {
+  background: #fd3b47;
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  color: #fff;
+  font-size: 10px;
+}
+.dash-user-name p {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #e6f2f5;
+}
+.dash-user-name p:last-child {
+  padding-left: 6px;
+}
+
+/* -----------sidebar---------- */
+
+.sidebar-wrapper{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 17px 15px 18px 12px;
+    background: #007E99;
+    position: sticky;
+      left: 0;
+    height: 100%;
+    
+  
+    
+}
+
+
+.link-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+padding: 11px 13px;
+ cursor: pointer;
+padding-top: 10px;
+padding-bottom: 10px;
+  
+    background: transparent;
+
+}
+.iconText{
+  color: #ffffff;
+    font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 20px;
+}
+.dashboard-icon {
+  width: 19px;
+  height: 19px;
+}
+.active {
+
+  width: 228px;
+  background: #003F4D;
+  border-radius: 4px;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+        align-items: flex-start;
+        gap:5px;
+}
+.sidebar-bottom{
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+}
+/* -----------General-------------- */
+.sub-menu button {
+  font-size: 13px;
+  line-height: 15px;
+  padding: 10px 20px 10px 4px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+.general-wrapper > button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  padding: 11px 13px;
+  font-size: 13px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.general {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.general-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.general-icon {
+  width: 13px;
+  height: 13px;
+}
+.general-icon-rotate {
+  transform: rotate(90deg);
+  width: 13px;
+  height: 13px;
+}
+
+.general-wrapper .submenu-active-1,
+.submenu-active-2,
+.submenu-active-3 {
+  width: 180px;
+  padding: 10px;
+  align-items: center;
+  background-color: #7cc2d1;
+  border-radius: 4px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-logo {
+    height: 40px;
+  }
+
+  .iconText {
+    display: none;
+  }
+
+  .general {
+    gap: 10px;
+  }
+
+  .general-wrapper {
+    text-align: center;
+  }
+
+  .sidebar-top,
+  .sidebar-wrapper,
+  .sidebar-bottom {
+    align-items: center;
+  }
+
+  .general-wrapper .submenu-active-1,
+  .submenu-active-2,
+  .submenu-active-3 {
+    width: auto;
+  }
+
+  .sub-menu button {
+    padding: 10px 0;
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active {
+    width: auto;
+  }
+}

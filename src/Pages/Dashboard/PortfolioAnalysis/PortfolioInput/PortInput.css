@@ -1,0 +1,36 @@
+/* input[type=text]{
+    width:285%;
+} */
+
+.inputflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.inputflex input[type="text"] {
+  width: 100%;
+  border: none;
+}
+
+.inputflex input::placeholder {
+  color: #9d9d9d;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.inputflex fieldset {
+  border: 1.1px solid #cbcbcb;
+  display: flex;
+  padding: 0 17px 0 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inputflex fieldset img {
+  cursor: pointer;
+}

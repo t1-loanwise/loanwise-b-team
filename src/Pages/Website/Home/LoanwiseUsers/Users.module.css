@@ -1,0 +1,94 @@
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+p {
+  color: #55666a;
+}
+
+/* ------------------ */
+/* Description*/
+/* ------------------ */
+.userWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.userDesc {
+  margin: 20px auto;
+  text-align: center;
+  width: 60%;
+}
+
+.userDesc h3 {
+  font-size: 41px;
+  margin-bottom: 10px;
+  color: #00151a;
+  text-transform: capitalize;
+}
+
+.userDesc p {
+  color: #55666a;
+}
+
+/* ------------------ */
+/* Users */
+/* ------------------ */
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #aab2b4;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 30px 24px 40px;
+  gap: 16px;
+}
+
+.user img:first-child,
+.user p {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.user h4 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 36px;
+  text-align: center;
+  color: #00151a;
+}
+
+.user a {
+  /* padding: 10px 30px; */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.user button:hover img {
+  filter: saturate(0%) brightness(10000%);
+}
+
+@media (max-width: 1000px) {
+  .userDesc {
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .userDesc {
+    width: 95%;
+  }
+
+  .userDesc h3 {
+    font-size: 31px;
+  }
+}
