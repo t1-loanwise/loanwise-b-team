@@ -6,7 +6,7 @@ import dateArrow from "../../../../Images/Dashboard/datearrow.svg";
 import Calendar from "react-calendar";
 import "react-datepicker/dist/react-datepicker.css";
 
-const DashSearch = () => {
+const  DashSearch = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -20,19 +20,15 @@ const DashSearch = () => {
 
   return (
     <div className="dash__titleSearch">
-      <div className="dash__title">
-        <p>
-          Explore insightful analyses and risk assessment to make informed
-          lending decisions.
-        </p>
-      </div>
+     
       <div className="dash__searchFilterDate">
-        <div className="dash__searchFilter">
-          <fieldset className="dash__search">
+       
+          {/* <fieldset className="dash__search">
             <input type="text" placeholder="Search  for Loans" />
             <FilledBtn title={"Search"} />
-          </fieldset>
-          <div className="filter">
+          </fieldset> */}
+        <div className="dash__searchFilter">
+        <div className="filter">
             <TransparentBtn
               title={"Filter"}
               icon2={Icon2}
@@ -40,9 +36,10 @@ const DashSearch = () => {
             />
             {showFilter && (
               <div className="list" onClick={() => setShowFilter(!showFilter)}>
-                <span>Wendy</span>
-                <span>Precious</span>
-                <span>Rosheedat</span>
+                <span>Default Loans</span>
+                <span>Active Loans</span>
+                <span>Pending Loans</span>
+                <span>Date</span>
               </div>
             )}
           </div>
@@ -89,6 +86,8 @@ const DashSearch = () => {
               </div>
             </div>
           </div>
+        </div>
+         
           <div
             className="dash__date"
             // onClick={() => setShowCalendar(!showCalendar)}
@@ -110,9 +109,9 @@ const DashSearch = () => {
               </div>
             )}
           </div>
-        </div>
       </div>
-    </div>
+      </div>
+   
   );
 };
 

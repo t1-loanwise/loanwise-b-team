@@ -1,24 +1,32 @@
-body {
-  width: 100vw;
-  height: 100vh;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    font-family: 'Urbanist';
+
+
 }
 
 /* -----------dashboardheader---------- */
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: var(--primary-bg);
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  width: 100dvw;
-  z-index: 999;
-  /* -webkit-overflow-scrolling: touch; */
+.dashboard-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: #007E99;
+    height: 80px;
+     position: sticky;
+     top: 0;
+     width: 100%;
+   
 }
 .dashboard-logo {
-  height: 60px;
+  height: 55px;
 }
 
 .dashboard-head-right {
@@ -65,37 +73,52 @@ body {
 }
 
 /* -----------sidebar---------- */
-.sidebar-wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
-  background: var(--primary-bg);
-  height: calc(100dvh - 74px);
-  padding: 24px 13px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.sidebar-wrapper{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 17px 15px 18px 12px;
+    background: #007E99;
+    position: sticky;
+      left: 0;
+    height: 100%;
+    
+  
+    
 }
+
 
 .link-text {
   display: flex;
   align-items: center;
   gap: 15px;
+padding: 11px 13px;
+ cursor: pointer;
+padding-top: 10px;
+padding-bottom: 10px;
+  
+    background: transparent;
+
+}
+.iconText{
   color: #ffffff;
-  padding: 11px 13px;
-  font-size: 13px;
-  cursor: pointer;
+    font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 20px;
 }
-
-.active {
-  background: #003f4d;
-  border-radius: 3px;
-  width: 100%;
-}
-
 .dashboard-icon {
   width: 19px;
   height: 19px;
+}
+.active {
+
+  width: 228px;
+  background: #003F4D;
+  border-radius: 4px;
 }
 
 .sidebar-top {
@@ -105,11 +128,17 @@ body {
   gap: 3px;
 }
 
-.sidebar-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  /* gap: 20px; */
+.sidebar-top{
+    display: flex;
+    flex-direction: column;
+        align-items: flex-start;
+        gap:5px;
+}
+.sidebar-bottom{
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
 }
 /* -----------General-------------- */
 .sub-menu button {

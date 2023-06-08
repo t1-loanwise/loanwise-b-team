@@ -468,12 +468,12 @@ border-top: 1px solid #ccd1d2;
     color: #007E99;
 }
 
-.content {
+.pricing-content-hidden {
   max-height: 0px;
   overflow: hidden;
 }
 
-.content-show {
+.pricing-content-show {
 
     height: auto;
     max-height: 90%;
