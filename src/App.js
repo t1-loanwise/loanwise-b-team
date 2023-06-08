@@ -12,11 +12,9 @@ import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
 import Loginn from './Pages/Onboarding/Wendy/Loginn'
 import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
-import Dashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
-
+import NewDashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
-import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'
 
 // import SU from './Pages/Onboarding/Wendy/SU'
 
@@ -40,7 +38,7 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/dashboard/*' element={<Dashboard/>} />
+           <Route  path='/dashboard/*' element={<NewDashboard/>} />
          
            {/* <Route  path='/su' element={<SU/>} /> */}
         </Routes>
