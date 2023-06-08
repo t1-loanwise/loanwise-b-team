@@ -28,6 +28,7 @@ p {
   font-size: 41px;
   margin-bottom: 10px;
   color: #00151a;
+  text-transform: capitalize;
 }
 
 .userDesc p {

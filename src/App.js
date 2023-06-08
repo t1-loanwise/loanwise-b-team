@@ -12,6 +12,8 @@ import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Register from './Pages/Onboarding/Register/Register'
 import Loginn from './Pages/Onboarding/Wendy/Loginn'
 import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
+import Dashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
+
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
 import Dashboard from './Pages/Dashboard/DashboardOverview/Dashboard'

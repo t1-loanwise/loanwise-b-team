@@ -24,6 +24,12 @@ const data = [
     amt: 2210,
   },
   {
+    name: "Mar",
+    ov: 1000,
+    dc: 700,
+    amt: 2210,
+  },
+  {
     name: "Apr",
     ov: 750,
     dc: 950,
@@ -64,7 +70,7 @@ const PortfolioChart = () => {
           </div>
         </div>
         <ResponsiveContainer width="100%" height={150}>
-          <AreaChart data={data} margin={0}>
+          <AreaChart data={data} margin={{ left: 0 }}>
             <CartesianGrid horizontal={true} vertical={false} />
             <XAxis
               dataKey="name"

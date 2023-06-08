@@ -96,6 +96,10 @@ p {
   margin: 0;
 }
 
+.dash__search input::placeholder {
+  color: #00151a;
+}
+
 .btnzz {
   display: none;
 }

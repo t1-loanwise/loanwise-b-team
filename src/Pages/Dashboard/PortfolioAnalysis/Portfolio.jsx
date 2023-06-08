@@ -1,15 +1,15 @@
 import React from "react";
 import PortfolioChart from "./PortfolioChart";
-import { Newportfolio } from "../../../components/NewPortfolio/Newportfolio";
-import { Boxes  } from "../../../components/input/Boxes";
+import { Newportfolio } from "./NewPortfolio/Newportfolio";
+import { PortInput } from "./PortfolioInput/PortInput";
 
 const Portfolio = () => {
   return (
    
         <div className="wrapper">
-         <Newportfolio/>
+          <Newportfolio />
           <PortfolioChart />
-          <Boxes/>
+          <PortInput />
         </div>
   
   );

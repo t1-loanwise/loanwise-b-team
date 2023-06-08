@@ -64,7 +64,7 @@ const  DashSearch = () => {
             </div>
             <div
               className="dash__date-small"
-              onClick={() => setShowCalendar(!showCalendar)}
+              // onClick={() => setShowCalendar(!showCalendar)}
             >
               <div
                 className="img-date"
@@ -90,7 +90,7 @@ const  DashSearch = () => {
          
           <div
             className="dash__date"
-            onClick={() => setShowCalendar(!showCalendar)}
+            // onClick={() => setShowCalendar(!showCalendar)}
           >
             <div
               className="img-date"
