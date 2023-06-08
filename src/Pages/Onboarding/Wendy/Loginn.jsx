@@ -3,6 +3,8 @@ import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./loginn.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 
 const Loginn = () => {
   const {
@@ -10,23 +12,33 @@ const Loginn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const onSubmit = (e) => {
-    // Handle form submission logic here
-    e.preventDefault();
-    setIsSubmitted(true);
+  const navigate = useNavigate();
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
   };
 
+  const onSubmit = () => {
+    let isValid = Object.keys(errors).length === 0;
+    {
+      isValid && navigate("/");
+    }
+  };
+
+  const formFooter = (
+    <p>
+      Don’t have an account? <a href="/loginn">Sign Up</a>
+    </p>
+  );
+
   return (
-    <AuthLayout>
-      <div className="form-text">
-        <h1 className="heading">Welcome Back!</h1>
-        <p className="subHeading">Enter your details to sign in</p>
-      </div>
+    <AuthLayout
+      title="Welcome Back!"
+      subtitle="Enter your details to sign in"
+      formFooter={formFooter}
+    >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="input__margin">
+        <fieldset>
           <label htmlFor="email">Email address</label>
           <input
             {...register("email", { required: true })}
@@ -37,21 +49,32 @@ const Loginn = () => {
           {errors.email?.type === "required" && (
             <p className="errorMessage">The email field is required</p>
           )}
-        </div>
-        <div className="input__margin">
+        </fieldset>
+
+        <fieldset>
           <label htmlFor="password">Password</label>
-          <input
-            {...register("password", { required: true, minLength: 6 })}
-            type="password"
-            id="password"
-            placeholder={"Enter email address"}
-          />
+          <div className="inputField">
+            <input
+              {...register("password", { required: true, minLength: 6 })}
+              type={passwordVisible ? "text" : "password"}
+              id="password"
+              placeholder={"Enter Password"}
+            />
+            <button type="button" onClick={togglePasswordVisibility}>
+              {passwordVisible ? (
+                <RiEyeLine style={{ color: "#007e99" }} />
+              ) : (
+                <RiEyeOffLine style={{ color: "#007e99" }} />
+              )}
+            </button>
+          </div>
           {errors.password && (
             <p className="errorMessage">
               Password must contain at least 6 characters including numbers
             </p>
           )}
-        </div>
+        </fieldset>
+
         <div className="checkForgot">
           <div className="checkText">
             <input type="checkbox" name="Keep me signed in" /> Keep me signed in

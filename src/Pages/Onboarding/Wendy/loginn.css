@@ -1,76 +1,91 @@
-form {
+/* ------------------ */
+/* General */
+/* ------------------ */
+
+form,
+h1,
+p {
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  margin: 0;
-}
-
-/* .field-container {
+.right-side .form-title {
   display: flex;
   flex-direction: column;
-} */
-
-.form-text {
+  gap: 5px;
   margin-bottom: 40px;
 }
 
-.form-text h1 {
+.right-side .form-title h1 {
   font-weight: 600;
   font-size: 52px;
 }
 
-label {
+.right-side label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: 600;
-  line-height: 24px;
   color: #00191f;
 }
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+
+.right-side fieldset {
+  margin-bottom: 20px;
+}
+
+.right-side input[type="text"],
+.right-side input[type="password"],
+.right-side input[type="email"] {
   background: #ffffff;
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
   width: 100%;
-  padding: 15px 0 15px 15px;
+  padding: 12px 0 12px 12px;
   outline: none;
-  /* border: 1px solid black; */
+}
+.right-side input[type="checkbox"] {
+  background: var(--primary-bg);
+  border-color: 2px solid var(--primary-bg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.right-side input::placeholder {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 17px;
+  color: #9d9d9d;
+}
+
+.formFooter {
+  text-align: center;
 }
 
 .passwordContainer {
   display: flex;
-  /* flex: 1; */
-
   width: 100%;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
 
-fieldset {
+.right-side fieldset {
   border: none;
   width: 100%;
-  margin-bottom: 10px;
 }
 
 .inputField {
   display: flex;
   background: #ffffff;
-  /* justify-content: space-between; */
   width: 100%;
   border: 1.1px solid #cbcbcb;
-
   border-radius: 5px;
+  padding-right: 10px;
 }
 
 .right-side .inputField input {
   margin-bottom: 0;
   border: none;
-  flex: 0.9;
+  flex: 1;
 }
 
 .inputField button {
@@ -83,17 +98,14 @@ fieldset {
   width: 100%;
 }
 
-.form-btn {
-  margin-top: 20px;
+.right-side .form-btn button {
+  margin-top: 50px;
 }
 
-.errorMessage {
-  padding: 0;
+.right-side fieldset .errorMessage {
+  margin-top: 3px;
   font-style: italic;
-}
-
-fieldset .errorMessage {
-  margin: 10px 0 0 0;
+  font-size: 13px;
 }
 
 .terms-and-conditions {
@@ -130,24 +142,34 @@ fieldset .errorMessage {
   margin: 0;
 }
 
-.already {
-  margin-top: 50px;
-  text-align: center;
-}
-
 @media (max-width: 1000px) {
-  label {
+  .right-side label {
     color: #ffffff;
   }
 
-  .form-text h1 {
+  .right-side {
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .right-side .form-title {
+    margin-bottom: 20px;
+  }
+
+  .right-side .form-title h1 {
     font-weight: 600;
     font-size: 48px;
   }
 
-  .subHeading,
-  .already {
+  .right-side .form-title p,
+  .subHeading {
     color: #f1ecec;
+  }
+
+  .right-side .form-btn button {
+    width: 100%;
+    background: #02697f;
+    margin-top: 20px;
   }
 
   .errorMessage {
@@ -165,8 +187,12 @@ fieldset .errorMessage {
     gap: 0;
   }
 
-  .form-text h1 {
+  .right-side .form-title h1 {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+  .right-side h1 {
+    padding: 0;
   }
 }
