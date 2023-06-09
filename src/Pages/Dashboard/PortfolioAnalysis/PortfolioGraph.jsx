@@ -16,33 +16,33 @@ const data = [
   },
   {
     name: "Feb",
-    ac: 2000,
-    cl: 800,
+    ac: 1150,
+    cl: 850,
   },
   {
     name: "Mar",
-    ac: 200,
-    cl: 1750,
+    ac: 1550,
+    cl: 200,
   },
   {
     name: "Apr",
-    ac: 320,
-    cl: 1470,
+    ac: 1150,
+    cl: 320,
   },
   {
     name: "May",
-    ac: 320,
-    cl: 1750,
+    ac: 1430,
+    cl: 320,
   },
   {
     name: "Jun",
-    ac: 500,
-    cl: 1250,
+    ac: 740,
+    cl: 510,
   },
   {
     name: "Jul",
-    ac: 500,
-    cl: 1250,
+    ac: 740,
+    cl: 510,
   },
 ];
 const PortfolioGraph = () => {
