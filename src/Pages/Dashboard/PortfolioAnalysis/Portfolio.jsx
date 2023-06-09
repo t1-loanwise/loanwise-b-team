@@ -7,14 +7,12 @@ import PaginationTable from "../../../components/Overview/PaginationTable";
 
 const Portfolio = () => {
   return (
-   
         <div className="wrapper">
           <Newportfolio />
           <PortfolioChart />
           <PortInput />
           <PaginationTable />
         </div>
-  
   );
 };
 
