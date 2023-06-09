@@ -21,7 +21,7 @@ const Login = () => {
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/");
+      isValid && navigate("/dashboard/overview");
     }
   };
 

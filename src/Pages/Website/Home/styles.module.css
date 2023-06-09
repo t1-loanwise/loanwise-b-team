@@ -35,7 +35,7 @@ h4 {
 }
 
 .heroText p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* ------------------ */
@@ -73,8 +73,10 @@ h4 {
 h2 {
   font-weight: 600;
   font-size: 40px;
-  line-height: 60px;
+  line-height: 50px;
   margin: 0;
+  margin-bottom: 25px;
+
   /* border: 1px solid black; */
 }
 
@@ -153,7 +155,7 @@ h2 {
 }
 
 .bigFeature:hover {
-  background: rgb(41, 230, 41);
+  background: #01ac76;
 }
 
 .bigFeature h3 {
@@ -194,7 +196,8 @@ h2 {
 }
 
 .AmazingImg img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(100%);
 }
 
 .bigFeatureImg img,
@@ -250,7 +253,6 @@ h2 {
 /* ------------------------- */
 
 @media (max-width: 1000px) {
-
   .hero,
   .Revolutionising,
   .loanDefaulters {
@@ -343,7 +345,6 @@ h2 {
 /* ------------------------- */
 
 @media (max-width: 768px) {
-
   .hero,
   .Revolutionising,
   .loanDefaulters {

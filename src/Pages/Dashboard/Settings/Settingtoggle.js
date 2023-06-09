@@ -1,7 +1,8 @@
-import * as React from "react";
+import React from "react";
 import "./Settingtoggle.css";
+import arrow from "../../../Images/arrrow.svg";
 
-const Settingtoggle = ({ header, subHeader }) => {
+const Settingtoggle = ({ header, subHeader, showItems }) => {
   const [isShow, setShow] = React.useState(false);
 
   const handleToggle = () => {
@@ -9,27 +10,21 @@ const Settingtoggle = ({ header, subHeader }) => {
     console.log("clicked");
   };
 
-  // const greeting = "Loading...";
-  // const Welcome = ({ text }) => {
-  //   return <h1>{text}</h1>;
-  // };
-
   return (
     <div className="Container">
-      <button onClick={handleToggle} type="button" className="header-btn">
-        <h1>{header}</h1>
-        <p>{subHeader}</p>
-      </button>
+      <div className="toggleContainer" onClick={handleToggle}>
+        <div className="toggle-title">
+          <h1>{header}</h1>
+          <p>{subHeader}</p>
+        </div>
+        {isShow ? (
+          <img src={arrow} alt="arrow" style={{ transform: "rotate(90deg)" }} />
+        ) : (
+          <img src={arrow} alt="arrow" />
+        )}
+      </div>
 
-      {isShow && (
-        <ul class="list-group">
-          <li class="list-group-item">Item</li>
-          <li class="list-group-item">Second item</li>
-          <li class="list-group-item">Third item</li>
-          <li class="list-group-item">Fourth item</li>
-          <li class="list-group-item">Fifth item</li>
-        </ul>
-      )}
+      {isShow && showItems}
     </div>
   );
 };
