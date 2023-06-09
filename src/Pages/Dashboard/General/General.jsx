@@ -1,8 +1,9 @@
 import React from 'react'
+import { Comming } from '../../../components/Comming/Comming'
 
 const General = () => {
   return (
-    <div>General</div>
+    <div><Comming/></div>
   )
 }
 

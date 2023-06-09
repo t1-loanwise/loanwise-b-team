@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
-import "./loginn.css";
+import "./Login.css";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 
-const NewAccount = () => {
+const CreateAccount = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -23,19 +25,23 @@ const NewAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const onSubmit = (data) => {
-    setIsSubmitted(true);
+  const onSubmit = () => {
+    let isValid = Object.keys(errors).length === 0;
+    {
+      isValid && navigate("/");
+    }
   };
 
+  const formFooter = (
+    <p>
+      Already have an account? <a href="/loginn">Sign In</a>
+    </p>
+  );
+
   return (
-    <AuthLayout>
-      <div className="form-text">
-        <h1 className="heading">Create an account</h1>
-      </div>
+    <AuthLayout title={"Create an account"} formFooter={formFooter}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="input__margin">
+        <fieldset>
           <label htmlFor="name">Full Name</label>
           <input
             {...register("name", { required: true })}
@@ -46,8 +52,9 @@ const NewAccount = () => {
           {errors.name && (
             <p className="errorMessage">The name field is required</p>
           )}
-        </div>
-        <div className="input__margin">
+        </fieldset>
+
+        <fieldset>
           <label htmlFor="email">Email address</label>
           <input
             {...register("email", { required: true })}
@@ -58,8 +65,9 @@ const NewAccount = () => {
           {errors.email && (
             <p className="errorMessage">The email field is required</p>
           )}
-        </div>
-        <div className="passwordContainer input__margin">
+        </fieldset>
+
+        <div className="passwordContainer">
           <fieldset className="password">
             <label htmlFor="password">Password</label>
             <div className="inputField">
@@ -77,12 +85,6 @@ const NewAccount = () => {
                 )}
               </button>
             </div>
-
-            {errors.password && (
-              <p className="errorMessage">
-                Password must contain at least 6 characters including numbers
-              </p>
-            )}
           </fieldset>
           <fieldset className="confirmPassword">
             <label htmlFor="confirmPassword">Confirm Password</label>
@@ -104,13 +106,13 @@ const NewAccount = () => {
                 )}
               </button>
             </div>
-            {errors["confirm password"] && (
-              <p className="errorMessage">
-                Password must contain at least 6 characters including numbers
-              </p>
-            )}
           </fieldset>
         </div>
+        {(errors.password || errors["confirm password"]) && (
+          <p className="errorMessage">
+            Password must contain at least 6 characters including numbers
+          </p>
+        )}
         <div className="terms-and-conditions">
           <input type="radio" id="terms" />
           <span>
@@ -120,18 +122,11 @@ const NewAccount = () => {
           </span>
         </div>
         <div className="form-btn">
-          <FilledBtn
-            type={"submit"}
-            title={"Create Account"}
-            link={"/emailVerify"}
-          />
+          <FilledBtn type={"submit"} title={"Create Account"} />
         </div>
       </form>
-      <p className="already">
-        Already have an account? <a href="/loginn">Sign In</a>
-      </p>
     </AuthLayout>
   );
 };
 
-export default NewAccount;
+export default CreateAccount;

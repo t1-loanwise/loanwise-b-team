@@ -1,8 +1,11 @@
 import React from 'react'
+import {Comming} from '../../../components/Comming/Comming' 
 
 const Message = () => {
   return (
-    <div>Message</div>
+    <div>
+      <Comming/>
+    </div>
   )
 }
 
