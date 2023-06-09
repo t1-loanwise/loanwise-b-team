@@ -26,7 +26,7 @@ const PaginationTable = ({data, totalCount}) => {
 	const navigate = useNavigate();
 	 
 	const handleClick = () => {
-		navigate('/')
+		navigate('/dashboard/customerpage')
 	}
 
 
