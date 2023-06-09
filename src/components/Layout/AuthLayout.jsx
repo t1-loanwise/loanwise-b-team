@@ -1,11 +1,9 @@
 import React from "react";
 import "./layout.css";
 import Chart from "../../Images/Auth/Group 8039.svg";
-// import Chart from "../../Images/Auth/Chart.png";
-// import Sum from "../../Images/Auth/Sum.png";
-import logo from "../../Images/logo.svg"
+import logo from "../../Images/logo.svg";
 
-const AuthLayout = ({ title, children, subtitle }) => {
+const AuthLayout = ({ title, children, subtitle, formFooter }) => {
   return (
     <div className="auth-container">
       <div className="auth--layout">
@@ -27,13 +25,15 @@ const AuthLayout = ({ title, children, subtitle }) => {
             </a>
           </div>
           <div className="right-style">
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
+            <div className="form-title">
+              <h1>{title}</h1>
+              {subtitle && <p>{subtitle}</p>}
+            </div>
             {children}
           </div>
+          {formFooter && <p className="formFooter">{formFooter}</p>}
         </div>
       </div>
-
     </div>
   );
 };
