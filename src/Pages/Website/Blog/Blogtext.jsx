@@ -8,7 +8,7 @@ const Blogtext = () => {
     <div className="text">
       <img src={ComingSoon} alt=""/>
       <h2>
-        Get Notified We Our Blog Launches
+        Get Notified When Our Blog Launches
       </h2>
 
       <div className="padding">
