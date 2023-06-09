@@ -42,7 +42,7 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/portfolio' element={<Portfolio/>} />
+           <Route  path='/Portfolio' element={<Portfolio/>} />
            <Route  path='/deliquency' element={<Deliquency/>} />
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
