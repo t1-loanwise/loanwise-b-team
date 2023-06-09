@@ -15,43 +15,36 @@ const data = [
     name: "Jan",
     ov: 510,
     dc: 1300,
-    amt: 2400,
   },
   {
     name: "Feb",
     ov: 1400,
     dc: 700,
-    amt: 2210,
   },
   {
     name: "Mar",
     ov: 1000,
     dc: 700,
-    amt: 2210,
   },
   {
     name: "Apr",
     ov: 750,
     dc: 950,
-    amt: 2290,
   },
   {
     name: "May",
     ov: 1000,
     dc: 1200,
-    amt: 2000,
   },
   {
     name: "Jun",
     ov: 1600,
     dc: 1700,
-    amt: 2181,
   },
   {
     name: "Jul",
     ov: 1450,
     dc: 1700,
-    amt: 2500,
   },
 ];
 const PortfolioChart = () => {
