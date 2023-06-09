@@ -22,7 +22,7 @@ const SearchBar = ({ handleSearch }) => {
       <div className='overview-form-wrapper'>
           <form onSubmit={handleSubmit}>
               <div className='overview-input'>
-                  <input type='text' placeholder='Search For Loans' value={searchItems} onChange={handleChange}  />
+                  <input type='text' placeholder='Search for Loans' value={searchItems} onChange={handleChange}  />
               </div>
               <button type='submit'>Search</button>
             </form>

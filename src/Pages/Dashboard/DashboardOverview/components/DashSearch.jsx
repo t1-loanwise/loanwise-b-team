@@ -22,11 +22,11 @@ const  DashSearch = () => {
     <div className="dash__titleSearch">
      
       <div className="dash__searchFilterDate">
-       
+{/*        
           <fieldset className="dash__search">
             <input type="text" placeholder="Search  for Loans" />
             <FilledBtn title={"Search"} />
-          </fieldset>
+          </fieldset> */}
         <div className="dash__searchFilter">
         <div className="filter">
             <TransparentBtn
