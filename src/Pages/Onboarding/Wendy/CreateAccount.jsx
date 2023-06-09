@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./Login.css";
@@ -28,13 +28,13 @@ const CreateAccount = () => {
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/");
+      isValid && navigate("/accountVerify");
     }
   };
 
   const formFooter = (
     <p>
-      Already have an account? <a href="/loginn">Sign In</a>
+      Already have an account? <a href="/login">Sign In</a>
     </p>
   );
 
@@ -85,7 +85,13 @@ const CreateAccount = () => {
                 )}
               </button>
             </div>
+            {errors.password && (
+              <p className="errorMessage">
+                Password must contain at least 6 characters including numbers
+              </p>
+            )}
           </fieldset>
+
           <fieldset className="confirmPassword">
             <label htmlFor="confirmPassword">Confirm Password</label>
             <div className="inputField">

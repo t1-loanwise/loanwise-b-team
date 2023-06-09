@@ -34,6 +34,11 @@ const AccountVerify = () => {
   /**
    * effects
    */
+
+  useEffect(() => {
+    inputRef1.current.focus();
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (resendTimeout === 0) {

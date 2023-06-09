@@ -21,6 +21,10 @@
   padding: 0 !important;
 }
 
+.otp_input-items input:focus {
+  outline: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
