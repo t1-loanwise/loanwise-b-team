@@ -1,21 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css';
 import Home from './Pages/Website/Home/Home'
 import AboutUs from './Pages/Website/AboutUs/AboutUs'
 import Pricing from './Pages/Website/Pricing/Pricing'
 import Blog from './Pages/Website/Blog/Blog'
-import './App.css';
-import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
-import Login from './Pages/Onboarding/Login/Login'
-import SecurityQuestion from './Pages/Onboarding/Login/SecurityQuestion'
-import CreateAccount from './Pages/Onboarding/CreateAccount/CreateAccount';
+import CreateAccount from './Pages/Onboarding/Wendy/CreateAccount'
+import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
+import SecurityQuestion from './Pages/Onboarding/Wendy/SecurityQuestion'
 import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
-import Register from './Pages/Onboarding/Register/Register'
-import Loginn from './Pages/Onboarding/Wendy/Loginn'
-import NewAccount from './Pages/Onboarding/Wendy/NewAccount'
+import Login from './Pages/Onboarding/Wendy/Login'
+import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
 import Dashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
 import Portfolio from './Pages/Dashboard/PortfolioAnalysis/Portfolio'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
-import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
 import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
 import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
 import Repayment from './Pages/Dashboard/Repayment/Repayment'
@@ -32,13 +29,10 @@ function App() {
           <Route exact path='/aboutUs' element={<AboutUs />} />
           <Route exact path='/pricing' element={<Pricing />} />
           <Route exact path='/blog' element={<Blog />} />
-          <Route exact path='/register' element={<Register />} />
           <Route exact path='/create-new-password' element={<CreatePassword />} />
           <Route exact path="/PasswordVerify" element={<PasswordVerify />} />
           <Route exact path='/login' element={<Login />} />
-          <Route exact path='/Loginn' element={<Loginn />} />
-          <Route exact path='/NewAccount' element={<NewAccount />} />
-          <Route exact path='/security-question' element={<SecurityQuestion />} />
+          <Route exact path='/securityQuestion' element={<SecurityQuestion />} />
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
@@ -49,7 +43,7 @@ function App() {
            <Route  path='/repayment' element={<Repayment/>} />
            <Route  path='/setting' element={<Setting/>} />
            {/* <Route  path='/su' element={<SU/>} /> */}
-        </Routes>
+        </Routes> 
       </BrowserRouter>
     </div>
   );

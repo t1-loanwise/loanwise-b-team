@@ -118,7 +118,7 @@ h1 {
     gap: 20px;
   }
 
-  .right-side-header {
+  .right-side-header:not(.securityQxn) {
     position: static;
     display: flex;
     align-items: center;

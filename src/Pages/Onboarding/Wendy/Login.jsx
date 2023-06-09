@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
-import "./loginn.css";
-import { useForm } from "react-hook-form";
+import "./Login.css";
+import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 
-const Loginn = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,
@@ -92,4 +92,4 @@ const Loginn = () => {
   );
 };
 
-export default Loginn;
+export default Login;

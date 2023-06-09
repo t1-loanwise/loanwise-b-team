@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
-import "./loginn.css";
+import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 
-const NewAccount = () => {
+const CreateAccount = () => {
   const {
     register,
     handleSubmit,
@@ -40,9 +40,6 @@ const NewAccount = () => {
 
   return (
     <AuthLayout title={"Create an account"} formFooter={formFooter}>
-      <div className="form-text">
-        <h1 className="heading"></h1>
-      </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <label htmlFor="name">Full Name</label>
@@ -132,4 +129,4 @@ const NewAccount = () => {
   );
 };
 
-export default NewAccount;
+export default CreateAccount;

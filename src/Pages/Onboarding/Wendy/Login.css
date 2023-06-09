@@ -34,7 +34,9 @@ p {
 
 .right-side input[type="text"],
 .right-side input[type="password"],
-.right-side input[type="email"] {
+.right-side input[type="email"],
+.securityQxn fieldset input,
+.select input {
   background: #ffffff;
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
@@ -47,6 +49,11 @@ p {
   border-color: 2px solid var(--primary-bg);
   border-radius: 4px;
   cursor: pointer;
+}
+
+.select {
+  padding: 0;
+  margin-bottom: 5px;
 }
 
 .right-side input::placeholder {
@@ -110,7 +117,6 @@ p {
 
 .terms-and-conditions {
   text-align: right;
-  margin: 18px 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
