@@ -4,7 +4,7 @@ import LoanAmount from './components/LoanAmount'
 import PaginationTable from '../../../components/Overview/PaginationTable'
 import BarChart from './components/BarChart'
 import './dashboard.css'
-import SearchBar from '../../../components/Overview/SearchBar'
+// import SearchBar from '../../../components/Overview/SearchBar'
 import { TableData } from '../../../components/Overview/TableData'
 
 
@@ -16,11 +16,11 @@ const DashboardOverview = () => {
 	  const [searchItems, setSearchItems] = useState('')
 //   const [isLoading, SetIsLoading] = useState(false);
 
-  const handleSearch = (term) => {
-	  setSearchItems(term);
-	  setCurrentPage(1);
-	  console.log({handleSearch})
-	};
+//   const handleSearch = (term) => {
+// 	  setSearchItems(term);
+// 	  setCurrentPage(1);
+// 	  console.log({handleSearch})
+// 	};
 	
 	useEffect(() => {
 		const results = TableData.filter((user) => {
@@ -53,7 +53,7 @@ const DashboardOverview = () => {
 		 </div>
 		  <div className='overview-search-filter'>
 				<div className='overview-search-filter-cal'>
-					<SearchBar handleSearch={handleSearch} />
+					{/* <SearchBar handleSearch={handleSearch} /> */}
 			 		 <DashSearch />
 				</div>
         		<LoanAmount />

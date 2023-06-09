@@ -10,7 +10,7 @@ body {
 
 }
 /* ---------Search-------- */
-.overview-form-wrapper form{
+/* .overview-form-wrapper form{
     display: flex;
   
     height: 40px;
@@ -33,7 +33,7 @@ border: 1px solid #AAD4DD;
       
     
         color: #00151A;
-}
+} */
 .table-wrapper{
     background: #FFFFFF;
      border: 1px solid #E6F2F5;
