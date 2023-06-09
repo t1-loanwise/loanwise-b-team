@@ -20,6 +20,7 @@ import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
 import Repayment from './Pages/Dashboard/Repayment/Repayment'
 import Setting from './Pages/Dashboard/Settings/Setting'
 import LogOut from './Pages/Dashboard/LogOut/LogOut'
+import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
 // import SU from './Pages/Onboarding/Wendy/SU'
 
 
@@ -42,7 +43,7 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/Portfolio' element={<Portfolio/>} />
+           <Route  path='/Portfolio' element={<MainPortfolio/>} />
            <Route  path='/deliquency' element={<Deliquency/>} />
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
