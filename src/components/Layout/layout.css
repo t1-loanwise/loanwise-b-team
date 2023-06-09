@@ -67,7 +67,14 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: left;
+}
+
+.right-side:not(.right-side .forgotPassword) {
   justify-content: space-between;
+}
+
+.right-side .right-side .forgotPassword {
+  justify-content: center;
 }
 
 .right-side-header {

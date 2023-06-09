@@ -10,6 +10,7 @@ import LogOut from "../LogOut/LogOut";
 import Message from "../Message/Message";
 import UserProfile from "../UserProfile/UserProfile";
 import Notification from "../Notification/Notification";
+import CustomerPage from "../CustomerPages/CustomerPage";
 
 
 const DashboardPages = () => {
@@ -25,6 +26,7 @@ const DashboardPages = () => {
       <Route path="/message" element={<Message />} />
       <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/notification" element={<Notification />} />
+      <Route path="/customerpage" element={<CustomerPage />} />
     </Routes>
   );
 };
