@@ -50,7 +50,7 @@ ul li a {
 }
 
 .active {
-  border-bottom: 2px solid var(--primary-bg);
+  text-decoration: underline;
 }
 
 /* ------------------ */
@@ -86,7 +86,8 @@ ul li a {
   padding: 16px 34px;
 }
 
-.transparentBtn a, .filledBtn a{
+.transparentBtn a,
+.filledBtn a {
   display: flex;
   align-items: center;
   justify-content: center;

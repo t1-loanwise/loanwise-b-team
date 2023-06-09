@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const SuccessfulPage = () => {
   const navigate = useNavigate();
-  const handleClick = () => navigate("/dashboard");
+  const handleClick = () => navigate("/dashboard/overview");
   const homeClick = () => navigate("/");
 
   return (
@@ -26,7 +26,7 @@ const SuccessfulPage = () => {
           You are set to explore <span>LoanWise </span> to make safe and easy
           credit decisions
         </p>
-        <FilledBtn title={"Continues"} type={"submit"} />
+        <FilledBtn title={"Continues"} type={"submit"} onClick={handleClick} />
       </div>
 
       <div className="successful-wave">
