@@ -75,6 +75,14 @@ p {
   gap: 10px;
 }
 
+.passwordContainer fieldset:first-child .errorMessage {
+  display: none;
+}
+
+.passwordContainer fieldset {
+  margin-bottom: 0;
+}
+
 .right-side fieldset {
   border: none;
   width: 100%;
@@ -98,7 +106,8 @@ p {
 .inputField button {
   border: none;
   background: none;
-  flex: 0.1;
+  flex: 0.05;
+  cursor: pointer;
 }
 
 .passwordContainer input {
@@ -109,7 +118,7 @@ p {
   margin-top: 50px;
 }
 
-.right-side fieldset .errorMessage {
+.right-side .errorMessage {
   margin-top: 3px;
   font-style: italic;
   font-size: 13px;
@@ -121,6 +130,7 @@ p {
   align-items: center;
   justify-content: flex-end;
   white-space: nowrap;
+  margin-top: 20px;
 }
 
 .terms-and-conditions input {
@@ -180,6 +190,18 @@ p {
 
   .errorMessage {
     color: #cbcbcb;
+  }
+
+  .passwordContainer fieldset:first-child .errorMessage {
+    display: block;
+  }
+
+  .passwordContainer fieldset:last-child label {
+    margin-top: 20px;
+  }
+
+  .terms-and-conditions {
+    margin: 20px 0 0 0;
   }
 }
 

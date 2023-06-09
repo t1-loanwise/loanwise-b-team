@@ -27,7 +27,7 @@ const Login = () => {
 
   const formFooter = (
     <p>
-      Don’t have an account? <a href="/loginn">Sign Up</a>
+      Don’t have an account? <a href="/createAccount">Sign Up</a>
     </p>
   );
 

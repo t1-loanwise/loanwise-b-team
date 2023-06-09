@@ -72,7 +72,7 @@
 }
 
 .Edit {
-  /* position: absolute; */
+  position: fixed;
   width: 888px;
   /* height: 1009px; */
   /* left: calc(50% - 888px / 2);

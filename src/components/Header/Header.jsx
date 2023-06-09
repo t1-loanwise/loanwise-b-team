@@ -67,10 +67,10 @@ const Header = () => {
             </button>
             <ul className={!menu ? styles.menuList : styles.display}>
               {navItem}
-              <a className={styles.register} href="/newAccount">
+              <a className={styles.register} href="/createAccount">
                 Register
               </a>
-              <FilledBtn title={"Login"} link={"/loginn"} />
+              <FilledBtn title={"Login"} link={"/login"} />
             </ul>
           </div>
         </div>
