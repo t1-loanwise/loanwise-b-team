@@ -15,12 +15,8 @@ import ForgotPassword from './Pages/Onboarding/Wendy/ForgotPassword'
 import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
 import NewDashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
-import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
-import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
-import Repayment from './Pages/Dashboard/Repayment/Repayment'
-import Setting from './Pages/Dashboard/Settings/Setting'
-import LogOut from './Pages/Dashboard/LogOut/LogOut'
-import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
+
+// import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
 
 
 function App() {
@@ -42,12 +38,8 @@ function App() {
           <Route exact path="/accVerify" element={<AccVerify />} />
           <Route exact path="/newPassword" element={<NewPassword />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/Portfolio' element={<MainPortfolio/>} />
-           <Route  path='/deliquency' element={<Deliquency/>} />
-           <Route  path='/recovery' element={<Recovery/>} />
-           <Route  path='/repayment' element={<Repayment/>} />
-           <Route  path='/setting' element={<Setting/>} />
-           <Route path='/Logout' element={<LogOut/>}/>
+           {/* <Route  path='/Portfolio' element={<MainPortfolio/>} /> */}
+       
            <Route  path='/dashboard/*' element={<NewDashboard/>} />
            {/* <Route  path='/su' element={<SU/>} /> */}
         </Routes> 
