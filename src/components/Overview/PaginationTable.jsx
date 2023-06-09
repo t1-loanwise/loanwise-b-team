@@ -7,7 +7,7 @@ import lessthan from '../../Images/Dashboard/lessthan.svg'
 import greaterthan from '../../Images/Dashboard/greaterthan.svg'
 import dot from '../../Images/Dashboard/dots.svg'
 
-const PaginationTable = () => {
+const PaginationTable = ({data, totalCount}) => {
 	const [currentPage, setCurrentPage] = useState(1);
 	
 	const [dataPerPage] = useState(5);
@@ -21,7 +21,7 @@ const PaginationTable = () => {
 
 	const indexOfLastData = currentPage * dataPerPage;
 	const indexOfFirstData = indexOfLastData - dataPerPage;
-	const currentData = TableData.slice(indexOfFirstData, indexOfLastData);
+	const currentData = data.slice(indexOfFirstData, indexOfLastData);
 
 	const navigate = useNavigate();
 	 
@@ -62,6 +62,7 @@ const PaginationTable = () => {
 				  } 
 			  </tbody>
 			  {TableData.length > dataPerPage && (
+ 
 				   <tfoot className='pagination-wrapper'>
 				  		<tr>
 					  		<td colSpan='6'>
@@ -75,7 +76,9 @@ const PaginationTable = () => {
 									    <li><img src={greaterthan} alt='a less than icon'  className = 'paginate-img'/></li>
 								 	 	{Array.from({ length: Math.ceil(TableData.length / dataPerPage) }).map((_, index) => (
 									  	<li key={index}>
-										  <button className={` paginate-btn ${currentPage === index + 1 ? "button-active" : "" }`} onClick={() => {paginate(index + 1)}} >{index + 1}</button>
+										  <button className={`paginate-btn ${currentPage === index + 1 ? "button-active" : ""}`}
+
+												onClick={() => {paginate(index + 1)}} >{index + 1}</button>
 										</li>
 									 ))}
 										<li><img src={dot}alt='dot' className='paginate-dots' /></li>

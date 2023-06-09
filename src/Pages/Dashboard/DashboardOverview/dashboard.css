@@ -50,10 +50,13 @@ padding: 27px 50px;
 }
 
 /* --------Search and button-------- */
-/* .overview-search-filter-cal{
+.overview-search-filter-cal{
   display: flex;
   align-items: center;
-} */
+  
+  gap: 40px;
+padding: 20px 0px;
+}
 /* ----------dashboard---filter----Search----Calendar-------- */
 h3,
 p {
@@ -75,9 +78,8 @@ p {
 .dash__searchFilterDate {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 25px;
-  padding-bottom: 15px;
+
+  gap:280px;
 }
 
 .dash__search {
@@ -107,8 +109,7 @@ p {
 .dash__searchFilter {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-  /* width: 100%; */
+ 
   flex: 1;
 }
 
