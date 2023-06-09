@@ -10,14 +10,14 @@ import SecurityQuestion from './Pages/Onboarding/Wendy/SecurityQuestion'
 import SuccessfulPage from './Pages/Onboarding/SuccessfulPage/SuccessfulPage'
 import Login from './Pages/Onboarding/Wendy/Login'
 import CreatePassword from './Pages/Onboarding/CreatePassword/CreatePassword'
-import Dashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
-import Portfolio from './Pages/Dashboard/PortfolioAnalysis/Portfolio'
+import NewDashboard from './Pages/Dashboard/DashboardOverview/NewDashboard'
 import PasswordVerify from "./Pages/Onboarding/PasswordResetVerification/PasswordVerify";
 import Deliquency from './Pages/Dashboard/DeliquencyAnalysis/Deliquency'
 import Recovery from './Pages/Dashboard/RecoveryManagement/Recovery'
 import Repayment from './Pages/Dashboard/Repayment/Repayment'
 import Setting from './Pages/Dashboard/Settings/Setting'
-// import SU from './Pages/Onboarding/Wendy/SU'
+import LogOut from './Pages/Dashboard/LogOut/LogOut'
+import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
 
 
 function App() {
@@ -36,12 +36,13 @@ function App() {
           <Route exact path='/createAccount' element={<CreateAccount />} />
           <Route exact path="/AccountVerify" element={<AccountVerify />} />
            <Route exact path='/successful' element={<SuccessfulPage />} />
-           <Route  path='/dashboard/' element={<Dashboard/>} />
-           <Route  path='/portfolio' element={<Portfolio/>} />
+           <Route  path='/Portfolio' element={<MainPortfolio/>} />
            <Route  path='/deliquency' element={<Deliquency/>} />
            <Route  path='/recovery' element={<Recovery/>} />
            <Route  path='/repayment' element={<Repayment/>} />
            <Route  path='/setting' element={<Setting/>} />
+           <Route path='/Logout' element={<LogOut/>}/>
+           <Route  path='/dashboard/*' element={<NewDashboard/>} />
            {/* <Route  path='/su' element={<SU/>} /> */}
         </Routes> 
       </BrowserRouter>

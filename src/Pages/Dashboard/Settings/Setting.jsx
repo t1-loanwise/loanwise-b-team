@@ -4,15 +4,9 @@ import SecurityPrivacy from "./Security-Privacy/SecurityPrivacy";
 import DashboardRule from "./Dashboard-Rule/DashboardRule";
 import UserPreference from "./User-Preference/UserPreference";
 import "../Settings/Setting.css";
-// import DashboardHeader from "../../../components/SideBar/DashboardHeader";
-// import SideBar from "../../../components/SideBar/SideBar";
 
 const Setting = () => {
   return (
-    // <div className="dashboard-wrapper">
-    //   <DashboardHeader />
-    //   <div className="dashboard-body">
-    //     <SideBar />
 
         <div className="wrapper">
 
@@ -50,8 +44,7 @@ const Setting = () => {
 
         </div>
 
-    //   </div>
-    // </div>
+   
   );
 };
 export default Setting;

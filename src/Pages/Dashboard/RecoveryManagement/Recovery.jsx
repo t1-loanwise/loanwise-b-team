@@ -1,17 +1,9 @@
-import React from "react";
-import DashboardHeader from "../../../components/SideBar/DashboardHeader.jsx";
-import SideBar from "../../../components/SideBar/SideBar.jsx";
+import React from 'react'
 
 const Recovery = () => {
   return (
-    <div className="dashboard-wrapper">
-      <DashboardHeader />
-      <div className="dashboard-body">
-        <SideBar />
-        <div className="wrapper">yo</div>
-      </div>
-    </div>
-  );
-};
+    <div>Recovery</div>
+  )
+}
 
-export default Recovery;
+export default Recovery

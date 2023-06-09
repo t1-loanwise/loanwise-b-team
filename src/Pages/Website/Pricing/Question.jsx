@@ -39,7 +39,7 @@ const Question = () => {
                 </span>
               </div>
 
-              <div className={selected === index ? "content-show" : "content"}>
+              <div className={selected === index ? "pricing-content-show" : "pricing-content-hidden"}>
                 <p>{item.Answer}</p>
               </div>
             </div>
