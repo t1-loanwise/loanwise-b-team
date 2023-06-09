@@ -58,8 +58,8 @@ const Header = () => {
         </div>
         <div className={styles.rightHeader}>
           <div className={styles.registerLogin}>
-            <a href="/newAccount">Register</a>
-            <FilledBtn title={"Login"} link={"/loginn"} />
+            <a href="/createAccount">Register</a>
+            <FilledBtn title={"Login"} link={"/login"} />
           </div>
           <div className={styles.mdSm}>
             <button className={styles.menuBtn} onClick={menuToggle}>
