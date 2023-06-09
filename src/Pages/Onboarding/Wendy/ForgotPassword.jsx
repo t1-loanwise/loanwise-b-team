@@ -24,7 +24,7 @@ const ForgotPassword = () => {
       title="Forgot Password?"
       subtitle="We’ve got you, please enter your registered email address"
     >
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="forgotPassword">
         <fieldset>
           <label htmlFor="email">Email address</label>
           <input
