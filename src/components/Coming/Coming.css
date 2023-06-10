@@ -1,0 +1,51 @@
+.Coming {
+  background-size: cover;
+  overflow-y: hidden;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  align-content: center;
+}
+
+.comingTitle {
+  text-align: center;
+}
+
+.Coming .side input {
+  background: #ffffff;
+  border: 1.1px solid #cbcbcb;
+  border-radius: 5px;
+  width: 70%;
+  padding: 12px 0 12px 12px;
+  outline: none;
+}
+
+.side-btn {
+  width: 100%;
+}
+
+.side {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.Coming h1 {
+  font-size: 70px;
+  padding-bottom: 12px;
+}
+
+.Coming p {
+  line-height: 25px;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 12px;
+}
+@media screen and (max-width: 786px) {
+  .Coming h1 {
+    font-size: 40px;
+    padding-bottom: 12px;
+  }
+}

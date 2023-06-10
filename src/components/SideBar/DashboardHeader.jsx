@@ -3,17 +3,26 @@ import dashboardLogo from "../../Images/Dashboard/dashboard-logo.svg";
 import bell from "../../Images/Dashboard/bell.svg";
 import man from "../../Images/Dashboard/man.png";
 import "./SideBar.css";
+import arrow from "../../Images/Dashboard/downarrowbg.svg";
 
-const DashboardHeader = () => {
+const DashboardHeader = ({ back }) => {
   return (
     <div className="dashboard-header">
-      <a href="/">
-        <img
-          src={dashboardLogo}
-          alt="a loanwise dashboard logo"
-          className="dashboard-logo"
-        />
-      </a>
+      <div className="dashboard-header-left">
+        <a href="/">
+          <img
+            src={dashboardLogo}
+            alt="a loanwise dashboard logo"
+            className="dashboard-logo"
+          />
+        </a>
+        {back && (
+          <div className="back">
+            <img src={arrow} alt="arrow" />
+            <span>back</span>
+          </div>
+        )}
+      </div>
       <div className="dashboard-head-right">
         <img src={bell} alt="a notification bell" />
         <div className="dash-profile-logo">

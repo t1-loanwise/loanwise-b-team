@@ -1,14 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Urbanist";
-  font-style: normal;
-}
-
 /* ---------dashbody body------- */
 .dashboard-wrapper {
   display: flex;
@@ -29,17 +18,12 @@ body {
 .dashboard-pages-wrapper {
   overflow-y: auto;
   height: 100%;
- 
   width: 82vw;
 }
 
 /* ------------dashboard overview-------------- */
 .overview-container {
-
-
-padding: 27px 50px;
-
-
+  padding: 27px 50px;
 }
 
 .explore p {
@@ -50,12 +34,12 @@ padding: 27px 50px;
 }
 
 /* --------Search and button-------- */
-.overview-search-filter-cal{
+.overview-search-filter-cal {
   display: flex;
   align-items: center;
-  
+
   gap: 40px;
-padding: 20px 0px;
+  padding: 20px 0px;
 }
 /* ----------dashboard---filter----Search----Calendar-------- */
 h3,
@@ -79,7 +63,7 @@ p {
   display: flex;
   align-items: center;
 
-  gap:280px;
+  gap: 280px;
 }
 
 .dash__search {
@@ -109,7 +93,7 @@ p {
 .dash__searchFilter {
   display: flex;
   align-items: flex-start;
- 
+
   flex: 1;
 }
 
@@ -477,8 +461,6 @@ fieldset > button {
     display: none;
   }
 }
-
-
 
 /* ------------dashboard overview-------------- */
 

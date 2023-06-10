@@ -1,10 +1,12 @@
-import React from 'react'
-import { Comming } from '../../../components/Comming/Comming'
+import React from "react";
+import { Coming } from "../../../components/Coming/Coming";
 
 const Recovery = () => {
   return (
-    <div><Comming/></div>
-  )
-}
+    <div>
+      <Coming />
+    </div>
+  );
+};
 
-export default Recovery
+export default Recovery;
