@@ -67,14 +67,7 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-
-.right-side:not(.right-side .forgotPassword) {
-  justify-content: space-between;
-}
-
-.right-side .right-side .forgotPassword {
-  justify-content: center;
+  /* justify-content: space-between; */
 }
 
 .right-side-header {
@@ -141,6 +134,10 @@ h1 {
   .auth-container {
     padding: 0 20px;
   }
+
+  .right-side {
+    position: relative;
+  }
   .left-side {
     display: none;
   }
@@ -152,10 +149,15 @@ h1 {
 
   .right-side .password-Content {
     display: block;
-    /* border: 1px solid black; */
   }
 
   .right-side-header a img {
     width: 100px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+  }
+
+  .right-side-header {
   }
 }

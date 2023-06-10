@@ -1,18 +1,8 @@
 import React from "react";
-import LoanAmount from "../DashboardOverview/components/LoanAmount.jsx";
-import DashSearch from "../DashboardOverview/components/DashSearch.jsx";
-import DelChart from "./DelChart.jsx";
+import { Coming } from "../../../components/Coming/Coming.jsx";
 
 const Deliquency = () => {
-  return (
-  
-     	<div className="wrapper">
-          <DashSearch />
-          <LoanAmount />
-          <DelChart />
-        </div>
-  
-  );
+  return <Coming />;
 };
 
 export default Deliquency;

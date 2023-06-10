@@ -1,7 +1,3 @@
-/* input[type=text]{
-    width:285%;
-} */
-
 .inputflex {
   display: flex;
   align-items: center;
@@ -11,7 +7,7 @@
   gap: 20px;
 }
 
-.inputflex input[type="text"] {
+.portfolioWrapper .inputflex input[type="text"] {
   width: 100%;
   border: none;
 }
@@ -26,11 +22,22 @@
 .inputflex fieldset {
   border: 1.1px solid #cbcbcb;
   display: flex;
-  padding: 0 17px 0 0;
+  align-items: center;
+  padding: 12px 17px 12px 12px;
   border-radius: 5px;
   width: 100%;
 }
 
+.inputflex fieldset:first-child img {
+  height: 15px;
+}
+
 .inputflex fieldset img {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .inputflex {
+    gap: 5px;
+  }
 }
