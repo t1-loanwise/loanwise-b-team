@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Settingtoggle.css";
 import arrow from "../../../Images/arrrow.svg";
+import { useNavigate } from "react-router-dom";
 
-const Settingtoggle = ({ header, subHeader, showItems }) => {
+const Settingtoggle = ({
+  header,
+  subHeader,
+  showItems,
+  link,
+  activeKey,
+  setSelectedItem,
+  selectedItem,
+}) => {
   const [isShow, setShow] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleToggle = () => {
-    setShow(!isShow);
-    console.log("clicked");
+    if (link) {
+      //navigate to link
+      navigate(link);
+    } else {
+      if (selectedItem) {
+        setSelectedItem(activeKey);
+        setShow(!isShow);
+        console.log(activeKey);
+      } else {
+        setShow(false);
+        setSelectedItem(null);
+      }
+    }
   };
 
   return (
@@ -17,14 +38,21 @@ const Settingtoggle = ({ header, subHeader, showItems }) => {
           <h1>{header}</h1>
           <p>{subHeader}</p>
         </div>
-        {isShow ? (
-          <img src={arrow} alt="arrow" style={{ transform: "rotate(90deg)" }} />
-        ) : (
-          <img src={arrow} alt="arrow" />
-        )}
+        {!link &&
+          activeKey &&
+          selectedItem &&
+          (isShow ? (
+            <img
+              src={arrow}
+              alt="arrow"
+              style={{ transform: "rotate(90deg)" }}
+            />
+          ) : (
+            <img src={arrow} alt="arrow" />
+          ))}
       </div>
 
-      {isShow && showItems}
+      {isShow && activeKey && selectedItem && showItems}
     </div>
   );
 };

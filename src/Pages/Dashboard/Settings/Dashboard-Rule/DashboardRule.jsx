@@ -1,12 +1,8 @@
-import React from 'react'
-import Settingtoggle from '../Settingtoggle';
+import React from "react";
+import Settingtoggle from "../Settingtoggle";
 
 const DashboardRule = () => {
-  return (
-    <div>
-      <Settingtoggle  header={"Dashboard Rule"} subHeader={"Set and edit or old load default analysis rule"}/>
-      </div>
-  )
-}
+  return <div>setting</div>;
+};
 
 export default DashboardRule;

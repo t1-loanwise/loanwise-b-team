@@ -1,12 +1,7 @@
-import React from 'react'
-import Settingtoggle from '../Settingtoggle';
+import React from "react";
 
 const SecurityPrivacy = () => {
-  return (
-    <div>
-      <Settingtoggle header={"Security & Privacy"} subHeader={"Control alerts and notification settings"}/>
-      </div>
-  )
-}
+  return <div>setting</div>;
+};
 
 export default SecurityPrivacy;

@@ -42,9 +42,9 @@ const Notification = () => {
     setModel(!model);
   };
 
-  const showItems = (
+  return (
     <>
-      <div class="predictiveModel">
+      <div className="predictiveModel">
         <div className="top">
           <div className="predictiveItem">
             <div className="title">Bank Statement Name Match</div>
@@ -133,16 +133,6 @@ const Notification = () => {
         </div>
       </div>
     </>
-  );
-
-  return (
-    <div>
-      <Settingtoggle
-        header={"Predictive Model"}
-        subHeader={"Set and edit new or old load default analysis rule "}
-        showItems={showItems}
-      />
-    </div>
   );
 };
 

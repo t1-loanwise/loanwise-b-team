@@ -121,7 +121,7 @@
   height: 19px;
 }
 .active {
-  width: 228px;
+  width: 100%;
   background: #003f4d;
   border-radius: 4px;
 }
