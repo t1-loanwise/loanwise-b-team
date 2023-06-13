@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./overview.css";
-import { TableData } from "./TableData";
-import lessthan from "../../Images/Dashboard/lessthan.svg";
-import greaterthan from "../../Images/Dashboard/greaterthan.svg";
+import "../../../../../components/Overview/overview.css";
+import  {PortfolioTableData}  from "./PorfolioTableData";
+import lessthan from "../../../../../Images/Dashboard/lessthan.svg";
+import greaterthan from "../../../../../Images/Dashboard/greaterthan.svg";
 
 
-const PaginationTable = ({ data, totalCount }) => {
+const PortfolioPaginationTable = ({ data, totalCount }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [dataPerPage] = useState(5);
@@ -31,7 +31,7 @@ const PaginationTable = ({ data, totalCount }) => {
   return (
     <div className="table-wrapper">
       <div className="performance-wrapper">
-        <h3>Loan Performance Table</h3>
+        <h3>Portfolio Overview</h3>
         <button>Download</button>
       </div>
       <table>
@@ -63,7 +63,7 @@ const PaginationTable = ({ data, totalCount }) => {
             </tr>
           ))}
         </tbody>
-        {TableData.length > dataPerPage && (
+        {PortfolioTableData.length > dataPerPage && (
           <tfoot className="pagination-wrapper">
             <tr>
               <td colSpan="6">
@@ -97,12 +97,7 @@ const PaginationTable = ({ data, totalCount }) => {
                         </button>
                       </li>
                     ))}
-                    {/* <li>
-                      <img src={dot} alt="dot" className="paginate-dots" />
-                    </li> */}
-                    {/* <li>
-                      <p className="page-fifty">50</p>
-                    </li> */}
+
                     <li>
                       {" "}
                       <img
@@ -122,4 +117,4 @@ const PaginationTable = ({ data, totalCount }) => {
   );
 };
 
-export default PaginationTable;
+export default  PortfolioPaginationTable;
