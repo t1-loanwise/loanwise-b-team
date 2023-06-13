@@ -49,6 +49,8 @@
   box-shadow: 0px 4px 20px #e6f2f5;
   border-radius: 16px;
   padding: 18px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 .performance-wrapper {
   display: flex;

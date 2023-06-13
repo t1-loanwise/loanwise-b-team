@@ -80,6 +80,10 @@ p {
   filter: saturate(0%) brightness(10000%);
 }
 
+.user button {
+  padding: 10px 30px;
+}
+
 @media (max-width: 1000px) {
   .userDesc {
     margin: 20px auto;
