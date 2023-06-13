@@ -10,7 +10,7 @@ const AboutUs = () => {
   return (
     <div className="container">
       <Header />
-      <div class="team1">
+      <div className="team1">
         <Team
           heading={"Simplifying lending, reducing loan default risk."}
           imageUrl={"./images/about-us-hero.png"}
