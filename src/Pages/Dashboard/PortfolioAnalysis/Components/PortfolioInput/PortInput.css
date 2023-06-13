@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Urbanist';
+
+}
+.inputflex {
+  font-family: 'Urbanist';
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  gap: 20px;
+}
+ .inputflex .portfolio-overview-form, .inputflex .portfolio-filter{
+   border: 1.1px solid #cbcbcb;
+   display: flex;
+   align-items: center;
+   padding: 12px 17px 12px 12px;
+   border-radius: 5px;
+   width: 50%;
+   height: 48px;
+ }
+ .inputflex .portfolio-overview-form input{
+  width: 100%;
+  border: none;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+ line-height: 17px;
+    color: black;
+  
+  
+  
+}
+
+.inputflex input::placeholder {
+  color: #9d9d9d;
+ 
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+
+
+.inputflex.portfolio-overview-form:first-child img {
+  height: 15px;
+}
+
+.inputflex fieldset img {
+  cursor: pointer;
+}
+     .inputflex .portfolio-overview-form button{
+      border: none;
+      background-color: transparent;
+      outline: none;
+}
+/* ------------Filter--------- */
+
+.inputflex .portfolio-filter{
+  position: relative;
+}
+.portfolio-filter select{
+  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+   cursor: pointer;
+    width: 100%;
+      border: none;
+      height: 100%;
+      outline: none;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 17px;
+      color: black;
+      width: 100%;
+        border: 1px solid white;
+        padding: 10px;
+}
+.portfolio-filter::after {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+background-color: white;
+  pointer-events: none;
+}
+
+    .portfolio-filter select:required:invalid {
+  color: #9d9d9d;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* .portfolio-filter select option[value=""][disabled] {
+  display: none;} */
+
+.portfolio-filter select option {
+  color: #000;
+    font-size: 16px;
+      font-weight: 400;
+      line-height: 17px;
+      color: black;
+      font-style: normal;
+      width:100%;
+      border: 1px solid white;
+      padding: 10px;
+
+}
+.portfolio-arrow-icon{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+}
+
+.porfolio-icon rotate{
+    transform: rotate(90deg);
+}
+@media (max-width: 768px) {
+  .inputflex {
+    gap: 5px;
+  }
+}
