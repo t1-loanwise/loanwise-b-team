@@ -1,0 +1,72 @@
+.successful-wrapper {
+  position: relative;
+  height: 100vh;
+  font-style: normal;
+  font-family: "Urbanist";
+}
+.successful-wave {
+  /* top: 550px; */
+  position: absolute;
+  bottom: 0px;
+}
+.successful-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.successful-logo img {
+  width: 177px;
+  height: 62px;
+}
+
+.successful-wave img {
+  height: 170px;
+  width: 1360px;
+  position: fixed;
+  bottom: 0;
+}
+.successful-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  flex-direction: column;
+}
+.successful-checker {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #e6f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.successful-checker img {
+  width: 70px;
+  height: 50px;
+}
+.successful-content h2 {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 74px;
+  text-align: center;
+  color: #00151a;
+}
+.successful-content p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  color: #55666a;
+  padding-bottom: 10px;
+}
+.successful-content span {
+  color: #007e99;
+}
+.successful-content button {
+  padding: 12px 90px;
+}

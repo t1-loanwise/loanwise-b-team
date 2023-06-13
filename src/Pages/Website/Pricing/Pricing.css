@@ -1,0 +1,541 @@
+/* -----------------plan div style---------------- */
+.plan-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.plan-div h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 77px;
+  color: #00191f;
+}
+
+.plan-div p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  width: 570px;
+  color: #00191f;
+}
+
+.plan-div a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #1d79e5;
+  padding-top: 5px;
+}
+
+/* ---------------------- 1st card style------------------- */
+.card-wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.card-div {
+  width: 350px;
+  height: 830px;
+  background: #ffffff;
+  border: 1px solid #aad4dd;
+  box-shadow: 0px 4.65954px 4.65954px 5.82442px rgba(208, 223, 232, 0.15),
+    0px 4.65954px 4.65954px rgba(208, 223, 232, 0.12),
+    0px 4.65954px 4.65954px rgba(208, 223, 232, 0.09),
+    0px 4.65954px 4.65954px rgba(208, 223, 232, 0.06),
+    0px 4.65954px 4.65954px rgba(208, 223, 232, 0.03);
+  border-radius: 17.4733px;
+  padding: 10px 30px;
+  margin-top: 40px;
+}
+
+.free-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 5px;
+  gap: 10px;
+  width: 100%;
+  height: 295px;
+  background: #ffffff;
+  border-radius: 11.6488px 11.6488px 0px 0px;
+}
+
+.free-card h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+  color: #24292f;
+
+  text-align: center;
+}
+
+.free-card p {
+  font-weight: 300;
+  font-size: 18.6381px;
+  line-height: 22px;
+  width: 220px;
+  text-align: center;
+  color: #24292f;
+}
+
+.price-div {
+  font-family: "Azeret Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dollar {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  padding-bottom: 15px;
+  color: #24292f;
+}
+
+.price-div .zero {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 67px;
+  text-align: center;
+  color: #24292f;
+  padding-left: 10px;
+}
+
+.time-div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-div span {
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  /* padding-left: 10px; */
+  color: #24292f;
+}
+
+.join-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 36px;
+  gap: 10px;
+  width: 100%;
+  background-color: white;
+  height: 54px;
+  border: 2px solid #006980;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18.6381px;
+  line-height: 22px;
+  text-align: center;
+  color: #007e99;
+}
+.join-btn:hover {
+  background-color: #006980;
+  cursor: pointer;
+  color: #ffffff;
+}
+.card-features ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-features ul li {
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* padding: 3px 0px; */
+  color: #00191f;
+  margin-top: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.list {
+  padding-top: 5px;
+}
+
+.premium-card {
+  background: #007e99;
+  border-radius: 17.4733px;
+  width: 360px;
+  height: 860px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.premium-card-div {
+  position: absolute;
+  right: -4px;
+  top: 6px;
+  background: #e6f2f5;
+  position: relative;
+  padding: 1px 7px;
+  margin-top: 20px;
+}
+
+.premium {
+  width: 100%;
+  height: 283.43px;
+
+  padding-top: 10px;
+}
+
+.premium p {
+  width: 260px;
+  font-weight: 500px;
+}
+
+.premium-price-div {
+  margin-left: -25px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.premium-dollar {
+  color: #999da4;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.premium-price-ash {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: line-through;
+
+  color: #999da4;
+}
+
+.premium-dollar-black {
+  padding-left: 5px;
+}
+
+.premium-price-black {
+  font-weight: 500;
+  font-size: 53px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.premium-time span {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 1px;
+  color: #24292f;
+}
+
+.started-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15.1435px 30.287px;
+  gap: 11.65px;
+  width: 230px;
+  height: 40px;
+  background: #007e99;
+  border: 1px solid #006980;
+  border-radius: 5.82442px;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.started-btn:hover {
+  background-color: #00191f;
+}
+
+.trial-btn-div {
+  display: flex;
+  gap: 6px;
+}
+
+.free-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 11.65px;
+  width: 120px;
+  height: 40.29px;
+  background: #007e99;
+  border: 1px solid #006980;
+  border-radius: 5.82442px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+.free-btn:hover {
+  cursor: pointer;
+}
+
+.contact-btn {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 10px;
+  width: 120px;
+  height: 40.29px;
+  background-color: white;
+  border: 2px solid #006980;
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  color: #007e99;
+  cursor: pointer;
+}
+.contact-btn:hover {
+  color: #ffffff;
+  background: #007e99;
+}
+
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 70px;
+}
+
+.pricing-content h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 73px;
+  text-align: center;
+  color: #00151a;
+}
+
+.pricing-content p {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  width: 800px;
+  color: #55666a;
+}
+
+/* -------------Frequent Question Section----------------- */
+.frequent-question {
+  margin: 25px 0px;
+}
+
+.frequent-div {
+  color: #00191f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  margin-bottom: 10px;
+}
+
+.frequent-div h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 77px;
+}
+
+.frequent-div p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  width: 70%;
+  text-align: center;
+}
+
+/* -----------------Accordion wrapper----------- */
+.List-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.List-container h2 {
+  font-weight: 500;
+  font-size: 30px;
+  color: #1e1e1c;
+  width: 300px;
+  text-align: left;
+  line-height: 30px;
+}
+
+/* -------accordion------- */
+.Accordion {
+
+    margin-top: 20px;
+    width:100%;
+
+
+}
+.Accordion:hover{
+
+    cursor:pointer;
+}
+
+
+.item {
+  padding: 20px 0px;
+  border-top: 1px solid #ccd1d2;
+
+}
+.item:nth-of-type(10){
+border-top: 1px solid #ccd1d2;
+}
+
+
+.title {
+
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+.minus{
+    font-size: 1.4em;
+    font-weight: 800;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+}
+.minus:hover{
+    border: 2px solid #007E99;
+        color: #007E99;
+}
+
+.minus {
+  font-size: 1.4em;
+  font-weight: 800;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+}
+
+.title p {
+  font-size: 1.1em;
+  font-weight: 500;
+
+}
+.title p:hover{
+    color: #007E99;
+}
+
+.pricing-content-hidden {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.pricing-content-show {
+
+    height: auto;
+    max-height: 90%;
+    margin-top: 20px;
+    text-align: left;
+font-size: 1.1em;
+font-weight: 500;
+
+}
+
+/* ---------useLoanwise--------- */
+.Useloanwise {
+  margin: 100px 0px;
+}
+
+/* -------------footer------------ */
+.footer {
+  margin-top: 50px;
+}
+
+/* ----------Responsive Style---------- */
+
+@media (max-width: 768px) {
+  .plan-div h1 {
+    font-size: 35px;
+  }
+
+  .plan-div p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .card-wrapper {
+    flex-direction: column;
+  }
+
+  .card-div {
+    width: 100%;
+    height: fit-content;
+  }
+  .premium-card {
+    width: 350px;
+    position: relative;
+  }
+  .premium-card-div {
+    width: 95%;
+    position: absolute;
+    right: 10px;
+  }
+
+  .frequent-div h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .frequent-div p {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  .List-container h2 {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+}
