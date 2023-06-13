@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import DashSearch from './components/DashSearch';
-import LoanAmount from './components/LoanAmount';
-import PaginationTable from '../../../components/Overview/PaginationTable';
-import BarChart from './components/BarChart';
-import './dashboard.css';
-import SearchBar from '../../../components/Overview/SearchBar';
-import { TableData } from '../../../components/Overview/TableData';
+import React, { useEffect, useState } from "react";
+import DashSearch from "./components/DashSearch";
+import LoanAmount from "./components/LoanAmount";
+import PaginationTable from "../../../components/Overview/PaginationTable";
+import BarChart from "./components/BarChart";
+import "./dashboard.css";
+import SearchBar from "../../../components/Overview/SearchBar";
+import { TableData } from "../../../components/Overview/TableData";
 
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [dataPerPage] = useState(5);
-  const [searchItems, setSearchItems] = useState('');
+  const [searchItems, setSearchItems] = useState("");
 
   const handleSearch = (term) => {
     setSearchItems(term);
@@ -42,7 +42,10 @@ const DashboardOverview = () => {
   return (
     <div className="overview-container">
       <div className="explore">
-        <p>Explore insightful analyses and risk assessment to make informed lending decisions.</p>
+        <p>
+          Explore insightful analyses and risk assessment to make informed
+          lending decisions.
+        </p>
       </div>
       <div className="overview-search-filter">
         <div className="overview-search-filter-cal">
@@ -51,7 +54,11 @@ const DashboardOverview = () => {
         </div>
         <LoanAmount />
         <BarChart />
-        <PaginationTable data={searchResults} totalCount={searchResults.length} paginate={paginate} />
+        <PaginationTable
+          data={searchResults}
+          totalCount={searchResults.length}
+          paginate={paginate}
+        />
       </div>
     </div>
   );

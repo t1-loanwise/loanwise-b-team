@@ -5,7 +5,7 @@ import Portfolio from "../PortfolioAnalysis/Portfolio";
 import Repayment from "../Repayment/Repayment";
 import Recovery from "../RecoveryManagement/Recovery";
 import Deliquency from "../DeliquencyAnalysis/Deliquency";
-import Setting from "../Settings/Setting";
+import Settings from "../Settings/Settings";
 import LogOut from "../LogOut/LogOut";
 import Message from "../Message/Message";
 import UserProfile from "../UserProfile/UserProfile";
@@ -20,7 +20,7 @@ const DashboardPages = () => {
       <Route path="/repayment" element={<Repayment />} />
       <Route path="/recovery" element={<Recovery />} />
       <Route path="/deliquency" element={<Deliquency />} />
-      <Route path="/settings" element={<Setting />} />
+      <Route path="/settings" element={<Settings />} />
       <Route path="/logout" element={<LogOut />} />
       <Route path="/message" element={<Message />} />
       <Route path="/user-profile" element={<UserProfile />} />

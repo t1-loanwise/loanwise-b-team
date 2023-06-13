@@ -5,7 +5,7 @@ import man from "../../Images/Dashboard/man.png";
 import "./SideBar.css";
 import arrow from "../../Images/Dashboard/downarrowbg.svg";
 
-const DashboardHeader = ({ back }) => {
+const DashboardHeader = ({ back, backLink }) => {
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-left">
@@ -17,10 +17,12 @@ const DashboardHeader = ({ back }) => {
           />
         </a>
         {back && (
-          <div className="back">
-            <img src={arrow} alt="arrow" />
-            <span>back</span>
-          </div>
+          <a onClick={backLink}>
+            <div className="back">
+              <img src={arrow} alt="arrow" />
+              <span>back</span>
+            </div>
+          </a>
         )}
       </div>
       <div className="dashboard-head-right">

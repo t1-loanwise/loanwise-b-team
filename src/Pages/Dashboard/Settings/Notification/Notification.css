@@ -1,0 +1,71 @@
+.notification p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #00151a;
+}
+
+.notification {
+  background: #e6f2f5;
+}
+
+.notification .title {
+  display: flex;
+  justify-content: baseline;
+  padding: 14px 40px;
+  border-bottom: 1px solid rgba(176, 215, 223, 0.5);
+}
+
+.notification .title div:first-child,
+.notification .toggleTxt-text {
+  width: 60%;
+  padding: 0;
+  margin: 0;
+}
+
+.notification .toggleTxt .tog {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notification .title div:nth-child(2) {
+  margin-right: 10px;
+  width: 20%;
+}
+.notification .title div:nth-child(2) p,
+.notification .title div:nth-child(3) p {
+  padding: 0;
+  margin: 0;
+  /* background: #000; */
+}
+
+.notification .toggleTxt:first-child .tog {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.notification .toggleTxt .tog:first-child {
+  background: #000;
+}
+
+.notification .title div:nth-child(3) {
+  width: 20%;
+}
+
+.notification .toggleTxt {
+  display: flex;
+  padding: 14px 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .notification .toggleTxt:first-child .tog {
+    margin-right: 0;
+  }
+
+  .notification .title div:nth-child(2) p,
+  .notification .title div:nth-child(3) p {
+    font-size: 14px;
+  }
+}

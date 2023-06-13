@@ -7,7 +7,7 @@ export const Coming = () => {
   return (
     <div className="Coming" style={{ backgroundImage: `url(${image})` }}>
       <div className="comingTitle">
-        <h1>COMMING SOON</h1>
+        <h1>COMING SOON</h1>
         <p>We are working hard to get this up and running</p>
         <p>We will be here soon</p>
       </div>

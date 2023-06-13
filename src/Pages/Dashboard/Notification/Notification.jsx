@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Coming } from "../../../components/Coming/Coming";
 
 const Notification = () => {
   return (
-    <div>Notification</div>
-  )
-}
+    <div>
+      <Coming />
+    </div>
+  );
+};
 
-export default Notification
+export default Notification;
