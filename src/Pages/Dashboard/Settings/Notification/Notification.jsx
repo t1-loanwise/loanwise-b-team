@@ -55,7 +55,7 @@ const Notification = () => {
       <div className="toggleTxts">
         <div className="toggleTxt">
           <div className="toggleTxt-text">
-            <p>New Applications</p>
+            <p>Loan Applications</p>
           </div>
           <div className="tog">
             <div
@@ -78,7 +78,7 @@ const Notification = () => {
       <div className="toggleTxts">
         <div className="toggleTxt">
           <div className="toggleTxt-text">
-            <p>New Applications</p>
+            <p>Loan due dates</p>
           </div>
           <div className="tog">
             <div
