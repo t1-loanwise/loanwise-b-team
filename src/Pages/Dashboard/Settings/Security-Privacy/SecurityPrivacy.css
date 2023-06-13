@@ -22,6 +22,7 @@
   background: #ffffff;
   border: 1px solid #cbcbcb;
   border-radius: 5px;
+  outline: none;
 }
 
 .passFlex {
@@ -31,4 +32,21 @@
 
 .passFlex label {
   color: #00151a;
+}
+
+.changeSecurityQ div input {
+  width: 100%;
+}
+
+.securityPrivacy button {
+  align-self: flex-end;
+  padding: 14px 24px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.securityPrivacy form {
+  width: 45%;
 }
