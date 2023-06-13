@@ -19,7 +19,7 @@
 .dashboard-pages-wrapper {
   overflow-y: auto;
   height: 100%;
-  width: 82vw;
+  width: 100%;
 }
 
 /* ------------dashboard overview-------------- */

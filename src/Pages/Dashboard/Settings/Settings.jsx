@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Notification from "./Notifications/Notification";
+import Predictive from "./Predictive/Predictive";
 import SecurityPrivacy from "./Security-Privacy/SecurityPrivacy";
 import DashboardRule from "./Dashboard-Rule/DashboardRule";
 import "../Settings/Setting.css";
 import Settingtoggle from "./Settingtoggle";
+import Notification from "./Notification/Notification";
 
-const Setting = () => {
+const Settings = () => {
   const [selectedItem, setSelectedItem] = useState(1);
 
   const toggleItems = [
@@ -13,24 +14,24 @@ const Setting = () => {
       key: 1,
       header: "Predictive Model",
       subHeader: "Set and edit new or old load default analysis rule ",
-      showItems: <Notification />,
+      showItems: <Predictive />,
     },
     {
       key: 2,
-      header: "Notifications",
+      header: "Notification",
       subHeader: "Control alerts and notification settings",
-      showItems: <SecurityPrivacy />,
+      showItems: <Notification />,
     },
     {
       key: 3,
       header: "Security & Privacy ",
       subHeader: "Protect your account with maximum security",
-      showItems: <DashboardRule />,
+      showItems: <SecurityPrivacy />,
     },
     {
       key: 4,
       header: "User Preference",
-      link: "/",
+      link: "/userPreference",
     },
   ];
   return (
@@ -46,6 +47,7 @@ const Setting = () => {
                   showItems={item.showItems}
                   link={item.link}
                   activeKey={item.key}
+                  selected={selectedItem === item.key}
                   selectedItem={selectedItem}
                   setSelectedItem={setSelectedItem}
                 />
@@ -57,4 +59,4 @@ const Setting = () => {
     </div>
   );
 };
-export default Setting;
+export default Settings;

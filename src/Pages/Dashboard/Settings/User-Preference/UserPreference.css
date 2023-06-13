@@ -1,0 +1,169 @@
+h1,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.userPref h1,
+.userPref h4,
+.userPref p,
+.userPref span {
+  color: #00191f;
+}
+
+.userPref {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.userPref h1 {
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+
+.userPref h4 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.textToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.textToggle p {
+  font-weight: 500;
+  font-size: 24px;
+  color: #00191f;
+}
+
+.userPref .text p:not(.userPref .textToggle .text p) {
+  font-size: 13px;
+}
+
+.userPref .text p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.textToggles-border {
+  padding: 20px 25px 20px 50px;
+  border: 1px solid #00191f;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin-top: 30px;
+}
+
+.border-textToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.borderText {
+  max-width: 269px;
+}
+
+.borderText p {
+  font-size: 15px;
+}
+
+.borderToggles {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.borderToggle {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.borderToggle span {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.subscribeBorder {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 32px 72px 32px 16px;
+  border: 1px solid #00191f;
+  margin-top: 30px;
+  width: 70%;
+}
+
+.subscribeBorder .subscribeTitle {
+  margin-bottom: 15px;
+}
+
+.subscribeBorder .subscribeTitle p {
+  font-size: 13px;
+}
+
+.subscribeBorder .subInput p {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.userPref .subscribeBorder .subInput input {
+  border-radius: 5px;
+  border: 1px solid #00191f;
+  padding: 10px 0 10px 10px;
+  width: 45%;
+}
+
+@media (max-width: 768px) {
+  .userPref h1 {
+    font-size: 25px;
+  }
+
+  .userPref h4 {
+    font-size: 17px;
+  }
+
+  .textToggles-border {
+    padding: 10px 15px 10px 25px;
+  }
+
+  .borderToggles {
+    gap: 8px;
+  }
+
+  .borderToggle {
+    gap: 16px;
+  }
+
+  .borderToggle span {
+    font-size: 15px;
+  }
+
+  .subscribeBorder {
+    width: 100%;
+  }
+
+  .userPref .subscribeBorder .subInput input {
+    width: 100%;
+  }
+
+  .border-textToggle {
+    gap: 30px;
+  }
+
+  .borderText p {
+    font-size: 14px;
+  }
+}

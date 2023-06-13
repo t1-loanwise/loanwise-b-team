@@ -1,3 +1,51 @@
+import React from "react";
+import "./Settingtoggle.css";
+import arrow from "../../../Images/arrrow.svg";
+import { settingData } from "./settingData";
+
+const NewSettings = ({ showItems }) => {
+  const [isShow, setIsShow] = React.useState(
+    new Array(settingData.length).fill(false)
+  );
+
+  const handleToggle = (index) => {
+    const updatedIsShow = new Array(settingData.length).fill(false);
+    updatedIsShow[index] = !isShow[index];
+    setIsShow(updatedIsShow);
+  };
+
+  const settingsData = settingData.map((data, index) => (
+    <div
+      className="toggleContainer"
+      onClick={() => handleToggle(index)}
+      key={index}
+    >
+      <div className="toggle-title">
+        <h1>{data.header}</h1>
+        <p>{data.subHeader}</p>
+      </div>
+      {index !== settingData.length - 1 && (
+        <img
+          src={arrow}
+          alt="arrow"
+          style={{ transform: isShow[index] ? "rotate(90deg)" : "none" }}
+        />
+      )}
+      {isShow && showItems}
+      {/* [isShow.length - 1] */}
+    </div>
+  ));
+
+  return (
+    <div className="container">
+      <div className="toggleContainers">{settingsData}</div>
+    </div>
+  );
+};
+
+export default NewSettings;
+
+/* 
 import React, { useState } from "react";
 import "./Settingtoggle.css";
 import arrow from "../../../Images/arrrow.svg";
@@ -58,3 +106,5 @@ const Settingtoggle = ({
 };
 
 export default Settingtoggle;
+
+*/
