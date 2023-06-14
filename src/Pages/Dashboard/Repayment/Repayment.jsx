@@ -1,15 +1,10 @@
 import React from "react";
-import DashboardHeader from "../../../components/SideBar/DashboardHeader.jsx";
-import SideBar from "../../../components/SideBar/SideBar.jsx";
+import { Coming } from "../../../components/Coming/Coming";
 
 const Repayment = () => {
   return (
-    <div className="dashboard-wrapper">
-      <DashboardHeader />
-      <div className="dashboard-body">
-        <SideBar />
-        <div className="wrapper">yo</div>
-      </div>
+    <div>
+      <Coming />
     </div>
   );
 };

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Coming } from "../../../components/Coming/Coming";
 
 const UserProfile = () => {
   return (
-    <div>UserProfile</div>
-  )
-}
+    <div>
+      <Coming />
+    </div>
+  );
+};
 
-export default UserProfile
+export default UserProfile;

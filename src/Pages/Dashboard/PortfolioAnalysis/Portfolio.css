@@ -1,10 +1,12 @@
+.portfolioWrapper {
+  padding: 32px 32px 0;
+}
+
 /* CHART */
 
 .portChart {
   display: flex;
   align-items: flex-end;
-  /* margin: 50px 0 50px; */
-  /* padding: 2px; */
   gap: 15px;
   width: 100%;
   flex: 1;
@@ -26,8 +28,16 @@
 }
 
 .portChart2 {
-  /* padding: 14px; */
   flex: 1;
+}
+
+.portChart2 .color1 span,
+.portChart1 .color1 span {
+  background: #009967;
+}
+.portChart2 .color3 span,
+.portChart1 .color3 span {
+  background: #99007e;
 }
 
 .graph {
@@ -72,5 +82,9 @@
   .portChart {
     flex-direction: column;
     align-items: center;
+  }
+
+  .portfolioWrapper {
+    padding: 16px 16px 0;
   }
 }

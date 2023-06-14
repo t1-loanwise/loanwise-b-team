@@ -1,0 +1,226 @@
+/* ------------------ */
+/* General */
+/* ------------------ */
+
+form,
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.right-side .form-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.right-side .form-title h1 {
+  font-weight: 600;
+  font-size: 52px;
+}
+
+.right-side label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #00191f;
+}
+
+.right-side fieldset {
+  margin-bottom: 20px;
+}
+
+.right-side input[type="text"],
+.right-side input[type="password"],
+.right-side input[type="email"],
+.securityQxn fieldset input,
+.select input {
+  background: #ffffff;
+  border: 1.1px solid #cbcbcb;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px 0 12px 12px;
+  outline: none;
+}
+.right-side input[type="checkbox"] {
+  background: var(--primary-bg);
+  border-color: 2px solid var(--primary-bg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select {
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.right-side input::placeholder {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 17px;
+  color: #9d9d9d;
+}
+
+.formFooter {
+  text-align: center;
+}
+
+.passwordContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.passwordContainer fieldset:first-child .errorMessage {
+  display: none;
+}
+
+.passwordContainer fieldset {
+  margin-bottom: 0;
+}
+
+.right-side fieldset {
+  border: none;
+  width: 100%;
+}
+
+.inputField {
+  display: flex;
+  background: #ffffff;
+  width: 100%;
+  border: 1.1px solid #cbcbcb;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.right-side .inputField input {
+  margin-bottom: 0;
+  border: none;
+  flex: 1;
+}
+
+.inputField button {
+  border: none;
+  background: none;
+  flex: 0.05;
+  cursor: pointer;
+}
+
+.passwordContainer input {
+  width: 100%;
+}
+
+.right-side .form-btn button {
+  margin-top: 50px;
+}
+
+.right-side .errorMessage {
+  margin-top: 3px;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.terms-and-conditions {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.terms-and-conditions input {
+  width: 15px;
+  margin: 0 3px 0 0;
+}
+
+.terms-and-conditions label {
+  font-weight: 400;
+}
+
+.checkForgot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.checkText input {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .right-side label {
+    color: #ffffff;
+  }
+
+  .right-side {
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .right-side .form-title {
+    margin-bottom: 20px;
+  }
+
+  .right-side .form-title h1 {
+    font-weight: 600;
+    font-size: 48px;
+  }
+
+  .right-side .form-title p,
+  .subHeading {
+    color: #f1ecec;
+  }
+
+  .right-side .form-btn button {
+    width: 100%;
+    background: #02697f;
+    margin-top: 20px;
+  }
+
+  .errorMessage {
+    color: #cbcbcb;
+  }
+
+  .passwordContainer fieldset:first-child .errorMessage {
+    display: block;
+  }
+
+  .passwordContainer fieldset:last-child label {
+    margin-top: 20px;
+  }
+
+  .terms-and-conditions {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  label {
+    color: #ffffff;
+  }
+
+  .passwordContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .right-side .form-title h1 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+
+  .right-side h1 {
+    padding: 0;
+  }
+}

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Coming } from "../../../components/Coming/Coming";
 
 const Message = () => {
   return (
-    <div>Message</div>
-  )
-}
+    <div>
+      <Coming />
+    </div>
+  );
+};
 
-export default Message
+export default Message;

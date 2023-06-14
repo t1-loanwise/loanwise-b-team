@@ -94,6 +94,7 @@
   margin-top: 20px;
   align-items: center;
   gap: 8%;
+  padding-top:30px;
 }
 
 .loan-analysis {
@@ -109,7 +110,10 @@
 .get-Started {
   flex: 1.5;
 }
-
+.get-Started h3{
+    font-size: 31px;
+      font-weight: 600px;
+}
 .get-Started h2 {
   font-size: 31px;
   font-weight: 600px;
@@ -121,6 +125,7 @@
   font-size: 16px;
   color: #55666a;
   margin-bottom: 15px;
+  padding-top: 10px;
 }
 
 /* this class can be found in the About component, imported under the header*/

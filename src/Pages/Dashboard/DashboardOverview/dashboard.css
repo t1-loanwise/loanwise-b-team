@@ -1,3 +1,48 @@
+/* ---------dashbody body------- */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 80px);
+}
+
+.dashboard-body > nav {
+  /* width: 19%; */
+  /* overflow: auto; */
+  height: 100%;
+}
+.dashboard-pages-wrapper {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* ------------dashboard overview-------------- */
+.overview-container {
+  padding: 27px 50px;
+}
+
+.explore p {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  color: #00151a;
+}
+
+/* --------Search and button-------- */
+.overview-search-filter-cal {
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+  padding: 20px 0px;
+}
+/* ----------dashboard---filter----Search----Calendar-------- */
 h3,
 p {
   margin: 0;
@@ -15,17 +60,11 @@ p {
   color: #00151a;
 }
 
-.dash__title p {
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 34px;
-  color: #00151a;
-}
-
 .dash__searchFilterDate {
   display: flex;
   align-items: center;
-  /* gap: 300px; */
+
+  gap: 280px;
 }
 
 .dash__search {
@@ -44,6 +83,10 @@ p {
   margin: 0;
 }
 
+.dash__search input::placeholder {
+  color: #00151a;
+}
+
 .btnzz {
   display: none;
 }
@@ -51,8 +94,7 @@ p {
 .dash__searchFilter {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
-  /* width: 100%; */
+
   flex: 1;
 }
 
@@ -70,8 +112,13 @@ fieldset > button {
   border-radius: 0;
   height: auto;
   width: auto;
-  padding: 8px 20px;
+  padding: 4px 30px;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* padding: 12px 34px; */
 }
 
 .dash__searchFilter > .filter button:hover img,
@@ -101,7 +148,7 @@ fieldset > button {
   top: 0;
   width: 100%;
   background: #e6f2f5;
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -122,13 +169,17 @@ fieldset > button {
 
 .img-date {
   box-sizing: border-box;
-  background: #e6f2f5;
-  padding: 17px 22px;
-  gap: 10px;
+  background: hsl(192, 43%, 93%);
+  padding: 15px 21px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
 }
 
 .calender {
@@ -148,7 +199,7 @@ fieldset > button {
 
 .loanAmountContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 15px;
   width: 100%;
 }
@@ -412,25 +463,8 @@ fieldset > button {
   }
 }
 
-/* ---------dashbody body------- */
-.dashboard-body {
-  display: flex;
-  align-items: flex-start;
-}
-
-.dashboard-body .wrapper {
-  margin: 20px 25px 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
-}
-
 /* ------------dashboard overview-------------- */
-.overview-container {
-  padding: 27px 50px;
-  width: 82vw;
-  height: 88vh;
-}
+
 .explore p {
   font-weight: 500;
   font-size: 19px;

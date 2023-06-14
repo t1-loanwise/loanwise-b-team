@@ -28,6 +28,7 @@ p {
   font-size: 41px;
   margin-bottom: 10px;
   color: #00151a;
+  text-transform: capitalize;
 }
 
 .userDesc p {
@@ -47,6 +48,10 @@ p {
   margin: 0 auto;
   padding: 30px 24px 40px;
   gap: 16px;
+}
+
+.user:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .user img:first-child,
@@ -73,6 +78,10 @@ p {
 
 .user button:hover img {
   filter: saturate(0%) brightness(10000%);
+}
+
+.user button {
+  padding: 10px 30px;
 }
 
 @media (max-width: 1000px) {
