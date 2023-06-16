@@ -5,12 +5,15 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
+import { nanoid } from 'nanoid'
+import axios from 'axios'
+
 
 const CreateAccount = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { isSubmitting, errors },
   } = useForm();
   const navigate = useNavigate();
 
@@ -25,11 +28,16 @@ const CreateAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/accountVerify");
+  const onSubmit = async data => {
+    const values = { ...data, id: nanoid() }
+    const response = await axios.post('https://loanwise.onrender.com/api/signup', values)
+    if (response.status === 201) {
+      navigate("/accountVerify")
     }
+    // let isValid = Object.keys(errors).length === 0;
+    // {
+    //   isValid && navigate("/accountVerify");
+    // }
   };
 
   const formFooter = (
@@ -74,6 +82,7 @@ const CreateAccount = () => {
               <input
                 {...register("password", { required: true, minLength: 6 })}
                 type={passwordVisible ? "text" : "password"}
+  
                 id="password"
                 placeholder={"Enter Password"}
               />
@@ -85,11 +94,7 @@ const CreateAccount = () => {
                 )}
               </button>
             </div>
-            {errors.password && (
-              <p className="errorMessage">
-                Password must contain at least 6 characters including numbers
-              </p>
-            )}
+        
           </fieldset>
 
           <fieldset className="confirmPassword">

@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./Login.css";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
+import { nanoid } from 'nanoid'
+import axios from 'axios'
+
 
 const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { isSubmitting, errors, isDirty },
   } = useForm();
   const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -18,11 +21,18 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/dashboard/overview");
+  const onSubmit = async data => {
+    const values = { ...data, id: nanoid() }
+    const response = await axios.post('http://localhost:4000/api/user', values)
+    if (response.status === 201) {
+      navigate("/dashboard/overview")
     }
+    
+
+    // let isValid = Object.keys(errors).length === 0;
+    // {
+    //   isValid && navigate("/dashboard/overview");
+    // }
   };
 
   const formFooter = (
@@ -42,9 +52,11 @@ const Login = () => {
           <label htmlFor="email">Email address</label>
           <input
             {...register("email", { required: true })}
+            isDisabled={isSubmitting}
             type="email"
             id="email"
             placeholder={"Enter email address"}
+          // autoComplete=false
           />
           {errors.email?.type === "required" && (
             <p className="errorMessage">The email field is required</p>
@@ -85,7 +97,7 @@ const Login = () => {
         </div>
 
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Sign In"} />
+          <FilledBtn type={"submit"} title={"Sign In"} isLoading={isSubmitting} isDisabled={isDirty || isSubmitting}/>
         </div>
       </form>
     </AuthLayout>
