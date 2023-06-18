@@ -1,13 +1,13 @@
 import React from "react";
-import background from "../../../Images/Ellipse 36.svg";
-import girlImage from "../../../Images/girlImage.svg";
+import GirlFrame from "../../../Images/girlFrame.svg";
 import "./Blog.css";
 
 export const Blogimage = () => {
   return (
     <div className="Blogimages">
-      <img src={background} alt="" />
-      <img src={girlImage} alt="" />
+      <div className="background-blog">
+        <img src={GirlFrame} alt="" />
+      </div>
     </div>
   );
 };
