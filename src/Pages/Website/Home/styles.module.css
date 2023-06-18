@@ -40,7 +40,7 @@ h2 {
   align-items: center;
   gap: 20px;
 }
- 
+
 
 .heroBtns a {
   gap: 20px;
@@ -224,6 +224,7 @@ h2 {
   font-size: 42.5px;
   line-height: 73px;
   color: #fff;
+  max-width: 300px;
 }
 
 .bigFeatureImg,
@@ -283,8 +284,13 @@ h2 {
 }
 
 .feature p {
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feature:hover p {
@@ -345,9 +351,9 @@ h2 {
   }
 
   .heroImg img,
-.lwFlexImg img {
-  height: auto;
-}
+  .lwFlexImg img {
+    height: auto;
+  }
 
 
   .revText {
@@ -411,6 +417,10 @@ h2 {
 
   .AmazingImg {
     display: none;
+  }
+
+  .bigFeature h3 {
+    max-width: 100%;
   }
 }
 
