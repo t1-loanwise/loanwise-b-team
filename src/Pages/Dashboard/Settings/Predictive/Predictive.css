@@ -35,6 +35,17 @@
   color: #00151a;
 }
 
+.closeRule {
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
 /* 
   Toggle color mode
   */
@@ -210,6 +221,7 @@ Edit Modal
   .editModal:first-child h2 {
     font-size: 20px;
   }
+
   .editModal:first-child p {
     font-size: 14px;
   }

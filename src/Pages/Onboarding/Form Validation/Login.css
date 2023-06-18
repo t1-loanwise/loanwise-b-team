@@ -13,23 +13,23 @@ p {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .right-side .form-title h1 {
   font-weight: 600;
-  font-size: 52px;
+  font-size: 50px;
 }
 
 .right-side label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   font-weight: 600;
   color: #00191f;
 }
 
 .right-side fieldset {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .right-side input[type="text"],
@@ -41,7 +41,7 @@ p {
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
   width: 100%;
-  padding: 12px 0 12px 12px;
+  padding: 10px 0 10px 10px;
   outline: none;
 }
 .right-side input[type="checkbox"] {
@@ -115,11 +115,11 @@ p {
 }
 
 .right-side .form-btn button {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .right-side .errorMessage {
-  margin-top: 3px;
+  margin-top: 1px;
   font-style: italic;
   font-size: 13px;
 }
@@ -161,6 +161,7 @@ p {
 @media (max-width: 1000px) {
   .right-side label {
     color: #ffffff;
+    font-size: 14px;
   }
 
   .right-side {
@@ -169,12 +170,12 @@ p {
   }
 
   .right-side .form-title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .right-side .form-title h1 {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 45px;
   }
 
   .right-side .form-title p,

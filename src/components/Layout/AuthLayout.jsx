@@ -4,6 +4,26 @@ import Chart from "../../Images/Auth/Group 8039.svg";
 import logo from "../../Images/logo.svg";
 
 const AuthLayout = ({ title, children, subtitle, formFooter }) => {
+  const spaceBetween = {
+    justifyContent: 'space-between',
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'left',
+    width: '60%'
+  };
+
+  const gap = {
+    gap: '50px',
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'left',
+    width: '60%'
+  };
+
+  const align = {
+    justifySelf: 'center'
+  };
+
   return (
     <div className="auth-container">
       <div className="auth--layout">
@@ -18,13 +38,13 @@ const AuthLayout = ({ title, children, subtitle, formFooter }) => {
           </div>
         </div>
 
-        <div className="right-side">
+        <div className="right-side" style={formFooter ? spaceBetween : gap}>
           <div className="right-side-header">
             <a href="/">
               <img src={logo} alt="logo" />
             </a>
           </div>
-          <div className="right-style">
+          <div className="right-style" style={!formFooter ? align : null}>
             <div className="form-title">
               <h1>{title}</h1>
               {subtitle && <p>{subtitle}</p>}
