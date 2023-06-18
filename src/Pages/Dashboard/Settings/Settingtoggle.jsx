@@ -28,9 +28,9 @@ const Settingtoggle = ({
     } else {
       // if (selected) {
       setShow((prevState) => !prevState);
-      console.log({ activeKey });
-      console.log({ selectedItem });
-      console.log({ currentToggle });
+      // console.log({ activeKey });
+      // console.log({ selectedItem });
+      // console.log({ currentToggle });
       // } else {
       //   setShow(false);
       //   setSelectedItem(null);
