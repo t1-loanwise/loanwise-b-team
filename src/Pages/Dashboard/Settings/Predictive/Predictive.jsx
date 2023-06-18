@@ -32,6 +32,14 @@ const Predictive = () => {
     });
   };
 
+  const close = (index) => {
+    setEditStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = newStates[index](false);
+      return newStates;
+    });
+  }
+
   const newModel = () => {
     setModel(!model);
   };
@@ -53,7 +61,7 @@ const Predictive = () => {
                 onClick={() => editModel(0)}
                 className="editIcon"
               />
-              {editStates[0] && <EditPage />}
+              {editStates[0] && <EditPage close={close} />}
             </div>
           </div>
         </div>
@@ -72,7 +80,7 @@ const Predictive = () => {
                 onClick={() => editModel(1)}
                 className="editIcon"
               />
-              {editStates[1] && <EditPage />}
+              {editStates[1] && <EditPage close={close} />}
             </div>
           </div>
         </div>
@@ -91,7 +99,7 @@ const Predictive = () => {
                 onClick={() => editModel(2)}
                 className="editIcon"
               />
-              {editStates[2] && <EditPage />}
+              {editStates[2] && <EditPage close={close} />}
             </div>
           </div>
         </div>
@@ -110,7 +118,7 @@ const Predictive = () => {
                 onClick={() => editModel(3)}
                 className="editIcon"
               />
-              {editStates[3] && <EditPage />}
+              {editStates[3] && <EditPage close={close} />}
             </div>
           </div>
         </div>

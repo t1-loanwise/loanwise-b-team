@@ -9,9 +9,18 @@ const FooterLists = () => {
       title: "Resources",
       items: [
         { name: "Blog", link: "/blog" },
-        { name: "FAQ", link: "#faq" },
+        { name: "FAQ", link: "/pricing" },
         { name: "Help Center", link: "/help" },
         { name: "Contact Us", link: "/contact" },
+      ],
+    },
+    {
+      title: "General",
+      items: [
+        { name: "Users", link: "#users" },
+        { name: "Admin", link: "/pricing" },
+        { name: "Team", link: "/aboutUs" },
+        { name: "Lending", link: "/contact" },
       ],
     },
     {
@@ -48,7 +57,7 @@ const FooterLists = () => {
           <li>
             +123-457-789-00
             <br />
-            +123-457-789-0
+            +123-457-789-00
           </li>
           <li>
             123, Numberone Avenue,

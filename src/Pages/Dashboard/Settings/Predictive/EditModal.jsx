@@ -2,14 +2,19 @@ import React from "react";
 import "./Predictive.css";
 import { BiPlus } from "react-icons/bi";
 import downArrow from "../../../../Images/Dashboard/downarrowbg.svg";
-import { BiBin } from "react-icons/bi";
+// import { FaBin } from "react-icons/fa";
+// import { position, transform } from "@chakra-ui/react";
 
-const EditModal = () => {
+const EditModal = ({ close }) => {
+
   return (
     <div className="editModal">
+      <div className="closeRule">
+        <BiPlus color="red" size={25} onClick={() => close}/>
+      </div>
       <div className="title">
         <h2>Edit Existing Rule</h2>
-        <div className="plus">
+        <div className="plus" >
           <BiPlus />
         </div>
       </div>
@@ -52,7 +57,7 @@ const EditModal = () => {
           <fieldset>
             <input type="text" placeholder="Select existing rule"></input>
             <div className="delete">
-              <span>Delete</span>
+              <span>Delete  </span>
             </div>
           </fieldset>
           <fieldset>
