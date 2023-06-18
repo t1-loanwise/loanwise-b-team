@@ -63,8 +63,13 @@ const BarGraph = () => {
       <h2>Loan Default Count Trend</h2>
       <div className="graph">
         <div className="rotate">Qty</div>
-        <ResponsiveContainer width="100%" height={145}>
-          <BarChart data={data}>
+        <ResponsiveContainer width="100%" height='100%'>
+          <BarChart data={data} margin={{
+            top: 10,
+            right: 10,
+            left: -30,
+            bottom: 10,
+          }}>
             <CartesianGrid stroke="#ccc" vertical={false} horizontal={false} />
             <XAxis dataKey="name" fontSize={10} fontWeight={500} />
             <YAxis
