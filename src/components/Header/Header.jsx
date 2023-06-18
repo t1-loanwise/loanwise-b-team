@@ -68,8 +68,8 @@ const Header = () => {
         </div>
         <div className={styles.rightHeader}>
           <div className={styles.registerLogin}>
-            <a onClick={() => (navigate = "/login")}>Register</a>
-            <FilledBtn title={"Login"} onClick={() => (navigate = "/login")} />
+            <a onClick={() => navigate("/login")}>Register</a>
+            <FilledBtn title={"Login"} onClick={() => navigate("/login")} />
           </div>
           <div className={styles.mdSm}>
             <button className={styles.menuBtn} onClick={menuToggle}>
@@ -77,16 +77,10 @@ const Header = () => {
             </button>
             <ul className={!menu ? styles.menuList : styles.display}>
               {navItem}
-              <a
-                className={styles.register}
-                onClick={() => (navigate = "/login")}
-              >
+              <a className={styles.register} onClick={() => navigate("/login")}>
                 Register
               </a>
-              <FilledBtn
-                title={"Login"}
-                onClick={() => (navigate = "/login")}
-              />
+              <FilledBtn title={"Login"} onClick={() => navigate("/login")} />
             </ul>
           </div>
         </div>

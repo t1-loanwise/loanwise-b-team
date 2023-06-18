@@ -4,6 +4,7 @@ import TransparentBtn from "../../../../components/Button/TransparentBtn";
 import styles from "../styles.module.css";
 import Icon from "../../../../Images/arrow-right.svg";
 import History from "../../../../Images/History.svg";
+import { useNavigate } from "react-router-dom";
 
 const heading = "Transform lending with accurate risk prediction";
 
@@ -11,6 +12,7 @@ const paragraph =
   "Our app accurately predicts default risk for borrowers, helping financial institutions make informed lending decisions and minimize the impact of defaults";
 
 const HeroTxt = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.heroText}>
       <div className={styles.history}>
@@ -19,8 +21,15 @@ const HeroTxt = () => {
       </div>
       <HeroText heading={heading} paragraph={paragraph} />
       <div className={styles.heroBtns}>
-        <FilledBtn title={"Get Started"} link={"/newaccount"} />
-        <TransparentBtn title={"Learn More"} icon={Icon} link={"/aboutUs"} />
+        <FilledBtn
+          title={"Get Started"}
+          onClick={() => navigate("/createAccount")}
+        />
+        <TransparentBtn
+          title={"Learn More"}
+          icon={Icon}
+          onClick={() => navigate("/createAccount")}
+        />
       </div>
     </div>
   );
