@@ -28,7 +28,7 @@ const HeroTxt = () => {
         <TransparentBtn
           title={"Learn More"}
           icon={Icon}
-          onClick={() => navigate("/createAccount")}
+          onClick={() => navigate("/aboutUs")}
         />
       </div>
     </div>
