@@ -7,7 +7,7 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div className="container">
+    <div className="blog-container container">
       <Header />
       <div className="Blog">
         <Blogtext />
