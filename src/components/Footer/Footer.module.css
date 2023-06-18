@@ -36,8 +36,7 @@ footer {
 
 .footerFlex {
   display: flex;
-  /* justify-content: space-between; */
-  gap: 8.5vw;
+  gap: 9vw;
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #55666a;
@@ -61,12 +60,15 @@ footer {
   margin-bottom: 12px;
 }
 
+footer .footerInput .logoText p {
+  color: #00151a;
+}
+
 .footerFlex .footerInput p {
   font-size: 13px;
   line-height: 14px;
   margin-bottom: 16px;
   color: #55666a;
-  /* border: 1px solid red; */
 }
 
 .footerInput label {
@@ -77,7 +79,6 @@ footer {
 
 .footerInput input {
   width: 100%;
-  /* box-sizing: border-box; */
   padding: 10px 0 10px 10px;
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
@@ -113,6 +114,7 @@ footer {
   gap: 6vw;
   padding: 0px;
   color: #00191f;
+  margin-bottom: -50px;
 }
 
 .footerLists ul {
@@ -122,10 +124,11 @@ footer {
 }
 
 .footerLists ul h4 {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   color: #00191f;
   font-size: 20px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .lists li,
@@ -133,7 +136,7 @@ footer {
   padding: 8px 8px 8px 0;
   margin: 0;
   line-height: 22px;
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -252,7 +255,8 @@ footer p:last-child {
   .footerLists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
+    gap: 30px;
+    margin: 0;
   }
 
   .footerLists h4 {
@@ -266,16 +270,14 @@ footer p:last-child {
 
   .footerLists ul:nth-child(3) {
     order: -1;
-    /* border: 1px solid black; */
   }
 
   .footerLists ul:nth-child(1) {
     order: -1;
     padding: 0 0 0 50px;
-    /* border: 1px solid black; */
   }
+
   .footerLists ul:nth-child(2) {
     padding: 0 0 0 50px;
-    /* border: 1px solid black; */
   }
 }

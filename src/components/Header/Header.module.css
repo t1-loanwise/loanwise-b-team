@@ -46,7 +46,7 @@ li {
 
 ul li a {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .active {
@@ -69,7 +69,7 @@ ul li a {
 .filledBtn {
   background-color: var(--primary-bg);
   color: #fff;
-  padding: 19px 34px;
+  padding: 18px 34px;
 }
 
 .filledBtn:hover {
@@ -80,7 +80,7 @@ ul li a {
   background: #fff;
   border: 1px solid var(--primary-bg);
   color: var(--primary-bg);
-  padding: 16px 34px;
+  padding: 14px 30px;
 }
 
 .transparentBtn a,

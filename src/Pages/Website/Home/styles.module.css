@@ -5,6 +5,17 @@ h4 {
   padding: 0;
 }
 
+
+h2 {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 55px;
+  /* max-width: 400px; */
+  margin: 0;
+  margin-bottom: 25px;
+  /* border: 1px solid black; */
+}
+
 /* ------------------------- */
 /* Hero*/
 /* ------------------------- */
@@ -18,8 +29,11 @@ h4 {
   align-items: center;
   gap: 20px;
   font-size: 20px;
-  line-height: 27px;
   margin-bottom: 16px;
+}
+
+.history img {
+  height: 42px;
 }
 
 .heroBtns {
@@ -27,6 +41,7 @@ h4 {
   align-items: center;
   gap: 20px;
 }
+ 
 
 .heroBtns a {
   gap: 20px;
@@ -34,9 +49,44 @@ h4 {
   align-items: center;
 }
 
+.heroText {
+  max-width: 450px;
+}
+
 .heroText p {
   margin-bottom: 20px;
 }
+
+.heroImg img,
+.lwFlexImg img {
+  height: 90vh;
+}
+
+.heroImg,
+.lwFlexImg,
+.AmazingImg {
+  webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transition: all ease-in-out 2s;
+}
+
+.heroImg img:hover,
+.lwFlexImg img:hover,
+.AmazingImg img:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+  transition: all ease-in-out 1s;
+}
+
+.heroText p,
+.lwFlexText p,
+.AmazingText p,
+.revText p {
+  color: #00191f;
+  font-size: 15px;
+  line-height: 19.3px;
+}
+
 
 /* ------------------ */
 /* loanDefaulters */
@@ -50,13 +100,20 @@ h4 {
   align-items: center;
   padding: 0px;
   justify-content: space-between;
-  /* margin-bottom: 30px; */
   gap: 50px;
 }
 
 .lwFlexText,
 .lwFlexImg img {
   width: 100%;
+}
+
+.teamworkImg img {
+  height: 100vh;
+}
+
+.teamworkText .lwFlexText ul {
+  margin-top: 30px;
 }
 
 /* ------------------ */
@@ -68,16 +125,6 @@ h4 {
   flex-direction: column;
   /* align-items: center; */
   max-width: 543px;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 50px;
-  margin: 0;
-  margin-bottom: 25px;
-
-  /* border: 1px solid black; */
 }
 
 .lwFlexText p {
@@ -105,26 +152,35 @@ h2 {
   max-width: 736px;
   display: flex;
   align-items: center;
-  /* max-height: 875px; */
+  transform: scale(1.04);
 }
 
 /* ------------------ */
 /* Revolutionising */
 /* ------------------ */
 
+.revText p {
+  max-width: 500px;
+
+}
+
 .revText h2,
 .revText p {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .revText h2 {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 39px;
+  line-height: 50px;
+  max-width: 400px;
 }
+
+
 
 /* ------------------ */
 /* Amazing features */
 /* ------------------ */
+
 
 .featureContainer,
 .features {
@@ -148,19 +204,25 @@ h2 {
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: 50px 40px 70px;
-  gap: 120px;
+  padding: 40px 40px 50px;
+  justify-content: space-between;
+  gap: 50px;
   background: #11252a;
   border-radius: 15px;
+  box-sizing: border-box;
+
 }
 
 .bigFeature:hover {
-  background: #01ac76;
+  background: #009967;
+  transform: scale(1.04);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
 }
 
 .bigFeature h3 {
   font-weight: 400;
-  font-size: 52.5px;
+  font-size: 42.5px;
   line-height: 73px;
   color: #fff;
 }
@@ -168,8 +230,8 @@ h2 {
 .bigFeatureImg,
 .AmazingImg {
   border-radius: 50%;
-  height: 177px;
-  width: 177px;
+  height: 157px;
+  width: 157px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +250,7 @@ h2 {
 
 .AmazingText {
   width: 100%;
-  max-width: 780px;
+  max-width: 700px;
 }
 
 .AmazingImg {
@@ -196,8 +258,7 @@ h2 {
 }
 
 .AmazingImg img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
-    contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .bigFeatureImg img,
@@ -208,7 +269,6 @@ h2 {
 .feature {
   display: flex;
   flex-direction: column;
-  /* align-items: stretch; */
   justify-content: space-between;
   padding: 32px 35px;
   gap: 5px;
@@ -218,11 +278,14 @@ h2 {
 
 .feature:hover {
   background: var(--primary-bg);
+  transform: scale(1.04);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
 }
 
 .feature p {
-  font-size: 20px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 40px;
 }
 
 .feature:hover p {
@@ -232,12 +295,16 @@ h2 {
 .featureImg {
   background: #80bfcc;
   border-radius: 33px;
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px;
+}
+
+.featureImg img {
+  height: 37px;
 }
 
 .feature:hover .featureImg {
@@ -253,6 +320,7 @@ h2 {
 /* ------------------------- */
 
 @media (max-width: 1000px) {
+
   .hero,
   .Revolutionising,
   .loanDefaulters {
@@ -277,6 +345,12 @@ h2 {
     justify-content: center;
   }
 
+  .heroImg img,
+.lwFlexImg img {
+  height: auto;
+}
+
+
   .revText {
     display: flex;
     flex-direction: column;
@@ -291,6 +365,7 @@ h2 {
   h2 {
     font-size: 40px;
     line-height: 40px;
+    /* max-width: 100%; */
   }
 
   .featureContainer,
@@ -345,6 +420,7 @@ h2 {
 /* ------------------------- */
 
 @media (max-width: 768px) {
+
   .hero,
   .Revolutionising,
   .loanDefaulters {
@@ -400,5 +476,39 @@ h2 {
 
   .heroText {
     margin-bottom: 30px;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
