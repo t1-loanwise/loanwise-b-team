@@ -14,6 +14,7 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { isSubmitting, errors, isDirty },
+    reset
   } = useForm();
   const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -27,7 +28,7 @@ const Login = () => {
     if (response.status === 201) {
       navigate("/dashboard/overview")
     }
-    
+    reset();
 
     // let isValid = Object.keys(errors).length === 0;
     // {
@@ -97,7 +98,7 @@ const Login = () => {
         </div>
 
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Sign In"} isLoading={isSubmitting} isDisabled={isDirty || isSubmitting}/>
+          <FilledBtn type={"submit"} title={"Sign In"} isLoading={isSubmitting} isDisabled={isDirty || isSubmitting} />
         </div>
       </form>
     </AuthLayout>
