@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap");
+form {
+  background-color: #e6f2f5;
+  padding: 30px 35px 100px 35px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #00151a;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+label {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  /* Neutral / 20 */
+  color: #00151a;
+}
+
+input {
+  box-sizing: border-box;
+  line-height: 1.5;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10.5px 16px;
+  margin-bottom: 15px;
+  gap: 10px;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  border: 1.1px solid #cbcbcb;
+  border-radius: 5px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+::placeholder {
+  width: 93px;
+  height: 17px;
+  font-family: "Urbanist";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #9d9d9d;
+}
+
+.alternative {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.proceed-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 72px;
+  gap: 10px;
+  position: absolute;
+  width: 202px;
+  height: 45px;
+  left: 830px;
+  top: 1102px;
+  background: #006980;
+  border-radius: 5px;
+}
+
+.proceed-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 72px;
+  gap: 10px;
+  position: absolute;
+  width: 202px;
+  height: 45px;
+  left: 790px;
+  top: 780px;
+  background: #006980;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.employ {
+  margin-top: 30px;
+}
+
+.auto-2,
+.auto-1 {
+  text-align: right;
+  text-decoration: underline;
+  font-size: 14px;
+  color: #00151a;
+  font-weight: 500;
+}
+
+.plus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  gap: 10px;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 1452px;
+  top: 731px;
+  border: none;
+  /* Primary Colour/50 (Primary) */
+  background: #007e99;
+  border-radius: 5px;
+}
+
+.doc {
+  color: #9d9d9d;
+}
+
+/* ?]ANalysis */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.button-header button {
+  outline: none;
+  margin-left: 10px;
+}
+
+.analysis-container {
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 30px 35px;
+  font-family: "Urbanist";
+}
+
+.view {
+  padding: 8px 60px;
+  color: #e5e5e5;
+  background-color: #006980;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.date {
+  background-color: #e6f2f5;
+  padding: 8px 25px;
+  border-radius: 5px;
+  border: none;
+}
+
+.analysis-link {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+li > a {
+  color: #00151a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Urbanist";
+}
+
+.result {
+  border-top: 1px solid #9d9d9d;
+}
+
+.result-loan {
+  margin-top: 25px;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
