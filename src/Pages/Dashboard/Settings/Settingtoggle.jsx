@@ -3,38 +3,16 @@ import "./Settingtoggle.css";
 import arrow from "../../../Images/arrrow.svg";
 import { useNavigate } from "react-router-dom";
 
-const Settingtoggle = ({
-  header,
-  subHeader,
-  showItems,
-  link,
-  activeKey,
-  setSelectedItem,
-  selectedItem,
-  selected,
-}) => {
-  const [isShow, setShow] = React.useState(false);
-  const [currentToggle, setCurrentToggle] = useState(null);
+const Settingtoggle = ({ header, subHeader, showItems, link }) => {
+  const [selectedIndex, setSelectedIndex] = useState(false);
   const navigate = useNavigate();
 
-  console.log({ selected });
   const handleToggle = () => {
-    setCurrentToggle(activeKey);
-    setSelectedItem(activeKey);
-
     if (link) {
       //navigate to link
       navigate(link);
     } else {
-      // if (selected) {
-      setShow((prevState) => !prevState);
-      // console.log({ activeKey });
-      // console.log({ selectedItem });
-      // console.log({ currentToggle });
-      // } else {
-      //   setShow(false);
-      //   setSelectedItem(null);
-      // }
+      setSelectedIndex(!selectedIndex);
     }
   };
 
@@ -46,7 +24,7 @@ const Settingtoggle = ({
           <p>{subHeader}</p>
         </div>
         {!link &&
-          (selected && isShow ? (
+          (selectedIndex ? (
             <img
               src={arrow}
               alt="arrow"
@@ -56,12 +34,8 @@ const Settingtoggle = ({
             <img src={arrow} alt="arrow" />
           ))}
       </div>
-      {/* import Settings from "../Settings/Settings";
-      <Route path="/settings" element={<Settings />} /> */}
 
-      {isShow && currentToggle === activeKey && showItems}
-      {/* {isShow && selected && showItems} */}
-      {/* {isShow && (selected || activeKey === currentToggle) && showItems} */}
+      {selectedIndex && <div>{showItems}</div>}
     </div>
   );
 };

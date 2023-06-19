@@ -7,8 +7,6 @@ import Settingtoggle from "./Settingtoggle";
 import Notification from "./Notification/Notification";
 
 const Settings = () => {
-  const [selectedItem, setSelectedItem] = useState(1);
-
   const toggleItems = [
     {
       key: 1,
@@ -46,10 +44,6 @@ const Settings = () => {
                   subHeader={item.subHeader}
                   showItems={item.showItems}
                   link={item.link}
-                  activeKey={item.key}
-                  selected={selectedItem === item.key}
-                  selectedItem={selectedItem}
-                  setSelectedItem={setSelectedItem}
                 />
               </div>
             );
