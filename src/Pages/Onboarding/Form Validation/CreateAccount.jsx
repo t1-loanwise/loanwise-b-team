@@ -37,7 +37,7 @@ const CreateAccount = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors }
   } = methods;
   const navigate = useNavigate();
 
@@ -194,7 +194,7 @@ const CreateAccount = () => {
           )}
         </div>
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Create Account"} disabled={isSubmitting} />
+          <FilledBtn type={"submit"} title={"Create Account"} />
         </div>
       </form>
     </AuthLayout>

@@ -17,17 +17,23 @@ const ForgotPassword = () => {
   } = useForm();
   const navigate = useNavigate();
 
-  const onSubmit = async data => {
-    const values = { ...data, id: nanoid() };
-    try {
-      const response = await axios.post('http://loanwise.onrender.com/api/forget-password', values);
-      if (response.status === 200) {
-        navigate("/accVerify");
-      }
-    } catch (error) {
-      console.error(error);
+  // const onSubmit = async data => {
+  //   const values = { ...data, id: nanoid() };
+  //   try {
+  //     const response = await axios.post('http://loanwise.onrender.com/api/forget-password', values);
+  //     if (response.status === 200) {
+  //       navigate("/accVerify");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   reset()
+  // };
+  const onSubmit = () => {
+    let isValid = Object.keys(errors).length === 0;
+    {
+      isValid && navigate("/accVerify");
     }
-    reset()
   };
   return (
     <AuthLayout
