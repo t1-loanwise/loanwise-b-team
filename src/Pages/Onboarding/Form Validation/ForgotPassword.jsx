@@ -20,7 +20,7 @@ const ForgotPassword = () => {
   const onSubmit = async data => {
     const values = { ...data, id: nanoid() };
     try {
-      const response = await axios.post('http://loanwise.onrender.com/api/forget-password', data);
+      const response = await axios.post('http://loanwise.onrender.com/api/forget-password', values);
       if (response.status === 200) {
         navigate("/accVerify");
       }

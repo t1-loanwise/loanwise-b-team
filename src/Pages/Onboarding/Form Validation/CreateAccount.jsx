@@ -5,8 +5,8 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-import { nanoid } from 'nanoid'
-import axios from 'axios'
+// import { nanoid } from 'nanoid'
+// import axios from 'axios'
 import { object, string } from 'yup';
 import * as Yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -63,19 +63,21 @@ const CreateAccount = () => {
   */
 
   const onSubmit = async data => {
-    const values = { ...data, id: nanoid() };
-    try {
-      const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+    // const values = { ...data, id: nanoid() };
+    // try {
+      // const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+      // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
       if (response.status === 201) {
         navigate("/accountVerify");
         console.log('Form submitted successfully');
       } else {
-        const errorData = response.data;
-        console.log('Validation error:', errorData);
+        // const errorData = response.data;
+        console.log('Validation error');
+        // console.log('Validation error:', errorData);
       }
-    } catch (error) {
-      console.error('Error while submitting form:', error);
-    }
+    // } catch (error) {
+    //   console.error('Error while submitting form:', error);
+    // }
   };
 
   const formFooter = (

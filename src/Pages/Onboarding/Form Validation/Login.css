@@ -218,9 +218,9 @@ p {
     display: block;
   }
 
-  .passwordContainer fieldset:last-child label {
+  /* .passwordContainer fieldset:last-child label {
     margin-top: 20px;
-  }
+  } */
 
   .terms-and-conditions {
     margin: 20px 0 0 0;
