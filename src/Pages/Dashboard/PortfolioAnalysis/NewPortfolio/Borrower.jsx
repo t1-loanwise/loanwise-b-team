@@ -72,6 +72,40 @@ const Borrower = () => {
           </div>
         </div>
 
+        <h2 className="employ">Employment Information</h2>
+        <label>Current Employer</label>
+        <input
+          type="text"
+          placeholder="Enter answer"
+          {...register("currentEmployer", { required: true })}
+        />
+        {errors.currentEmployer && <p>Please enter the current employer</p>}
+        <label>Job Title</label>
+        <input
+          type="text"
+          placeholder="Enter answer"
+          {...register("jobTitle", { required: true })}
+        />
+        {errors.jobTitle && <p>Please enter the job title</p>}
+
+        <div className="alternative">
+          <div className="alter">
+            <label>Length of Employment</label>
+            <input
+              type="text"
+              placeholder="Enter answer"
+              {...register("lengthOfEmployment", { required: true })}
+            />
+            {errors.lengthOfEmployment && (
+              <p>Please enter the length of employment</p>
+            )}
+          </div>
+          <div className="alter">
+            <label>Current Salary</label>
+            <input type="text" />
+          </div>
+        </div>
+        <p className="auto-1">Auto-fill from loan application</p>
         <button type="submit" className="proceed-1">
           Proceed
         </button>

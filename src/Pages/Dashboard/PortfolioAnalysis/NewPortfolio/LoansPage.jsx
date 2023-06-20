@@ -16,6 +16,7 @@ const LoansPage = () => {
       navigate("/Pages/LoanPage");
     }
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -110,31 +111,33 @@ const LoansPage = () => {
             />
             {errors.requestedAmount && <p>Please enter the Requested Amount</p>}
           </div>
-        </div>
-        <div className="alternative">
           <div className="alter">
-            <label>Loan Company Verfication</label>
+            <label>Validity Period</label>
             <input
               type="choose"
               placeholder="Select Validity period"
-              {...register("companyVerfication", { required: true })}
+              {...register("validityPeriod", { required: true })}
             />
-            {errors.companyVerfication && (
-              <p>Please enter the Company Verfication</p>
-            )}
+            {errors.validityPeriod && <p>Please enter the Validity Period</p>}
           </div>
           <div className="alter">
-            <label>Application Type</label>
-            <input
-              type="text"
-              {...register("applicationType", { required: true })}
-            />
-            {errors.applicationType && <p>Please enter the application Type</p>}
+            <label>Interest Rate</label>
+            <input type="num" placeholder="0%" />
           </div>
         </div>
 
+        <p className="auto-2">Auto-fill from loan applications</p>
+
+        <h2 className="employ">Documentation</h2>
+        <p className="doc">
+          Upload 6 month bank statement and any other relevant document,
+          application name must match bank statement name
+        </p>
+        <input type="choose" placeholder="Choose file" />
+        <input type="choose" placeholder="Choose file" />
+        <button className="plus">+</button>
         <button className="proceed-2" type="submit">
-          Analyse
+          Proceed
         </button>
       </form>
     </div>
