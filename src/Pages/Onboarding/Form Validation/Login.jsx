@@ -31,8 +31,7 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting, errors, isDirty },
-    reset
+    formState: { isSubmitting, errors, isDirty }
   } = methods;
 
   const navigate = useNavigate();
@@ -43,8 +42,8 @@ const Login = () => {
 
   // const onSubmit = async data => {
   //   const values = { ...data, id: nanoid() }
-  //   // const response = await axios.post('https://loanwise.onrender.com/api/login', values)
-  //   const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
+  //   const response = await axios.post('https://loanwise.onrender.com/api/login', values)
+  //   // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
   //   if (response.status === 201) {
   //     navigate("/dashboard/overview")
   //     console.log('Form submitted successfully');
@@ -52,7 +51,6 @@ const Login = () => {
   //     const errorData = response.data;
   //     console.log('Validation error:', errorData);
   //   }
-  //   reset();
   // };
 
   const onSubmit = () => {
@@ -64,7 +62,7 @@ const Login = () => {
 
   const formFooter = (
     <p>
-      Don’t have an account? <a href="/createAccount">Sign Up</a>
+      Don’t have an account? <a  onClick={() => navigate("/createAccount")}>Sign Up</a>
     </p>
   );
 

@@ -39,6 +39,7 @@ const CreateAccount = () => {
     handleSubmit,
     formState: { errors }
   } = methods;
+
   const navigate = useNavigate();
 
   /*
@@ -82,13 +83,13 @@ const CreateAccount = () => {
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/accountVerify");
+      isValid && navigate("/dashboard/overview");
     }
   };
 
   const formFooter = (
     <p>
-      Already have an account? <a href="/login">Sign In</a>
+      Already have an account? <a onClick={() => navigate("/login")}>Sign In</a>
     </p>
   );
 
@@ -170,11 +171,11 @@ const CreateAccount = () => {
             {errors.password.message}
           </p>
         )}
-        {(!errors.password && errors.confirmPassword) ? (
+        {(!errors.password && errors.confirmPassword) && (
           <p className="errorMessage">
             {errors.confirmPassword.message}
           </p>
-        ) : ''}
+        )}
 
         <div className="termz" style={{
           display: 'flex', flexDirection: 'column', alignItems: 'flex-end'
