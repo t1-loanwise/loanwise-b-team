@@ -62,22 +62,28 @@ const CreateAccount = () => {
   * Fxns
   */
 
-  const onSubmit = async data => {
-    // const values = { ...data, id: nanoid() };
-    // try {
-      // const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
-      // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
-      if (response.status === 201) {
-        navigate("/accountVerify");
-        console.log('Form submitted successfully');
-      } else {
-        // const errorData = response.data;
-        console.log('Validation error');
-        // console.log('Validation error:', errorData);
-      }
-    // } catch (error) {
-    //   console.error('Error while submitting form:', error);
-    // }
+  // const onSubmit = async data => {
+  //   const values = { ...data, id: nanoid() };
+  //   try {
+  //     const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+  //     // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
+  //     if (response.status === 201) {
+  //       navigate("/accountVerify");
+  //       console.log('Form submitted successfully');
+  //     } else {
+  //       const errorData = response.data;
+  //       console.log('Validation error:', errorData);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error while submitting form:', error);
+  //   }
+  // };
+
+  const onSubmit = () => {
+    let isValid = Object.keys(errors).length === 0;
+    {
+      isValid && navigate("/accountVerify");
+    }
   };
 
   const formFooter = (
