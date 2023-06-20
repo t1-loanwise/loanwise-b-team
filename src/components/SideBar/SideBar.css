@@ -252,4 +252,8 @@
   .dashboard-header-left {
     gap: 30px;
   }
+
+  .dashboard-header-left .back span {
+    display: none;
+  }
 }

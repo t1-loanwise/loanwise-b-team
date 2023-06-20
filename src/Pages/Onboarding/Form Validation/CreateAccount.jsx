@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./Login.css";
@@ -14,20 +14,19 @@ import { yupResolver } from '@hookform/resolvers/yup';
 /*
  * Interface
 */
-let userSchema = object().shape({
-  name: string().required('The name field is required'),
-  email: string().email('Invalid email').required('The email field is required'),
+
+const userSchema = Yup.object().shape({
+  name: Yup.string().required('The name field is required'),
+  email: Yup.string().email('Invalid email').required('The email field is required'),
   password: Yup.string()
     .required('The password field is required')
-    .matches(
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*\s).{6,20}$/,
-      "Password must contain at least 6 characters including numbers"
-    ),
+    .matches(/^(?=.*\d).*$/, 'Password must contain at least 6 characters including a number')
+    .min(6, 'Password must contain at least 6 characters'),
   confirmPassword: Yup.string()
-    .required(true)
-    .oneOf([Yup.ref("password")], "Passwords do not match!"),
+    .oneOf([Yup.ref('password')], 'Passwords do not match!'),
   radio: Yup.string().required('The radio field is required'),
 });
+
 
 
 const CreateAccount = () => {
@@ -38,7 +37,7 @@ const CreateAccount = () => {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting, errors }
+    formState: { errors, isSubmitting }
   } = methods;
   const navigate = useNavigate();
 
@@ -57,21 +56,26 @@ const CreateAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  /**
+  const [isRadioChecked, setRadioChecked] = useState(false);
+
+  /*
   * Fxns
   */
 
   const onSubmit = async data => {
-    const values = { ...data, id: nanoid() }
-    const response = await axios.post('https://loanwise.onrender.com/api/signup', values)
-    if (response.status === 201) {
-      navigate("/accountVerify")
+    const values = { ...data, id: nanoid() };
+    try {
+      const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+      if (response.status === 201) {
+        navigate("/accountVerify");
+        console.log('Form submitted successfully');
+      } else {
+        const errorData = response.data;
+        console.log('Validation error:', errorData);
+      }
+    } catch (error) {
+      console.error('Error while submitting form:', error);
     }
-    methods.reset();
-    // let isValid = Object.keys(errors).length === 0;
-    // {
-    //   isValid && navigate("/accountVerify");
-    // }
   };
 
   const formFooter = (
@@ -82,7 +86,7 @@ const CreateAccount = () => {
 
   return (
     <AuthLayout title={"Create an account"} formFooter={formFooter}>
-      <form onSubmit={handleSubmit(onSubmit)} >
+      <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <label htmlFor="name">Full Name</label>
           <input
@@ -121,7 +125,7 @@ const CreateAccount = () => {
                 type={passwordVisible ? "text" : "password"}
                 name="password"
                 id="password"
-                placeholder={"Enter Password"}
+                placeholder="Enter Password"
               />
               <button type="button" onClick={togglePasswordVisibility}>
                 {passwordVisible ? (
@@ -131,7 +135,6 @@ const CreateAccount = () => {
                 )}
               </button>
             </div>
-
           </fieldset>
 
           <fieldset className="confirmPassword">
@@ -142,7 +145,7 @@ const CreateAccount = () => {
                 name="confirmPassword"
                 type={confirmPasswordVisible ? "text" : "password"}
                 id="confirmPassword"
-                placeholder={"Confirm Password"}
+                placeholder="Confirm Password"
               />
               <button type="button" onClick={toggleConfirmPasswordVisibility}>
                 {confirmPasswordVisible ? (
@@ -154,33 +157,36 @@ const CreateAccount = () => {
             </div>
           </fieldset>
         </div>
-        {(errors.password || errors["confirmPassword"]) && (
+        {errors.password && (
           <p className="errorMessage">
             {errors.password.message}
           </p>
         )}
-         {errors.confirmPassword && (
-              <p className="errorMessage">{errors.confirmPassword.message}</p>
-            )}
+        {(!errors.password && errors.confirmPassword) ? (
+          <p className="errorMessage">
+            {errors.confirmPassword.message}
+          </p>
+        ) : ''}
+
         <div className="termz" style={{
           display: 'flex', flexDirection: 'column', alignItems: 'flex-end'
         }}>
           <div className="terms-and-conditions">
             <input
               {...register("radio")}
-              type="radio" id="terms" name="terms" />
+              type="radio" id="terms" name="terms" onChange={() => setRadioChecked(!isRadioChecked)} />
             <span>
               <label htmlFor="terms">
                 I agree to the terms of service and privacy policy
               </label>
             </span>
           </div>
-          {errors.radio && (
+          {!isRadioChecked && errors.radio && (
             <p className="errorMessage">{errors.radio.message}</p>
           )}
         </div>
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Create Account"} isLoading={isSubmitting} />
+          <FilledBtn type={"submit"} title={"Create Account"} disabled={isSubmitting} />
         </div>
       </form>
     </AuthLayout>
