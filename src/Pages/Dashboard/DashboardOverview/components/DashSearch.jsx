@@ -20,6 +20,18 @@ const DashSearch = ({ handleSearch }) => {
     year: "numeric",
   });
 
+  const [searchItems, setSearchItems] = useState("");
+
+  const handleChange = (event) => {
+    setSearchItems(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleSearch(searchItems);
+    console.log(searchItems);
+  };
+
   return (
     <div className="dash__titleSearch">
       <div className="dash__searchFilterDate">
@@ -41,7 +53,7 @@ const DashSearch = ({ handleSearch }) => {
             )}
           </div>
           <div className="btnzz">
-            <FilledBtn title={"Search"} />
+            <FilledBtn title={"Search"} handleSearch={handleSearch} />
             <div className="filter">
               <TransparentBtn
                 title={"Filter"}
