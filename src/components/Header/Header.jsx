@@ -68,7 +68,7 @@ const Header = () => {
         </div>
         <div className={styles.rightHeader}>
           <div className={styles.registerLogin}>
-            <a onClick={() => navigate("/login")}>Register</a>
+            <a onClick={() => navigate("/createAccount")}>Register</a>
             <FilledBtn title={"Login"} onClick={() => navigate("/login")} />
           </div>
           <div className={styles.mdSm}>
@@ -77,7 +77,10 @@ const Header = () => {
             </button>
             <ul className={!menu ? styles.menuList : styles.display}>
               {navItem}
-              <a className={styles.register} onClick={() => navigate("/login")}>
+              <a
+                className={styles.register}
+                onClick={() => navigate("/createAccount")}
+              >
                 Register
               </a>
               <FilledBtn title={"Login"} onClick={() => navigate("/login")} />

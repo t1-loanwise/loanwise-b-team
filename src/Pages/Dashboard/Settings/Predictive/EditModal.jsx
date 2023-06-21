@@ -1,73 +1,246 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Predictive.css";
 import { BiPlus } from "react-icons/bi";
-import downArrow from "../../../../Images/Dashboard/downarrowbg.svg";
-// import { FaBin } from "react-icons/fa";
-// import { position, transform } from "@chakra-ui/react";
+import Select from "react-select";
+import Delete from "../../../../Images/Dashboard/delete.svg";
+import FilledBtn from "../../../../components/Button/FilledBtn";
 
-const EditModal = ({ close }) => {
+const EditModal = ({ handleEdit }) => {
+  const variableOptions = [
+    {
+      value: "Select",
+      label: "Select",
+    },
+    {
+      value: "Bank Statement Name Match",
+      label: "Bank Statement Name Match",
+    },
+    {
+      value: "Average balance",
+      label: "Average balance",
+    },
+    {
+      value: "Greater than",
+      label: "Greater than",
+    },
+    {
+      value: "Greater than or equal to",
+      label: "Greater than or equal to",
+    },
+    {
+      value: "Equal to",
+      label: "Equal to",
+    },
+    {
+      value: "Tally with",
+      label: "Tally with",
+    },
+  ];
+  const operatorOptions = [
+    {
+      value: "Select",
+      label: "Select",
+    },
+    {
+      value: "Less than",
+      label: "Less than",
+    },
+    {
+      value: "Less than or equal to",
+      label: "Less than or equal to",
+    },
+    {
+      value: "Greater than",
+      label: "Greater than",
+    },
+    {
+      value: "Account Activity",
+      label: "Account Activity",
+    },
+    {
+      value: "Number of Credit Transactions",
+      label: "Number of Credit Transactions",
+    },
+    {
+      value: "Number of Debit Transactions",
+      label: "Number of Debit Transactions",
+    },
+    {
+      value: "Number of other loan amount",
+      label: "Number of other loan amount",
+    },
+  ];
 
+  const customStyles = {
+    placeholder: (provided) => ({
+      ...provided,
+      fontSize: "12px",
+    }),
+    control: (baseStyles, state) => ({
+      ...baseStyles,
+      fontSize: "13px",
+      fontWeight: "600",
+    }),
+    menu: (baseStyles, state) => ({
+      ...baseStyles,
+      fontSize: "13px",
+      fontWeight: "600",
+    }),
+  };
   return (
     <div className="editModal">
-      <div className="closeRule">
-        <BiPlus color="red" size={25} onClick={() => close}/>
-      </div>
-      <div className="title">
-        <h2>Edit Existing Rule</h2>
-        <div className="plus" >
-          <BiPlus />
+      {/* Nothing here :( */}
+      <form>
+        <div className="title">
+          <h2>Edit Existing Rule</h2>
+          <div className="plus">
+            <BiPlus color="#006980" onClick={handleEdit} />
+          </div>
         </div>
-      </div>
-      <p>
-        Edit existing rules that loan applications must meet for approval or
-        dismissal
-      </p>
-      <div className="select-section">
-        <div>Model Title</div>
-        <fieldset>
-          <input type="text" placeholder="Select existing rule"></input>
-          <img src={downArrow} alt="" />
-        </fieldset>
-      </div>
-      <div className="select-sections">
-        <div className="variable">
-          <div className="title">Variable</div>
+        <p className="rule-par">
+          Edit existing rules that loan applications must meet for approval or
+          dismissal
+        </p>
+        <div className="select-section">
+          <div>Model Title</div>
           <fieldset>
             <input type="text" placeholder="Select existing rule"></input>
-            <img src={downArrow} alt="" />
-          </fieldset>
-          <fieldset>
-            <input type="text" placeholder="Select existing rule"></input>
-            <img src={downArrow} alt="" />
           </fieldset>
         </div>
-        <div className="operator">
-          <div className="title">Operator</div>
-          <fieldset>
-            <input type="text" placeholder="Select existing rule"></input>
-            <img src={downArrow} alt="" />
-          </fieldset>
-          <fieldset>
-            <input type="text" placeholder="Select existing rule"></input>
-            <img src={downArrow} alt="" />
-          </fieldset>
-        </div>
-        <div className="variable">
-          <div className="title">Value</div>
-          <fieldset>
-            <input type="text" placeholder="Select existing rule"></input>
-            <div className="delete">
-              <span>Delete  </span>
+        <div className="selections">
+          <div className="select-sectionz">
+            <div className="select-sections">
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={variableOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={operatorOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <fieldset>
+                  <input type="text" placeholder="input" />
+                </fieldset>
+              </div>
             </div>
-          </fieldset>
-          <fieldset>
-            <input type="text" placeholder="Select existing rule"></input>
-            <div className="delete">
-              <span>Delete</span>
+            <div className="inputDelContainer">
+              <div className="inputDel">
+                <p>Delete</p>
+                <span>
+                  <img src={Delete} alt="Delete" width="18px" height="18px" />
+                </span>
+              </div>
             </div>
-          </fieldset>
+          </div>
+          <div className="select-sectionz">
+            <div className="select-sections">
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={variableOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={operatorOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <fieldset>
+                  <input type="text" placeholder="input" />
+                </fieldset>
+              </div>
+            </div>
+            <div className="inputDelContainer">
+              <div className="inputDel">
+                <p>Delete</p>
+                <span>
+                  <img src={Delete} alt="Delete" width="18px" height="18px" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="select-sectionz">
+            <div className="select-sections">
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={variableOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <Select
+                  className="select"
+                  placeholder={"Select question"}
+                  options={operatorOptions}
+                  styles={customStyles}
+                />
+              </div>
+              <div className="select-component variable">
+                <div className="title">Variable</div>
+                <fieldset>
+                  <input type="text" placeholder="input" />
+                </fieldset>
+              </div>
+            </div>
+            <div className="inputDelContainer">
+              <div className="inputDel">
+                <p>Delete</p>
+                <span>
+                  <img src={Delete} alt="Delete" width="18px" height="18px" />
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div className="new-condition">
+          <FilledBtn
+            icon={<BiPlus size={20} />}
+            title={"New Condition"}
+            // onClick={newModel}
+          />
+        </div>
+        <div className="termsContainer">
+          <div>
+            <input type="radio" name="condition" id="condition1" />
+            <label htmlFor="condition1">All conditions must be met</label>
+          </div>
+          <div>
+            <input type="radio" name="condition" id="condition2" />
+            <label htmlFor="condition2">Any of the conditions can be met</label>
+          </div>
+        </div>
+        <div className="save-New">
+          <FilledBtn
+            title={"Save"}
+            // onClick={newModel}
+          />
+        </div>
+      </form>
     </div>
   );
 };
