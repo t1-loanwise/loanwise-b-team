@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import LoanAmountComponent from "../components/LoanAmountComponent";
-import BarGraph from "./BarGraph";
+import BarGraph from "./BarGraph1";
 import Earnings from "../../../../Images/Dashboard/earnings.svg";
 
 const data = [
@@ -32,7 +32,7 @@ const data = [
 
 const Barchart = () => {
   return (
-    <div className="chart">
+    <>
       <LoanAmountComponent
         image={Earnings}
         amount={"N6,000,000.00"}
@@ -59,9 +59,14 @@ const Barchart = () => {
         <ResponsiveContainer width="100%" height={150}>
           <LineChart
             data={data}
-            margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+            margin={{
+              top: 10,
+              right: 10,
+              left: -25,
+              bottom: 10,
+            }}
           >
-            <CartesianGrid stroke="#ccc" horizontal={true} vertical={false} />
+            <CartesianGrid stroke="#ccc" horizontal={false} vertical={false} />
             <XAxis
               dataKey="name"
               tickCount={12}
@@ -103,10 +108,7 @@ const Barchart = () => {
         </ResponsiveContainer>
         <p>Period</p>
       </div>
-      <div className="chart2">
-        <BarGraph />
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -20,23 +20,11 @@ const DashSearch = ({ handleSearch }) => {
     year: "numeric",
   });
 
-  const [searchItems, setSearchItems] = useState("");
-
-  const handleChange = (event) => {
-    setSearchItems(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    handleSearch(searchItems);
-    console.log(searchItems);
-  };
-
   return (
     <div className="dash__titleSearch">
       <div className="dash__searchFilterDate">
-        <SearchBar handleSearch={handleSearch} />
         <div className="dash__searchFilter">
+          <SearchBar handleSearch={handleSearch} />
           <div className="filter">
             <TransparentBtn
               title={"Filter"}
@@ -53,7 +41,7 @@ const DashSearch = ({ handleSearch }) => {
             )}
           </div>
           <div className="btnzz">
-            <FilledBtn title={"Search"} handleSearch={handleSearch} />
+            <FilledBtn title={"Search"} onClick={() => handleSearch("")} />
             <div className="filter">
               <TransparentBtn
                 title={"Filter"}
@@ -65,15 +53,16 @@ const DashSearch = ({ handleSearch }) => {
                   className="list"
                   onClick={() => setShowFilter2(!showFilter2)}
                 >
-                  <span>Wendy</span>
-                  <span>Precious</span>
-                  <span>Rosheedat</span>
+                  <span>Default Loans</span>
+                  <span>Active Loans</span>
+                  <span>Pending Loans</span>
+                  <span>Date</span>
                 </div>
               )}
             </div>
             <div
               className="dash__date-small"
-              onClick={() => setShowCalendar(!showCalendar)}
+              // onClick={() => setShowCalendar(!showCalendar)}
             >
               <div
                 className="img-date"
@@ -97,10 +86,7 @@ const DashSearch = ({ handleSearch }) => {
           </div>
         </div>
 
-        <div
-          className="dash__date"
-          // onClick={() => setShowCalendar(!showCalendar)}
-        >
+        <div className="dash__date">
           <div
             className="img-date"
             onClick={() => setShowCalendar(!showCalendar)}
