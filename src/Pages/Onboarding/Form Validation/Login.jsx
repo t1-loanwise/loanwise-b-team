@@ -62,7 +62,7 @@ const Login = () => {
 
   const formFooter = (
     <p>
-      Don’t have an account? <a  onClick={() => navigate("/createAccount")}>Sign Up</a>
+      Don’t have an account? <a onClick={() => navigate("/createAccount")}>Sign Up</a>
     </p>
   );
 
@@ -130,3 +130,5 @@ const Login = () => {
 };
 
 export default Login;
+
+
