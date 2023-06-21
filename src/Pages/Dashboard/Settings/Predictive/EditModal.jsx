@@ -87,6 +87,12 @@ const EditModal = ({ handleEdit }) => {
       fontWeight: "600",
     }),
   };
+
+  const [showNewCondition, setShowNewCondition] = useState(false);
+
+  const handleNewCondition = () => {
+    setShowNewCondition(true);
+  };
   return (
     <div className="editModal">
       {/* Nothing here :( */}
@@ -120,7 +126,7 @@ const EditModal = ({ handleEdit }) => {
                 />
               </div>
               <div className="select-component variable">
-                <div className="title">Variable</div>
+                <div className="title">Operator</div>
                 <Select
                   className="select"
                   placeholder={"Select question"}
@@ -129,7 +135,7 @@ const EditModal = ({ handleEdit }) => {
                 />
               </div>
               <div className="select-component variable">
-                <div className="title">Variable</div>
+                <div className="title">Value</div>
                 <fieldset>
                   <input type="text" placeholder="input" />
                 </fieldset>
@@ -156,7 +162,7 @@ const EditModal = ({ handleEdit }) => {
                 />
               </div>
               <div className="select-component variable">
-                <div className="title">Variable</div>
+                <div className="title">Operator</div>
                 <Select
                   className="select"
                   placeholder={"Select question"}
@@ -165,7 +171,7 @@ const EditModal = ({ handleEdit }) => {
                 />
               </div>
               <div className="select-component variable">
-                <div className="title">Variable</div>
+                <div className="title">Value</div>
                 <fieldset>
                   <input type="text" placeholder="input" />
                 </fieldset>
@@ -180,48 +186,50 @@ const EditModal = ({ handleEdit }) => {
               </div>
             </div>
           </div>
-          <div className="select-sectionz">
-            <div className="select-sections">
-              <div className="select-component variable">
-                <div className="title">Variable</div>
-                <Select
-                  className="select"
-                  placeholder={"Select question"}
-                  options={variableOptions}
-                  styles={customStyles}
-                />
+          {showNewCondition && (
+            <div className="select-sectionz">
+              <div className="select-sections">
+                <div className="select-component variable">
+                  <div className="title">Variable</div>
+                  <Select
+                    className="select"
+                    placeholder={"Select question"}
+                    options={variableOptions}
+                    styles={customStyles}
+                  />
+                </div>
+                <div className="select-component variable">
+                  <div className="title">Operator</div>
+                  <Select
+                    className="select"
+                    placeholder={"Select question"}
+                    options={operatorOptions}
+                    styles={customStyles}
+                  />
+                </div>
+                <div className="select-component variable">
+                  <div className="title">Value</div>
+                  <fieldset>
+                    <input type="text" placeholder="input" />
+                  </fieldset>
+                </div>
               </div>
-              <div className="select-component variable">
-                <div className="title">Variable</div>
-                <Select
-                  className="select"
-                  placeholder={"Select question"}
-                  options={operatorOptions}
-                  styles={customStyles}
-                />
-              </div>
-              <div className="select-component variable">
-                <div className="title">Variable</div>
-                <fieldset>
-                  <input type="text" placeholder="input" />
-                </fieldset>
+              <div className="inputDelContainer">
+                <div className="inputDel">
+                  <p>Delete</p>
+                  <span>
+                    <img src={Delete} alt="Delete" width="18px" height="18px" />
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="inputDelContainer">
-              <div className="inputDel">
-                <p>Delete</p>
-                <span>
-                  <img src={Delete} alt="Delete" width="18px" height="18px" />
-                </span>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
         <div className="new-condition">
           <FilledBtn
             icon={<BiPlus size={20} />}
             title={"New Condition"}
-            // onClick={newModel}
+            onClick={handleNewCondition}
           />
         </div>
         <div className="termsContainer">

@@ -5,8 +5,11 @@ import Footer from "../../../components/Footer/Footer.jsx";
 import Header from "../../../components/Header/Header.jsx";
 import LoanwiseUsers from "../Home/LoanwiseUsers/LoanwiseUsers";
 import "../Pricing/Pricing.css";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container">
       <Header />
@@ -34,7 +37,12 @@ const Pricing = () => {
                 <span>forever</span>
               </div>
             </div>
-            <button className="join-btn">Join for free</button>
+            <button
+              className="join-btn"
+              onClick={() => navigate("/createAccount")}
+            >
+              Join for free
+            </button>
           </div>
           <div className="card-features">
             <ul>
@@ -108,7 +116,12 @@ const Pricing = () => {
                   <span>for the first 12 months</span>
                 </div>
               </div>
-              <button className="started-btn">Get Started Premium</button>
+              <button
+                className="started-btn"
+                onClick={() => navigate("/createAccount")}
+              >
+                Get Started Premium
+              </button>
             </div>
             <div className="card-features">
               <ul>
@@ -183,7 +196,12 @@ const Pricing = () => {
               </div>
             </div>
             <div className="trial-btn-div">
-              <button className="free-btn">Start a free trial</button>
+              <button
+                className="free-btn"
+                onClick={() => navigate("/createAccount")}
+              >
+                Start a free trial
+              </button>
               <button className="contact-btn">Contact Sales</button>
             </div>
           </div>
