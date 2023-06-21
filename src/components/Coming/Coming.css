@@ -43,9 +43,17 @@
   color: black;
   padding-bottom: 12px;
 }
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 1000px) {
   .Coming h1 {
     font-size: 40px;
     padding-bottom: 12px;
+  }
+
+  .Coming .side input {
+    width: 100%;
+  }
+
+  .side {
+    width: 100%;
   }
 }
