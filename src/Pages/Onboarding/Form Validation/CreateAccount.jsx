@@ -5,46 +5,50 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-// import { nanoid } from 'nanoid'
-// import axios from 'axios'
-import { object, string } from 'yup';
+import { nanoid } from "nanoid";
+import axios from "axios";
+import { object, string } from "yup";
 import * as Yup from "yup";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 
 /*
  * Interface
-*/
+ */
 
 const userSchema = Yup.object().shape({
-  name: Yup.string().required('The name field is required'),
-  email: Yup.string().email('Invalid email').required('The email field is required'),
+  name: Yup.string().required("The name field is required"),
+  email: Yup.string()
+    .email("Invalid email")
+    .required("The email field is required"),
   password: Yup.string()
-    .required('The password field is required')
-    .matches(/^(?=.*\d).*$/, 'Password must contain at least 6 characters including a number')
-    .min(6, 'Password must contain at least 6 characters'),
-  confirmPassword: Yup.string()
-    .oneOf([Yup.ref('password')], 'Passwords do not match!'),
-  radio: Yup.string().required('The radio field is required'),
+    .required("The password field is required")
+    .matches(
+      /^(?=.*\d).*$/,
+      "Password must contain at least 6 characters including a number"
+    )
+    .min(6, "Password must contain at least 6 characters"),
+  confirmPassword: Yup.string().oneOf(
+    [Yup.ref("password")],
+    "Passwords do not match!"
+  ),
+  radio: Yup.string().required("The radio field is required"),
 });
-
-
 
 const CreateAccount = () => {
   /*
    * Validation
    */
-  const methods = useForm({ resolver: yupResolver(userSchema) })
+  const methods = useForm({ resolver: yupResolver(userSchema) });
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors, isSubmitting },
   } = methods;
-
   const navigate = useNavigate();
 
   /*
-  * useStates
-  */
+   * useStates
+   */
 
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -59,15 +63,27 @@ const CreateAccount = () => {
 
   const [isRadioChecked, setRadioChecked] = useState(false);
 
-  /*
-  * Fxns
-  */
+  /**
+   * Fxns
+   */
+
+  const onSubmit = () => {
+    // const values = { ...data, id: nanoid() }
+    // const response = await axios.post('https://loanwise.onrender.com/api/signup', values)
+    // if (response.status === 201) {
+    //   navigate("/accountVerify")
+    // }
+    // methods.reset();
+    let isValid = Object.keys(errors).length === 0;
+    {
+      isValid && navigate("/accountVerify");
+    }
+  };
 
   // const onSubmit = async data => {
   //   const values = { ...data, id: nanoid() };
   //   try {
   //     const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
-  //     // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
   //     if (response.status === 201) {
   //       navigate("/accountVerify");
   //       console.log('Form submitted successfully');
@@ -80,16 +96,9 @@ const CreateAccount = () => {
   //   }
   // };
 
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/dashboard/overview");
-    }
-  };
-
   const formFooter = (
     <p>
-      Already have an account? <a onClick={() => navigate("/login")}>Sign In</a>
+      Already have an account? <a href="/login">Sign In</a>
     </p>
   );
 
@@ -105,9 +114,7 @@ const CreateAccount = () => {
             type="text"
             placeholder={"Enter full name"}
           />
-          {errors.name && (
-            <p className="errorMessage">{errors.name.message}</p>
-          )}
+          {errors.name && <p className="errorMessage">{errors.name.message}</p>}
         </fieldset>
 
         <fieldset>
@@ -122,7 +129,6 @@ const CreateAccount = () => {
           {errors.email && (
             <p className="errorMessage">{errors.email.message}</p>
           )}
-
         </fieldset>
 
         <div className="passwordContainer">
@@ -167,23 +173,30 @@ const CreateAccount = () => {
           </fieldset>
         </div>
         {errors.password && (
-          <p className="errorMessage">
-            {errors.password.message}
-          </p>
+          <p className="errorMessage">{errors.password.message}</p>
         )}
-        {(!errors.password && errors.confirmPassword) && (
-          <p className="errorMessage">
-            {errors.confirmPassword.message}
-          </p>
+        {!errors.password && errors.confirmPassword ? (
+          <p className="errorMessage">{errors.confirmPassword.message}</p>
+        ) : (
+          ""
         )}
 
-        <div className="termz" style={{
-          display: 'flex', flexDirection: 'column', alignItems: 'flex-end'
-        }}>
+        <div
+          className="termz"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+          }}
+        >
           <div className="terms-and-conditions">
             <input
               {...register("radio")}
-              type="radio" id="terms" name="terms" onChange={() => setRadioChecked(!isRadioChecked)} />
+              type="radio"
+              id="terms"
+              name="terms"
+              onChange={() => setRadioChecked(!isRadioChecked)}
+            />
             <span>
               <label htmlFor="terms">
                 I agree to the terms of service and privacy policy
@@ -195,7 +208,11 @@ const CreateAccount = () => {
           )}
         </div>
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Create Account"} />
+          <FilledBtn
+            type={"submit"}
+            title={"Create Account"}
+            isLoading={isSubmitting}
+          />
         </div>
       </form>
     </AuthLayout>
