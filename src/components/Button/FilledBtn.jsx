@@ -1,12 +1,11 @@
 import styles from "../Header/Header.module.css";
 
-const FilledBtn = ({ title, link, type, onClick, icon, isLoading, ...props }) => {
+const FilledBtn = ({ title, link, type, onClick, icon, ...props }) => {
   return (
     <button
       type={type ? type : "button"}
       className={styles.filledBtn}
       onClick={onClick}
-      isLoading={isLoading && isLoading}
       props={props}
     >
       {icon && <span className="iconPlus">{icon}</span>}
