@@ -46,23 +46,28 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  // const onSubmit = async data => {
-  //   const values = { ...data, id: nanoid() }
-  //   const response = await axios.post('https://loanwise.onrender.com/api/login', values)
-  //   if (response.status === 201) {
+  //   try {
+  //     const response = await axios.post(
+  //       "https://loanwise.onrender.com/api/login",
+  //       values
+  //     );
+  //     if (response.status === 201) {
   //     navigate("/dashboard/overview")
-  //     console.log('Form submitted successfully');
-  //   } else {
-  //     const errorData = response.data;
-  //     console.log('Validation error:', errorData);
+  //       console.log("Form submitted successfully");
+  //     } else {
+  //       const errorData = response.data;
+  //       console.log("Validation error:", errorData);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error while submitting form:", error);
   //   }
-  //   reset();
+  //   console.log("what");
   // };
 
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/accountVerify");
+      isValid && navigate("/successful");
     }
   };
 

@@ -47,15 +47,22 @@
 }
 
 .person-profile {
-  height: 300px;
+  /* height: 300px; */
   width: 100%;
-  padding: 20px 0 100px;
+  padding: 40px 18px;
   border: 1px solid #aab2b4;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  gap: 15px;
+  gap: 16px;
+}
+
+.person-profile:hover {
+  border: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
 }
 
 .image {
@@ -83,7 +90,7 @@
   margin-top: 20px;
   align-items: center;
   gap: 8%;
-  padding-top:30px;
+  padding-top: 30px;
 }
 
 .loan-analysis {
@@ -99,9 +106,9 @@
 .get-Started {
   flex: 1.5;
 }
-.get-Started h3{
-    font-size: 31px;
-      font-weight: 600px;
+.get-Started h3 {
+  font-size: 31px;
+  font-weight: 600px;
 }
 .get-Started h2 {
   font-size: 31px;

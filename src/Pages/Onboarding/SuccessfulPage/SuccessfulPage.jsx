@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../Images/logo.svg";
 import "./SuccessfulPage.css";
-import wave from "../../../Images/watermark.png";
+import wave from "../../../Images/waveee.svg";
 import check from "../../../Images/Check.svg";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +26,7 @@ const SuccessfulPage = () => {
           You are set to explore <span>LoanWise </span> to make safe and easy
           credit decisions
         </p>
-        <FilledBtn title={"Continues"} type={"submit"} onClick={handleClick} />
+        <FilledBtn title={"Continue"} type={"submit"} onClick={handleClick} />
       </div>
 
       <div className="successful-wave">

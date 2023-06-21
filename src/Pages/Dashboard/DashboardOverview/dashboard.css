@@ -208,6 +208,13 @@ fieldset > button {
   color: var(--primary-bg);
 }
 
+/* ChartCardss */
+
+.ChartCards {
+  display: flex;
+  flex-direction: column;
+}
+
 /* loan cards */
 
 .loanAmountContainer {

@@ -44,7 +44,6 @@ p {
   width: 100%;
   padding: 10px 0 10px 10px;
   outline: none;
-
   &&::placeholder {
     font-size: 12px;
   }
@@ -146,7 +145,6 @@ p {
   width: 15px;
   margin: 0 3px 0 0;
   cursor: pointer;
-
 }
 
 .terms-and-conditions label {
@@ -154,7 +152,6 @@ p {
   font-size: 14px;
   margin: 0;
   cursor: pointer;
-
 }
 
 .checkForgot {
@@ -203,7 +200,6 @@ p {
     color: #f1ecec;
   }
 
-
   .right-side .form-btn button {
     width: 100%;
     background: #02697f;
@@ -216,10 +212,6 @@ p {
 
   .passwordContainer fieldset:first-child .errorMessage {
     display: block;
-  }
-
-  .passwordContainer fieldset:last-child label {
-    margin-top: 20px;
   }
 
   .terms-and-conditions {

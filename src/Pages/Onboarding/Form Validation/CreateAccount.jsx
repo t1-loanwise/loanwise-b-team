@@ -69,8 +69,6 @@ const CreateAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  // const [isRadioChecked, setRadioChecked] = useState(false);
-
   /**
    * Fxns
    */
@@ -82,24 +80,34 @@ const CreateAccount = () => {
     }
   };
 
-  // const onSubmit = async data => {
-  //   const values = { ...data, id: nanoid() };
+  // const onSubmit = async (data) => {
+  //   const values = {
+  //     name: data.name,
+  //     email: data.email,
+  //     password: data.password,
+  //     id: nanoid(),
+  //   };
+
   //   try {
-  //     const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+  //     const response = await axios.post(
+  //       "https://loanwise.onrender.com/api/signup",
+  //       values
+  //     );
   //     if (response.status === 201) {
   //       navigate("/accountVerify");
-  //       console.log('Form submitted successfully');
+  //       console.log("Form submitted successfully");
   //     } else {
   //       const errorData = response.data;
-  //       console.log('Validation error:', errorData);
+  //       console.log("Validation error:", errorData);
   //     }
   //   } catch (error) {
-  //     console.error('Error while submitting form:', error);
+  //     console.error("Error while submitting form:", error);
   //   }
+  //   console.log("what");
   // };
 
   const handleRadioChange = () => {
-    setValue("radioButton", "true"); // Set the value to 'true' when radio button is selected
+    setValue("radioButton", "true");
   };
 
   const formFooter = (

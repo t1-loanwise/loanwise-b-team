@@ -78,7 +78,12 @@ const BarGraph = () => {
                 vertical={false}
                 horizontal={false}
               />
-              <XAxis dataKey="name" fontSize={10} fontWeight={500} />
+              <XAxis
+                position="insideBottom"
+                dataKey="name"
+                fontSize={10}
+                fontWeight={500}
+              />
               <YAxis
                 domain={[0, 1000]}
                 ticks={[0, 250, 500, 750, 1000]}
@@ -96,3 +101,51 @@ const BarGraph = () => {
 };
 
 export default BarGraph;
+
+/*
+
+
+const Barchart = () => {
+
+  return (
+    <div className="line-chart-container">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart
+          data={data}
+          fontSize={8.5}
+          margin={{
+            top: 10,
+            right: 10,
+            left: -10,
+            bottom: 10,
+          }}
+        >
+          <XAxis dataKey="month">
+            <Label
+              value="Period"
+              position="insideBottom"
+              offset={-5}
+              fontSize={14}
+              fontWeight="bold"
+            />
+          </XAxis>
+          <YAxis>
+            <Label
+              value="Qty"
+              position="insideLeft"
+              angle={-90}
+              offset={20}
+              fontSize={14}
+              fontWeight="bold"
+            />
+          </YAxis>
+          <Tooltip cursor={false}/>
+          <Bar dataKey="Qty" fill="#99007E" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+export default Barchart
+*/
