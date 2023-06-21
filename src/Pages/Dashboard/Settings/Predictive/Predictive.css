@@ -301,4 +301,10 @@ New Modal
     flex-direction: column;
     gap: 6px;
   }
+
+  .editModal form .new-condition button {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 7px 8px;
+  }
 }

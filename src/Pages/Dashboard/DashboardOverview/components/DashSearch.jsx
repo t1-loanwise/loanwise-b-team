@@ -5,8 +5,10 @@ import Icon2 from "../../../../Images/Dashboard/sort.svg";
 import dateArrow from "../../../../Images/Dashboard/datearrow.svg";
 import Calendar from "react-calendar";
 import "react-datepicker/dist/react-datepicker.css";
+import SearchBar from "../../../../components/Overview/SearchBar";
+import "../dashboard.css";
 
-const DashSearch = () => {
+const DashSearch = ({ handleSearch }) => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -20,10 +22,9 @@ const DashSearch = () => {
 
   return (
     <div className="dash__titleSearch">
-
       <div className="dash__searchFilterDate">
-       
         <div className="dash__searchFilter">
+          <SearchBar handleSearch={handleSearch} />
           <div className="filter">
             <TransparentBtn
               title={"Filter"}
@@ -40,7 +41,7 @@ const DashSearch = () => {
             )}
           </div>
           <div className="btnzz">
-            <FilledBtn title={"Search"} />
+            <FilledBtn title={"Search"} onClick={() => handleSearch("")} />
             <div className="filter">
               <TransparentBtn
                 title={"Filter"}
@@ -61,7 +62,7 @@ const DashSearch = () => {
             </div>
             <div
               className="dash__date-small"
-            // onClick={() => setShowCalendar(!showCalendar)}
+              // onClick={() => setShowCalendar(!showCalendar)}
             >
               <div
                 className="img-date"
@@ -85,10 +86,7 @@ const DashSearch = () => {
           </div>
         </div>
 
-        <div
-          className="dash__date"
-        // onClick={() => setShowCalendar(!showCalendar)}
-        >
+        <div className="dash__date">
           <div
             className="img-date"
             onClick={() => setShowCalendar(!showCalendar)}
@@ -108,7 +106,6 @@ const DashSearch = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

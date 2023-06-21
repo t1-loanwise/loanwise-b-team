@@ -31,18 +31,26 @@ const userSchema = Yup.object().shape({
     [Yup.ref("password")],
     "Passwords do not match!"
   ),
-  radio: Yup.string().required("The radio field is required"),
+  radioButton: Yup.string()
+    .oneOf(["true"], "The radio field is required")
+    .required("The radio field is required"),
 });
 
 const CreateAccount = () => {
   /*
    * Validation
    */
-  const methods = useForm({ resolver: yupResolver(userSchema) });
+  const methods = useForm({
+    resolver: yupResolver(userSchema),
+    defaultValues: {
+      terms: "",
+    },
+  });
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    setValue,
   } = methods;
   const navigate = useNavigate();
 
@@ -61,40 +69,46 @@ const CreateAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  const [isRadioChecked, setRadioChecked] = useState(false);
-
   /**
    * Fxns
    */
 
   const onSubmit = () => {
-    // const values = { ...data, id: nanoid() }
-    // const response = await axios.post('https://loanwise.onrender.com/api/signup', values)
-    // if (response.status === 201) {
-    //   navigate("/accountVerify")
-    // }
-    // methods.reset();
     let isValid = Object.keys(errors).length === 0;
     {
       isValid && navigate("/accountVerify");
     }
   };
 
-  // const onSubmit = async data => {
-  //   const values = { ...data, id: nanoid() };
+  // const onSubmit = async (data) => {
+  //   const values = {
+  //     name: data.name,
+  //     email: data.email,
+  //     password: data.password,
+  //     id: nanoid(),
+  //   };
+
   //   try {
-  //     const response = await axios.post('https://loanwise.onrender.com/api/signup', values);
+  //     const response = await axios.post(
+  //       "https://loanwise.onrender.com/api/signup",
+  //       values
+  //     );
   //     if (response.status === 201) {
   //       navigate("/accountVerify");
-  //       console.log('Form submitted successfully');
+  //       console.log("Form submitted successfully");
   //     } else {
   //       const errorData = response.data;
-  //       console.log('Validation error:', errorData);
+  //       console.log("Validation error:", errorData);
   //     }
   //   } catch (error) {
-  //     console.error('Error while submitting form:', error);
+  //     console.error("Error while submitting form:", error);
   //   }
+  //   console.log("what");
   // };
+
+  const handleRadioChange = () => {
+    setValue("radioButton", "true");
+  };
 
   const formFooter = (
     <p>
@@ -191,11 +205,12 @@ const CreateAccount = () => {
         >
           <div className="terms-and-conditions">
             <input
-              {...register("radio")}
+              {...register("radioButton")}
               type="radio"
               id="terms"
               name="terms"
-              onChange={() => setRadioChecked(!isRadioChecked)}
+              value="true"
+              onChange={handleRadioChange} // Add onChange event handler
             />
             <span>
               <label htmlFor="terms">
@@ -203,8 +218,8 @@ const CreateAccount = () => {
               </label>
             </span>
           </div>
-          {!isRadioChecked && errors.radio && (
-            <p className="errorMessage">{errors.radio.message}</p>
+          {errors.radioButton && (
+            <p className="errorMessage">{errors.radioButton.message}</p>
           )}
         </div>
         <div className="form-btn">

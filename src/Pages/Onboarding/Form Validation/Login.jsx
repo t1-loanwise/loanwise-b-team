@@ -5,33 +5,39 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-import { nanoid } from 'nanoid'
-import axios from 'axios'
-import { object, string } from 'yup';
+import { nanoid } from "nanoid";
+import axios from "axios";
+import { object, string } from "yup";
 import * as Yup from "yup";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 
 /*
  * Interface
-*/
+ */
 
 const userSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('The email field is required'),
+  email: Yup.string()
+    .email("Invalid email")
+    .required("The email field is required"),
   password: Yup.string()
-    .required('The password field is required')
-    .matches(/^(?=.*\d).*$/, 'Password must contain at least 6 characters including a number')
-    .min(6, 'Password must contain at least 6'),
+    .required("The password field is required")
+    .matches(
+      /^(?=.*\d).*$/,
+      "Password must contain at least 6 characters including a number"
+    )
+    .min(6, "Password must contain at least 6"),
 });
 
 const Login = () => {
   /*
- * Validation
- */
-  const methods = useForm({ resolver: yupResolver(userSchema) })
+   * Validation
+   */
+  const methods = useForm({ resolver: yupResolver(userSchema) });
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting, errors, isDirty }
+    formState: { isSubmitting, errors, isDirty },
+    reset,
   } = methods;
 
   const navigate = useNavigate();
@@ -40,29 +46,34 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  // const onSubmit = async data => {
-  //   const values = { ...data, id: nanoid() }
-  //   const response = await axios.post('https://loanwise.onrender.com/api/login', values)
-  //   // const response = await axios.post('https://my-json-server.typicode.com/tundeojediran/contacts-api-server/inquiries', values);
-  //   if (response.status === 201) {
+  //   try {
+  //     const response = await axios.post(
+  //       "https://loanwise.onrender.com/api/login",
+  //       values
+  //     );
+  //     if (response.status === 201) {
   //     navigate("/dashboard/overview")
-  //     console.log('Form submitted successfully');
-  //   } else {
-  //     const errorData = response.data;
-  //     console.log('Validation error:', errorData);
+  //       console.log("Form submitted successfully");
+  //     } else {
+  //       const errorData = response.data;
+  //       console.log("Validation error:", errorData);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error while submitting form:", error);
   //   }
+  //   console.log("what");
   // };
 
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/dashboard/overview");
+      isValid && navigate("/successful");
     }
   };
 
   const formFooter = (
     <p>
-      Don’t have an account? <a onClick={() => navigate("/createAccount")}>Sign Up</a>
+      Don’t have an account? <a href="/createAccount">Sign Up</a>
     </p>
   );
 
@@ -81,7 +92,7 @@ const Login = () => {
             type="email"
             id="email"
             placeholder={"Enter email address"}
-          // autoComplete=false
+            // autoComplete=false
           />
           {errors.email?.type === "required" && (
             <p className="errorMessage">The email field is required</p>
@@ -106,9 +117,7 @@ const Login = () => {
             </button>
           </div>
           {errors.password && (
-            <p className="errorMessage">
-              {errors.password.message}
-            </p>
+            <p className="errorMessage">{errors.password.message}</p>
           )}
         </fieldset>
 
@@ -122,7 +131,12 @@ const Login = () => {
         </div>
 
         <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Sign In"} isLoading={isSubmitting} isDisabled={isDirty || isSubmitting} />
+          <FilledBtn
+            type={"submit"}
+            title={"Sign In"}
+            isLoading={isSubmitting}
+            isDisabled={isDirty || isSubmitting}
+          />
         </div>
       </form>
     </AuthLayout>
@@ -130,5 +144,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
