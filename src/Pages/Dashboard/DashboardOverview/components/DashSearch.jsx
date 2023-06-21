@@ -5,8 +5,10 @@ import Icon2 from "../../../../Images/Dashboard/sort.svg";
 import dateArrow from "../../../../Images/Dashboard/datearrow.svg";
 import Calendar from "react-calendar";
 import "react-datepicker/dist/react-datepicker.css";
+import SearchBar from "../../../../components/Overview/SearchBar";
+import "../dashboard.css";
 
-const  DashSearch = () => {
+const DashSearch = ({ handleSearch }) => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -20,15 +22,10 @@ const  DashSearch = () => {
 
   return (
     <div className="dash__titleSearch">
-     
       <div className="dash__searchFilterDate">
-{/*        
-          <fieldset className="dash__search">
-            <input type="text" placeholder="Search  for Loans" />
-            <FilledBtn title={"Search"} />
-          </fieldset> */}
+        <SearchBar handleSearch={handleSearch} />
         <div className="dash__searchFilter">
-        <div className="filter">
+          <div className="filter">
             <TransparentBtn
               title={"Filter"}
               icon2={Icon2}
@@ -64,7 +61,7 @@ const  DashSearch = () => {
             </div>
             <div
               className="dash__date-small"
-              // onClick={() => setShowCalendar(!showCalendar)}
+              onClick={() => setShowCalendar(!showCalendar)}
             >
               <div
                 className="img-date"
@@ -87,31 +84,30 @@ const  DashSearch = () => {
             </div>
           </div>
         </div>
-         
+
+        <div
+          className="dash__date"
+          // onClick={() => setShowCalendar(!showCalendar)}
+        >
           <div
-            className="dash__date"
-            // onClick={() => setShowCalendar(!showCalendar)}
+            className="img-date"
+            onClick={() => setShowCalendar(!showCalendar)}
           >
-            <div
-              className="img-date"
-              onClick={() => setShowCalendar(!showCalendar)}
-            >
-              <img src={dateArrow} alt="date Arrow" />
-              <p>{currentDate}</p>
-            </div>
-            {showCalendar && (
-              <div className="calender">
-                <Calendar
-                  onChange={setSelectedDate}
-                  value={selectedDate}
-                  dateFormat="dd/MM/yyyy"
-                />
-              </div>
-            )}
+            <img src={dateArrow} alt="date Arrow" />
+            <p>{currentDate}</p>
           </div>
+          {showCalendar && (
+            <div className="calender">
+              <Calendar
+                onChange={setSelectedDate}
+                value={selectedDate}
+                dateFormat="dd/MM/yyyy"
+              />
+            </div>
+          )}
+        </div>
       </div>
-      </div>
-   
+    </div>
   );
 };
 

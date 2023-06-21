@@ -49,8 +49,8 @@ const DashboardOverview = () => {
       </div>
       <div className="overview-search-filter">
         <div className="overview-search-filter-cal">
-          <SearchBar handleSearch={handleSearch} />
-          <DashSearch />
+          {/* <SearchBar handleSearch={handleSearch} /> */}
+          <DashSearch handleSearch={handleSearch} />
         </div>
         <LoanAmount />
         <BarChart />

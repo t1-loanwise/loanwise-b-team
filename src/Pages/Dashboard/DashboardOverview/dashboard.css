@@ -1,3 +1,9 @@
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------dashbody body------- */
 .dashboard-wrapper {
   display: flex;
@@ -38,17 +44,10 @@
 .overview-search-filter-cal {
   display: flex;
   align-items: center;
-
   gap: 40px;
   padding: 20px 0px;
 }
 /* ----------dashboard---filter----Search----Calendar-------- */
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 .dash__title {
   margin-bottom: 26px;
 }
@@ -63,7 +62,6 @@ p {
 .dash__searchFilterDate {
   display: flex;
   align-items: center;
-
   gap: 280px;
 }
 
@@ -75,12 +73,18 @@ p {
 .dash__searchFilterDate fieldset {
   display: flex;
   align-items: center;
+  border: 0;
 }
 
 .dash__search input {
   flex: 1;
-  padding: 17px 0 17px 15px;
+  padding: 18px 0 25px 15px;
   margin: 0;
+  width: 100%;
+  border: 1px solid #aad4dd;
+  height: 40px;
+  padding: 10px;
+  outline: none;
 }
 
 .dash__search input::placeholder {
@@ -118,7 +122,7 @@ fieldset > button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 12px 34px; */
+  padding: 10px 34px;
 }
 
 .dash__searchFilter > .filter button:hover img,
