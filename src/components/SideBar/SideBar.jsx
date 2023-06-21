@@ -117,7 +117,7 @@ const SideBar = () => {
                     isActive ? "submenu-active-1" : ""
                   }
                 >
-                  Messages
+                  <span>Messages</span>
                 </NavLink>
                 <NavLink
                   to="/dashboard/user-profile"
@@ -125,7 +125,7 @@ const SideBar = () => {
                     isActive ? "submenu-active-2" : ""
                   }
                 >
-                  User Profile
+                  <span>User Profile</span>
                 </NavLink>
                 <NavLink
                   to="/dashboard/notification"
@@ -133,7 +133,7 @@ const SideBar = () => {
                     isActive ? "submenu-active-3" : ""
                   }
                 >
-                  Notification
+                  <span>Notification</span>
                 </NavLink>
               </div>
             )}
