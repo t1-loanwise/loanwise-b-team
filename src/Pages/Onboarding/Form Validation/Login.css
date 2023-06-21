@@ -208,6 +208,11 @@ p {
     width: 100%;
     background: #02697f;
     margin-top: 20px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .right-side .form-btn button:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
 
   .errorMessage {
@@ -218,9 +223,9 @@ p {
     display: block;
   }
 
-  .passwordContainer fieldset:last-child label {
+  /* .passwordContainer fieldset:last-child label {
     margin-top: 20px;
-  }
+  } */
 
   .terms-and-conditions {
     margin: 20px 0 0 0;
