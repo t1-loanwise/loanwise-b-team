@@ -71,6 +71,7 @@ const Borrower = () => {
             {errors.NIN && <p>Please enter your NIN</p>}
           </div>
         </div>
+
         <h2 className="employ">Employment Information</h2>
         <label>Current Employer</label>
         <input
