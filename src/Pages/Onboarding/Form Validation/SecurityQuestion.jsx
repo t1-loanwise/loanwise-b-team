@@ -17,7 +17,7 @@ function SecurityQuestion() {
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
     {
-      isValid && navigate("/successful");
+      isValid && navigate("/login");
     }
   };
 

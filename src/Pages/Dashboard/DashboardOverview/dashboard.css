@@ -501,6 +501,12 @@ fieldset > button {
   .dash__date {
     display: none;
   }
+
+  .img-date {
+    box-sizing: border-box;
+    background: hsl(192, 43%, 93%);
+    padding: 15px 15px;
+  }
 }
 
 /* ------------dashboard overview-------------- */

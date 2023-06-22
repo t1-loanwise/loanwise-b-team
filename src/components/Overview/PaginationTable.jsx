@@ -4,7 +4,7 @@ import "./overview.css";
 import { TableData } from "./TableData";
 import lessthan from "../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../Images/Dashboard/greaterthan.svg";
-
+import FilledBtn from "../Button/FilledBtn";
 
 const PaginationTable = ({ data, totalCount }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +32,7 @@ const PaginationTable = ({ data, totalCount }) => {
     <div className="table-wrapper">
       <div className="performance-wrapper">
         <h3>Loan Performance Table</h3>
-        <button>Download</button>
+        <FilledBtn title={"Download"} />
       </div>
       <table>
         <thead>
