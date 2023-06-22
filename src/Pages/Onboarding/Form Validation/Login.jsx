@@ -46,13 +46,19 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
+  // const onSubmit = async (data) => {
+  //   const values = {
+  //     email: data.email,
+  //     password: data.password,
+  //     id: nanoid(),
+  //   };
   //   try {
   //     const response = await axios.post(
   //       "https://loanwise.onrender.com/api/login",
   //       values
   //     );
   //     if (response.status === 201) {
-  //     navigate("/dashboard/overview")
+  //       navigate("/dashboard/overview");
   //       console.log("Form submitted successfully");
   //     } else {
   //       const errorData = response.data;
@@ -60,6 +66,7 @@ const Login = () => {
   //     }
   //   } catch (error) {
   //     console.error("Error while submitting form:", error);
+  //     reset();
   //   }
   //   console.log("what");
   // };

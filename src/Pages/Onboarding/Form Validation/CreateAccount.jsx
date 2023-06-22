@@ -51,6 +51,7 @@ const CreateAccount = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     setValue,
+    reset,
   } = methods;
   const navigate = useNavigate();
 
@@ -94,16 +95,21 @@ const CreateAccount = () => {
   //       values
   //     );
   //     if (response.status === 201) {
+  //       localStorage.setItem("email", data.email);
   //       navigate("/accountVerify");
   //       console.log("Form submitted successfully");
   //     } else {
-  //       const errorData = response.data;
-  //       console.log("Validation error:", errorData);
+  //       console.log("Unexpected status code:", response.status);
   //     }
   //   } catch (error) {
-  //     console.error("Error while submitting form:", error);
+  //     if (error.response) {
+  //       console.log("Request failed with status code:", error.response.status);
+  //       console.log("Response data:", error.response.data);
+  //     } else {
+  //       console.error("Error while submitting form:", error.message);
+  //     }
+  //     reset();
   //   }
-  //   console.log("what");
   // };
 
   const handleRadioChange = () => {
