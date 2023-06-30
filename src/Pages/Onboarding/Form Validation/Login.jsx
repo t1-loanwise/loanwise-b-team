@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
-import FilledBtn from "../../../components/Button/FilledBtn";
+import { Button } from "@chakra-ui/react";
 import "./Login.css";
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
 import { nanoid } from "nanoid";
 import axios from "axios";
-import { object, string } from "yup";
+// import { object, string } from "yup";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import FormInput from "../../../components/NewForm/form/FormInput";
 
 /*
  * Interface
@@ -46,37 +47,32 @@ const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  // const onSubmit = async (data) => {
-  //   const values = {
-  //     email: data.email,
-  //     password: data.password,
-  //     id: nanoid(),
-  //   };
-  //   try {
-  //     const response = await axios.post(
-  //       "https://loanwise.onrender.com/api/login",
-  //       values
-  //     );
-  //     if (response.status === 201) {
-  //       navigate("/dashboard/overview");
-  //       console.log("Form submitted successfully");
-  //     } else {
-  //       const errorData = response.data;
-  //       console.log("Validation error:", errorData);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error while submitting form:", error);
-  //     reset();
-  //   }
-  //   console.log("what");
-  // };
-
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/successful");
+  const onSubmit = async (data) => {
+    const values = {
+      email: data.email,
+      password: data.password,
+      id: nanoid(),
+    };
+    try {
+      const response = await axios.post(
+        "https://loanwise.onrender.com/api/login",
+        values
+      )
+        navigate("/dashboard/overview");
+        console.log("Form submitted successfully");
+    } catch (error) {
+      // const errorData = response.data;
+      // console.log("Validation error:", errorData);
+      if (error.response) {
+        console.log("Request failed with status code:", error.response.status);
+        console.log("Response data:", error.response.data);
+      } else {
+        console.error("Error while submitting form:", error.message);
+      }
+      reset();
     }
   };
+
 
   const formFooter = (
     <p>
@@ -90,21 +86,13 @@ const Login = () => {
       subtitle="Enter your details to sign in"
       formFooter={formFooter}
     >
+          <FormProvider {...methods}>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <fieldset>
-          <label htmlFor="email">Email address</label>
-          <input
-            {...register("email", { required: true })}
-            isDisabled={isSubmitting}
-            type="email"
-            id="email"
+      <FormInput
+            name="email"
+            label="Email address"
             placeholder={"Enter email address"}
-            // autoComplete=false
           />
-          {errors.email?.type === "required" && (
-            <p className="errorMessage">The email field is required</p>
-          )}
-        </fieldset>
 
         <fieldset>
           <label htmlFor="password">Password</label>
@@ -138,14 +126,18 @@ const Login = () => {
         </div>
 
         <div className="form-btn">
-          <FilledBtn
-            type={"submit"}
-            title={"Sign In"}
-            isLoading={isSubmitting}
-            isDisabled={isDirty || isSubmitting}
-          />
+        <Button
+              color="#fff"
+              bgColor="#007e99"
+              type="submit"
+              isLoading={methods.formState.isSubmitting}
+              isDisabled={!methods.formState.isDirty}
+            >
+              Sign In
+            </Button>
         </div>
       </form>
+      </FormProvider>
     </AuthLayout>
   );
 };

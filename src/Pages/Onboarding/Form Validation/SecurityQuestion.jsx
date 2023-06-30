@@ -1,41 +1,85 @@
 import React from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
-import FilledBtn from "../../../components/Button/FilledBtn";
-import Select from "react-select";
-import { useForm, Controller } from "react-hook-form";
-
+import { FormProvider, useForm } from "react-hook-form";
+import { Button, Select } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormInput from "../../../components/NewForm/form/FormInput";
 
 function SecurityQuestion() {
+  const userSchema = Yup.object().shape({
+    firstAnswer: Yup.string().required(
+      "You must select a question and enter an answer"
+    ),
+    secondAnswer: Yup.string().required(
+      "You must select a question and enter an answer"
+    ),
+  });
+
+  const methods = useForm({
+    resolver: yupResolver(userSchema),
+  });
+
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { isSubmitting, errors }
+  } = methods;
   const navigate = useNavigate();
 
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/login");
+  //   const onSubmit = () => {
+  //   let isValid = Object.keys(errors).length === 0;
+  //   {
+  //     isValid && navigate("/login");
+  //   }
+  // };
+
+  const onSubmit = async (data) => {
+    const values = {
+      securityQuestions: [
+        {
+          question: data.firstquestion,
+          answer: data.firstAnswer,
+        },
+        {
+          question: data.secondQuestion,
+          answer: data.secondAnswer,
+        },
+      ],
+    };
+   
+    try {
+      const response = await axios.put(
+        `https://loanwise.onrender.com/api/648d4b1d86390176ebdd3f08/security-question`,
+    values
+      );
+          console.log(response.data);
+          console.log("Form submitted successfully");
+          console.log(data.firstAnswer);
+          console.log(data.secondAnswer);
+          navigate("/login");
+    } catch (error) {
+      if (error.response) {
+        console.log("Request failed with status code:", error.response.status);
+        console.log("Response data:", error.response.data);
+      } else {
+        console.error("Error while submitting form:", error.message);
+      }
     }
   };
 
   const options = [
-    {
-      value: "what is your mother's name?",
-      label: "What is your Mother's name?",
-    },
-    {
-      value: "what is your father's name?",
-      label: "What is your Father's name?",
-    },
-    { value: "where did you grow up?", label: "Where did you grow up?" },
-    {
-      value: "what university did you attend?",
-      label: "What University did you attend?",
-    },
+    {value: "What is your mother's name?"},
+    {value: "What is your father's name?"},
+    { value: "Where did you grow up?" },
+    {value: "What university did you attend?"}
   ];
+
+  const option = options.map((item, index) => (
+    <option key={index} value={item.value}>{item.value}</option>
+  ));
+  
   return (
     <AuthLayout
       title={"Set Security Question"}
@@ -44,48 +88,55 @@ function SecurityQuestion() {
       }
     >
       <div className="securityQxn">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <Select
-            className="select"
-            placeholder={"Select a question"}
-            options={options}
-          />
-          <fieldset>
-            <input
+        <FormProvider {...methods}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Select
+              isDisabled={isSubmitting}
+              name="firstQuestion"
+              placeholder="Select a question"
+              bgColor="white"
+              color="black"
+              mb={"5px"}
+              iconColor="#007e99"
+            >
+              {option}
+            </Select>
+            <FormInput
+              name="firstAnswer"
               placeholder={"Enter answer"}
-              {...register("select1", { required: true })}
-              type="text"
-              id="select1"
+              autoFocus={true}
             />
-            {errors.select1?.type === "required" && (
-              <p className="errorMessage">
-                You must select a question and enter an answer
-              </p>
-            )}
-          </fieldset>
 
-          <Select
-            className="select"
-            placeholder={"Select a question"}
-            options={options}
-          />
-          <fieldset>
-            <input
+            <Select
+              isDisabled={isSubmitting}
+              name="secondQuestion"
+              placeholder="Select a question"
+              bgColor="white"
+              color="black"
+              mt={"12px"}
+              mb={"5px"}
+              iconColor="#007e99"
+            >
+              {option}
+            </Select>
+            <FormInput
+              name="secondAnswer"
               placeholder={"Enter answer"}
-              {...register("select2", { required: true })}
-              type="text"
-              id="select2"
             />
-            {errors.select2?.type === "required" && (
-              <p className="errorMessage">
-                You must select a question and enter an answer
-              </p>
-            )}
-          </fieldset>
-          <div className="form-btn">
-            <FilledBtn title={"Proceed"} type={"submit"} />
-          </div>
-        </form>
+
+            <div className="form-btn">
+              <Button
+                color="#fff"
+                bgColor="#007e99"
+                type="submit"
+                isLoading={methods.formState.isSubmitting}
+                isDisabled={!methods.formState.isDirty}
+              >
+                Proceed
+              </Button>
+            </div>
+          </form>
+        </FormProvider>
       </div>
     </AuthLayout>
   );
