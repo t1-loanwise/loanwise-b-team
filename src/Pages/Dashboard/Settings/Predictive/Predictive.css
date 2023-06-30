@@ -35,6 +35,17 @@
   color: #00151a;
 }
 
+.closeRule {
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotate(45deg);
+}
+
 /* 
   Toggle color mode
   */
@@ -69,60 +80,60 @@ Edit Modal
 */
 
 .editModal {
-  /* display: none; */
   position: fixed;
-  top: 60px;
+  top: 20px;
   bottom: 5%;
-  right: 0;
-  left: 0;
-  margin: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
   height: auto;
   overflow-y: auto;
   width: 55%;
   background: #fbfeff;
   box-shadow: 0px 4px 20px #e6f2f5;
   border-radius: 8px;
-  padding: 51px 24px;
+  padding: 10px 24px 10px;
   z-index: 2500;
+  text-align: left;
+  color: black;
+  font-weight: 400;
 }
 
-.edit .editModal {
-  /* display: none; */
+.editModal form label {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
 }
+
+/* 
+Edit Modal title
+*/
 
 .editModal .title {
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
 }
 
 .editModal .title h2 {
-  /* justify-self: center; */
   margin: 0 auto;
   font-weight: 600;
   font-size: 25px;
-  /* line-height: 36px; */
   color: #00151a;
 }
 
-.editModal:first-child p {
+.editModal .rule-par {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
-  /* line-height: 29px; */
   margin: 0 auto;
   color: #55666a;
-  /* color: red; */
 }
 
 .editModal .title .plus {
-  border: 1px solid var(--primary-bg);
+  border: 1.5px solid var(--primary-bg);
   display: flex;
   align-items: center;
   border-radius: 50%;
   float: right;
-  /* justify-self: flex-end; */
-  /* color: red; */
+  transform: rotate(-45deg);
 }
 
 .editIcon,
@@ -130,14 +141,22 @@ Edit Modal
   cursor: pointer;
 }
 
+/* 
+Edit Modal selections
+*/
+
+.selections {
+  margin-top: 10px;
+}
+
 .select-section {
   display: block;
-  margin-top: 30px;
+  text-align: left;
 }
 
 .select-section div {
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 15px;
   line-height: 29px;
   color: #00151a;
 }
@@ -148,7 +167,7 @@ Edit Modal
   border: 1.1px solid #cbcbcb;
   display: flex;
   align-items: center;
-  padding: 12px 17px 12px 12px;
+  padding: 10px 17px 10px 12px;
   border-radius: 5px;
   width: 100%;
 }
@@ -163,21 +182,83 @@ Edit Modal
 .select-section fieldset input::placeholder {
   color: #9d9d9d;
 }
+.select-sectionz {
+  display: flex;
+  flex-direction: column;
+}
 
 .select-sections {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 24px;
-  margin-top: 20px;
+  margin-top: 7px;
+  width: 100%;
 }
 
 .select-sections .title {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+}
+
+/* 
+Edit Modal delete
+*/
+
+.inputDelContainer {
+  align-self: flex-end;
+}
+
+.inputDelContainer p {
+  margin: 0;
+  padding: 0;
+}
+
+.inputDel {
+  display: flex;
+  font-size: 0.875rem;
+  gap: 5px;
+  align-items: center;
 }
 
 .new-model {
   align-self: flex-end;
 }
+
+.editModal .select {
+  width: 100%;
+}
+.select-component {
+  width: 100%;
+}
+
+.editModal .select-component .title {
+  font-size: 15px;
+}
+
+.editModal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editModal .new-condition {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.editModal form .new-condition button {
+  padding: 7px 10px;
+}
+
+.editModal form .save-New button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 17px 0;
+  font-weight: 700;
+  justify-content: center;
+}
+
+/* 
+New Modal 
+*/
 
 .new-model button {
   gap: 5px;
@@ -186,7 +267,7 @@ Edit Modal
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .predictiveItem .title {
     font-size: 16px;
   }
@@ -205,122 +286,25 @@ Edit Modal
 
   .editModal {
     width: 75%;
+    overflow-y: auto;
   }
 
   .editModal:first-child h2 {
     font-size: 20px;
   }
+
   .editModal:first-child p {
     font-size: 14px;
   }
-}
 
-/* 
-:root {
-  --toggle-bg: #f5f5f5;
-  --slide-ball: #ffffff;
-  --align-ball: flex-start;
-}
+  .select-sections {
+    flex-direction: column;
+    gap: 6px;
+  }
 
-.move {
-  --toggle-bg: blue;
-  --toggle-ball: #1a1b21;
-  --align-ball: flex-end;
+  .editModal form .new-condition button {
+    font-size: 12px;
+    white-space: nowrap;
+    padding: 7px 8px;
+  }
 }
-
-.predictiveModel {
-  text-align: center;
-  background: #e6f2f5;
-  color: #005466;
-  font-weight: 600;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  padding: 25px;
-  position: relative;
-}
-
-.predictiveItem {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 26px;
-}
-
-.predictiveItem .title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #00151a;
-}
-
-.toggle-edit {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.toggle {
-  width: 50px;
-  height: 23px;
-  background: var(--toggle-bg);
-  border-radius: 25px;
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: var(--align-ball);
-}
-
-.toggle .toggle-ball {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--slide-ball);
-}
-
-.new-model {
-  align-self: flex-end;
-}
-
-.new-model button {
-  gap: 5px;
-  padding: 11px 16px;
-  display: flex;
-  align-items: center;
-}
-
-.Edit {
-  position: fixed;
-  width: 888px;
-  height: 1009px;
-  left: calc(50% - 888px / 2);
-  top: calc(50% - 1009px / 2 + 0.5px);
-  background: #fbfeff;
-  box-shadow: 0px 4px 20px #e6f2f5;
-  border-radius: 8px;
-  display: none;
-}
-
-.edit .Edit {
-  display: none;
-}
-
-.Edit .title {
-  display: flex;
-  align-items: center;
-}
-
-.Edit .title h2 {
-  justify-self: center;
-}
-
-.Edit .title .plus {
-  border: 1px solid var(--primary-bg);
-}
-
-.editIcon,
-.predictiveItem {
-  cursor: pointer;
-}
-
-*/

@@ -44,14 +44,15 @@ p {
   flex-direction: column;
   align-items: center;
   border: 1px solid #aab2b4;
-  border-radius: 5px;
   margin: 0 auto;
-  padding: 30px 24px 40px;
+  padding: 30px 18px 40px;
   gap: 16px;
 }
 
 .user:hover {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
 }
 
 .user img:first-child,
@@ -80,6 +81,10 @@ p {
   filter: saturate(0%) brightness(10000%);
 }
 
+.user button {
+  padding: 10px 30px;
+}
+
 @media (max-width: 1000px) {
   .userDesc {
     margin: 20px auto;
@@ -87,6 +92,7 @@ p {
     width: 90%;
   }
 }
+
 @media (max-width: 768px) {
   .userDesc {
     width: 95%;

@@ -5,6 +5,10 @@
   color: #00191f;
 }
 
+.active {
+  display: block;
+}
+
 .toggleContainer p {
   font-weight: 500;
   color: #55666a;

@@ -5,7 +5,10 @@ import image from "../../Images/socials/background.svg";
 
 export const Coming = () => {
   return (
-    <div className="Coming" style={{ backgroundImage: `url(${image})` }}>
+    <div
+      className="Coming container"
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <div className="comingTitle">
         <h1>COMING SOON</h1>
         <p>We are working hard to get this up and running</p>

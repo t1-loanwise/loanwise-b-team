@@ -11,61 +11,47 @@
   background: #e6f2f5;
 }
 
-.notification .title {
-  display: flex;
-  justify-content: baseline;
-  padding: 14px 40px;
+.notification table {
+  width: 100%;
+}
+
+.notification .td {
+  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.notification table,
+.notification table td {
+  padding: 0;
+  margin: 0;
+}
+
+.dn {
+  width: 70%;
+  text-align: left;
   border-bottom: 1px solid rgba(176, 215, 223, 0.5);
 }
 
-.notification .title div:first-child,
-.notification .toggleTxt-text {
-  width: 60%;
-  padding: 0;
-  margin: 0;
+.notification .pb {
+  padding-bottom: 25px;
 }
 
-.notification .toggleTxt .tog {
-  display: flex;
-  justify-content: flex-end;
+.notification .rightT {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 25px;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(176, 215, 223, 0.5);
 }
 
-.notification .title div:nth-child(2) {
-  margin-right: 10px;
-  width: 20%;
-}
-.notification .title div:nth-child(2) p,
-.notification .title div:nth-child(3) p {
-  padding: 0;
-  margin: 0;
-  /* background: #000; */
-}
-
-.notification .toggleTxt:first-child .tog {
-  width: 20%;
-  margin-right: 20px;
-}
-
-.notification .toggleTxt .tog:first-child {
-  background: #000;
-}
-
-.notification .title div:nth-child(3) {
-  width: 20%;
-}
-
-.notification .toggleTxt {
-  display: flex;
-  padding: 14px 40px;
-}
-
-@media screen and (max-width: 768px) {
-  .notification .toggleTxt:first-child .tog {
-    margin-right: 0;
+@media screen and (max-width: 1000px) {
+  .notification .rightT {
+    white-space: normal;
   }
 
-  .notification .title div:nth-child(2) p,
-  .notification .title div:nth-child(3) p {
+  .notification .toggleTxt,
+  .notification .rightT {
     font-size: 14px;
   }
 }

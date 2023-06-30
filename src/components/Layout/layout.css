@@ -3,41 +3,54 @@ h1 {
   padding: 0;
 }
 
-.auth-container {
-  padding: 20px 32px 5px;
+.authContainerWrapper {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+
+.auth-container {
+  padding: 0 32px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
 }
 
 .auth--layout {
   width: 100%;
   background: white;
   display: flex;
-  gap: 70px;
-  margin-top: 20px;
+  gap: 5%;
 }
 
 /* ------------------ */
 /* Left side */
 /* ------------------ */
 
-.left-side,
-.right-side {
-  width: 100%;
-  height: auto;
-}
-
 .left-side {
   background: var(--primary-bg);
   border-radius: 16px;
-  padding: 70px 50px;
-  max-width: 517px;
+  padding: 50px 40px;
+  max-width: 600px;
+  height: auto;
 }
 
 .left-side img {
   width: 100%;
   margin-bottom: 50px;
+  webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transition: ease-in-out 2s;
+}
+
+.left-side:hover img {
+  transform: scale(1.06);
+  cursor: pointer;
+  transition: all ease-in-out 1s;
 }
 
 .left-side_text {
@@ -63,12 +76,7 @@ h1 {
 /* right */
 /* ------------------ */
 
-.right-side {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  /* justify-content: space-between; */
-}
+
 
 .right-side-header {
   justify-self: flex-start;
@@ -86,6 +94,7 @@ h1 {
 
 .right-side button {
   width: 100%;
+  font-weight: 600;
 }
 
 .right-side .right-style {
@@ -98,14 +107,25 @@ h1 {
 /* ------------------ */
 
 @media (max-width: 1000px) {
+  .authContainerWrapper {
+    height: auto;
+  }
+
+
   .auth-container {
     padding: 0 100px;
+    /* overflow-x: hidden; */
+    /* height: 100vh; */
+  }
+
+  .auth--layout {
+    margin-top: 0;
   }
 
   .right-style {
     background: var(--primary-bg);
     color: #ffffff;
-    padding: 30px 100px;
+    padding: 25px 40px;
     border-radius: 10px;
     align-items: center;
   }
@@ -115,14 +135,22 @@ h1 {
   }
 
   .right-side {
-    gap: 20px;
+    gap: 6px;
+    margin-top: 20px;
+    width: 100% !important;
+    justify-content: center !important;
   }
 
   .right-side-header:not(.securityQxn) {
-    position: static;
+    position: absolute;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  .right-side-header .logo img {
+    height: 30px;
   }
 }
 
@@ -135,15 +163,13 @@ h1 {
     padding: 0 20px;
   }
 
-  .right-side {
-    position: relative;
-  }
+
   .left-side {
     display: none;
   }
 
   .right-style {
-    padding: 30px 50px;
+    padding: 25px;
     margin: 0;
   }
 
@@ -153,11 +179,39 @@ h1 {
 
   .right-side-header a img {
     width: 100px;
-    border: 1px solid black;
-    position: absolute;
-    top: 0;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
   }
 
-  .right-side-header {
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }

@@ -47,19 +47,29 @@ const Header = () => {
     return <IconComponent size={30} className={styles.menuIcon} />;
   };
 
+  const logoHome = () => {
+    navigate("/");
+  };
+
   return (
     <div>
       <header>
         <div className={styles.leftHeader}>
-          <img src={Logo} alt="logo" className={styles.logo} />
+          <img
+            src={Logo}
+            alt="logo"
+            className={styles.logo}
+            onClick={logoHome}
+          />
+
           <nav>
             <ul className={styles.navlist}>{navItem}</ul>
           </nav>
         </div>
         <div className={styles.rightHeader}>
           <div className={styles.registerLogin}>
-            <a href="/createAccount">Register</a>
-            <FilledBtn title={"Login"} link={"/login"} />
+            <a onClick={() => navigate("/createAccount")}>Register</a>
+            <FilledBtn title={"Login"} onClick={() => navigate("/login")} />
           </div>
           <div className={styles.mdSm}>
             <button className={styles.menuBtn} onClick={menuToggle}>
@@ -67,10 +77,13 @@ const Header = () => {
             </button>
             <ul className={!menu ? styles.menuList : styles.display}>
               {navItem}
-              <a className={styles.register} href="/createAccount">
+              <a
+                className={styles.register}
+                onClick={() => navigate("/createAccount")}
+              >
                 Register
               </a>
-              <FilledBtn title={"Login"} link={"/login"} />
+              <FilledBtn title={"Login"} onClick={() => navigate("/login")} />
             </ul>
           </div>
         </div>

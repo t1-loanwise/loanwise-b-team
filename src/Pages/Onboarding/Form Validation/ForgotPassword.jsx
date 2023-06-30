@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import FilledBtn from "../../../components/Button/FilledBtn";
 import "./Login.css";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { nanoid } from "nanoid";
 
 const ForgotPassword = () => {
+  const formFooter = "";
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const navigate = useNavigate();
 
@@ -19,10 +23,24 @@ const ForgotPassword = () => {
       isValid && navigate("/accVerify");
     }
   };
+
+  // const onSubmit = async data => {
+  //   const values = { ...data, id: nanoid() };
+  //   try {
+  //     const response = await axios.post('http://loanwise.onrender.com/api/forget-password', data);
+  //     if (response.status === 200) {
+  //       navigate("/accVerify");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  //   reset()
+  // };
   return (
     <AuthLayout
       title="Forgot Password?"
       subtitle="We’ve got you, please enter your registered email address"
+      formFooter={formFooter}
     >
       <form onSubmit={handleSubmit(onSubmit)} className="forgotPassword">
         <fieldset>

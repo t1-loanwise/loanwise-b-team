@@ -1,0 +1,52 @@
+.securityPrivacy {
+  background: #e6f2f5;
+  /* color: #005466;
+    font-weight: 600;
+    font-size: 18px; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 15px;
+  color: #00151a;
+}
+
+.securityPrivacy h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #00151a;
+}
+
+.securityPrivacy input {
+  padding: 10.5px 16px;
+  width: 45%;
+  background: #ffffff;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  outline: none;
+}
+
+.passFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passFlex label {
+  color: #00151a;
+}
+
+.changeSecurityQ div input {
+  width: 100%;
+}
+
+.securityPrivacy button {
+  align-self: flex-end;
+  padding: 14px 24px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.securityPrivacy form {
+  width: 45%;
+}

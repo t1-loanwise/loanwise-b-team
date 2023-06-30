@@ -13,23 +13,24 @@ p {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .right-side .form-title h1 {
   font-weight: 600;
-  font-size: 52px;
+  font-size: 50px;
 }
 
 .right-side label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   font-weight: 600;
   color: #00191f;
 }
 
 .right-side fieldset {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding: 0;
 }
 
 .right-side input[type="text"],
@@ -41,9 +42,13 @@ p {
   border: 1.1px solid #cbcbcb;
   border-radius: 5px;
   width: 100%;
-  padding: 12px 0 12px 12px;
+  padding: 10px 0 10px 10px;
   outline: none;
+  &&::placeholder {
+    font-size: 12px;
+  }
 }
+
 .right-side input[type="checkbox"] {
   background: var(--primary-bg);
   border-color: 2px solid var(--primary-bg);
@@ -101,6 +106,10 @@ p {
   margin-bottom: 0;
   border: none;
   flex: 1;
+
+  &&::placeholder {
+    font-size: 12px;
+  }
 }
 
 .inputField button {
@@ -115,31 +124,34 @@ p {
 }
 
 .right-side .form-btn button {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .right-side .errorMessage {
-  margin-top: 3px;
   font-style: italic;
   font-size: 13px;
+  color: red;
 }
 
 .terms-and-conditions {
-  text-align: right;
+  /* text-align: right; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  white-space: nowrap;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .terms-and-conditions input {
   width: 15px;
   margin: 0 3px 0 0;
+  cursor: pointer;
 }
 
 .terms-and-conditions label {
   font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
 }
 
 .checkForgot {
@@ -161,6 +173,12 @@ p {
 @media (max-width: 1000px) {
   .right-side label {
     color: #ffffff;
+    font-size: 14px;
+  }
+
+  .right-side .form-title p,
+  .formFooter {
+    font-size: 14px;
   }
 
   .right-side {
@@ -169,12 +187,12 @@ p {
   }
 
   .right-side .form-title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .right-side .form-title h1 {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 45px;
   }
 
   .right-side .form-title p,
@@ -189,25 +207,29 @@ p {
   }
 
   .errorMessage {
-    color: #cbcbcb;
+    font-weight: 500;
   }
 
   .passwordContainer fieldset:first-child .errorMessage {
     display: block;
   }
 
-  .passwordContainer fieldset:last-child label {
-    margin-top: 20px;
-  }
-
   .terms-and-conditions {
     margin: 20px 0 0 0;
+  }
+
+  .right-side input[type="text"],
+  .right-side input[type="password"],
+  .right-side input[type="email"],
+  .securityQxn fieldset input,
+  .select input {
+    padding: 7px 0 7px 10px;
   }
 }
 
 @media (max-width: 768px) {
-  label {
-    color: #ffffff;
+  .right-side label {
+    font-size: 12px;
   }
 
   .passwordContainer {
@@ -217,7 +239,12 @@ p {
 
   .right-side .form-title h1 {
     font-weight: 600;
-    font-size: 35px;
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .right-side fieldset {
+    margin-bottom: 8px;
   }
 
   .right-side h1 {

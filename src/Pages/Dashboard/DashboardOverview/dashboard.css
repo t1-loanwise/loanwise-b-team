@@ -1,3 +1,9 @@
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---------dashbody body------- */
 .dashboard-wrapper {
   display: flex;
@@ -24,7 +30,7 @@
 
 /* ------------dashboard overview-------------- */
 .overview-container {
-  padding: 27px 50px;
+  padding-top: 27px;
 }
 
 .explore p {
@@ -38,17 +44,10 @@
 .overview-search-filter-cal {
   display: flex;
   align-items: center;
-
   gap: 40px;
   padding: 20px 0px;
 }
 /* ----------dashboard---filter----Search----Calendar-------- */
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 .dash__title {
   margin-bottom: 26px;
 }
@@ -63,24 +62,35 @@ p {
 .dash__searchFilterDate {
   display: flex;
   align-items: center;
-
-  gap: 280px;
+  /* gap: 280px; */
 }
 
-.dash__search {
+.dash__title .dash__searchFilterDate .dash__search {
   max-width: 622px;
   flex: 0.8;
 }
 
-.dash__searchFilterDate fieldset {
+.dash__searchFilterDate .dash_searchBar form fieldset {
   display: flex;
   align-items: center;
+  border: 0;
+  padding: 0;
+}
+.dash__searchFilterDate .dash_searchBar form fieldset button {
+  margin-right: 10px;
 }
 
-.dash__search input {
-  flex: 1;
+.dash_searchBar {
+  width: 60%;
+}
+
+.dash__searchFilterDate .dash__searchFilter .dash__search input {
+  /* flex: 1; */
   padding: 17px 0 17px 15px;
   margin: 0;
+  width: 100%;
+  border: 1px solid #aad4dd;
+  outline: none;
 }
 
 .dash__search input::placeholder {
@@ -93,9 +103,10 @@ p {
 
 .dash__searchFilter {
   display: flex;
-  align-items: flex-start;
-
+  align-items: center;
   flex: 1;
+  margin: 20px 0;
+  width: 100%;
 }
 
 fieldset > button {
@@ -112,13 +123,14 @@ fieldset > button {
   border-radius: 0;
   height: auto;
   width: auto;
+  height: 50px;
   padding: 4px 30px;
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 12px 34px; */
+  padding: 10px 34px;
 }
 
 .dash__searchFilter > .filter button:hover img,
@@ -165,13 +177,13 @@ fieldset > button {
 .dash__date-small {
   position: relative;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .img-date {
   box-sizing: border-box;
   background: hsl(192, 43%, 93%);
   padding: 15px 21px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,6 +197,7 @@ fieldset > button {
 .calender {
   position: absolute;
   top: 5px;
+  right: 0;
   width: auto;
 }
 
@@ -193,6 +206,13 @@ fieldset > button {
   font-size: 14px;
   font-weight: 700;
   color: var(--primary-bg);
+}
+
+/* ChartCardss */
+
+.ChartCards {
+  display: flex;
+  flex-direction: column;
 }
 
 /* loan cards */
@@ -236,7 +256,7 @@ fieldset > button {
   font-size: 13px;
   line-height: 19px;
   color: #00151a;
-  /* white-space: nowrap; */
+  /* white-space:  nowrap; */
 }
 
 .loanAmountIcon {
@@ -273,7 +293,7 @@ fieldset > button {
   border: 1px solid #e6f2f5;
   box-shadow: 0px 8px 40px #e6f2f5;
   border-radius: 16px;
-  padding-right: 25px;
+  padding: 8px 25px;
   width: 100%;
 }
 
@@ -307,6 +327,7 @@ fieldset > button {
 
 .chartTitle {
   padding: 10px 0 10px 25px;
+  margin-bottom: 5px;
 }
 
 .chart1 .chartTitle {
@@ -388,20 +409,23 @@ fieldset > button {
 
   .dash__searchFilterDate {
     flex-direction: column;
-    align-items: normal;
+    align-items: center;
     gap: 0;
+    width: 100%;
   }
 
   .dash__searchFilter {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
   }
 
   .dash__search {
     max-width: none;
     grid-column: auto;
     flex-direction: column;
+    flex: 1;
   }
 
   fieldset.dash__search > button {
@@ -416,10 +440,26 @@ fieldset > button {
     display: flex;
     gap: 20px;
     box-sizing: border-box;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btnzz button {
+    height: 50px;
+  }
+
+  .btnzz .filter button {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .dash__search button {
     display: block;
+  }
+
+  .dash_searchBar {
+    width: 100%;
   }
 
   .dash__searchFilterDate fieldset {
@@ -460,6 +500,12 @@ fieldset > button {
 
   .dash__date {
     display: none;
+  }
+
+  .img-date {
+    box-sizing: border-box;
+    background: hsl(192, 43%, 93%);
+    padding: 15px 15px;
   }
 }
 

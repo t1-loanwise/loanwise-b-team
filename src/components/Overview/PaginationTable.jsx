@@ -4,7 +4,7 @@ import "./overview.css";
 // import { TableData } from "./TableData";
 import lessthan from "../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../Images/Dashboard/greaterthan.svg";
-import LoanWiseData from '../../LoanWise.json'
+import FilledBtn from "../Button/FilledBtn";import LoanWiseData from '../../LoanWise.json'
 
 
 
@@ -34,7 +34,7 @@ const PaginationTable = ({ data, totalCount }) => {
     <div className="table-wrapper">
       <div className="performance-wrapper">
         <h3>Loan Performance Table</h3>
-        <button>Download</button>
+        <FilledBtn title={"Download"} />
       </div>
       <table>
         <thead>

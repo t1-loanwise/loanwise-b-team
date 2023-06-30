@@ -118,6 +118,7 @@
   font-weight: 200;
   font-size: 14px;
   line-height: 20px;
+  white-space: nowrap;
 }
 .dashboard-icon {
   width: 19px;
@@ -144,17 +145,19 @@
   width: 100%;
 }
 /* -----------General-------------- */
-.sub-menu button {
-  font-size: 13px;
-  line-height: 15px;
-  padding: 10px 20px 10px 4px;
-  color: #ffffff;
+.sub-menu {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 15px;
-  background: transparent;
-  border: none;
+}
+
+.sub-menu span {
+  color: #fff;
+  padding: 20px 3px;
+  font-size: 15px;
   white-space: nowrap;
+  /* background: #000; */
 }
 
 .general-wrapper > button {
@@ -192,12 +195,12 @@
 .sub-menu .submenu-active-1,
 .submenu-active-2,
 .submenu-active-3 {
-  width: 180px;
+  width: 100%;
   padding: 10px;
-  align-items: center;
+  align-items: flex-end;
   background-color: #7cc2d1;
   border-radius: 4px;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -234,8 +237,9 @@
     width: auto;
   }
 
-  .sub-menu button {
-    padding: 10px 0;
+  .sub-menu span {
+    padding: 10px 3px;
+    font-size: 13px;
   }
 
   .sub-menu {
@@ -251,5 +255,9 @@
 
   .dashboard-header-left {
     gap: 30px;
+  }
+
+  .dashboard-header-left .back span {
+    display: none;
   }
 }

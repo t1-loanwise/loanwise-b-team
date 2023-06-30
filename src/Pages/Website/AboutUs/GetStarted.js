@@ -1,13 +1,18 @@
 import React from "react";
 import FilledBtn from "../../../components/Button/FilledBtn";
+import { useNavigate } from "react-router-dom";
 
+const GetStarted = ({ title, content }) => {
+  const navigate = useNavigate();
 
-const GetStarted = ({title, content}) => {
   return (
-    <div className = 'get-Started'>
+    <div className="get-Started">
       <h3>{title}</h3>
       <p>{content}</p>
-      <FilledBtn title={'Get Started'}/>
+      <FilledBtn
+        title={"Get Started"}
+        onClick={() => navigate("/createAccount")}
+      />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../../../components/Overview/overview.css";
-// import  {PortfolioTableData}  from "./PorfolioTableData";
+// import { PortfolioTableData } from "./PorfolioTableData";
 import LoanWiseData from "../../../../../LoanWise.json"
 import lessthan from "../../../../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../../../../Images/Dashboard/greaterthan.svg";
-
+import FilledBtn from "../../../../../components/Button/FilledBtn";
 
 const PortfolioPaginationTable = ({ data, totalCount }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -33,7 +33,7 @@ const PortfolioPaginationTable = ({ data, totalCount }) => {
     <div className="table-wrapper">
       <div className="performance-wrapper">
         <h3>Portfolio Overview</h3>
-        <button>Download</button>
+        <FilledBtn title={"Download"} />
       </div>
       <table>
         <thead>
@@ -118,4 +118,4 @@ const PortfolioPaginationTable = ({ data, totalCount }) => {
   );
 };
 
-export default  PortfolioPaginationTable;
+export default PortfolioPaginationTable;

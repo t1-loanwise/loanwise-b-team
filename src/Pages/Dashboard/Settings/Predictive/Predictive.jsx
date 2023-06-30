@@ -35,6 +35,17 @@ const Predictive = () => {
   const newModel = () => {
     setModel(!model);
   };
+  const handleShow = () => {
+    setModel(false);
+  };
+  const handleEdit = (index) => {
+    setEditStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = false; // Set the current edit state to false
+      return newStates;
+    });
+  };
+
   return (
     <div className="predictiveModel">
       <div className="top">
@@ -53,7 +64,7 @@ const Predictive = () => {
                 onClick={() => editModel(0)}
                 className="editIcon"
               />
-              {editStates[0] && <EditPage />}
+              {editStates[0] && <EditPage handleEdit={() => handleEdit(0)} />}
             </div>
           </div>
         </div>
@@ -72,7 +83,7 @@ const Predictive = () => {
                 onClick={() => editModel(1)}
                 className="editIcon"
               />
-              {editStates[1] && <EditPage />}
+              {editStates[1] && <EditPage handleEdit={() => handleEdit(1)} />}
             </div>
           </div>
         </div>
@@ -91,7 +102,7 @@ const Predictive = () => {
                 onClick={() => editModel(2)}
                 className="editIcon"
               />
-              {editStates[2] && <EditPage />}
+              {editStates[2] && <EditPage handleEdit={() => handleEdit(2)} />}
             </div>
           </div>
         </div>
@@ -110,7 +121,7 @@ const Predictive = () => {
                 onClick={() => editModel(3)}
                 className="editIcon"
               />
-              {editStates[3] && <EditPage />}
+              {editStates[3] && <EditPage handleEdit={() => handleEdit(3)} />}
             </div>
           </div>
         </div>
@@ -121,7 +132,7 @@ const Predictive = () => {
           title={"Set new model"}
           onClick={newModel}
         />
-        {model && <NewModelPage />}
+        {model && <NewModelPage handleShow={handleShow} />}
       </div>
     </div>
   );

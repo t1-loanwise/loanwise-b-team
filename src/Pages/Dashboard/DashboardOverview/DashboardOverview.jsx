@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DashSearch from "./components/DashSearch";
-import LoanAmount from "./components/LoanAmount";
 import PaginationTable from "../../../components/Overview/PaginationTable";
-import BarChart from "./components/BarChart";
 import "./dashboard.css";
 import SearchBar from "../../../components/Overview/SearchBar";
 // import { TableData } from "../../../components/Overview/TableData";
@@ -17,7 +15,7 @@ const DashboardOverview = () => {
   const handleSearch = (term) => {
     setSearchItems(term);
     setCurrentPage(1);
-    console.log({ handleSearch });
+    console.log({ term });
   };
 
   useEffect(() => {
@@ -40,7 +38,7 @@ const DashboardOverview = () => {
   };
 
   return (
-    <div className="overview-container">
+    <div className="overview-container container">
       <div className="explore">
         <p>
           Explore insightful analyses and risk assessment to make informed
@@ -48,14 +46,12 @@ const DashboardOverview = () => {
         </p>
       </div>
       <div className="overview-search-filter">
-        <div className="overview-search-filter-cal">
-          <SearchBar handleSearch={handleSearch} />
-          <DashSearch />
+        <div>
+          <DashSearch handleSearch={handleSearch} />
         </div>
-        <LoanAmount />
-        <BarChart />
+        <ChartCards />
         <PaginationTable
-          data={searchResults}
+          data={currentData}
           totalCount={searchResults.length}
           paginate={paginate}
         />
