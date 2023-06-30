@@ -15,6 +15,7 @@ import ForgotPassword from "./Pages/Onboarding/Form Validation/ForgotPassword";
 import NewDashboard from "./Pages/Dashboard/DashboardOverview/NewDashboard";
 import UserPreference from "./Pages/Dashboard/Settings/User-Preference/UserPreference";
 // import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
+import ContactForm from './components/NewForm/ContactForm'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />
+          <Route exact path="/contactForm" element={<ContactForm />} />
           <Route
             exact
             path="/securityQuestion"
