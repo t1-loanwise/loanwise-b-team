@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../../../components/Overview/overview.css";
-import  {PortfolioTableData}  from "./PorfolioTableData";
+// import  {PortfolioTableData}  from "./PorfolioTableData";
+import LoanWiseData from "../../../../../LoanWise.json"
 import lessthan from "../../../../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../../../../Images/Dashboard/greaterthan.svg";
 
@@ -52,18 +53,18 @@ const PortfolioPaginationTable = ({ data, totalCount }) => {
               onClick={handleClick}
               className="table-body-container"
             >
-              <td>{item.id}</td>
+              <td>{item.customer_id}</td>
               <td>{item.name}</td>
-              <td>{item.category}</td>
-              <td>{item.amount}</td>
-              <td>{item.date}</td>
-              <td className={`${item.status}`}>
-                <button>{item.status}</button>
+              <td>{item.Category}</td>
+              <td>{item.Requested}</td>
+              <td>{item["Due date"]}</td>
+              <td className={`${item["Loan status"]}`}>
+                <button>{item["Loan status"]}</button>
               </td>
             </tr>
           ))}
         </tbody>
-        {PortfolioTableData.length > dataPerPage && (
+        {LoanWiseData.length > dataPerPage && (
           <tfoot className="pagination-wrapper">
             <tr>
               <td colSpan="6">

@@ -3,8 +3,8 @@ import PortfolioChart from "./Components/PortfolioChart";
 import { Newportfolio } from "./Components/NewPortfolio/Newportfolio";
 import { PortfolioInput } from "./Components/PortfolioInput/PortInput";
 import PortfolioPaginationTable from "./Components/PortfolioTable/PortfolioPaginationTable";
-import { PortfolioTableData } from "./Components/PortfolioTable/PorfolioTableData";
-
+// import { PortfolioTableData } from "./Components/PortfolioTable/PorfolioTableData";
+import LoanWiseData from "../../../LoanWise.json"
 const PortfolioOverview = () => {
 
   const [searchResults, setSearchResults] = useState([]);
@@ -29,12 +29,12 @@ const PortfolioOverview = () => {
   }
 
   useEffect(() => {
-    setOriginalData(PortfolioTableData);
-    setTableData(PortfolioTableData);
+    setOriginalData(LoanWiseData);
+    setTableData(LoanWiseData);
    
-    let searchResults = PortfolioTableData;
+    let searchResults = LoanWiseData;
     if (searchTerm !== ' ') {
-      searchResults = PortfolioTableData.filter((item) => item.id.toLowerCase().includes(searchTerm.toLowerCase()))
+      searchResults = LoanWiseData.filter((item) => item.customer_id.toLowerCase().includes(searchTerm.toLowerCase()))
     };
     setSearchResults(searchResults);
     setTableData(searchResults)
@@ -42,7 +42,7 @@ const PortfolioOverview = () => {
 
     let filteredResults = searchResults;
     if (selectedCategory !== ' ') {
-      filteredResults = searchResults.filter((item) => item.category === selectedCategory )
+      filteredResults = searchResults.filter((item) => item.Category === selectedCategory )
     }
     setFilteredData(filteredResults);
     setTableData(filteredResults)

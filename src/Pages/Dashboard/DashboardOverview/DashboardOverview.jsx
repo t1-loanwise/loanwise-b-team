@@ -5,7 +5,8 @@ import PaginationTable from "../../../components/Overview/PaginationTable";
 import BarChart from "./components/BarChart";
 import "./dashboard.css";
 import SearchBar from "../../../components/Overview/SearchBar";
-import { TableData } from "../../../components/Overview/TableData";
+// import { TableData } from "../../../components/Overview/TableData";
+import LoanWiseData from "../../../LoanWise.json"
 
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -20,11 +21,10 @@ const DashboardOverview = () => {
   };
 
   useEffect(() => {
-    const results = TableData.filter((user) => {
+    const results = LoanWiseData.filter((user) => {
       return (
         user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
-        user.id.toLowerCase().includes(searchItems.toLowerCase()) ||
-        user.status.toLowerCase().includes(searchItems.toLowerCase())
+        user.customer_id.toLowerCase().includes(searchItems.toLowerCase()) 
       );
     });
     setSearchResults(results);

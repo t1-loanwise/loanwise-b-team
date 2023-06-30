@@ -36,7 +36,7 @@ export const PortfolioInput = ({ handleSearch, handleFilter }) => {
 
       <div className= {`portfolio-filter ${isOpen ? 'open' : ' '}`}>
         <select className="filterDropdown"    value={selectedOption} onChange={handleFilterChange}  required>
-          <option value=''  disabled hidden>Sort by category</option>
+          {/* <option value=''  disabled hidden>Sort by category</option> */}
           <option value='Business'>Business</option>
           <option value='Personal'>Personal</option>
           <option value='Student'>Student</option>
