@@ -49,7 +49,7 @@ const DashboardOverview = () => {
         <div>
           <DashSearch handleSearch={handleSearch} />
         </div>
-        <ChartCards />
+        {/* <ChartCards /> */}
         <PaginationTable
           data={currentData}
           totalCount={searchResults.length}

@@ -22,23 +22,7 @@
     padding-bottom: 20px;
 }
 
-/* .show-dropdown{
-    display:block ;
-    
-} */
-.dropdown-menu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-background: #E6F2F5;
-    padding: 5px;
-    cursor: pointer;
-    
-}
-.dropdown-menu p{
-    font-size: 14px;
-    line-height: 20px;
-}
+
 .new-portfolio-form{
         font-family: 'Urbanist';
             font-style: normal;

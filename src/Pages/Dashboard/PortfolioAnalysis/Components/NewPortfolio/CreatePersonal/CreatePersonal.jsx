@@ -4,6 +4,7 @@ import BurrowerDetail from './BurrowerDetail'
 const CreatePersonal = () => {
   return (
     <div>
+     
       <BurrowerDetail />
     </div>
   )

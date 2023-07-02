@@ -12,7 +12,7 @@ import UserProfile from "../UserProfile/UserProfile";
 import Notification from "../Notification/Notification";
 import CustomerPage from "../CustomerPages/CustomerPage";
 import CreatePersonal from "../PortfolioAnalysis/Components/NewPortfolio/CreatePersonal/CreatePersonal";
-import CreateBusiness from "../PortfolioAnalysis/Components/NewPortfolio/CreateBusiness/CreateBusiness";
+
 
 const DashboardPages = () => {
   return (
@@ -20,7 +20,7 @@ const DashboardPages = () => {
       <Route index path="/overview" element={<DashboardOverview />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/portfolio/personal" element = {<CreatePersonal/>}/>
-      <Route path="/portfolio/business" element = {<CreateBusiness/>}/>
+
       <Route path="/repayment" element={<Repayment />} />
       <Route path="/recovery" element={<Recovery />} />
       <Route path="/deliquency" element={<Deliquency />} />
