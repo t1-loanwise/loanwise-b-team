@@ -17,25 +17,36 @@ const ForgotPassword = () => {
   } = useForm();
   const navigate = useNavigate();
 
-  const onSubmit = () => {
-    let isValid = Object.keys(errors).length === 0;
-    {
-      isValid && navigate("/accVerify");
+  // const onSubmit = () => {
+  //   let isValid = Object.keys(errors).length === 0;
+  //   {
+  //     isValid && navigate("/accVerify");
+  //   }
+  // };
+
+  const onSubmit = async data => {
+    const values = { ...data, id: nanoid() };
+    try {
+      const response = await axios.post('http://loanwise.onrender.com/api/forget-password', values);
+        navigate("/accVerify");
+    } catch (error) {
+      // console.error(error);
+      // console.log("Request failed with status code:", error.response.status);
+      // // console.log("Response data:", error.response.data);
+        console.log("Request failed with status code:", error.response.status);
+        console.log("Response data:", error.response.data);
+        // setInValid(
+        //   error.response.data.message === "User already exists! Please login" &&
+        //     error.response.data.message
+        // );
+
+        console.error("Error while submitting form:", error.message);
+    
     }
+    reset()
   };
 
-  // const onSubmit = async data => {
-  //   const values = { ...data, id: nanoid() };
-  //   try {
-  //     const response = await axios.post('http://loanwise.onrender.com/api/forget-password', data);
-  //     if (response.status === 200) {
-  //       navigate("/accVerify");
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  //   reset()
-  // };
+
   return (
     <AuthLayout
       title="Forgot Password?"

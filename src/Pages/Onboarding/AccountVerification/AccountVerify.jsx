@@ -1,97 +1,82 @@
-import React, { useEffect, useRef, useState } from "react";
-import FilledBtn from "../../../components/Button/FilledBtn";
-import FormField from "../../../components/Form/FormField.jsx";
+import React, { useEffect, useState } from "react";
+import { Button } from "@chakra-ui/react";
 import AuthLayout from "../../../components/Layout/AuthLayout.jsx";
-import "./AccountVerify.css";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { FormProvider, useForm } from "react-hook-form";
+import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { PinInput, PinInputField, HStack } from "@chakra-ui/react";
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const AccountVerify = () => {
-  /**
-   * hooks
-   */
   const navigate = useNavigate();
-  const inputRef1 = useRef();
-  const inputRef2 = useRef();
-  const inputRef3 = useRef();
-  const inputRef4 = useRef();
-  const [resendTimeout, setResendTimeout] = useState(10);
+  const location = useLocation();
+  const email = location.state?.email || "";
+  const [resendTimeout, setResendTimeout] = useState(30);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  const [inValid, setInValid] = useState('');
 
-  /**
-   * form validation
-   */
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const userSchema = Yup.object().shape({
+    otp1: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
+    otp2: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
+    otp3: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
+    otp4: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
+  });
 
-  /**
-   * variable
-   */
-  // const customOTPValues = [2345, 0102, 5443];
+  const methods = useForm({
+    resolver: yupResolver(userSchema),
+  });
 
-  /**
-   * effects
-   */
-
-  useEffect(() => {
-    inputRef1.current.focus();
-  }, []);
+  const { handleSubmit, formState: { errors, isSubmitting } } = methods;
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (resendTimeout === 0) {
         clearTimeout(timer);
       } else {
-        setResendTimeout(resendTimeout - 1);
+        setResendTimeout((prevTimeout) => prevTimeout - 1);
       }
     }, 1000);
 
     return () => clearTimeout(timer);
   }, [resendTimeout]);
 
-  /**
-   * function
-   */
-
   const handleResendClick = () => {
     if (resendTimeout === 0) {
-      setResendTimeout(10); // Restart the timer (set to 60 seconds)
+      setResendTimeout(60);
     }
   };
 
-  const handleVerifyClick = () => {
-    const userInput =
-      inputRef1.current.value +
-      inputRef2.current.value +
-      inputRef3.current.value +
-      inputRef4.current.value;
+  const handleVerifyClick = async (values) => {
+    const data = `${values.otp1}${values.otp2}${values.otp3}${values.otp4}`;
 
-    {
-      userInput && userInput.length === 4 && navigate("/securityQuestion");
+    try {
+      const response = await axios.post(
+        "https://loanwise.onrender.com/api/verify-signup",
+        {
+          email: email,
+          verificationCode: data
+        }
+      );
+      if (response.status === 201) {
+        navigate("/securityQuestion");
+        console.log("Form submitted successfully");
+        console.log("Entered OTP:", data);
+      } else {
+        console.log("Unexpected status code:", response.status);
+      }
+     } catch (error) {
+      if (error.response) {
+        console.log("Request failed with status code:", error.response.status);
+        console.log("Response data:", error.response.data);
+        console.log("Entered OTP:", data);
+        setInValid(error.response.data.message === 'Invalid verification code' && error.response.data.message)
+      } else {
+        console.error("Error while submitting form:", error.message);
+      }
     }
-
-    console.log(errors["otp-1"]);
   };
 
-  // const handleClick = () => {
-  //   // get otp entered§
-  //   const userInput =
-  //     inputRef1.current +
-  //     inputRef2.current +
-  //     inputRef3.current +
-  //     inputRef4.current;
-  //   const isOTPValid = customOTPValues.contains(userInput);
-
-  //   if (isOTPValid) {
-  //     navigate("/successful");
-  //   }
-  // };
-
-  /**
-   * component
-   */
   const formFooter = (
     <>
       Didn’t get OTP?{" "}
@@ -103,87 +88,92 @@ const AccountVerify = () => {
 
   return (
     <AuthLayout
-      title={"Verify Email Address"}
-      subtitle={
-        "Thank you for signing up. Please enter the verification code we sent to your email address @johndoe@gmail.com"
-      }
+      title="Verify Email Address"
+      subtitle={`Thank you for signing up. Please enter the verification code we sent to your email address ${email}`}
       formFooter={formFooter}
     >
-      <form className="form" onSubmit={handleSubmit(handleVerifyClick)}>
-        <div className="otp_input-Content">
-          <div className="otp_input-items">
-            <FormField
-              {...register("otp-1", { required: true })}
-              type="number"
-              pattern="\d*"
-              maxLength={1}
-              className="otp_input"
-              id="ist"
-              name="otp-1"
-              innerRef={inputRef1}
-              onKeyUp={() => inputRef2.current.focus()}
-            />
+        {inValid && (
+                <span style={{color: 'red', marginBottom: '30px'}}>{inValid}</span>
+              )}
+      <FormProvider {...methods}>
+        <form className="form" onSubmit={handleSubmit(resendTimeout === 0 ? handleResendClick : handleVerifyClick)}>
+          <div className="otp_input-Content">
+            <HStack mx="auto" mt={5}>
+              <PinInput size="lg" placeholder="">
+                  <PinInputField
+                    name={`otp1`}
+                    {...methods.register(`otp1`)}
+                    height={["auto", "120px"]}
+                    width="100%"
+                    fontSize={40}
+                    py={8}
+                    mr={["10px", "20px"]}
+                    bgColor="white"
+                    color='black'
+                    border={inValid ? '2px' : '1px'}
+                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
+                  />
+                  <PinInputField
+                    name={`otp2`}
+                    {...methods.register(`otp2`)}
+                    height={["auto", "120px"]}
+                    width="100%"
+                    fontSize={40}
+                    py={8}
+                    mr={["10px", "20px"]}
+                    bgColor="white"
+                    color='black'
+                    border={inValid ? '2px' : '1px'}
+                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
+                  />
+                  <PinInputField
+                    name={`otp3`}
+                    {...methods.register(`otp3`)}
+                    height={["auto", "120px"]}
+                    width="100%"
+                    fontSize={40}
+                    py={8}
+                    mr={["10px", "20px"]}
+                    bgColor="white"
+                    color='black'
+                    border={inValid ? '2px' : '1px'}
+                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
+                  />
+                  <PinInputField
+                    name={`otp4`}
+                    {...methods.register(`otp4`)}
+                    height={["auto", "120px"]}
+                    width="100%"
+                    fontSize={40}
+                    py={8}
+                    mr={["10px", "20px"]}
+                    bgColor="white"
+                    color='black'
+                    border={inValid ? '2px' : '1px'}
+                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
+                  />
+    
+              </PinInput>
+            </HStack>
           </div>
 
-          <div className="otp_input-items">
-            <FormField
-              {...register("otp-2", { required: true })}
-              type="number"
-              pattern="\d*"
-              maxLength={1}
-              className="otp_input"
-              id="sec"
-              name="otp-2"
-              innerRef={inputRef2}
-              onKeyUp={() => inputRef3.current.focus()}
-            />
-          </div>
+          {(errors.otp1 || errors.otp2 || errors.otp3 || errors.otp4)  && (
+            <p className="errorMessage">{errors.data}</p>
+          )}
 
-          <div className="otp_input-items">
-            <FormField
-              {...register("otp-3", { required: true })}
-              type="number"
-              pattern="\d*"
-              maxLength={1}
-              className="otp_input"
-              id="third"
-              name="otp-3"
-              innerRef={inputRef3}
-              onKeyUp={() => inputRef4.current.focus()}
-            />
+          <div className="form-btn">
+            <Button
+              color="#fff"
+              bgColor="#007e99"
+              type="submit"
+              isLoading={isSubmitting}
+              isDisabled={!methods.formState.isDirty}
+            >
+              {resendTimeout === 0 ? "Resend" : "Verify"}
+            </Button>
           </div>
-
-          <div className="otp_input-items">
-            <FormField
-              {...register("otp-4", { required: true })}
-              type="number"
-              pattern="\d*"
-              maxLength={1}
-              className="otp_input"
-              id="fourth"
-              name="otp-4"
-              innerRef={inputRef4}
-              // onkeyup="clickEvent(this,'fourth')"
-            />
-          </div>
-        </div>
-        {(errors["otp-1"] ||
-          errors["otp-2"] ||
-          errors["otp-3"] ||
-          errors["otp-4"]) && (
-          <p className="errorMessage">Please enter a valid value</p>
-        )}
-
-        <div className="form-btn">
-          <FilledBtn
-            title={resendTimeout === 0 ? "Resend" : "Verify"}
-            size={"100%"}
-            onClick={
-              resendTimeout === 0 ? handleResendClick : handleVerifyClick
-            }
-          />
-        </div>
-      </form>
+        </form>
+      </FormProvider>
     </AuthLayout>
   );
 };
