@@ -10,12 +10,19 @@ const DashboardOverview = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [dataPerPage] = useState(5);
   const [searchItems, setSearchItems] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(' ')
 
   const handleSearch = (term) => {
     setSearchItems(term);
     setCurrentPage(1);
     console.log({ term });
   };
+  const handleFilter = (category) => {
+    setSelectedCategory(category)
+    setCurrentPage(1)
+    console.log({handleFilter})
+  }
 
   useEffect(() => {
     const results = TableData.filter((user) => {
@@ -47,7 +54,7 @@ const DashboardOverview = () => {
       </div>
       <div className="overview-search-filter">
         <div>
-          <DashSearch handleSearch={handleSearch} />
+          <DashSearch handleSearch={handleSearch} handleFilter={handleFilter}/>
         </div>
         <ChartCards />
         <PaginationTable
