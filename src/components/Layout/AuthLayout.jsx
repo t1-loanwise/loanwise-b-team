@@ -9,15 +9,17 @@ const AuthLayout = ({ title, children, subtitle, formFooter }) => {
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'left',
-    width: '60%'
+    width: '60%',
+    height: '100%'
   };
 
   const gap = {
-    gap: '25%',
+    gap: '15%',
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'left',
-    width: '60%'
+    width: '60%',
+    height: '100%'
   };
 
   const align = {
