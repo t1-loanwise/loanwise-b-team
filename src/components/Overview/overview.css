@@ -62,8 +62,7 @@ td {
 .Active button,
 .Completed button,
 .Pending button,
-.Declined button,
-.Approved button {
+.Defaulted button, .Approved button{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -85,7 +84,7 @@ td {
   background: #17a937;
   border: 1px solid #17a937;
 }
-.Declined button {
+.Defaulted button {
   background: #ff2e2e;
   border: 1px solid #ff2e2e;
 }

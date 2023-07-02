@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./overview.css";
-import { TableData } from "./TableData";
+// import { TableData } from "./TableData";
 import lessthan from "../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../Images/Dashboard/greaterthan.svg";
-import FilledBtn from "../Button/FilledBtn";
+import FilledBtn from "../Button/FilledBtn";import LoanWiseData from '../../LoanWise.json'
+
+
 
 const PaginationTable = ({ data, totalCount }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -52,18 +54,18 @@ const PaginationTable = ({ data, totalCount }) => {
               onClick={handleClick}
               className="table-body-container"
             >
-              <td>{item.id}</td>
+              <td>{item.customer_id}</td>
               <td>{item.name}</td>
-              <td>{item.category}</td>
-              <td>{item.amount}</td>
-              <td>{item.date}</td>
-              <td className={`${item.status}`}>
-                <button>{item.status}</button>
+              <td>{item.Category}</td>
+              <td>{item.Requested}</td>
+              <td>{item["Due date"]}</td>
+              <td className={`${item["Loan status"]}`}>
+                <button>{item["Loan status"]}</button>
               </td>
             </tr>
           ))}
         </tbody>
-        {TableData.length > dataPerPage && (
+        {LoanWiseData.length > dataPerPage && (
           <tfoot className="pagination-wrapper">
             <tr>
               <td colSpan="6">
@@ -97,12 +99,7 @@ const PaginationTable = ({ data, totalCount }) => {
                         </button>
                       </li>
                     ))}
-                    {/* <li>
-                      <img src={dot} alt="dot" className="paginate-dots" />
-                    </li> */}
-                    {/* <li>
-                      <p className="page-fifty">50</p>
-                    </li> */}
+                
                     <li>
                       {" "}
                       <img
