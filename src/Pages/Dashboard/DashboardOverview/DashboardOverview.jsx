@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import DashSearch from "./components/DashSearch";
 import PaginationTable from "../../../components/Overview/PaginationTable";
 import "./dashboard.css";
-import { TableData } from "../../../components/Overview/TableData";
-import ChartCards from "./components/ChartCards";
+import SearchBar from "../../../components/Overview/SearchBar";
+// import { TableData } from "../../../components/Overview/TableData";
+import LoanWiseData from "../../../LoanWise.json"
 
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -18,11 +19,10 @@ const DashboardOverview = () => {
   };
 
   useEffect(() => {
-    const results = TableData.filter((user) => {
+    const results = LoanWiseData.filter((user) => {
       return (
         user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
-        user.id.toLowerCase().includes(searchItems.toLowerCase()) ||
-        user.status.toLowerCase().includes(searchItems.toLowerCase())
+        user.customer_id.toLowerCase().includes(searchItems.toLowerCase()) 
       );
     });
     setSearchResults(results);
@@ -49,7 +49,7 @@ const DashboardOverview = () => {
         <div>
           <DashSearch handleSearch={handleSearch} />
         </div>
-        <ChartCards />
+        {/* <ChartCards /> */}
         <PaginationTable
           data={currentData}
           totalCount={searchResults.length}
