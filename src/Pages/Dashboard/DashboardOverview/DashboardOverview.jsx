@@ -45,10 +45,6 @@ const DashboardOverview = () => {
     console.log(results);
   }, [searchItems]);
 
-  const indexOfLastData = currentPage * dataPerPage;
-  const indexOfFirstData = indexOfLastData - dataPerPage;
-  const currentData = searchResults.slice(indexOfFirstData, indexOfLastData);
-
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -67,7 +63,7 @@ const DashboardOverview = () => {
         </div>
         <ChartCards />
         <PaginationTable
-          data={currentData}
+          data={searchResults}
           totalCount={searchResults.length}
           paginate={paginate}
         />
