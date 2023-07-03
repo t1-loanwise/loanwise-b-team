@@ -89,9 +89,6 @@ const PersonalInfo = ({ handleNext }) => {
               name="fullName"
               placeholder="Enter full name"
             />
-            {errors.fullName && (
-              <p className="errorMessage">{errors.fullName.message}</p>
-            )}
           </div>
           <div>
             <NewFormInput
@@ -100,9 +97,6 @@ const PersonalInfo = ({ handleNext }) => {
               name="address"
               placeholder="Enter address"
             />
-            {errors.address && (
-              <p className="errorMessage">{errors.address.message}</p>
-            )}
           </div>
           <div>
             <NewFormInput
@@ -111,9 +105,6 @@ const PersonalInfo = ({ handleNext }) => {
               label="Email Address"
               placeholder="Enter email address"
             />
-            {errors.email && (
-              <p className="errorMessage">{errors.email.message}</p>
-            )}
           </div>
 
           <div className="phone-cont">
@@ -123,9 +114,6 @@ const PersonalInfo = ({ handleNext }) => {
               label="Phone Number"
               placeholder="Enter number"
             />
-            {errors.phoneNumber && (
-              <p className="errorMessage">{errors.phoneNumber.message}</p>
-            )}
           </div>
           <div className="phone-cont">
             <NewFormInput
@@ -141,9 +129,6 @@ const PersonalInfo = ({ handleNext }) => {
               type="date"
               label="Date of Birth"
             />
-            {errors.dateOfBirth && (
-              <p className="errorMessage">{errors.dateOfBirth.message}</p>
-            )}
           </div>
           <div className="date-cont">
             <NewFormInput
@@ -152,7 +137,6 @@ const PersonalInfo = ({ handleNext }) => {
               label="Bank Verification Number"
               placeholder="Enter number"
             />
-            {errors.bvn && <p className="errorMessage">{errors.bvn.message}</p>}
           </div>
           <div className="Personalform-btn">
             <Button
