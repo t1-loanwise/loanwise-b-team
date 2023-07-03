@@ -57,7 +57,7 @@ function SecurityQuestion() {
           console.log(response.data);
           console.log("Form submitted successfully");
           console.log(data.firstAnswer);
-          console.log(d-ata.secondAnswer);
+          console.log(data.secondAnswer);
           navigate("/login");
     } catch (error) {
       if (error.response) {
