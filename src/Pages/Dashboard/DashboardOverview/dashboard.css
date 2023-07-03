@@ -19,7 +19,7 @@ p {
 
 .dashboard-body > nav {
   /* width: 19%; */
-  /* overflow: auto; */
+  width: auto;
   height: 100%;
 }
 .dashboard-pages-wrapper {
@@ -34,8 +34,8 @@ p {
 }
 
 .explore p {
-  font-weight: 500;
-  font-size: 19px;
+  font-weight: 600;
+  font-size: 25px;
   line-height: 25px;
   color: #00151a;
 }
@@ -252,8 +252,8 @@ fieldset > button {
 }
 
 .loanAmount p {
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 300;
+  font-size: 12px;
   line-height: 19px;
   color: #00151a;
   /* white-space:  nowrap; */
@@ -507,13 +507,10 @@ fieldset > button {
     background: hsl(192, 43%, 93%);
     padding: 15px 15px;
   }
+
+  .explore p {
+    font-size: 19px;
+  }
 }
 
 /* ------------dashboard overview-------------- */
-
-.explore p {
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 25px;
-  color: #00151a;
-}

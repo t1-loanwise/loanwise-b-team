@@ -4,7 +4,8 @@ import PaginationTable from "../../../components/Overview/PaginationTable";
 import "./dashboard.css";
 import SearchBar from "../../../components/Overview/SearchBar";
 // import { TableData } from "../../../components/Overview/TableData";
-import LoanWiseData from "../../../LoanWise.json"
+import LoanWiseData from "../../../LoanWise.json";
+import ChartCards from "./components/ChartCards";
 
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -22,7 +23,7 @@ const DashboardOverview = () => {
     const results = LoanWiseData.filter((user) => {
       return (
         user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
-        user.customer_id.toLowerCase().includes(searchItems.toLowerCase()) 
+        user.customer_id.toLowerCase().includes(searchItems.toLowerCase())
       );
     });
     setSearchResults(results);
@@ -49,7 +50,7 @@ const DashboardOverview = () => {
         <div>
           <DashSearch handleSearch={handleSearch} />
         </div>
-        {/* <ChartCards /> */}
+        <ChartCards />
         <PaginationTable
           data={currentData}
           totalCount={searchResults.length}

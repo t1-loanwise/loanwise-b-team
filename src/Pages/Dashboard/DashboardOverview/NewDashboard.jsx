@@ -17,4 +17,4 @@ const NewDashboard = () => {
   )
 }
 
-export default NewDashboard
+export default NewDashboard 

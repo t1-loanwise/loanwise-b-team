@@ -11,7 +11,6 @@ import Message from "../Message/Message";
 import UserProfile from "../UserProfile/UserProfile";
 import Notification from "../Notification/Notification";
 import CustomerPage from "../CustomerPages/CustomerPage";
-import CreatePersonal from "../PortfolioAnalysis/Components/NewPortfolio/CreatePersonal/CreatePersonal";
 
 
 const DashboardPages = () => {
@@ -19,7 +18,6 @@ const DashboardPages = () => {
     <Routes>
       <Route index path="/overview" element={<DashboardOverview />} />
       <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/portfolio/personal" element = {<CreatePersonal/>}/>
 
       <Route path="/repayment" element={<Repayment />} />
       <Route path="/recovery" element={<Recovery />} />

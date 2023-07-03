@@ -16,6 +16,7 @@ import NewDashboard from "./Pages/Dashboard/DashboardOverview/NewDashboard";
 import UserPreference from "./Pages/Dashboard/Settings/User-Preference/UserPreference";
 // import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
 import ContactForm from './components/NewForm/ContactForm'
+import CreatePersonal from "./Pages/Dashboard/PortfolioAnalysis/Components/NewPortfolio/CreatePersonal/CreatePersonal";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
           {/* <Route  path='/Portfolio' element={<MainPortfolio/>} /> */}
           <Route path="/dashboard/*" element={<NewDashboard />} />
           <Route path="/userPreference" element={<UserPreference />} />
-          {/* <Route  path='/su' element={<SU/>} /> */}
+          <Route path="/personal" element = {<CreatePersonal/>}/>
         </Routes>
       </BrowserRouter>
     </div>

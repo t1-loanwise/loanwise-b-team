@@ -8,7 +8,7 @@ export const Newportfolio = () => {
 const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate("/dashboard/portfolio/personal")
+    navigate("/personal")
   }
 
 
