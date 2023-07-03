@@ -35,12 +35,11 @@ export const PortfolioInput = ({ handleSearch, handleFilter }) => {
       </form>
 
       <div className= {`portfolio-filter ${isOpen ? 'open' : ' '}`}>
-        <select className="filterDropdown"    value={selectedOption} onChange={handleFilterChange}  required>
-          {/* <option value=''  disabled hidden>Sort by category</option> */}
+        <select className="filterDropdown"    value={selectedOption} onChange={handleFilterChange}>
+        
           <option value='Business'>Business</option>
           <option value='Personal'>Personal</option>
-          <option value='Student'>Student</option>
-            <option value='Mortgage'>Mortgage</option>
+          
           </select>
         <div className="portfolio-arrow-icon" onClick={toggleDropdown}>
               <img
