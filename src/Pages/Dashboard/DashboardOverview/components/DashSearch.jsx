@@ -9,7 +9,7 @@ import SearchBar from "../../../../components/Overview/SearchBar";
 import "../dashboard.css";
 import DashboardFilter from "../../../../components/Overview/DashboardFilter";
 
-const DashSearch = ({ handleSearch }) => {
+const DashSearch = ({ handleSearch, handleFilter}) => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -26,7 +26,7 @@ const DashSearch = ({ handleSearch }) => {
       <div className="dash__searchFilterDate">
         <div className="dash__searchFilter">
           <SearchBar handleSearch={handleSearch} />
-          <DashboardFilter />
+          <DashboardFilter handleFilter={handleFilter}/>
           
           <div
               className="dash__date-small"

@@ -5,21 +5,20 @@ import sort from '../../Images/Dashboard/sort.svg'
 const DashboardFilter = ({handleFilter}) => {
 	const [showOption, setShowOption] = useState(false)
 	const [selectedOption, setSelectedOption] = useState("Filter")
-	
+
 
 	const handleFilterClick = () =>{
 		setShowOption(!showOption)
 	}
 
-	const handleFilterChange = (filterOption) =>{
-		if (filterOption === "all"){
-			setSelectedOption ("Filter")
-		} else {	
-			setSelectedOption(filterOption)}
+	const handleFilterChange = (filterOption) => {
+			setSelectedOption(filterOption === "All" ? "Filter" : filterOption)
 			setShowOption(false)
-
-
+			handleFilter(filterOption)
 	}
+	
+
+
 
   return (
 
@@ -31,10 +30,10 @@ const DashboardFilter = ({handleFilter}) => {
 
 			{showOption && (
 				<div className = "list">
-					<span onClick={() => handleFilterChange("default")}>Defaulted Loans</span>
-					<span onClick={() => handleFilterChange("active")}>Active Loans</span>
-					<span onClick={() => handleFilterChange("completed")}>Completed Loans</span>
-					<span onClick={() => handleFilterChange("all")}>All</span>
+					<span onClick={() => handleFilterChange("Defaulted")}>Defaulted Loans</span>
+					<span onClick={() => handleFilterChange("Active")}>Active Loans</span>
+					<span onClick={() => handleFilterChange("Completed")}>Completed Loans</span>
+					<span onClick={() => handleFilterChange("All")}>All</span>
 				</div>
 			)}
 
