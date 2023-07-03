@@ -5,7 +5,7 @@ import "./Login.css";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import axios from "axios";
 // import { object, string } from "yup";
 import * as Yup from "yup";
@@ -51,7 +51,7 @@ const Login = () => {
     const values = {
       email: data.email,
       password: data.password,
-      id: nanoid(),
+      // id: nanoid(),
     };
     try {
       const response = await axios.post(

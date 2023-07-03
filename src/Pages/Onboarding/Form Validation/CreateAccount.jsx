@@ -5,7 +5,7 @@ import "./Login.css";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import axios from "axios";
 // import { object, string } from "yup";
 import * as Yup from "yup";
@@ -89,7 +89,7 @@ const CreateAccount = () => {
       email: data.email,
       password: data.password,
       confirmPassword: data.confirmPassword,
-      id: nanoid(),
+      // id: nanoid(),
     };
 
     try {

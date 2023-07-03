@@ -23,7 +23,7 @@ const DownloadReport = () => {
             py="12px"
             borderRadius="0"
           >
-            Proceed
+            Download Report
           </Button>
         </div>
       </div>

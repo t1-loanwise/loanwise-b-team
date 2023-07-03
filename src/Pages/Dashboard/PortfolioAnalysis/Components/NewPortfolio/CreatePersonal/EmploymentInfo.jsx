@@ -245,7 +245,7 @@ const EmploymentInfo = ({ handleNext }) => {
               name="bvn"
               type="number"
               label="Application Type"
-              placeholder="Enter number"
+              placeholder="$0.00"
             />
             {errors.bvn && <p className="errorMessage">{errors.bvn.message}</p>}
           </div>
@@ -261,7 +261,7 @@ const EmploymentInfo = ({ handleNext }) => {
               py="12px"
               borderRadius='0'
             >
-              Proceed
+              Analyze
             </Button>
           </div>
         </div>
