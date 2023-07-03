@@ -7,8 +7,9 @@ import Calendar from "react-calendar";
 import "react-datepicker/dist/react-datepicker.css";
 import SearchBar from "../../../../components/Overview/SearchBar";
 import "../dashboard.css";
+import DashboardFilter from "../../../../components/Overview/DashboardFilter";
 
-const DashSearch = ({ handleSearch }) => {
+const DashSearch = ({ handleSearch, handleFilter}) => {
   const [showFilter, setShowFilter] = useState(false);
   const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -25,42 +26,9 @@ const DashSearch = ({ handleSearch }) => {
       <div className="dash__searchFilterDate">
         <div className="dash__searchFilter">
           <SearchBar handleSearch={handleSearch} />
-          <div className="filter">
-            <TransparentBtn
-              title={"Filter"}
-              icon2={Icon2}
-              onClick={() => setShowFilter(!showFilter)}
-            />
-            {showFilter && (
-              <div className="list" onClick={() => setShowFilter(!showFilter)}>
-                <span>Default Loans</span>
-                <span>Active Loans</span>
-                <span>Pending Loans</span>
-                <span>Date</span>
-              </div>
-            )}
-          </div>
-          <div className="btnzz">
-            <FilledBtn title={"Search"} onClick={() => handleSearch("")} />
-            <div className="filter">
-              <TransparentBtn
-                title={"Filter"}
-                icon2={Icon2}
-                onClick={() => setShowFilter2(!showFilter2)}
-              />
-              {showFilter2 && (
-                <div
-                  className="list"
-                  onClick={() => setShowFilter2(!showFilter2)}
-                >
-                  <span>Default Loans</span>
-                  <span>Active Loans</span>
-                  <span>Pending Loans</span>
-                  <span>Date</span>
-                </div>
-              )}
-            </div>
-            <div
+          <DashboardFilter handleFilter={handleFilter}/>
+          
+          <div
               className="dash__date-small"
               // onClick={() => setShowCalendar(!showCalendar)}
             >
@@ -83,10 +51,10 @@ const DashSearch = ({ handleSearch }) => {
                 )}
               </div>
             </div>
-          </div>
+          </div> 
         </div>
 
-        <div className="dash__date">
+        {/* <div className="dash__date">
           <div
             className="img-date"
             onClick={() => setShowCalendar(!showCalendar)}
@@ -103,8 +71,8 @@ const DashSearch = ({ handleSearch }) => {
               />
             </div>
           )}
-        </div>
-      </div>
+        </div> */}
+      
     </div>
   );
 };
