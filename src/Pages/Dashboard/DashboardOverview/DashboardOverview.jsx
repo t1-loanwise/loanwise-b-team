@@ -4,8 +4,10 @@ import PaginationTable from "../../../components/Overview/PaginationTable";
 import "./dashboard.css";
 import SearchBar from "../../../components/Overview/SearchBar";
 // import { TableData } from "../../../components/Overview/TableData";
-import LoanWiseData from "../../../LoanWise.json"
+import LoanWiseData from "../../../LoanWise.json";
+import ChartCards from "./components/ChartCards";
 import { CategoryScale } from "chart.js";
+
 
 const DashboardOverview = () => {
   const [searchResults, setSearchResults] = useState(LoanWiseData);
@@ -33,17 +35,14 @@ const DashboardOverview = () => {
   }
 
   useEffect(() => {
-     
-    if(searchItems !== ''){
-      const searchFilterResult = searchResults.filter((user) => {
-        return (
-          user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
-          user.customer_id.toLowerCase().includes(searchItems.toLowerCase()) 
-        );
-      });
-      setSearchResults(searchFilterResult);
-    }
-  
+    const results = LoanWiseData.filter((user) => {
+      return (
+        user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
+        user.customer_id.toLowerCase().includes(searchItems.toLowerCase())
+      );
+    });
+    setSearchResults(results);
+    console.log(results);
   }, [searchItems]);
 
   const indexOfLastData = currentPage * dataPerPage;
@@ -66,7 +65,7 @@ const DashboardOverview = () => {
         <div>
           <DashSearch handleSearch={handleSearch} handleFilter={handleFilter}/>
         </div>
-        {/* <ChartCards /> */}
+        <ChartCards />
         <PaginationTable
           data={currentData}
           totalCount={searchResults.length}

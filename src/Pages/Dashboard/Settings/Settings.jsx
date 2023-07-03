@@ -8,12 +8,12 @@ import Notification from "./Notification/Notification";
 
 const Settings = () => {
   const toggleItems = [
-    {
-      key: 1,
-      header: "Predictive Model",
-      subHeader: "Set and edit new or old load default analysis rule ",
-      showItems: <Predictive />,
-    },
+    // {
+    //   key: 1,
+    //   header: "Predictive Model",
+    //   subHeader: "Set and edit new or old load default analysis rule ",
+    //   showItems: <Predictive />,
+    // },
     {
       key: 2,
       header: "Notification",

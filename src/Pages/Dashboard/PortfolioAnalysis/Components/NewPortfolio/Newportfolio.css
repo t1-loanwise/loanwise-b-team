@@ -1,89 +1,119 @@
-.btn{ 
-    /* padding:11px, 16px, 11px, 16px; */
-    background-color: #007E99;
-    height: 40px;
-    width: 150px;
-    gap: 10px;
-    color: aliceblue;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    border: none;
-    font-family: 'Urbanist';
-    cursor: pointer;
-
-}
-
-.btnclass{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-}
-
-
-.new-portfolio-form{
-        font-family: 'Urbanist';
-            font-style: normal;
-    width: 60%;
-    margin: 120px auto;
-    background: #e6f2f5;
-}
-.new-portfolio-wrapper{
-
-width: 90%;
-    margin: 0 auto;
-    padding: 16px 0;
-}
-.new-portfolio-input{
-width: 100%;
-    padding: 8px 16px;
-    
-    border: 1px solid #e6f2f5;
-    margin-top: 2px;
-    margin-bottom: 17px;
-    outline: none;
-    border: none;
-}
-.new-portfolio-wrapper h2{
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 34px;
-     color: #00151A;
-}
-.new-portfolio-wrapper  .new-porfolio-label{
-    font-weight: 500;
-        font-size: 14px;
-        line-height: 22px;
-        padding: 8px;
+.btn {
+  padding:11px, 16px, 11px, 16px; 
+  background-color: #007e99;
+  height: 40px;
+  width: 150px;
+  gap: 10px;
+  color: aliceblue;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  font-family: "Urbanist";
+  cursor: pointer;
  
-        color: #00151A;
 }
-.phone-number-wrapper, .date-nin-wrapper{
-    display: flex;
-    align-items: center;
-    width:100%;
-    /* justify-content: space-between; */
-    gap:10px;
+
+.Personalform-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
-.phone-number-wrapper  .phone-cont,  .date-nin-wrapper .date-cont{
-    width:50% ;
+
+.btnclass {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
 }
-.new-portfolio-wrapper  .new-portfolio-button{
-    display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 4px 50px;
-          background: #006980;
-          border: 1px solid #006980;
-        border-radius: 5px;
-        font-weight: 300;
-            font-size: 12px;
-            line-height: 19px;
-            text-align: center;
-        
-            color: #FFFFFF;
-            margin: 40px auto 20px ;
- }
+
+.createPersonal {
+  padding: 40px;
+  display: flex;
+  width: 100%;
+}
+
+.createPersonalWrapper {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.new-portfolio-form {
+  width: 100%;
+  background: #e6f2f5;
+  margin: 0 auto;
+}
+
+.new-portfolio-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.new-portfolio-input {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #e6f2f5;
+  margin-top: 2px;
+  margin-bottom: 17px;
+  outline: none;
+  border: none;
+}
+
+.new-portfolio-wrapper h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #00151a;
+}
+.new-portfolio-wrapper h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  color: #00151a;
+  margin-bottom: 10px;
+}
+
+.new-portfolio-wrapper .new-porfolio-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 8px;
+  color: #00151a;
+}
+.phone-number-wrapper,
+.date-nin-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+.phone-number-wrapper .phone-cont,
+.date-nin-wrapper .date-cont {
+  width: 50%;
+}
+.new-portfolio-wrapper .new-portfolio-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 50px;
+  background: #006980;
+  border: 1px solid #006980;
+  border-radius: 5px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  margin: 40px auto 20px;
+}
+
+.successReport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0;
+}
