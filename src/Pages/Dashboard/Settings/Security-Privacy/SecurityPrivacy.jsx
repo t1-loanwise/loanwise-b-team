@@ -1,15 +1,57 @@
 import React, { useState } from "react";
 import "./SecurityPrivacy.css";
 import Select from "react-select";
-import { useForm, Controller } from "react-hook-form";
+// import { useForm, Controller } from "react-hook-form";
+import { Button, Flex, Text } from "@chakra-ui/react";
+import { FormProvider, useForm } from "react-hook-form";
 import FilledBtn from "../../../../components/Button/FilledBtn";
+import axios from "axios";
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormInput from "../../../../components/NewForm/form/FormInput";
+
+/*
+ * Interface
+ */
+
+const userSchema = Yup.object().shape({
+  name: Yup.string().required("The name field is required"),
+  email: Yup.string()
+    .email("Invalid email")
+    .required("The email field is required"),
+  password: Yup.string()
+    .required("The password field is required")
+    .matches(
+      /^(?=.*\d).*$/,
+      "Password must contain at least 6 characters including a number"
+    )
+    .min(6, "Password must contain at least 6 characters"),
+  confirmPassword: Yup.string().oneOf(
+    [Yup.ref("password")],
+    "Passwords do not match!"
+  ),
+  radioButton: Yup.string()
+    .oneOf(["true"], "The radio field is required")
+    .required("The radio field is required"),
+});
 
 const SecurityPrivacy = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+    /*
+   * Validation
+   */
+    const methods = useForm({
+      resolver: yupResolver(userSchema),
+      defaultValues: {
+        terms: "",
+      },
+    });
+    const {
+      register,
+      handleSubmit,
+      formState: { errors, isSubmitting },
+      setValue,
+      reset,
+    } = methods;
 
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
@@ -44,10 +86,20 @@ const SecurityPrivacy = () => {
   };
 
   return (
+    <FormProvider {...methods}>
     <form className="securityPrivacy" onSubmit={handleSubmit(onSubmit)}>
       <div className="prevPass passFlex">
-        <h3 htmlFor="Password">Previous Password</h3>
-        <input type="password" />
+        <Flex w='100%' justifyContent={'space-between'}>
+        <Text htmlFor="Password">Previous Password</Text>
+        {/* <input type="password" /> */}
+        <FormInput
+            name="Password"
+            type="password"
+            placeholder={"Enter full name"}
+            autoFocus={true}
+            ml='auto'
+          />
+          </Flex> 
       </div>
       <div className="prevPass passFlex">
         <h3 htmlFor="Password">New Password</h3>
@@ -119,6 +171,7 @@ const SecurityPrivacy = () => {
       </div>
       <FilledBtn title={"Save Changes"} />
     </form>
+    </FormProvider>
   );
 };
 
