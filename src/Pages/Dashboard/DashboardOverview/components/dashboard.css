@@ -1,9 +1,3 @@
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 /* ---------dashbody body------- */
 .dashboard-wrapper {
   display: flex;
@@ -18,24 +12,23 @@ p {
 }
 
 .dashboard-body > nav {
-  /* width: 19%; */
-  width: auto;
+  width: 19%;
   height: 100%;
 }
 .dashboard-pages-wrapper {
   overflow-y: auto;
   height: 100%;
-  width: 100%;
+  width: 82vw;
 }
 
 /* ------------dashboard overview-------------- */
 .overview-container {
-  padding-top: 27px;
+  padding: 27px 50px;
 }
 
 .explore p {
-  font-weight: 600;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 19px;
   line-height: 25px;
   color: #00151a;
 }
@@ -44,10 +37,17 @@ p {
 .overview-search-filter-cal {
   display: flex;
   align-items: center;
+
   gap: 40px;
   padding: 20px 0px;
 }
 /* ----------dashboard---filter----Search----Calendar-------- */
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .dash__title {
   margin-bottom: 26px;
 }
@@ -62,40 +62,29 @@ p {
 .dash__searchFilterDate {
   display: flex;
   align-items: center;
+
+  gap: 280px;
 }
 
-.dash__title .dash__searchFilterDate .dash__search {
+.dash__search {
   max-width: 622px;
   flex: 0.8;
 }
 
-.dash__searchFilterDate .dash_searchBar form fieldset {
+.dash__searchFilterDate fieldset {
   display: flex;
   align-items: center;
-  border: 0;
-  padding: 0;
-}
-.dash__searchFilterDate .dash_searchBar form fieldset button {
-  margin-right: 20px;
-  padding: 12.5px 35px;
 }
 
-.dash_searchBar {
-  width: 60%;
-}
-
-.dash__searchFilterDate .dash__searchFilter .dash__search input {
-  padding: 11.5px 0 11.5px 15px;
+.dash__search input {
+  flex: 1;
+  padding: 17px 0 17px 15px;
   margin: 0;
-  width: 100%;
-  border: 1px solid #aad4dd;
-  outline: none;
-  &&::placeholder{
-  color: #00151a;
-  font-size: 15px;
-  }
 }
 
+.dash__search input::placeholder {
+  color: #00151a;
+}
 
 .btnzz {
   display: none;
@@ -103,28 +92,32 @@ p {
 
 .dash__searchFilter {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
   flex: 1;
-  margin: 20px 0;
-  width: 100%;
 }
 
+fieldset > button {
+  height: auto;
+  width: auto;
+  padding: 16px 44px;
+  border: 1px solid green;
+}
 
 .dash__searchFilter > .filter button,
 .btnzz .filter button {
-  background: #ffffff;
+  background: #150f0f;
   border: 2px solid #cce5eb;
   border-radius: 0;
   height: auto;
   width: auto;
-  height: 50px;
   padding: 4px 30px;
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 34px;
+  /* padding: 12px 34px; */
 }
 
 .dash__searchFilter > .filter button:hover img,
@@ -137,6 +130,14 @@ p {
   color: var(--primary-bg);
 }
 
+.btnzz .filter button a,
+.dash__searchFilter > .filter button a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+
 .filter {
   position: relative;
 }
@@ -144,10 +145,9 @@ p {
 .filter .list {
   position: absolute;
   top: 0;
-  z-index: 1;
   width: 100%;
   background: #e6f2f5;
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
 }
 
@@ -164,13 +164,13 @@ p {
 .dash__date-small {
   position: relative;
   cursor: pointer;
-  margin-left: auto;
 }
 
 .img-date {
   box-sizing: border-box;
   background: hsl(192, 43%, 93%);
   padding: 15px 21px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,7 +184,6 @@ p {
 .calender {
   position: absolute;
   top: 5px;
-  right: 0;
   width: auto;
 }
 
@@ -193,13 +192,6 @@ p {
   font-size: 14px;
   font-weight: 700;
   color: var(--primary-bg);
-}
-
-/* ChartCardss */
-
-.ChartCards {
-  display: flex;
-  flex-direction: column;
 }
 
 /* loan cards */
@@ -220,7 +212,6 @@ p {
   border: 1px solid #e6f2f5;
   box-shadow: 0px 8px 40px #e6f2f5;
   border-radius: 15px;
-  width: 100%;
 }
 
 .loanAmount {
@@ -233,18 +224,18 @@ p {
 }
 
 .loanAmount h3 {
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 17px;
   line-height: 29px;
   color: #00151a;
 }
 
 .loanAmount p {
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 13px;
   line-height: 19px;
   color: #00151a;
-  /* white-space:  nowrap; */
+  /* white-space: nowrap; */
 }
 
 .loanAmountIcon {
@@ -252,9 +243,6 @@ p {
   box-shadow: 0px 8px 40px #e6f2f5;
   border-radius: 13px;
   padding: 6px 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .loanAmountIcon img {
@@ -284,7 +272,7 @@ p {
   border: 1px solid #e6f2f5;
   box-shadow: 0px 8px 40px #e6f2f5;
   border-radius: 16px;
-  padding: 8px 25px;
+  padding-right: 25px;
   width: 100%;
 }
 
@@ -318,7 +306,6 @@ p {
 
 .chartTitle {
   padding: 10px 0 10px 25px;
-  margin-bottom: 5px;
 }
 
 .chart1 .chartTitle {
@@ -399,63 +386,39 @@ p {
   }
 
   .dash__searchFilterDate {
-    align-items: center;
+    flex-direction: column;
+    align-items: normal;
     gap: 0;
-    width: 100%;
   }
 
   .dash__searchFilter {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   }
 
   .dash__search {
     max-width: none;
     grid-column: auto;
-    /* flex-direction: column; */
-    flex: 1;
+    flex-direction: column;
   }
 
-  .dash__date-small{
-    margin-left: unset;
-    margin: 0 auto;
-  }
- 
-  .dash__searchFilterDate .dash_searchBar form fieldset button  {
-    margin-right: 0;
+  fieldset.dash__search > button {
+    display: none;
   }
 
-  .dash__searchFilter > .filter{
-    margin: 0 auto;
-
-  } 
+  .dash__searchFilter > .filter button {
+    display: none;
+  }
 
   .btnzz {
     display: flex;
     gap: 20px;
     box-sizing: border-box;
-    white-space: normal;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btnzz button {
-    height: 50px;
-  }
-
-  .btnzz .filter button {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .dash__search button {
     display: block;
-  }
-
-  .dash_searchBar {
-    width: 100%;
   }
 
   .dash__searchFilterDate fieldset {
@@ -497,26 +460,13 @@ p {
   .dash__date {
     display: none;
   }
-
-  .img-date {
-    box-sizing: border-box;
-    background: hsl(192, 43%, 93%);
-    padding: 15px 15px;
-  }
-
-  .explore p {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 1000px) {
-
-   
-    .dash__searchFilterDate .dash_searchBar form fieldset button  {
-    padding: 13.5px 10px;
-    font-size: 14px;
-    }
-  
 }
 
 /* ------------dashboard overview-------------- */
+
+.explore p {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  color: #00151a;
+}
