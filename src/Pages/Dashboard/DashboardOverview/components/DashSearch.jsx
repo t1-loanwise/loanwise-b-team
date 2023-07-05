@@ -10,8 +10,6 @@ import "../dashboard.css";
 import DashboardFilter from "../../../../components/Overview/DashboardFilter";
 
 const DashSearch = ({ handleSearch, handleFilter}) => {
-  const [showFilter, setShowFilter] = useState(false);
-  const [showFilter2, setShowFilter2] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showCalendar, setShowCalendar] = useState(false);
 
@@ -21,16 +19,16 @@ const DashSearch = ({ handleSearch, handleFilter}) => {
     year: "numeric",
   });
 
+  const button = <FilledBtn title={"Search"} type="submit" />
+
   return (
     <div className="dash__titleSearch">
       <div className="dash__searchFilterDate">
         <div className="dash__searchFilter">
           <SearchBar handleSearch={handleSearch} />
           <DashboardFilter handleFilter={handleFilter}/>
-          
           <div
               className="dash__date-small"
-              // onClick={() => setShowCalendar(!showCalendar)}
             >
               <div
                 className="img-date"
@@ -45,7 +43,7 @@ const DashSearch = ({ handleSearch, handleFilter}) => {
                     <Calendar
                       onChange={setSelectedDate}
                       value={selectedDate}
-                      dateFormat="dd/MM/yyyy"
+                      dateFormat="dd/mm/yyyy"
                     />
                   </div>
                 )}
@@ -53,26 +51,6 @@ const DashSearch = ({ handleSearch, handleFilter}) => {
             </div>
           </div> 
         </div>
-
-        {/* <div className="dash__date">
-          <div
-            className="img-date"
-            onClick={() => setShowCalendar(!showCalendar)}
-          >
-            <img src={dateArrow} alt="date Arrow" />
-            <p>{currentDate}</p>
-          </div>
-          {showCalendar && (
-            <div className="calender">
-              <Calendar
-                onChange={setSelectedDate}
-                value={selectedDate}
-                dateFormat="dd/MM/yyyy"
-              />
-            </div>
-          )}
-        </div> */}
-      
     </div>
   );
 };

@@ -4,6 +4,7 @@ import LoanAmount from "./LoanAmount";
 import BarGraph from "./BarGraph";
 import Earnings from "../../../../Images/Dashboard/earnings.svg";
 import LoanAmountComponent from "./LoanAmountComponent";
+import NewBarGraph from "./NewBarGraph";
 
 const ChartCards = () => {
   return (
@@ -16,7 +17,8 @@ const ChartCards = () => {
           description={"Interest Earnings"}
         />
         <Barchart />
-        <BarGraph />
+        {/* <Barchart /> */}
+        <NewBarGraph />
       </div>
     </div>
   );

@@ -3,34 +3,35 @@ import "../Newportfolio.css";
 import { Button } from "@chakra-ui/react";
 import NewFormInput from "../FormControl/NewFormInput";
 import { FormProvider, useForm } from "react-hook-form";
-import { nanoid } from "nanoid";
 import axios from "axios";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useNavigate } from "react-router-dom";
 
 const userSchema = Yup.object().shape({
-  fullName: Yup.string().required("The name field is required"),
+  fullName: Yup.string()
+    .required("The name field is required")
+    .min(11, "Must be at least 11 characters"),
   address: Yup.string()
     .required("Enter your residential address")
     .min(11, "Must be more than 11 characters"),
   email: Yup.string()
     .email("Invalid email")
     .required("The email field is required"),
-    phoneNumber: Yup.string()
+  phoneNumber: Yup.string()
     .required("Phone number is required")
     .matches(
       /^(\\+[1-9]{1,4}[ \\-]*)?(\\([0-9]{2,3}\\)[ \\-]*)?([0-9]{2,4})[ \\-]*[0-9]{3,4}[ \\-]*[0-9]{3,4}$/,
       "Invalid phone number format"
-    ),
-  
+    )
+    .min(10, "Phone number must be at up to 10 characters"),
+
   alternatePhone: Yup.string()
     .required("Phone number is required")
     .matches(
       /^(\\+[1-9]{1,4}[ \\-]*)?(\\([0-9]{2,3}\\)[ \\-]*)?([0-9]{2,4})[ \\-]*[0-9]{3,4}[ \\-]*[0-9]{3,4}$/,
       "Invalid phone number format"
     )
-    .min(10, "Password must be at up to 10 characters"),
+    .min(10, "Phone number must be at up to 10 characters"),
   dateOfBirth: Yup.date().required("This field is required"),
   bvn: Yup.string().required("Enter Number"),
 });
@@ -43,22 +44,16 @@ const PersonalInfo = ({ handleNext }) => {
     resolver: yupResolver(userSchema),
   });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    setValue,
-    reset,
-  } = methods;
-  const navigate = useNavigate();
+  const { handleSubmit, reset } = methods;
 
   const onSubmit = async (data) => {
     const values = {
       name: data.fullName,
       email: data.email,
-      // password: data.password,
-      // confirmPassword: data.confirmPassword,
-      id: nanoid(),
+      address: data.address,
+      phoneNumber: data.phoneNumber,
+      dateOfBirth: data.dateOfBirth,
+      bvn: data.bvn,
     };
 
     try {
@@ -69,13 +64,24 @@ const PersonalInfo = ({ handleNext }) => {
       // localStorage.setItem("email", data.email);
       handleNext();
       console.log("Form submitted successfully");
-      console.log("Unexpected status code:", response.status);
+      if (response && response.status) {
+        console.log("Unexpected status code:", response.status);
+      }
     } catch (error) {
-      console.log("Request failed with status code:", error.response.status);
-      console.log("Response data:", error.response.data);
-      reset();
+      if (error.response && error.response.status) {
+        console.log("Request failed with status code:", error.response.status);
+      }
+      // console.log("Response data:", error.response.data);
+      // reset();
     }
   };
+
+  // const onSubmit = () => {
+  //   let isValid = Object.keys(errors).length === 0;
+  //   {
+  //     isValid && handleNext();
+  //   }
+  // };
 
   return (
     <FormProvider {...methods}>
@@ -84,6 +90,7 @@ const PersonalInfo = ({ handleNext }) => {
           <h2>Personal Information</h2>
           <div>
             <NewFormInput
+              autoFocus={true}
               type="text"
               label="Full Name"
               name="fullName"
@@ -148,7 +155,7 @@ const PersonalInfo = ({ handleNext }) => {
               mx="auto"
               px="40px"
               py="12px"
-              borderRadius='0'
+              borderRadius="0"
             >
               Proceed
             </Button>

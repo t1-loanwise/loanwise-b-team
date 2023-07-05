@@ -3,7 +3,7 @@ import "../Newportfolio.css";
 import { Button, Select, FormLabel, FormControl } from "@chakra-ui/react";
 import NewFormInput from "../FormControl/NewFormInput";
 import { FormProvider, useForm } from "react-hook-form";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import axios from "axios";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,27 +13,55 @@ import { useNavigate } from "react-router-dom";
 const userSchema = Yup.object().shape({
   currentEmployer: Yup.string().required("This field is required"),
   currentRole: Yup.string().required("This field is required"),
-  email: Yup.string()
+  annualIncome: Yup.string()
     .email("Invalid email")
     .required("The email field is required"),
-  phoneNumber: Yup.string()
+    totalYearsOfEmployment: Yup.string()
     .required("Phone number is required")
     .matches(
       /^(\\+[1-9]{1,4}[ \\-]*)?(\\([0-9]{2,3}\\)[ \\-]*)?([0-9]{2,4})[ \\-]*[0-9]{3,4}[ \\-]*[0-9]{3,4}$/,
       "Invalid phone number format"
     ),
-
-  alternatePhone: Yup.string()
+    loanPurpose: Yup.string().required("This field is required"),
+    loanCategory: Yup.string()
+    .required("This field is required")
+    .oneOf(["Personal", "Business", "Mortgage", "Student"])
+    .label("Loan Category"),
+    date: Yup.date().required("This field is required"),
+    amount: Yup.string().required("This field is required"),
+    validityPeriod: Yup.string()
+    .required("This field is required")
+    .oneOf(["3 Months", "6 Months", "1 Year", "above 1 Year"])
+    .label("Validity Period"),
+    incomeDebitRatio: Yup.string()
     .required("Phone number is required")
     .matches(
       /^(\\+[1-9]{1,4}[ \\-]*)?(\\([0-9]{2,3}\\)[ \\-]*)?([0-9]{2,4})[ \\-]*[0-9]{3,4}[ \\-]*[0-9]{3,4}$/,
       "Invalid phone number format"
     ),
-
-  dateOfBirth: Yup.date().required("This field is required"),
-  bvn: Yup.string().required("Enter Number"),
+    interestRate: Yup.string().required("This field is required"),
+    creditUtilizationRate: Yup.date().required("This field is required"),
+    openCreditLines: Yup.date().required("This field is required"),
+    mortgageAccounts: Yup.string().required("Enter Number"),
 });
 
+//   curl --location 'https://loanwise.onrender.com/api/employment-details' \
+// --data '{
+//     "customer_id": "CST_1",
+//     "currentEmployer": "ABC Company",
+//     "currentRole": "Software Engineer",
+//     "annualIncome": 50000,
+//     "totalYearsOfEmployment": 5,
+//     "incomeDebitRatio": 0.4,
+//     "c": 3,
+//     "creditUtilizationRate": 0.5,
+//     "mortgageAccounts": 1,
+//     "loanPurpose": "Home Improvement",
+//     "loanTerm": 12,
+//     "requestedAmount": 10000,
+//     "loanCompanyVerification": true,
+//     "applicationType": "Online"
+// }'
 const EmploymentInfo = ({ handleNext }) => {
   /*
    * Validation
@@ -57,7 +85,7 @@ const EmploymentInfo = ({ handleNext }) => {
       email: data.email,
       // password: data.password,
       // confirmPassword: data.confirmPassword,
-      id: nanoid(),
+      // id: nanoid(),
     };
 
     try {
@@ -76,23 +104,6 @@ const EmploymentInfo = ({ handleNext }) => {
     }
   };
 
-//   curl --location 'https://loanwise.onrender.com/api/employment-details' \
-// --data '{
-//     "customer_id": "CST_1",
-//     "currentEmployer": "ABC Company",
-//     "currentRole": "Software Engineer",
-//     "annualIncome": 50000,
-//     "totalYearsOfEmployment": 5,
-//     "incomeDebitRatio": 0.4,
-//     "openCreditLines": 3,
-//     "creditUtilizationRate": 0.5,
-//     "mortgageAccounts": 1,
-//     "loanPurpose": "Home Improvement",
-//     "loanTerm": 12,
-//     "requestedAmount": 10000,
-//     "loanCompanyVerification": true,
-//     "applicationType": "Online"
-// }'
 
   const options = [
     { value: "Choose answer" },
@@ -116,7 +127,7 @@ const EmploymentInfo = ({ handleNext }) => {
           <div>
             <NewFormInput
               type="text"
-              label="Current Employere"
+              label="Current Employer"
               name="currentEmployer"
               placeholder="Enter full name"
             />
@@ -138,7 +149,7 @@ const EmploymentInfo = ({ handleNext }) => {
           <div>
             <NewFormInput
               name="anualIncome"
-              type="email"
+              type="number"
               label="Annual Income"
               placeholder="Enter answer"
             />
@@ -149,45 +160,48 @@ const EmploymentInfo = ({ handleNext }) => {
 
           <div className="phone-cont">
             <NewFormInput
-              name="phoneNumber"
-              type="phone"
+              name="totalYearsOfEmployment"
+              type="number"
               label="Total Years of Employment"
               placeholder="Enter answer"
             />
-            {errors.phoneNumber && (
-              <p className="errorMessage">{errors.phoneNumber.message}</p>
+            {errors.totalYearsOfEmployment && (
+              <p className="errorMessage">{errors.totalYearsOfEmployment.message}</p>
             )}
           </div>
           <div className="phone-cont">
             <NewFormInput
-              name="alternatePhone"
-              type="phone"
+              name="incomeDebitRatio"
+              type="number"
               label="Income-Debt Ratio"
               placeholder="Enter number"
             />
           </div>
           <div className="date-cont">
             <NewFormInput
-              name="dateOfBirth"
-              type="date"
-              label="Date of Birth"
+              name="openCreditLines"
+              type="number"
+              label="No. of Open Credit Lines"
+              placeholder="Enter answer"
             />
-            {errors.dateOfBirth && (
-              <p className="errorMessage">{errors.dateOfBirth.message}</p>
+            {errors.openCreditLines && (
+              <p className="errorMessage">{errors.openCreditLines.message}</p>
             )}
           </div>
           <div className="date-cont">
             <NewFormInput
-              name="bvn"
+              name="creditUtilizationRate"
               type="number"
-              label="No of Open Credit Lines."
-              placeholder="Enter number"
+              label="Credit Utilization Rate"
+              placeholder="Enter answer"
             />
-            {errors.bvn && <p className="errorMessage">{errors.bvn.message}</p>}
+            {errors.creditUtilizationRate && (
+              <p className="errorMessage">{errors.creditUtilizationRate.message}</p>
+            )}
           </div>
           <div className="date-cont">
             <NewFormInput
-              name="bvn"
+              name="mortgageAccounts"
               type="number"
               label="No. of Mortgage Account"
               placeholder="Enter number"

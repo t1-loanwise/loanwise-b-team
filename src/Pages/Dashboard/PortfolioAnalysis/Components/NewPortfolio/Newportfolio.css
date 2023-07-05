@@ -34,6 +34,10 @@
   width: 100%;
 }
 
+.css-1sq3hks[data-status=complete] {
+  background: #007e99;
+}
+
 .createPersonalWrapper {
   margin: 0 auto;
   max-width: 600px;

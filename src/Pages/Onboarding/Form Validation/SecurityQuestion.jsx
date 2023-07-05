@@ -24,7 +24,7 @@ function SecurityQuestion() {
 
   const {
     handleSubmit,
-    formState: { isSubmitting, errors }
+    formState: { isSubmitting, errors },
   } = methods;
   const navigate = useNavigate();
 
@@ -48,17 +48,17 @@ function SecurityQuestion() {
         },
       ],
     };
-   
+
     try {
       const response = await axios.put(
         `https://loanwise.onrender.com/api/648d4b1d86390176ebdd3f08/security-question`,
-    values
+        values
       );
-          console.log(response.data);
-          console.log("Form submitted successfully");
-          console.log(data.firstAnswer);
-          console.log(data.secondAnswer);
-          navigate("/login");
+      console.log(response.data);
+      console.log("Form submitted successfully");
+      console.log(data.firstAnswer);
+      console.log(data.secondAnswer);
+      navigate("/login");
     } catch (error) {
       if (error.response) {
         console.log("Request failed with status code:", error.response.status);
@@ -70,16 +70,18 @@ function SecurityQuestion() {
   };
 
   const options = [
-    {value: "What is your mother's name?"},
-    {value: "What is your father's name?"},
+    { value: "What is your mother's name?" },
+    { value: "What is your father's name?" },
     { value: "Where did you grow up?" },
-    {value: "What university did you attend?"}
+    { value: "What university did you attend?" },
   ];
 
   const option = options.map((item, index) => (
-    <option key={index} value={item.value}>{item.value}</option>
+    <option key={index} value={item.value}>
+      {item.value}
+    </option>
   ));
-  
+
   return (
     <AuthLayout
       title={"Set Security Question"}
@@ -119,10 +121,7 @@ function SecurityQuestion() {
             >
               {option}
             </Select>
-            <FormInput
-              name="secondAnswer"
-              placeholder={"Enter answer"}
-            />
+            <FormInput name="secondAnswer" placeholder={"Enter answer"} />
 
             <div className="form-btn">
               <Button

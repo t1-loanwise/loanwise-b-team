@@ -39,7 +39,7 @@ const CreatePersonal = () => {
   ];
 
   const backLink = () =>
-    activeStep <= 3 && !(activeStep < 1) && setActiveStep(activeStep - 1);
+  activeStep === 0 ?  navigate('/dashboard/portfolio') : activeStep <= 2 && !(activeStep < 1) && setActiveStep(activeStep - 1);
 
   const activeStepText = steps[activeStep];
 
@@ -52,13 +52,13 @@ const CreatePersonal = () => {
           <div className="createPersonal container">
             <div className="createPersonalWrapper">
               <Stack>
-                <Stepper size="md" index={activeStep} gap="0" mb={20}>
+                <Stepper size="md" index={activeStep} gap="0" mb={'20px'} colorScheme='teal'>
                   {steps.map((step, index) => (
-                    <Step key={index} gap="0">
-                      <StepIndicator>
+                    <Step key={index} gap="0" >
+                      <StepIndicator >
                         <StepStatus />
                       </StepIndicator>
-                      <StepSeparator _horizontal={{ ml: "0", height: "2" }} />
+                      <StepSeparator bgColor={'#e6f2f5'} _horizontal={{ ml: "0", height: "2" }} />
                     </Step>
                   ))}
                 </Stepper>
