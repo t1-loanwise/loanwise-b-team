@@ -2,6 +2,8 @@ import React from "react";
 import "./layout.css";
 import Chart from "../../Images/Auth/Group 8039.svg";
 import logo from "../../Images/logo.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 const AuthLayout = ({ title, children, subtitle, formFooter }) => {
   const spaceBetween = {
@@ -31,7 +33,7 @@ const AuthLayout = ({ title, children, subtitle, formFooter }) => {
       <div className="auth-container">
         <div className="auth--layout">
           <div className="left-side">
-            <img src={Chart} alt="" />
+            <LazyLoadImage src={Chart} alt="" />
             <div className="left-side_text">
               <p>Make safe and easy decisions</p>
               <p>

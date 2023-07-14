@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./SecurityPrivacy.css";
 import Select from "react-select";
-// import { useForm, Controller } from "react-hook-form";
-import { Button, Flex, Text } from "@chakra-ui/react";
 import { FormProvider, useForm } from "react-hook-form";
+import { Button, Flex, Text } from "@chakra-ui/react";
 import FilledBtn from "../../../../components/Button/FilledBtn";
 import axios from "axios";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FormInput from "../../../../components/NewForm/form/FormInput";
+import FormInput from "./SecurityForm/FormInput";
 
 /*
  * Interface
@@ -36,22 +35,22 @@ const userSchema = Yup.object().shape({
 });
 
 const SecurityPrivacy = () => {
-    /*
+  /*
    * Validation
    */
-    const methods = useForm({
-      resolver: yupResolver(userSchema),
-      defaultValues: {
-        terms: "",
-      },
-    });
-    const {
-      register,
-      handleSubmit,
-      formState: { errors, isSubmitting },
-      setValue,
-      reset,
-    } = methods;
+  const methods = useForm({
+    resolver: yupResolver(userSchema),
+    defaultValues: {
+      terms: "",
+    },
+  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    setValue,
+    reset,
+  } = methods;
 
   const onSubmit = () => {
     let isValid = Object.keys(errors).length === 0;
@@ -87,90 +86,99 @@ const SecurityPrivacy = () => {
 
   return (
     <FormProvider {...methods}>
-    <form className="securityPrivacy" onSubmit={handleSubmit(onSubmit)}>
-      <div className="prevPass passFlex">
-        <Flex w='100%' justifyContent={'space-between'}>
-        <Text htmlFor="Password">Previous Password</Text>
-        {/* <input type="password" /> */}
-        <FormInput
-            name="Password"
-            type="password"
-            placeholder={"Enter full name"}
-            autoFocus={true}
-            ml='auto'
-          />
-          </Flex> 
-      </div>
-      <div className="prevPass passFlex">
-        <h3 htmlFor="Password">New Password</h3>
-        <input type="password" />
-      </div>
-      <div className="prevPass passFlex">
-        <h3 htmlFor="Password">Confirm Password</h3>
-        <input type="password" />
-      </div>
-      <div className="textToggle passFlex">
-        <h3>Two factor authentication</h3>
-        <div
-          className={`toggle ${toggleStates[0] ? "move" : ""}`}
-          onClick={() => toggleBall(0)}
-        >
-          <span className="toggle-ball"></span>
-        </div>
-      </div>
-      <div className="changeSec passFlex">
-        <h3 htmlFor="Password">Change security question</h3>
-        <form className="changeSecurityQ">
-          <Select
-            className="select"
-            placeholder={"Select question"}
-            options={options}
-          />
-          <div className="mb">
-            <input
-              placeholder={"Enter answer"}
-              {...register("select1", { required: true })}
-              type="text"
-              id="select1"
-            />
-            {errors.select1?.type === "required" && (
-              <p className="errorMessage">
-                You must select a question and enter an answer
-              </p>
-            )}
-          </div>
-
-          <Select
-            className="select"
-            placeholder={"Select question"}
-            options={options}
-          />
+      <form className="securityPrivacy" onSubmit={handleSubmit(onSubmit)}>
+        {/* <div className="prevPass passFlex">
+          <h3 htmlFor="Password">Previous Password</h3>
           <div>
-            <input
-              placeholder={"Enter answer"}
-              {...register("select2", { required: true })}
-              type="text"
-              id="select2"
+            <FormInput
+              name="Password"
+              type="password"
+              placeholder={"Enter full name"}
+              autoFocus={true}
             />
-            {errors.select2?.type === "required" && (
-              <p className="errorMessage">
-                You must select a question and enter an answer
-              </p>
-            )}
           </div>
-        </form>
-      </div>
-      <div className="textToggle passFlex">
-        <h3>Use security question for sign-in</h3>
-        <div
-          className={`toggle ${toggleStates[1] ? "move" : ""}`}
-          onClick={() => toggleBall(1)}
-        >
-          <span className="toggle-ball"></span>
+        </div> */}
+        <div className="prevPass passFlex">
+          <h3 htmlFor="Password">Previous Password</h3>
+          <input type="password" />
         </div>
-      </div>
-      <FilledBtn title={"Save Changes"} />
-    </form>
+        <div className="prevPass passFlex">
+          <h3 htmlFor="Password">New Password</h3>
+          <input type="password" />
+        </div>
+        <div className="prevPass passFlex">
+          <h3 htmlFor="Password">Confirm Password</h3>
+          <input type="password" />
+        </div>
+        <div className="textToggle passFlex">
+          <h3>Two factor authentication</h3>
+          <div
+            className={`toggle ${toggleStates[0] ? "move" : ""}`}
+            onClick={() => toggleBall(0)}
+          >
+            <span className="toggle-ball"></span>
+          </div>
+        </div>
+        <div className="changeSec passFlex">
+          <h3 htmlFor="Password">Change security question</h3>
+          <form className="changeSecurityQ">
+            <Select
+              className="select"
+              placeholder={"Select question"}
+              options={options}
+            />
+            <div className="mb">
+              <input
+                placeholder={"Enter answer"}
+                {...register("select1", { required: true })}
+                type="text"
+                id="select1"
+              />
+              {errors.select1?.type === "required" && (
+                <p className="errorMessage">
+                  You must select a question and enter an answer
+                </p>
+              )}
+            </div>
+
+            <Select
+              className="select"
+              placeholder={"Select question"}
+              options={options}
+            />
+            <div>
+              <input
+                placeholder={"Enter answer"}
+                {...register("select2", { required: true })}
+                type="text"
+                id="select2"
+              />
+              {errors.select2?.type === "required" && (
+                <p className="errorMessage">
+                  You must select a question and enter an answer
+                </p>
+              )}
+            </div>
+          </form>
+        </div>
+        <div className="textToggle passFlex">
+          <h3>Use security question for sign-in</h3>
+          <div
+            className={`toggle ${toggleStates[1] ? "move" : ""}`}
+            onClick={() => toggleBall(1)}
+          >
+            <span className="toggle-ball"></span>
+          </div>
+        </div>
+        <Button
+          color="#fff"
+          bgColor="#007e99"
+          type="submit"
+          isDisabled={!methods.formState.isDirty}
+        >
+          Save Changes
+        </Button>
+      </form>
     </FormProvider>
   );
 };

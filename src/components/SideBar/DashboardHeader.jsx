@@ -5,7 +5,7 @@ import man from "../../Images/Dashboard/man.png";
 import "./SideBar.css";
 import arrow from "../../Images/Dashboard/downarrowbg.svg";
 
-const DashboardHeader = ({ back, backLink }) => {
+const DashboardHeader = ({ back, backLink, fullName }) => {
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-left">
@@ -34,7 +34,7 @@ const DashboardHeader = ({ back, backLink }) => {
           </div>
         </div>
         <div className="dash-user-name">
-          <p>Tosin Adepoju</p>
+          <p>{fullName}</p>
           <p>Risk Analyst </p>
         </div>
       </div>

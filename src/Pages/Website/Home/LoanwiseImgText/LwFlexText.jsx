@@ -1,12 +1,14 @@
 import styles from "../styles.module.css";
 import TickCircle from "../../../../Images/tickcircle.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const LoanDefaultersText = ({ listItems, heading, paragraph }) => {
   let listItem = null;
 
   if (listItems && listItems.length > 0) {
     listItem = listItems.map((item, index) => (
       <li key={index}>
-        <img src={TickCircle} alt="Tick Circle" />
+        <LazyLoadImage src={TickCircle} alt="Tick Circle" />
         <span>{item}</span>
       </li>
     ));

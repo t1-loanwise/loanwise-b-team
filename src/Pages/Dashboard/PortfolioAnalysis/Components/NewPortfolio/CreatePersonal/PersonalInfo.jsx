@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Newportfolio.css";
 import { Button } from "@chakra-ui/react";
 import NewFormInput from "../FormControl/NewFormInput";
@@ -37,6 +37,8 @@ const userSchema = Yup.object().shape({
 });
 
 const PersonalInfo = ({ handleNext }) => {
+  const [inValid, setInValid] = useState("");
+
   /*
    * Validation
    */
@@ -61,30 +63,36 @@ const PersonalInfo = ({ handleNext }) => {
         "https://loanwise.onrender.com/borrowers-details",
         values
       );
-      // localStorage.setItem("email", data.email);
       handleNext();
       console.log("Form submitted successfully");
-      if (response && response.status) {
-        console.log("Unexpected status code:", response.status);
-      }
+      reset();
     } catch (error) {
-      if (error.response && error.response.status) {
+      if (error.response) {
         console.log("Request failed with status code:", error.response.status);
+        console.log("Response data:", error.response.data);
+        // Set error state and display error message to the user
+        setInValid(
+          error.response.data.message
+        );
+      } else {
+        console.error("Error while submitting form:", error.message);
       }
-      // console.log("Response data:", error.response.data);
-      // reset();
     }
   };
 
-  // const onSubmit = () => {
-  //   let isValid = Object.keys(errors).length === 0;
-  //   {
-  //     isValid && handleNext();
-  //   }
-  // };
-
   return (
     <FormProvider {...methods}>
+      {inValid && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          {inValid}
+          {/* <a
+            style={{ textDecoration: "underline" }}
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </a> */}
+        </span>
+      )}
       <form className="new-portfolio-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="new-portfolio-wrapper">
           <h2>Personal Information</h2>

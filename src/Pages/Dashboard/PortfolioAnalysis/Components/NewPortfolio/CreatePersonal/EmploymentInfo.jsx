@@ -83,9 +83,8 @@ const EmploymentInfo = ({ handleNext }) => {
     const values = {
       name: data.fullName,
       email: data.email,
-      // password: data.password,
-      // confirmPassword: data.confirmPassword,
-      // id: nanoid(),
+      password: data.password,
+      confirmPassword: data.confirmPassword,
     };
 
     try {

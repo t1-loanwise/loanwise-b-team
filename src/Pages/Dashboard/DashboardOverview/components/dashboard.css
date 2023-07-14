@@ -12,7 +12,7 @@
 }
 
 .dashboard-body > nav {
-  width: 19%;
+  width: auto;
   height: 100%;
 }
 .dashboard-pages-wrapper {
