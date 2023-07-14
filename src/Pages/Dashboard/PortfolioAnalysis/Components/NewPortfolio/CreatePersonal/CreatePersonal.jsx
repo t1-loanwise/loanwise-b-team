@@ -6,7 +6,6 @@ import DownloadReport from "./DownloadReport";
 import { useNavigate } from "react-router-dom";
 import SideBar from "../../../../../../components/SideBar/SideBar";
 import DashboardHeader from "../../../../../../components/SideBar/DashboardHeader";
-
 import {
   Button,
   Step,
@@ -21,6 +20,7 @@ import {
   Stepper,
   useSteps,
 } from "@chakra-ui/react";
+
 
 const CreatePersonal = () => {
   const [back, setBack] = useState(true);

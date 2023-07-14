@@ -5,16 +5,10 @@ import "./Login.css";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { RiEyeLine, RiEyeOffLine } from "react-icons/ri";
-// import { nanoid } from "nanoid";
 import axios from "axios";
-// import { object, string } from "yup";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormInput from "../../../components/NewForm/form/FormInput";
-
-/*
- * Interface
- */
 
 const userSchema = Yup.object().shape({
   name: Yup.string().required("The name field is required"),
@@ -38,9 +32,6 @@ const userSchema = Yup.object().shape({
 });
 
 const CreateAccount = () => {
-  /*
-   * Validation
-   */
   const methods = useForm({
     resolver: yupResolver(userSchema),
     defaultValues: {
@@ -56,13 +47,10 @@ const CreateAccount = () => {
   } = methods;
   const navigate = useNavigate();
 
-  /*
-   * useStates
-   */
-
   const [inValid, setInValid] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const [fullName, setFullName] = useState("");
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -72,24 +60,12 @@ const CreateAccount = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  /**
-   * Fxns
-   */
-
-  // const onSubmit = () => {
-  //   let isValid = Object.keys(errors).length === 0;
-  //   {
-  //     isValid && navigate("/accountVerify");
-  //   }
-  // };
-
   const onSubmit = async (data) => {
     const values = {
       name: data.name,
       email: data.email,
       password: data.password,
       confirmPassword: data.confirmPassword,
-      // id: nanoid(),
     };
 
     try {
@@ -99,8 +75,10 @@ const CreateAccount = () => {
       );
       if (response.status === 201) {
         localStorage.setItem("email", data.email);
+        setFullName(data.name);
         navigate("/accountVerify", { state: { email: data.email } });
         console.log("Form submitted successfully");
+        console.log(response);
       } else {
         console.log("Unexpected status code:", response.status);
       }
@@ -125,28 +103,34 @@ const CreateAccount = () => {
 
   const formFooter = (
     <p>
-      Already have an account? <a onClick={() => navigate("/login")}>Sign In</a>
+      Already have an account?{" "}
+      <a onClick={() => navigate("/login")}>Sign In</a>
     </p>
   );
 
   return (
     <AuthLayout title={"Create an account"} formFooter={formFooter}>
       {inValid && (
-        <span style={{ color: "red", marginBottom: "30px" }}>User already exists! Please <a style={{textDecoration: 'underline'}} onClick={() => navigate("/login")}>Login</a></span>
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          User already exists! Please{" "}
+          <a style={{ textDecoration: "underline" }} onClick={() => navigate("/login")}>
+            Login
+          </a>
+        </span>
       )}
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormInput
             name="name"
             label="Full Name"
-            placeholder={"Enter full name"}
+            placeholder="Enter full name"
             autoFocus={true}
           />
 
           <FormInput
             name="email"
             label="Email address"
-            placeholder={"Enter email address"}
+            placeholder="Enter email address"
           />
 
           <div className="passwordContainer">
@@ -159,7 +143,6 @@ const CreateAccount = () => {
                   name="password"
                   id="password"
                   placeholder="Enter Password"
-                  // style={isSubmitting && {cursor : 'pointer'}}
                 />
                 <button type="button" onClick={togglePasswordVisibility}>
                   {passwordVisible ? (
@@ -215,7 +198,7 @@ const CreateAccount = () => {
                 id="terms"
                 name="terms"
                 value="true"
-                onChange={handleRadioChange} // Add onChange event handler
+                onChange={handleRadioChange}
               />
               <span>
                 <label htmlFor="terms">

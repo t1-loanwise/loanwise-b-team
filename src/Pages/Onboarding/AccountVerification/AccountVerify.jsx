@@ -14,20 +14,31 @@ const AccountVerify = () => {
   const email = location.state?.email || "";
   const [resendTimeout, setResendTimeout] = useState(30);
   // const [isSubmitting, setIsSubmitting] = useState(false);
-  const [inValid, setInValid] = useState('');
+  const [inValid, setInValid] = useState("");
 
   const userSchema = Yup.object().shape({
-    otp1: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
-    otp2: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
-    otp3: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
-    otp4: Yup.string().length(1, "OTP must be 4 characters").required("The OTP field is required"),
+    otp1: Yup.string()
+      .length(1, "OTP must be 4 characters")
+      .required("The OTP field is required"),
+    otp2: Yup.string()
+      .length(1, "OTP must be 4 characters")
+      .required("The OTP field is required"),
+    otp3: Yup.string()
+      .length(1, "OTP must be 4 characters")
+      .required("The OTP field is required"),
+    otp4: Yup.string()
+      .length(1, "OTP must be 4 characters")
+      .required("The OTP field is required"),
   });
 
   const methods = useForm({
     resolver: yupResolver(userSchema),
   });
 
-  const { handleSubmit, formState: { errors, isSubmitting } } = methods;
+  const {
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = methods;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -55,22 +66,23 @@ const AccountVerify = () => {
         "https://loanwise.onrender.com/api/verify-signup",
         {
           email: email,
-          verificationCode: data
+          verificationCode: data,
         }
       );
-      if (response.status === 201) {
-        navigate("/securityQuestion");
-        console.log("Form submitted successfully");
-        console.log("Entered OTP:", data);
-      } else {
-        console.log("Unexpected status code:", response.status);
-      }
-     } catch (error) {
+      console.log("Form submitted successfully");
+      navigate("/securityQuestion", { state: { token: response.data.user_id } });
+      console.log("Entered OTP:", data);
+      console.log(response);
+      console.log("Unexpected status code:", response.status);
+    } catch (error) {
       if (error.response) {
         console.log("Request failed with status code:", error.response.status);
         console.log("Response data:", error.response.data);
         console.log("Entered OTP:", data);
-        setInValid(error.response.data.message === 'Invalid verification code' && error.response.data.message)
+        setInValid(
+          error.response.data.message === "Invalid verification code" &&
+            error.response.data.message
+        );
       } else {
         console.error("Error while submitting form:", error.message);
       }
@@ -92,72 +104,76 @@ const AccountVerify = () => {
       subtitle={`Thank you for signing up. Please enter the verification code we sent to your email address ${email}`}
       formFooter={formFooter}
     >
-        {inValid && (
-                <span style={{color: 'red', marginBottom: '30px'}}>{inValid}</span>
-              )}
+      {inValid && (
+        <span style={{ color: "red", marginBottom: "30px" }}>{inValid}</span>
+      )}
       <FormProvider {...methods}>
-        <form className="form" onSubmit={handleSubmit(resendTimeout === 0 ? handleResendClick : handleVerifyClick)}>
+        <form
+          className="form"
+          onSubmit={handleSubmit(
+            resendTimeout === 0 ? handleResendClick : handleVerifyClick
+          )}
+        >
           <div className="otp_input-Content">
             <HStack mx="auto" mt={5}>
               <PinInput size="lg" placeholder="">
-                  <PinInputField
-                    name={`otp1`}
-                    {...methods.register(`otp1`)}
-                    height={["auto", "120px"]}
-                    width="100%"
-                    fontSize={40}
-                    py={8}
-                    mr={["10px", "20px"]}
-                    bgColor="white"
-                    color='black'
-                    border={inValid ? '2px' : '1px'}
-                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
-                  />
-                  <PinInputField
-                    name={`otp2`}
-                    {...methods.register(`otp2`)}
-                    height={["auto", "120px"]}
-                    width="100%"
-                    fontSize={40}
-                    py={8}
-                    mr={["10px", "20px"]}
-                    bgColor="white"
-                    color='black'
-                    border={inValid ? '2px' : '1px'}
-                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
-                  />
-                  <PinInputField
-                    name={`otp3`}
-                    {...methods.register(`otp3`)}
-                    height={["auto", "120px"]}
-                    width="100%"
-                    fontSize={40}
-                    py={8}
-                    mr={["10px", "20px"]}
-                    bgColor="white"
-                    color='black'
-                    border={inValid ? '2px' : '1px'}
-                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
-                  />
-                  <PinInputField
-                    name={`otp4`}
-                    {...methods.register(`otp4`)}
-                    height={["auto", "120px"]}
-                    width="100%"
-                    fontSize={40}
-                    py={8}
-                    mr={["10px", "20px"]}
-                    bgColor="white"
-                    color='black'
-                    border={inValid ? '2px' : '1px'}
-                    borderColor={inValid ? 'red' : 'rgb(203, 203, 203)'}
-                  />
-    
+                <PinInputField
+                  name={`otp1`}
+                  {...methods.register(`otp1`)}
+                  height={["auto", "120px"]}
+                  width="100%"
+                  fontSize={40}
+                  py={8}
+                  mr={["10px", "20px"]}
+                  bgColor="white"
+                  color="black"
+                  border={inValid ? "2px" : "1px"}
+                  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}
+                />
+                <PinInputField
+                  name={`otp2`}
+                  {...methods.register(`otp2`)}
+                  height={["auto", "120px"]}
+                  width="100%"
+                  fontSize={40}
+                  py={8}
+                  mr={["10px", "20px"]}
+                  bgColor="white"
+                  color="black"
+                  border={inValid ? "2px" : "1px"}
+                  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}
+                />
+                <PinInputField
+                  name={`otp3`}
+                  {...methods.register(`otp3`)}
+                  height={["auto", "120px"]}
+                  width="100%"
+                  fontSize={40}
+                  py={8}
+                  mr={["10px", "20px"]}
+                  bgColor="white"
+                  color="black"
+                  border={inValid ? "2px" : "1px"}
+                  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}
+                />
+                <PinInputField
+                  name={`otp4`}
+                  {...methods.register(`otp4`)}
+                  height={["auto", "120px"]}
+                  width="100%"
+                  fontSize={40}
+                  py={8}
+                  mr={["10px", "20px"]}
+                  bgColor="white"
+                  color="black"
+                  border={inValid ? "2px" : "1px"}
+                  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}
+                />
               </PinInput>
             </HStack>
           </div>
 
-          {(errors.otp1 || errors.otp2 || errors.otp3 || errors.otp4)  && (
+          {(errors.otp1 || errors.otp2 || errors.otp3 || errors.otp4) && (
             <p className="errorMessage">{errors.data}</p>
           )}
 

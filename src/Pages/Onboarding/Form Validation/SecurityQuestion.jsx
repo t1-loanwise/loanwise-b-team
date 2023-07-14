@@ -7,6 +7,7 @@ import axios from "axios";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormInput from "../../../components/NewForm/form/FormInput";
+import { useLocation } from "react-router-dom";
 
 function SecurityQuestion() {
   const userSchema = Yup.object().shape({
@@ -35,6 +36,9 @@ function SecurityQuestion() {
   //   }
   // };
 
+  const location = useLocation();
+  const token = location.state?.token;
+
   const onSubmit = async (data) => {
     const values = {
       securityQuestions: [
@@ -51,7 +55,7 @@ function SecurityQuestion() {
 
     try {
       const response = await axios.put(
-        `https://loanwise.onrender.com/api/648d4b1d86390176ebdd3f08/security-question`,
+        `https://loanwise.onrender.com/api/${token}/security-question`,
         values
       );
       console.log(response.data);

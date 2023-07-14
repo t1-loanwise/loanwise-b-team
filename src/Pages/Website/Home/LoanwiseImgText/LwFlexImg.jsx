@@ -1,9 +1,10 @@
 import styles from "../styles.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LoanDefaultersImg = ({ image }) => {
   return (
     <div className={styles.lwFlexImg}>
-      <img src={image} alt="" />
+      <LazyLoadImage src={image} alt="" />
     </div>
   );
 };

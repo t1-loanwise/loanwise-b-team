@@ -13,19 +13,21 @@ p {
 
 .dashboard-body {
   display: flex;
-  flex-direction: row;
   height: calc(100% - 80px);
+  flex: 1;
 }
 
 .dashboard-body > nav {
-  /* width: 19%; */
   width: auto;
   height: 100%;
+  flex: 0.2;
 }
 .dashboard-pages-wrapper {
   overflow-y: auto;
   height: 100%;
   width: 100%;
+  flex: 0.9;
+
 }
 
 /* ------------dashboard overview-------------- */
