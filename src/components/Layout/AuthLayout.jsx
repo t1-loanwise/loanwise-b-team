@@ -2,30 +2,28 @@ import React from "react";
 import "./layout.css";
 import Chart from "../../Images/Auth/Group 8039.svg";
 import logo from "../../Images/logo.svg";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-
 
 const AuthLayout = ({ title, children, subtitle, formFooter }) => {
   const spaceBetween = {
-    justifyContent: 'space-between',
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'left',
-    width: '60%',
-    height: '100%'
+    justifyContent: "space-between",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    width: "60%",
+    height: "100%",
   };
 
   const gap = {
-    gap: '15%',
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'left',
-    width: '60%',
-    height: '100%'
+    gap: "15%",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "left",
+    width: "60%",
+    height: "100%",
   };
 
   const align = {
-    justifySelf: 'center'
+    justifySelf: "center",
   };
 
   return (
@@ -33,12 +31,12 @@ const AuthLayout = ({ title, children, subtitle, formFooter }) => {
       <div className="auth-container">
         <div className="auth--layout">
           <div className="left-side">
-            <LazyLoadImage src={Chart} alt="" />
+            <img src={Chart} alt="" />
             <div className="left-side_text">
               <p>Make safe and easy decisions</p>
               <p>
-                Get insight for credit decision with an in-depth analysis in just
-                one click
+                Get insight for credit decision with an in-depth analysis in
+                just one click
               </p>
             </div>
           </div>
