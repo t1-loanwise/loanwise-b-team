@@ -6,10 +6,17 @@
 /* Header */
 /* ------------------ */
 
+.everyHeader{
+
+}
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 16px 0;
+  position: sticky;
+  left: 0;
+  height: 92px;
 }
 
 .display {
@@ -114,11 +121,10 @@ ul li a {
   right: 0;
   background-color: #fff;
   padding: 20px 30px;
-  height: 400px;
+  height: 100vh;
   width: 50%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); */
-  z-index: 1500;
+  z-index: 1000;
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
     both;
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -168,7 +174,6 @@ ul li a {
     align-items: center;
     justify-content: center;
     top: 80px;
-    height: 300px;
   }
 
   ul a:nth-child(5),
