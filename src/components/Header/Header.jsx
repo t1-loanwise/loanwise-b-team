@@ -52,7 +52,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className={styles.everyHeader}>
       <header>
         <div className={styles.leftHeader}>
           <img

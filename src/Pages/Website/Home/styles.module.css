@@ -69,14 +69,6 @@ h2 {
   transition: all ease-in-out 2s;
 }
 
-.heroImg img:hover,
-.lwFlexImg img:hover,
-.AmazingImg img:hover {
-  transform: scale(1.06);
-  cursor: pointer;
-  transition: all ease-in-out 1s;
-}
-
 .heroText p,
 .lwFlexText p,
 .AmazingText p,
