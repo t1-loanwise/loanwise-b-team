@@ -13,7 +13,6 @@ const AccountVerify = () => {
   const location = useLocation();
   const email = location.state?.email || "";
   const [resendTimeout, setResendTimeout] = useState(30);
-  // const [isSubmitting, setIsSubmitting] = useState(false);
   const [inValid, setInValid] = useState("");
 
   const userSchema = Yup.object().shape({
@@ -58,6 +57,16 @@ const AccountVerify = () => {
     }
   };
 
+  const inputAttributes = () => `height={["auto", "120px"]}
+  width="100%"
+  fontSize={40}
+  py={8}
+  mr={["10px", "20px"]}
+  bgColor="white"
+  color="black"
+  border={inValid ? "2px" : "1px"}
+  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}`;
+
   const handleVerifyClick = async (values) => {
     const data = `${values.otp1}${values.otp2}${values.otp3}${values.otp4}`;
 
@@ -70,7 +79,9 @@ const AccountVerify = () => {
         }
       );
       console.log("Form submitted successfully");
-      navigate("/securityQuestion", { state: { token: response.data.user_id } });
+      navigate("/securityQuestion", {
+        state: { token: response.data.user_id },
+      });
       console.log("Entered OTP:", data);
       console.log(response);
       console.log("Unexpected status code:", response.status);
@@ -117,19 +128,7 @@ const AccountVerify = () => {
           <div className="otp_input-Content">
             <HStack mx="auto" mt={5}>
               <PinInput size="lg" placeholder="">
-                <PinInputField
-                  name={`otp1`}
-                  {...methods.register(`otp1`)}
-                  height={["auto", "120px"]}
-                  width="100%"
-                  fontSize={40}
-                  py={8}
-                  mr={["10px", "20px"]}
-                  bgColor="white"
-                  color="black"
-                  border={inValid ? "2px" : "1px"}
-                  borderColor={inValid ? "red" : "rgb(203, 203, 203)"}
-                />
+                <PinInputField name={`otp1`} {...methods.register(`otp1`)} inputAttributes/>
                 <PinInputField
                   name={`otp2`}
                   {...methods.register(`otp2`)}

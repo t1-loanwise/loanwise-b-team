@@ -60,7 +60,7 @@ const PersonalInfo = ({ handleNext }) => {
 
     try {
       const response = await axios.post(
-        "https://loanwise.onrender.com/borrowers-details",
+        "https://loanwise.onrender.com/api/borrowers-details",
         values
       );
       handleNext();
@@ -71,9 +71,7 @@ const PersonalInfo = ({ handleNext }) => {
         console.log("Request failed with status code:", error.response.status);
         console.log("Response data:", error.response.data);
         // Set error state and display error message to the user
-        setInValid(
-          error.response.data.message
-        );
+        setInValid(error.response.data.message);
       } else {
         console.error("Error while submitting form:", error.message);
       }
