@@ -1,5 +1,5 @@
 .btn {
-  padding:11px, 16px, 11px, 16px; 
+  padding: 11px, 16px, 11px, 16px;
   background-color: #007e99;
   height: 40px;
   width: 150px;
@@ -12,7 +12,6 @@
   border: none;
   font-family: "Urbanist";
   cursor: pointer;
- 
 }
 
 .Personalform-btn {
@@ -29,12 +28,13 @@
 }
 
 .createPersonal {
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   width: 100%;
 }
 
-.css-1sq3hks[data-status=complete] {
+.css-1sq3hks[data-status="complete"] {
   background: #007e99;
 }
 

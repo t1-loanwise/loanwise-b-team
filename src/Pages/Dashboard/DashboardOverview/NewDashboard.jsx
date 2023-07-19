@@ -1,20 +1,20 @@
-import React from 'react'
-import DashboardHeader from '../../../components/SideBar/DashboardHeader'
-import SideBar from '../../../components/SideBar/SideBar'
-import DashboardPages from '../DashboardOverview/DashboardPages'
+import React from "react";
+import DashboardHeader from "../../../components/SideBar/DashboardHeader";
+import SideBar from "../../../components/SideBar/SideBar";
+import DashboardPages from "../DashboardOverview/DashboardPages";
 
 const NewDashboard = () => {
   return (
-    <div className='dashboard-wrapper'>
+    <div className="dashboard-wrapper">
       <DashboardHeader />
-      <div className='dashboard-body'>
+      <div className="dashboard-body">
         <SideBar />
-        <div className='dashboard-pages-wrapper '>
+        <div className="dashboard-pages-wrapper">
           <DashboardPages />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewDashboard 
+export default NewDashboard;
