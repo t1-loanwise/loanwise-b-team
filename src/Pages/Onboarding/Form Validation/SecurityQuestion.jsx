@@ -25,16 +25,9 @@ function SecurityQuestion() {
 
   const {
     handleSubmit,
-    formState: { isSubmitting, errors },
+    formState: { isSubmitting },
   } = methods;
   const navigate = useNavigate();
-
-  //   const onSubmit = () => {
-  //   let isValid = Object.keys(errors).length === 0;
-  //   {
-  //     isValid && navigate("/login");
-  //   }
-  // };
 
   const location = useLocation();
   const token = location.state?.token;

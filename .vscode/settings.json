@@ -1,6 +1,9 @@
 {
   "editor.formatOnSave": true,
   "cSpell.ignoreWords": [
-    "sectionz"
+    "chakra",
+    "hookform",
+    "sectionz",
+    "termz"
   ]
 }

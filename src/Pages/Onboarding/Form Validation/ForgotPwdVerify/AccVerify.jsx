@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@chakra-ui/react";
-import AuthLayout from "../../../components/Layout/AuthLayout.jsx";
+import AuthLayout from "../../../../components/Layout/AuthLayout";
 import { FormProvider, useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -8,13 +8,16 @@ import { PinInput, PinInputField, HStack } from "@chakra-ui/react";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const AccountVerify = () => {
+const AccVerify = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const email = location.state?.email || "";
   const [resendTimeout, setResendTimeout] = useState(30);
   const [inValid, setInValid] = useState("");
 
+  /**
+   * userSchema
+   */
   const userSchema = Yup.object().shape({
     otp1: Yup.string()
       .length(1, "OTP must be 4 characters")
@@ -34,6 +37,9 @@ const AccountVerify = () => {
     resolver: yupResolver(userSchema),
   });
 
+  /**
+   * form validation
+   */
   const {
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -51,6 +57,9 @@ const AccountVerify = () => {
     return () => clearTimeout(timer);
   }, [resendTimeout]);
 
+  /**
+   * function
+   */
   const handleResendClick = () => {
     if (resendTimeout === 0) {
       setResendTimeout(60);
@@ -101,13 +110,12 @@ const AccountVerify = () => {
 
   return (
     <AuthLayout
-      title="Verify Email Address"
-      subtitle={`Thank you for signing up. Please enter the verification code we sent to your email address ${email}`}
+      title={"Verify Email Address"}
+      subtitle={
+        "Thank you for signing up. Please enter the verification code we sent to your email address @johndoe@gmail.com"
+      }
       formFooter={formFooter}
     >
-      {inValid && (
-        <span style={{ color: "red", marginBottom: "30px" }}>{inValid}</span>
-      )}
       <FormProvider {...methods}>
         <form
           className="form"
@@ -195,4 +203,4 @@ const AccountVerify = () => {
   );
 };
 
-export default AccountVerify;
+export default AccVerify;

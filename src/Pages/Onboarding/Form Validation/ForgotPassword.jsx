@@ -1,51 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
-import FilledBtn from "../../../components/Button/FilledBtn";
+import { Button } from "@chakra-ui/react";
 import "./Login.css";
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { nanoid } from "nanoid";
+import * as Yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormInput from "../../../components/NewForm/form/FormInput";
+
+const userSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("Invalid email")
+    .required("The email field is required"),
+});
 
 const ForgotPassword = () => {
   const formFooter = "";
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
+  const methods = useForm({
+    resolver: yupResolver(userSchema),
+    defaultValues: {
+      terms: "",
+    },
+  });
+  const { handleSubmit, reset } = methods;
   const navigate = useNavigate();
+  const [inValid, setInValid] = useState("");
+  const [allErrorsState, setAllErrors] = useState("");
 
-  // const onSubmit = () => {
-  //   let isValid = Object.keys(errors).length === 0;
-  //   {
-  //     isValid && navigate("/accVerify");
-  //   }
-  // };
-
-  const onSubmit = async data => {
-    const values = { ...data, id: nanoid() };
+  const onSubmit = async (data) => {
+    const values = { email: data.email };
     try {
-      const response = await axios.post('http://loanwise.onrender.com/api/forget-password', values);
-        navigate("/accVerify");
+      const response = await axios.post(
+        "https://loanwise.onrender.com/api/forget-password",
+        values
+      );
+      navigate("/accVerify");
     } catch (error) {
-      // console.error(error);
-      // console.log("Request failed with status code:", error.response.status);
-      // // console.log("Response data:", error.response.data);
+      if (error.response) {
         console.log("Request failed with status code:", error.response.status);
         console.log("Response data:", error.response.data);
-        // setInValid(
-        //   error.response.data.message === "User already exists! Please login" &&
-        //     error.response.data.message
-        // );
-
+        console.log("Email:", data);
+        setInValid(
+          error.response.data.message === "User not found. Please signup" &&
+            error.response.data.message
+        );
+        setAllErrors(
+          !error.response.data.message === "User not found. Please signup" &&
+            error.response.data.message
+        );
+      } else {
         console.error("Error while submitting form:", error.message);
-    
+      }
     }
-    reset()
+    reset();
   };
-
 
   return (
     <AuthLayout
@@ -53,24 +62,42 @@ const ForgotPassword = () => {
       subtitle="We’ve got you, please enter your registered email address"
       formFooter={formFooter}
     >
-      <form onSubmit={handleSubmit(onSubmit)} className="forgotPassword">
-        <fieldset>
-          <label htmlFor="email">Email address</label>
-          <input
-            {...register("email", { required: true })}
-            type="email"
-            id="email"
-            placeholder={"Enter email address"}
+      {inValid && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          User not found. Please{" "}
+          <a
+            style={{ textDecoration: "underline" }}
+            onClick={() => navigate("/createAccount")}
+          >
+            signup
+          </a>
+        </span>
+      )}
+      {!inValid && allErrorsState && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          {allErrorsState}
+        </span>
+      )}
+      <FormProvider {...methods}>
+        <form onSubmit={handleSubmit(onSubmit)} className="forgotPassword">
+          <FormInput
+            name="email"
+            label="Email address"
+            placeholder="Enter email address"
           />
-          {errors.email?.type === "required" && (
-            <p className="errorMessage">The email field is required</p>
-          )}
-        </fieldset>
-
-        <div className="form-btn">
-          <FilledBtn type={"submit"} title={"Proceed"} />
-        </div>
-      </form>
+          <div className="form-btn">
+            <Button
+              color="#fff"
+              bgColor="#007e99"
+              type="submit"
+              isLoading={methods.formState.isSubmitting}
+              isDisabled={!methods.formState.isDirty}
+            >
+              Proceed
+            </Button>
+          </div>
+        </form>
+      </FormProvider>
     </AuthLayout>
   );
 };

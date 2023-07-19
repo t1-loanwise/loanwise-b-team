@@ -27,7 +27,6 @@ p {
   height: 100%;
   width: 100%;
   flex: 0.9;
-
 }
 
 /* ------------dashboard overview-------------- */
@@ -92,12 +91,11 @@ p {
   width: 100%;
   border: 1px solid #aad4dd;
   outline: none;
-  &&::placeholder{
-  color: #00151a;
-  font-size: 15px;
+  &&::placeholder {
+    color: #00151a;
+    font-size: 15px;
   }
 }
-
 
 .btnzz {
   display: none;
@@ -110,7 +108,6 @@ p {
   margin: 20px 0;
   width: 100%;
 }
-
 
 .dash__searchFilter > .filter button,
 .btnzz .filter button {
@@ -420,19 +417,18 @@ p {
     flex: 1;
   }
 
-  .dash__date-small{
+  .dash__date-small {
     margin-left: unset;
     margin: 0 auto;
   }
- 
-  .dash__searchFilterDate .dash_searchBar form fieldset button  {
+
+  .dash__searchFilterDate .dash_searchBar form fieldset button {
     margin-right: 0;
   }
 
-  .dash__searchFilter > .filter{
+  .dash__searchFilter > .filter {
     margin: 0 auto;
-
-  } 
+  }
 
   .btnzz {
     display: flex;
@@ -512,13 +508,10 @@ p {
 }
 
 @media (max-width: 1000px) {
-
-   
-    .dash__searchFilterDate .dash_searchBar form fieldset button  {
+  .dash__searchFilterDate .dash_searchBar form fieldset button {
     padding: 13.5px 10px;
     font-size: 14px;
-    }
-  
+  }
 }
 
 /* ------------dashboard overview-------------- */

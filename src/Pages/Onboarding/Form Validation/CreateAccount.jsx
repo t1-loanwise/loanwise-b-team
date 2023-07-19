@@ -46,6 +46,7 @@ const CreateAccount = () => {
     reset,
   } = methods;
   const navigate = useNavigate();
+  const [allErrorsState, setAllErrors] = useState("");
 
   const [inValid, setInValid] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -90,6 +91,10 @@ const CreateAccount = () => {
           error.response.data.message === "User already exists! Please login" &&
             error.response.data.message
         );
+        setAllErrors(
+          !error.response.data.message ===
+            "User already exists! Please login" && error.response.data.message
+        );
       } else {
         console.error("Error while submitting form:", error.message);
       }
@@ -103,8 +108,7 @@ const CreateAccount = () => {
 
   const formFooter = (
     <p>
-      Already have an account?{" "}
-      <a onClick={() => navigate("/login")}>Sign In</a>
+      Already have an account? <a onClick={() => navigate("/login")}>Sign In</a>
     </p>
   );
 
@@ -113,9 +117,17 @@ const CreateAccount = () => {
       {inValid && (
         <span style={{ color: "red", marginBottom: "30px" }}>
           User already exists! Please{" "}
-          <a style={{ textDecoration: "underline" }} onClick={() => navigate("/login")}>
+          <a
+            style={{ textDecoration: "underline" }}
+            onClick={() => navigate("/login")}
+          >
             Login
           </a>
+        </span>
+      )}
+      {!inValid && allErrorsState && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          {allErrorsState}
         </span>
       )}
       <FormProvider {...methods}>
