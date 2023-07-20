@@ -47,7 +47,6 @@ const CreateAccount = () => {
   } = methods;
   const navigate = useNavigate();
   const [allErrorsState, setAllErrors] = useState("");
-
   const [inValid, setInValid] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
@@ -77,7 +76,9 @@ const CreateAccount = () => {
       if (response.status === 201) {
         localStorage.setItem("email", data.email);
         setFullName(data.name);
-        navigate("/accountVerify", { state: { email: data.email } });
+        navigate("/accountVerify", {
+          state: { email: data.email, name: data.name },
+        });
         console.log("Form submitted successfully");
         console.log(response);
       } else {
@@ -228,7 +229,6 @@ const CreateAccount = () => {
               bgColor="#007e99"
               type="submit"
               isLoading={methods.formState.isSubmitting}
-              isDisabled={!methods.formState.isDirty}
             >
               Create Account
             </Button>

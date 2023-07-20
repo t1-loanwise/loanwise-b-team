@@ -114,6 +114,7 @@
   color: #ffffff;
   font-size: 15px;
   line-height: 20px;
+  font-weight: 600;
 }
 .dashboard-icon {
   width: 19px;
@@ -125,12 +126,13 @@
   border-radius: 4px;
 }
 
-.sidebar-top, .sidebar-bottom {
+.sidebar-top,
+.sidebar-bottom {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 3px;
-  width:100%;
+  width: 100%;
 }
 
 /* -----------General-------------- */

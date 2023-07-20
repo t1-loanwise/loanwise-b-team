@@ -42,6 +42,8 @@ const Login = () => {
   } = methods;
 
   const navigate = useNavigate();
+  const [allErrorsState, setAllErrors] = useState("");
+  const [inValid, setInValid] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -51,28 +53,32 @@ const Login = () => {
     const values = {
       email: data.email,
       password: data.password,
-      // id: nanoid(),
     };
     try {
       const response = await axios.post(
         "https://loanwise.onrender.com/api/login",
         values
-      )
-        navigate("/dashboard/overview");
-        console.log("Form submitted successfully");
+      );
+      navigate("/dashboard/overview");
+      console.log("Form submitted successfully");
     } catch (error) {
-      // const errorData = response.data;
-      // console.log("Validation error:", errorData);
       if (error.response) {
         console.log("Request failed with status code:", error.response.status);
         console.log("Response data:", error.response.data);
+        setInValid(
+          error.response.data.message === "User not found. Please signup" &&
+            error.response.data.message
+        );
+        setAllErrors(
+          !error.response.data.message === "User not found. Please signup" &&
+            error.response.data.message
+        );
       } else {
         console.error("Error while submitting form:", error.message);
       }
       reset();
     }
   };
-
 
   const formFooter = (
     <p>
@@ -86,57 +92,73 @@ const Login = () => {
       subtitle="Enter your details to sign in"
       formFooter={formFooter}
     >
-          <FormProvider {...methods}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-      <FormInput
+      {inValid && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          User already exists! Please{" "}
+          <a
+            style={{ textDecoration: "underline" }}
+            onClick={() => navigate("/createAccount")}
+          >
+            Login
+          </a>
+        </span>
+      )}
+      {!inValid && allErrorsState && (
+        <span style={{ color: "red", marginBottom: "30px" }}>
+          {allErrorsState}
+        </span>
+      )}
+      <FormProvider {...methods}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <FormInput
             name="email"
             label="Email address"
             placeholder={"Enter email address"}
           />
 
-        <fieldset>
-          <label htmlFor="password">Password</label>
-          <div className="inputField">
-            <input
-              {...register("password", { required: true, minLength: 6 })}
-              type={passwordVisible ? "text" : "password"}
-              id="password"
-              placeholder={"Enter Password"}
-            />
-            <button type="button" onClick={togglePasswordVisibility}>
-              {passwordVisible ? (
-                <RiEyeLine style={{ color: "#007e99" }} />
-              ) : (
-                <RiEyeOffLine style={{ color: "#007e99" }} />
-              )}
-            </button>
-          </div>
-          {errors.password && (
-            <p className="errorMessage">{errors.password.message}</p>
-          )}
-        </fieldset>
+          <fieldset>
+            <label htmlFor="password">Password</label>
+            <div className="inputField">
+              <input
+                {...register("password", { required: true, minLength: 6 })}
+                type={passwordVisible ? "text" : "password"}
+                id="password"
+                placeholder={"Enter Password"}
+              />
+              <button type="button" onClick={togglePasswordVisibility}>
+                {passwordVisible ? (
+                  <RiEyeLine style={{ color: "#007e99" }} />
+                ) : (
+                  <RiEyeOffLine style={{ color: "#007e99" }} />
+                )}
+              </button>
+            </div>
+            {errors.password && (
+              <p className="errorMessage">{errors.password.message}</p>
+            )}
+          </fieldset>
 
-        <div className="checkForgot">
-          <div className="checkText">
-            <input type="checkbox" name="Keep me signed in" /> Keep me signed in
+          <div className="checkForgot">
+            <div className="checkText">
+              <input type="checkbox" name="Keep me signed in" /> Keep me signed
+              in
+            </div>
+            <p className="subHeading">
+              <a href="/forgotpassword">Forgot Password?</a>
+            </p>
           </div>
-          <p className="subHeading">
-            <a href="/forgotpassword">Forgot Password?</a>
-          </p>
-        </div>
 
-        <div className="form-btn">
-        <Button
+          <div className="form-btn">
+            <Button
               color="#fff"
               bgColor="#007e99"
               type="submit"
               isLoading={methods.formState.isSubmitting}
-              isDisabled={!methods.formState.isDirty}
             >
               Sign In
             </Button>
-        </div>
-      </form>
+          </div>
+        </form>
       </FormProvider>
     </AuthLayout>
   );

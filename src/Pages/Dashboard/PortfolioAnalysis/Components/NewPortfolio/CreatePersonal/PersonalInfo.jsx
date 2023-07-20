@@ -32,7 +32,9 @@ const userSchema = Yup.object().shape({
       "Invalid phone number format"
     )
     .min(10, "Phone number must be at up to 10 characters"),
-  dateOfBirth: Yup.date().required("This field is required"),
+  dateOfBirth: Yup.date()
+    .required("This field is required")
+    .typeError("Invalid Date"),
   bvn: Yup.string().required("Enter Number"),
 });
 
@@ -81,15 +83,7 @@ const PersonalInfo = ({ handleNext }) => {
   return (
     <FormProvider {...methods}>
       {inValid && (
-        <span style={{ color: "red", marginBottom: "30px" }}>
-          {inValid}
-          {/* <a
-            style={{ textDecoration: "underline" }}
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </a> */}
-        </span>
+        <span style={{ color: "red", marginBottom: "30px" }}>{inValid}</span>
       )}
       <form className="new-portfolio-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="new-portfolio-wrapper">
@@ -119,37 +113,40 @@ const PersonalInfo = ({ handleNext }) => {
               placeholder="Enter email address"
             />
           </div>
-
-          <div className="phone-cont">
-            <NewFormInput
-              name="phoneNumber"
-              type="phone"
-              label="Phone Number"
-              placeholder="Enter number"
-            />
+          <div className="dFlex">
+            <div className="dFlex1">
+              <NewFormInput
+                name="phoneNumber"
+                type="phone"
+                label="Phone Number"
+                placeholder="Enter number"
+              />
+            </div>
+            <div className="dFlex2">
+              <NewFormInput
+                name="alternatePhone"
+                type="phone"
+                label="Alternate Phone Number"
+                placeholder="Enter number"
+              />
+            </div>
           </div>
-          <div className="phone-cont">
-            <NewFormInput
-              name="alternatePhone"
-              type="phone"
-              label="Alternate Phone Number"
-              placeholder="Enter number"
-            />
-          </div>
-          <div className="date-cont">
-            <NewFormInput
-              name="dateOfBirth"
-              type="date"
-              label="Date of Birth"
-            />
-          </div>
-          <div className="date-cont">
-            <NewFormInput
-              name="bvn"
-              type="number"
-              label="Bank Verification Number"
-              placeholder="Enter number"
-            />
+          <div className="dFlex">
+            <div className="dFlex1">
+              <NewFormInput
+                name="dateOfBirth"
+                type="date"
+                label="Date of Birth"
+              />
+            </div>
+            <div className="dFlex2">
+              <NewFormInput
+                name="bvn"
+                type="number"
+                label="Bank Verification Number"
+                placeholder="Enter number"
+              />
+            </div>
           </div>
           <div className="Personalform-btn">
             <Button
@@ -157,7 +154,6 @@ const PersonalInfo = ({ handleNext }) => {
               bgColor="#007e99"
               type="submit"
               isLoading={methods.formState.isSubmitting}
-              isDisabled={!methods.formState.isDirty}
               mx="auto"
               px="40px"
               py="12px"

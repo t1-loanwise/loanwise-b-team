@@ -37,3 +37,13 @@
   line-height: 480px;
   cursor: pointer;
 }
+
+.settingsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.settingsLower {
+  margin-top: auto;
+}

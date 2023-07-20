@@ -35,13 +35,11 @@
 
 /* ---------------------- 1st card style------------------- */
 .card-wrapper {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .card-div {
@@ -402,49 +400,41 @@
 
 /* -------accordion------- */
 .Accordion {
-
-    margin-top: 20px;
-    width:100%;
-
-
+  margin-top: 20px;
+  width: 100%;
 }
-.Accordion:hover{
-
-    cursor:pointer;
+.Accordion:hover {
+  cursor: pointer;
 }
-
 
 .item {
   padding: 20px 0px;
   border-top: 1px solid #ccd1d2;
-
 }
-.item:nth-of-type(10){
-border-top: 1px solid #ccd1d2;
+.item:nth-of-type(10) {
+  border-top: 1px solid #ccd1d2;
 }
-
 
 .title {
-
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
 }
-.minus{
-    font-size: 1.4em;
-    font-weight: 800;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 3px;
+.minus {
+  font-size: 1.4em;
+  font-weight: 800;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
 }
-.minus:hover{
-    border: 2px solid #007E99;
-        color: #007E99;
+.minus:hover {
+  border: 2px solid #007e99;
+  color: #007e99;
 }
 
 .minus {
@@ -462,10 +452,9 @@ border-top: 1px solid #ccd1d2;
 .title p {
   font-size: 1.1em;
   font-weight: 500;
-
 }
-.title p:hover{
-    color: #007E99;
+.title p:hover {
+  color: #007e99;
 }
 
 .pricing-content-hidden {
@@ -474,14 +463,12 @@ border-top: 1px solid #ccd1d2;
 }
 
 .pricing-content-show {
-
-    height: auto;
-    max-height: 90%;
-    margin-top: 20px;
-    text-align: left;
-font-size: 1.1em;
-font-weight: 500;
-
+  height: auto;
+  max-height: 90%;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 /* ---------useLoanwise--------- */
@@ -496,6 +483,11 @@ font-weight: 500;
 
 /* ----------Responsive Style---------- */
 
+@media (max-width: 1000px) {
+  .card-wrapper {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 768px) {
   .plan-div h1 {
     font-size: 35px;

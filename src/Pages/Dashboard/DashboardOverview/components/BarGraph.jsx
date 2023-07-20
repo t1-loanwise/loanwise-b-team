@@ -63,7 +63,7 @@ const BarGraph = () => {
         <h2>Loan Default Count Trend</h2>
         <div className="graph">
           <div className="rotate">Qty</div>
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={"100%"}>
             <BarChart
               data={data}
               margin={{
@@ -101,4 +101,3 @@ const BarGraph = () => {
 };
 
 export default BarGraph;
-

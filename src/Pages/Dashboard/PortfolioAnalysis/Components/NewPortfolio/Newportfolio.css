@@ -121,3 +121,26 @@
   align-items: center;
   padding: 35px 0;
 }
+
+.dFlex {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+.dFlex1,
+.dFlex2 {
+  flex: 0.5;
+}
+
+@media (max-width: 1000px) {
+  .dFlex {
+    flex-direction: column;
+  }
+
+  .successReport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+}

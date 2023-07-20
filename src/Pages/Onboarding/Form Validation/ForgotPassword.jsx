@@ -35,7 +35,7 @@ const ForgotPassword = () => {
         "https://loanwise.onrender.com/api/forget-password",
         values
       );
-      navigate("/accVerify");
+      navigate("/accVerify", { state: { email: data.email } });
     } catch (error) {
       if (error.response) {
         console.log("Request failed with status code:", error.response.status);
@@ -91,7 +91,6 @@ const ForgotPassword = () => {
               bgColor="#007e99"
               type="submit"
               isLoading={methods.formState.isSubmitting}
-              isDisabled={!methods.formState.isDirty}
             >
               Proceed
             </Button>

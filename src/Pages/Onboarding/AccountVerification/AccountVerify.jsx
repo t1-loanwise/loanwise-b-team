@@ -184,7 +184,6 @@ const AccountVerify = () => {
               bgColor="#007e99"
               type="submit"
               isLoading={isSubmitting}
-              isDisabled={!methods.formState.isDirty}
             >
               {resendTimeout === 0 ? "Resend" : "Verify"}
             </Button>

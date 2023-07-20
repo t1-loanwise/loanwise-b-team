@@ -170,12 +170,7 @@ const SecurityPrivacy = () => {
             <span className="toggle-ball"></span>
           </div>
         </div>
-        <Button
-          color="#fff"
-          bgColor="#007e99"
-          type="submit"
-          isDisabled={!methods.formState.isDirty}
-        >
+        <Button color="#fff" bgColor="#007e99" type="submit">
           Save Changes
         </Button>
       </form>

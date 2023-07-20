@@ -1,16 +1,17 @@
 import React from "react";
-import success from "../../../../../../Images/Dashboard/success.svg";
+import unsuccessful from "../../../../../../Images/Dashboard/unsuccessful.svg";
 import { Button } from "@chakra-ui/react";
 
-const DownloadReport = () => {
+const UnsuccessfulReport = () => {
   return (
     <form className="new-portfolio-form">
       <div className="successReport">
         <h3>Customer’s ID: #012346789</h3>
-        <img src={success} alt="pass" />
+        <img src={unsuccessful} alt="pass" />
         <div>
           <p>
-            Congratulations, borrower is not likely to default on this loan amount
+            Borrower is likely to default on this loan amount, consider a lesser
+            amount
           </p>
         </div>
         <div className="Personalform-btn">
@@ -31,4 +32,4 @@ const DownloadReport = () => {
   );
 };
 
-export default DownloadReport;
+export default UnsuccessfulReport;
