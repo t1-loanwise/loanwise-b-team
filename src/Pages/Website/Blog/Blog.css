@@ -7,6 +7,10 @@
   margin: 30px 0 50px;
 }
 
+.blog-container header {
+  padding: 16px 63px;
+}
+
 .Blogtext,
 .Blogimages img {
   width: 100%;
@@ -116,6 +120,10 @@
     gap: 20px;
   }
 
+  .blog-container header {
+    padding: 16px 32px;
+  }
+
   .Blogtext h4 {
     font-size: 36px;
     font-weight: 700;
@@ -137,5 +145,11 @@
 
   .blog-Input button {
     flex: 0.25;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container header {
+    padding: 16px 32px;
   }
 }
