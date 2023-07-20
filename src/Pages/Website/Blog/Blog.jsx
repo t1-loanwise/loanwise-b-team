@@ -7,13 +7,15 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div className="blog-container container">
+    <div className="blog-container">
       <Header />
-      <div className="Blog">
-        <Blogtext />
-        <Blogimage />
+      <div className="container">
+        <div className="Blog">
+          <Blogtext />
+          <Blogimage />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
