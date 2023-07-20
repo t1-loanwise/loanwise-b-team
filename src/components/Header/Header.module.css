@@ -6,17 +6,20 @@
 /* Header */
 /* ------------------ */
 
-.everyHeader{
-
+.everyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: #fff;
+  width: auto;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 16px 0;
-  position: sticky;
   left: 0;
-  height: 92px;
+  position: relative;
 }
 
 .display {
@@ -117,12 +120,12 @@ ul li a {
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 0;
   background-color: #fff;
   padding: 20px 30px;
   height: 100vh;
-  width: 50%;
+  width: 60%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
@@ -172,8 +175,9 @@ ul li a {
   .menuList {
     display: flex;
     align-items: center;
-    justify-content: center;
-    top: 80px;
+    justify-content: flex-start;
+    top: 90px;
+    right: -63px;
   }
 
   ul a:nth-child(5),
@@ -191,17 +195,15 @@ ul li a {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .menuBtn {
     display: flex;
     align-items: center;
   }
 
   .menuList {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
+    right: -32px;
+    top: 60px;
   }
 
   .navlist {

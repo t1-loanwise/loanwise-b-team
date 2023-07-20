@@ -78,7 +78,7 @@ const AccVerify = () => {
         }
       );
       console.log("Form submitted successfully");
-      navigate("/securityQuestion", {
+      navigate("/newPassword", {
         state: { token: response.data.user_id },
       });
       console.log("Entered OTP:", data);
@@ -111,9 +111,7 @@ const AccVerify = () => {
   return (
     <AuthLayout
       title={"Verify Email Address"}
-      subtitle={
-        "Thank you for signing up. Please enter the verification code we sent to your email address @johndoe@gmail.com"
-      }
+      subtitle={`Thank you for signing up. Please enter the verification code we sent to your email address ${email}`}
       formFooter={formFooter}
     >
       <FormProvider {...methods}>
@@ -192,7 +190,6 @@ const AccVerify = () => {
               bgColor="#007e99"
               type="submit"
               isLoading={isSubmitting}
-              isDisabled={!methods.formState.isDirty}
             >
               {resendTimeout === 0 ? "Resend" : "Verify"}
             </Button>

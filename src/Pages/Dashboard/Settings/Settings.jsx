@@ -35,19 +35,22 @@ const Settings = () => {
   return (
     <div className="wrapper">
       <div className="container">
-        <div className="content">
-          {toggleItems.map((item, index) => {
-            return (
-              <div key={index}>
-                <Settingtoggle
-                  header={item.header}
-                  subHeader={item.subHeader}
-                  showItems={item.showItems}
-                  link={item.link}
-                />
-              </div>
-            );
-          })}
+        <div className="content settingsContainer">
+          <div className="settingsUpper">
+            {toggleItems.map((item, index) => {
+              return (
+                <div key={index}>
+                  <Settingtoggle
+                    header={item.header}
+                    subHeader={item.subHeader}
+                    showItems={item.showItems}
+                    link={item.link}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          {/* <div className="settingsLower">hello</div> */}
         </div>
       </div>
     </div>

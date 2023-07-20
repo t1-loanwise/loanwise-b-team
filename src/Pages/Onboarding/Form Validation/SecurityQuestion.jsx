@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AuthLayout from "../../../components/Layout/AuthLayout";
 import { FormProvider, useForm } from "react-hook-form";
 import { Button, Select } from "@chakra-ui/react";
@@ -126,7 +126,6 @@ function SecurityQuestion() {
                 bgColor="#007e99"
                 type="submit"
                 isLoading={methods.formState.isSubmitting}
-                isDisabled={!methods.formState.isDirty}
               >
                 Proceed
               </Button>

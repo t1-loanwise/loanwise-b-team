@@ -6,15 +6,14 @@ import Pricing from "./Pages/Website/Pricing/Pricing";
 import Blog from "./Pages/Website/Blog/Blog";
 import CreateAccount from "./Pages/Onboarding/Form Validation/CreateAccount";
 import AccountVerify from "./Pages/Onboarding/AccountVerification/AccountVerify";
+import ForgotPassword from "./Pages/Onboarding/Form Validation/ForgotPassword";
 import ForgotPasswordVerify from "./Pages/Onboarding/Form Validation/ForgotPwdVerify/AccVerify";
 import NewPassword from "./Pages/Onboarding/Form Validation/NewPassword";
 import SecurityQuestion from "./Pages/Onboarding/Form Validation/SecurityQuestion";
 import SuccessfulPage from "./Pages/Onboarding/SuccessfulPage/SuccessfulPage";
 import Login from "./Pages/Onboarding/Form Validation/Login";
-import ForgotPassword from "./Pages/Onboarding/Form Validation/ForgotPassword";
 import NewDashboard from "./Pages/Dashboard/DashboardOverview/NewDashboard";
 import UserPreference from "./Pages/Dashboard/Settings/User-Preference/UserPreference";
-// import MainPortfolio from './Pages/Dashboard/PortfolioAnalysis/MainPortfolio';
 import ContactForm from "./components/NewForm/ContactForm";
 import CreatePersonal from "./Pages/Dashboard/PortfolioAnalysis/Components/NewPortfolio/CreatePersonal/CreatePersonal";
 
@@ -40,7 +39,6 @@ function App() {
           <Route exact path="/accVerify" element={<ForgotPasswordVerify />} />
           <Route exact path="/newPassword" element={<NewPassword />} />
           <Route exact path="/successful" element={<SuccessfulPage />} />
-          {/* <Route  path='/Portfolio' element={<MainPortfolio/>} /> */}
           <Route path="/dashboard/*" element={<NewDashboard />} />
           <Route path="/userPreference" element={<UserPreference />} />
           <Route path="/personal" element={<CreatePersonal />} />

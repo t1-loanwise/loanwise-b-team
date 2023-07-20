@@ -114,8 +114,6 @@ h1 {
 
   .auth-container {
     padding: 0 100px;
-    /* overflow-x: hidden; */
-    /* height: 100vh; */
   }
 
   .auth--layout {
@@ -141,9 +139,9 @@ h1 {
     justify-content: center !important;
   }
 
-  .right-side-header:not(.securityQxn) {
-    position: absolute;
-    /* top: 20px; */
+  .right-side-header {
+    margin-top: 10px;
+    margin-bottom: auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;

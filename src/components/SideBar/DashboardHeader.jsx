@@ -4,8 +4,12 @@ import bell from "../../Images/Dashboard/bell.svg";
 import man from "../../Images/Dashboard/man.png";
 import "./SideBar.css";
 import arrow from "../../Images/Dashboard/downarrowbg.svg";
+import { useLocation } from "react-router-dom";
 
-const DashboardHeader = ({ back, backLink, fullName }) => {
+const DashboardHeader = ({ back, backLink }) => {
+  const location = useLocation();
+  const fullName = location.state?.name || "";
+
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-left">
