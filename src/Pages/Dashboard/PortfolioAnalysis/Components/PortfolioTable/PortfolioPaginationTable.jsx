@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../../../components/Overview/overview.css";
-// import { PortfolioTableData } from "./PorfolioTableData";
-import LoanWiseData from "../../../../../LoanWise.json"
 import lessthan from "../../../../../Images/Dashboard/lessthan.svg";
 import greaterthan from "../../../../../Images/Dashboard/greaterthan.svg";
 import FilledBtn from "../../../../../components/Button/FilledBtn";
 
-const PortfolioPaginationTable = ({ data, totalCount }) => {
+const DATA_PER_PAGE = 5;
+
+const PortfolioPaginationTable = ({ data}) => {
   const [currentPage, setCurrentPage] = useState(1);
-
-  const [dataPerPage] = useState(5);
-
   const [isActive, setIsActive] = useState(false);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
     setIsActive(!isActive);
   };
-
-  const indexOfLastData = currentPage * dataPerPage;
-  const indexOfFirstData = indexOfLastData - dataPerPage;
+const totalCount = data.length
+  const indexOfLastData = currentPage * DATA_PER_PAGE;
+  const indexOfFirstData = indexOfLastData - DATA_PER_PAGE;
   const currentData = data.slice(indexOfFirstData, indexOfLastData);
 
   const navigate = useNavigate();
@@ -54,17 +51,17 @@ const PortfolioPaginationTable = ({ data, totalCount }) => {
               className="table-body-container"
             >
               <td>{item.customer_id}</td>
-              <td>{item.name}</td>
+              <td>{item.fullName}</td>
               <td>{item.Category}</td>
-              <td>{item.Requested}</td>
-              <td>{item["Due date"]}</td>
-              <td className={`${item["Loan status 2"]}`}>
-                <button>{item["Loan status 2"]}</button>
+              <td>N{item.Disbursed}</td>
+              <td>{item["due_date"]}</td>
+              <td className={`${item["loan_status_2"]}`}>
+                <button>{item["loan_status_2"]}</button>
               </td>
             </tr>
           ))}
         </tbody>
-        {LoanWiseData.length > dataPerPage && (
+        {totalCount >= DATA_PER_PAGE && (
           <tfoot className="pagination-wrapper">
             <tr>
               <td colSpan="6">
@@ -83,7 +80,7 @@ const PortfolioPaginationTable = ({ data, totalCount }) => {
                       />
                     </li>
                     {Array.from({
-                      length: Math.ceil(totalCount / dataPerPage),
+                      length: Math.ceil(totalCount / DATA_PER_PAGE),
                     }).map((_, index) => (
                       <li key={index}>
                         <button

@@ -2,75 +2,79 @@ import React, { useEffect, useState } from "react";
 import DashSearch from "./components/DashSearch";
 import PaginationTable from "../../../components/Overview/PaginationTable";
 import "./dashboard.css";
-import SearchBar from "../../../components/Overview/SearchBar";
-// import { TableData } from "../../../components/Overview/TableData";
-import LoanWiseData from "../../../LoanWise.json";
+import axios from 'axios'
 import ChartCards from "./components/ChartCards";
-import { CategoryScale } from "chart.js";
-
 
 const DashboardOverview = () => {
-  const [searchResults, setSearchResults] = useState(LoanWiseData);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [dataPerPage] = useState(5);
+  const [searchResults, setSearchResults] = useState([]);
+  const [loanData, setLoanData] = useState([]);
   const [searchItems, setSearchItems] = useState("");
+  
   const [selectedCategory, setSelectedCategory] = useState(' ')
 
-  const handleSearch = (term) => {
-    setSearchItems(term);
-    setCurrentPage(1);
-    console.log({ term });
-  };
-  const handleFilter = (category) => {
-    if(category === "All") {
-      setSearchResults(LoanWiseData);
-      return;
-    }
-    const filteredResults = LoanWiseData.filter((user) => user["Loan status"] === category);
-    setSelectedCategory(category)
-    setCurrentPage(1)
-    setSearchResults(filteredResults);
-
-   
-  }
+  useEffect(() => {
+    axios.get("https://loanwise.onrender.com/api/loan-table")
+      .then(response => {
+        setSearchResults(response.data)
+        setLoanData(response.data)
+        
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error)
+      });
+  }, []);
 
   useEffect(() => {
-    const results = LoanWiseData.filter((user) => {
+    const results = loanData.filter((user) => {
       return (
-        user.name.toLowerCase().includes(searchItems.toLowerCase()) ||
+        user.fullName.toLowerCase().includes(searchItems.toLowerCase()) ||
         user.customer_id.toLowerCase().includes(searchItems.toLowerCase())
       );
     });
-    setSearchResults(results);
-    console.log(results);
-  }, [searchItems]);
 
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    setSearchResults(results);
+  
+    
+  }, [searchItems,loanData]);
+
+  const handleSearch = (term) => {
+    setSearchItems(term);
+  
   };
+
+  const handleFilter = (category) => {
+    if (category === "All") {
+      setSearchResults(loanData);
+      return;
+    }
+    const filteredResults = loanData.filter((user) => user["loan_status"] === category);
+    setSelectedCategory(category);
+   
+    setSearchResults(filteredResults);
+  }
+
+
 
   return (
     <div className="overview-container container">
       <div className="explore">
         <p>
-          Explore insightful analyses and risk assessment to make informed
-          lending decisions.
+          Explore insightful analyses and risk assessment to make informed lending decisions.
         </p>
       </div>
       <div className="overview-search-filter">
         <div>
-          <DashSearch handleSearch={handleSearch} handleFilter={handleFilter}/>
+          <DashSearch handleSearch={handleSearch} handleFilter={handleFilter} />
         </div>
         <ChartCards />
         <PaginationTable
           data={searchResults}
-          totalCount={searchResults.length}
-          paginate={paginate}
+          
+       
         />
       </div>
     </div>
   );
-
 };
 
 export default DashboardOverview;
