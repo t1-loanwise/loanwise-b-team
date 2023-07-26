@@ -29,11 +29,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />
           <Route exact path="/contactForm" element={<ContactForm />} />
-          <Route
-            exact
-            path="/securityQuestion"
-            element={<SecurityQuestion />}
-          />
+          <Route exact path="/securityQuestion" element={<SecurityQuestion />}/>
           <Route exact path="/createAccount" element={<CreateAccount />} />
           <Route exact path="/accountVerify" element={<AccountVerify />} />
           <Route exact path="/accVerify" element={<ForgotPasswordVerify />} />
